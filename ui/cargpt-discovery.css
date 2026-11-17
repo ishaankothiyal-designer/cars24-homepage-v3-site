@@ -1,0 +1,33 @@
+/* Reference: car-gpt-layout-worikng.riv, artboard 1/state_01.
+   80×68 compact board; 56px action, 12px edges; entry 30 frames at60fps.
+   DOM transform/opacity preserve native interactive/scrollable chip controls. */
+:root{--c3-ease:cubic-bezier(.23,1,.32,1);--c3-entry-duration:500ms;--c3-nudge-duration:200ms}
+.bottom-nav-search .cargpt-entry-live{display:block;width:44px;height:44px;pointer-events:none}
+.cargpt-discovery-entry{position:absolute;left:0;right:0;bottom:0;height:68px;z-index:6;pointer-events:none;font-family:C3Geist,Geist,system-ui,sans-serif;isolation:isolate}
+.cargpt-discovery-material{position:absolute;inset:0;opacity:0;transform:translateX(24px);background:linear-gradient(to top,rgb(190 170 255 / 65%),rgb(225 213 255 / 28%) 50%,transparent);transition:opacity var(--c3-nudge-duration) var(--c3-ease),transform var(--c3-entry-duration) var(--c3-ease);pointer-events:none}
+.cargpt-discovery-launcher.bottom-nav-search{--c3-entry-travel:280px;position:absolute;right:12px;left:auto;top:6px;width:56px;height:56px;border:0;border-radius:50%;display:grid;place-items:center;pointer-events:auto;transform:translateX(0);transition:transform var(--c3-entry-duration) var(--c3-ease);touch-action:manipulation}
+.cargpt-discovery-launcher:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.cargpt-entry-nudges{position:absolute;left:80px;right:0;top:0;height:68px;display:flex;align-items:center;gap:8px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain;pointer-events:none;visibility:hidden;opacity:0;transform:translateX(24px);transition:opacity var(--c3-nudge-duration) var(--c3-ease),transform var(--c3-entry-duration) var(--c3-ease);padding:0 12px 0 0;scroll-padding-inline:4px 12px;-webkit-overflow-scrolling:touch}
+.cargpt-entry-nudges::-webkit-scrollbar{display:none}
+.cargpt-discovery-entry .cargpt-entry-nudge{flex:none;white-space:nowrap;max-width:none;min-height:36px;padding:7px 8px;border:1px solid #cad5e2;border-radius:8px;background:#fff;box-shadow:0 2px 2px #00000012;font:500 13px/20px C3Geist,Geist,system-ui,sans-serif;color:#4736fe;cursor:pointer;touch-action:pan-x}
+.cargpt-entry-nudge:focus-visible{outline:2px solid #4736fe;outline-offset:2px}
+.cargpt-entry-nudge:active{transform:scale(.96)}
+.cargpt-discovery-entry[data-expanded="true"] .cargpt-discovery-launcher{transform:translateX(calc(-1 * var(--c3-entry-travel)))}
+.cargpt-discovery-entry[data-expanded="true"] .cargpt-discovery-material{opacity:1;transform:translateX(0)}
+.cargpt-discovery-entry[data-expanded="true"] .cargpt-entry-nudges{visibility:visible;pointer-events:auto;opacity:1;transform:translateX(0);transition-delay:100ms,0ms}
+.cargpt-discovery-entry[data-instant="true"] :is(.cargpt-discovery-launcher,.cargpt-discovery-material,.cargpt-entry-nudges){transition:none}
+.clp-view{position:relative;isolation:isolate}
+.clp-scroll{scroll-padding-bottom:88px}
+.clp-scroll::after{content:"";display:block;height:88px}
+.cdp-view>.cdp-footer{overflow:visible}
+.cdp-footer>.cargpt-discovery-entry{bottom:100%;}
+.cdp-page-scroll{scroll-padding-bottom:80px}
+.cdp-page-scroll::after{content:"";display:block;height:80px}
+@media(prefers-reduced-motion:reduce){
+ .cargpt-discovery-launcher.bottom-nav-search{transition:none}
+ .cargpt-entry-nudges,.cargpt-discovery-material{transform:none;transition:opacity 160ms var(--c3-ease)}
+ .cargpt-entry-nudge:active{transform:none}
+ .cargpt-discovery-entry[data-expanded="true"] .cargpt-entry-nudges{transition-delay:0ms}
+}
+
+.cargpt-entry-live:not([data-renderer="rive"]){background:url('../cargpt/assets/entry-orb.png') center/contain no-repeat}

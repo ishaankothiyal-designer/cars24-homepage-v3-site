@@ -2,7 +2,15 @@
 export function createSpeechAdapter({scope=globalThis}={}) {
  const Recognition=scope.SpeechRecognition||scope.webkitSpeechRecognition;
  const synth=scope.speechSynthesis,Utterance=scope.SpeechSynthesisUtterance;
- let recognition=null,utterance=null,audio=null,recognitionRevision=0,speechRevision=0,cueRevision=0,destroyed=false;
+ let recognition=null,utterance=null,audio=null,recognitionRevision=0,speechRevision=0,cueRevision=0,destroyed=false,microphoneGranted=false,permissionWatch=null,watchingPermission=false;
+ const permissionChanged=()=>{if(permissionWatch?.state!=='granted')microphoneGranted=false;};
+ function watchPermission(){
+  if(watchingPermission||!scope.navigator?.permissions?.query)return;
+  watchingPermission=true;
+  // Revoking access in browser controls must invalidate the capture cache.
+  // Querying permission never substitutes for the native getUserMedia prompt.
+  scope.navigator.permissions.query({name:'microphone'}).then(status=>{if(destroyed)return;permissionWatch=status;status.addEventListener?.('change',permissionChanged);}).catch(()=>{watchingPermission=false;});
+ }
  function stop(){
   recognitionRevision++;
   if(!recognition)return;
@@ -22,7 +30,7 @@ export function createSpeechAdapter({scope=globalThis}={}) {
  }
  return {
   supported:Boolean(Recognition),ttsSupported:Boolean(synth&&Utterance),
-  start({onStart=()=>{},onTranscript=()=>{},onEnd=()=>{},onError=()=>{}}={}){
+  start({requestPermission=false,onPermission=()=>{},onStart=()=>{},onTranscript=()=>{},onEnd=()=>{},onError=()=>{}}={}){
    stop();cancelSpeech();cancelCue();
    if(destroyed)return false;
    if(!Recognition){onError('unsupported');return false;}
@@ -39,7 +47,21 @@ export function createSpeechAdapter({scope=globalThis}={}) {
    };
    current.onerror=event=>{if(valid())onError(event.error||'recognition-error');};
    current.onend=()=>{if(!valid())return;recognition=null;onEnd();};
-   try{current.start();return true;}catch(error){recognition=null;onError(error.name==='NotAllowedError'?'not-allowed':'recognition-error');return false;}
+   const begin=()=>{if(!valid())return false;try{current.start();return true;}catch(error){recognition=null;onError(error.name==='NotAllowedError'?'not-allowed':'recognition-error');return false;}};
+   // Explicit permission retries always reach the browser, including after a
+   // speech-service error. Conversational turns reuse a successful grant.
+   // Release the probe stream before recognition takes over capture.
+   const devices=scope.navigator?.mediaDevices;
+   if(requestPermission)microphoneGranted=false;
+   if(!microphoneGranted&&devices?.getUserMedia){
+    watchPermission();
+    devices.getUserMedia({audio:true}).then(stream=>{
+     stream.getTracks().forEach(track=>track.stop());
+     if(!valid())return;microphoneGranted=true;onPermission();begin();
+    }).catch(error=>{if(valid()){recognition=null;onError(['NotAllowedError','SecurityError'].includes(error.name)?'not-allowed':error.name==='NotFoundError'?'audio-capture':'recognition-error');}});
+    return true;
+   }
+   return begin();
   },
   stop,
   speak(text,{onStart=()=>{},onBoundary=()=>{},onEnd=()=>{},onError=()=>{}}={}){
@@ -70,7 +92,7 @@ export function createSpeechAdapter({scope=globalThis}={}) {
    try{const result=current.play();result?.catch?.(fail);return true;}catch{fail();return false;}
   },
   cancelCue,
-  destroy(){stop();cancelSpeech();cancelCue();destroyed=true;}
+  destroy(){stop();cancelSpeech();cancelCue();destroyed=true;permissionWatch?.removeEventListener?.('change',permissionChanged);}
 
  };
 }
