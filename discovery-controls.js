@@ -35,3 +35,11 @@ export const ONBOARDING_FUELS=['Petrol','Diesel','CNG'];
 export const fuelSelection=value=>[...new Set((Array.isArray(value)?value:[value]).filter(v=>v&&v!=='Any'))];
 export function toggleFuel(value,fuel){if(fuel==='Any')return [...ONBOARDING_FUELS];const selected=fuelSelection(value);return selected.includes(fuel)?selected.filter(v=>v!==fuel):[...selected,fuel];}
 export function fuelChoices(value,action='retail-fuel-filter'){const selected=fuelSelection(value);return `<div class="options body-type-options" role="group" aria-label="Fuel types">${['Petrol','Diesel','CNG','Electric','Any'].map(fuel=>{const checked=fuel==='Any'?!selected.length:selected.includes(fuel);return `<button type="button" class="choice body-type-choice${checked?' selected':''}" role="checkbox" aria-checked="${checked}" data-action="${action}" data-value="${fuel}"><span class="choice-label">${fuel==='Any'?'Open to all':fuel}</span><span class="check" aria-hidden="true">✓</span></button>`;}).join('')}</div>`;}
+
+// Home price entries use disjoint CLP bands without changing onboarding budget choices.
+export const HOME_PRICE_BANDS=[
+ {value:'under-7',id:'home-price:under-7',label:'Under ₹7 lakh',min:0,max:7,maxExclusive:true},
+ {value:'7-15',id:'home-price:7-15',label:'₹7–15 lakh',min:7,max:15,maxExclusive:true},
+ {value:'over-15',id:'home-price:over-15',label:'₹15 lakh+',min:15,max:Infinity,maxExclusive:false},
+];
+export const homePriceBand=value=>HOME_PRICE_BANDS.find(band=>band.id===value||band.value===value||band.label===value);

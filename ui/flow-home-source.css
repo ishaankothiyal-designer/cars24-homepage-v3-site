@@ -1,0 +1,96 @@
+/* Current Home source 8667:75249 / header 8963:57231. All overrides stay inside this screen. */
+@font-face{font-family:'Home Campaign';font-style:normal;font-weight:800;font-display:swap;src:url('../assets/flow-home/OpenSauceSans-ExtraBold.ttf') format('truetype')}
+@font-face{font-family:'Home Serif';font-style:italic;font-weight:500;font-display:swap;src:url('../assets/flow-home/IBM-Plex-Serif-500.ttf') format('truetype')}
+@font-face{font-family:'Home Serif';font-style:italic;font-weight:600;font-display:swap;src:url('../assets/flow-home/IBM-Plex-Serif-600.ttf') format('truetype')}
+@font-face{font-family:'Home Serif';font-style:italic;font-weight:700;font-display:swap;src:url('../assets/flow-home/IBM-Plex-Serif-700.ttf') format('truetype')}
+.screen.is-flow-home{
+ --home-header-purple:#5b4dfa;--home-font-sauce:'Home Campaign',sans-serif;--home-font-serif:'Home Serif',serif;--font-family-primary:GeistCDP,Geist,system-ui,sans-serif;
+ --home-source-masthead-height:72px;--home-source-search-block:48px;--home-source-tabs-height:88px;--home-source-header-white:var(--home-white);--home-source-icon-surface:var(--home-surface-alpha);--home-source-search-shadow:0 6px 16px #1f29370a,0 2px 8px #1f293705;
+}
+.screen.is-flow-home .home-reference{font-family:var(--font-family-primary)}
+.screen.is-flow-home .home-masthead{height:calc(var(--home-native-top-inset) + var(--home-source-masthead-height));padding-top:var(--home-native-top-inset);background:var(--home-header-purple);overflow:visible}
+.screen.is-flow-home .home-brand-row{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.screen.is-flow-home .home-brand-logo{display:block;width:87.7145px;height:26.58015px;object-fit:contain}
+.screen.is-flow-home .home-header-actions{gap:6px}
+.screen.is-flow-home .home-header-icon{width:32px;height:32px;min-height:32px}
+.screen.is-flow-home .home-header-icon:before{inset:0;box-shadow:none;background:var(--home-source-icon-surface)}
+.screen.is-flow-home .home-header-icon i,.screen.is-flow-home .home-header-icon img{width:20px;height:20px;font-size:20px}
+.screen.is-flow-home .home-location-row{height:24px;align-items:flex-start;padding:0 16px}
+.screen.is-flow-home .home-location{height:16px;min-height:16px;gap:4px;max-width:100%;font-size:12px;line-height:16px;font-weight:500;color:var(--home-white)}
+.screen.is-flow-home .home-location-pin{background:none;box-shadow:none;width:16px;height:16px;border-radius:0}
+.screen.is-flow-home .home-location i{font-size:16px;line-height:16px;flex:none}
+.screen.is-flow-home .home-location-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.screen.is-flow-home .home-search-sticky{height:var(--home-source-search-block);padding:8px 16px 0;background:var(--home-header-purple)}
+.screen.is-flow-home .home-reference .home-search{margin:0;width:343px;height:40px;border:0;border-radius:999px;background:var(--home-white);color:var(--home-muted);padding:10px 12px;gap:8px;box-shadow:var(--home-source-search-shadow);font-family:var(--font-family-primary);font-size:14px;line-height:18px;font-weight:400}
+.screen.is-flow-home .home-search-sticky .home-search i{font-size:20px;color:var(--home-muted)}
+.screen.is-flow-home .home-service-tabs{height:var(--home-source-tabs-height);top:calc(var(--home-native-top-inset) + var(--home-source-search-block));background:var(--home-header-purple)}
+.screen.is-flow-home .home-service-tabs .nav-tabs{height:88px;min-height:88px;max-height:88px;padding:0 12px;gap:8px;border-bottom:1px solid transparent;background:var(--home-header-purple);overflow-x:auto;overflow-y:hidden}
+.screen.is-flow-home .home-service-tabs .nav-tab{width:70px;min-width:70px;flex:0 0 70px;height:88px;min-height:88px;padding:8px 0 0;gap:4px;font-family:var(--font-family-primary);font-size:13px;line-height:18px;font-weight:400;color:var(--home-white)}
+.screen.is-flow-home .home-service-tabs .nav-tab.active{font-weight:600}
+.screen.is-flow-home .home-service-tabs .nav-tab.active::after{bottom:0;height:2px;background:var(--home-white)}
+.screen.is-flow-home .home-service-tabs .nav-img{position:relative;display:grid;place-items:center;width:70px;height:50px;flex:none}
+.screen.is-flow-home .home-service-tabs .nav-img img{width:50px;height:50px;max-width:none;object-fit:contain;position:relative}
+.screen.is-flow-home .home-service-tabs [data-value=all] img{width:44px;height:44px}
+.screen.is-flow-home .home-service-tabs [data-value=sell] img{width:42px;height:42px;transform:translate(2px,2px) rotate(-7.42deg)}
+.screen.is-flow-home .home-service-tabs [data-value=loans] img{width:46px;height:46px}
+.screen.is-flow-home .home-service-tabs [data-value=challan] img{width:50px;height:34px}
+.screen.is-flow-home .home-service-tabs .nav-img .home-insurance-layer{position:absolute;left:10px;top:0}
+.screen.is-flow-home .home-warranty-copy{left:19px}
+.screen.is-flow-home .home-warranty-action{gap:3px}
+.screen.is-flow-home .home-warranty-action i{font-size:9px;line-height:9px}
+.screen.is-flow-home .home-section-title,.screen.is-flow-home .home-section-heading h2{font-family:var(--font-family-primary);font-size:20px;line-height:24px;font-weight:700;letter-spacing:0}
+.screen.is-flow-home .home-section-title{padding:20px 16px 0}
+.screen.is-flow-home .home-used{height:245.4465px}
+.screen.is-flow-home .home-tier-art{height:73.4465px;aspect-ratio:auto;border:0;background:none}
+.screen.is-flow-home .home-reference .home-tier-art .home-tier-image{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;max-width:none;transform:none}
+.screen.is-flow-home.is-home-scrolled .home-search-sticky{background:var(--home-white)}
+.screen.is-flow-home.is-home-scrolled .home-search{background:var(--home-light)}
+
+.screen.is-flow-home .home-location{position:relative}
+.screen.is-flow-home .home-location::after{content:"";position:absolute;inset:-14px auto -14px 0;width:min(100%,240px);min-height:44px}
+
+.screen.is-flow-home .home-header-icon .home-header-avatar{width:18px;height:18px}
+
+/* The compact source header keeps its expanded flow space so scrolling never changes the page height. */
+.screen.is-flow-home{--home-source-search-outline:#c6d2e1;--home-source-compact-divider:rgba(0,0,0,.1);--home-source-compact-text:#020617}
+.screen.is-flow-home.is-home-scrolled .home-search-sticky{top:calc(var(--home-native-top-inset) + 14px);padding:0 16px;background:var(--home-white)}
+.screen.is-flow-home.is-home-scrolled .home-reference .home-search{background:var(--home-white);border:1px solid var(--home-source-search-outline);box-shadow:var(--home-source-search-shadow);color:var(--home-muted)}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs{top:calc(var(--home-native-top-inset) + 62px);background:transparent;pointer-events:none}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tabs{height:34px;min-height:34px;max-height:34px;padding:0 12px;gap:8px;background:var(--home-white);border-bottom:0;box-shadow:inset 0 -1px 0 var(--home-source-compact-divider);pointer-events:auto}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab{height:34px;min-height:34px;padding:8px 0 0;gap:0;justify-content:flex-start;color:var(--home-source-compact-text)}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-img{height:0;opacity:0;transform:translateY(-8px);overflow:hidden}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab.active::after{bottom:0;background:var(--text-brand-base)}
+
+/* Opaque campaign backing prevents fractional sticky-layer edges exposing the white page. */
+.screen.is-flow-home .home-hero{background:var(--home-header-purple)}
+
+.screen.is-flow-home .home-search-prompt{display:inline-flex;align-items:center;white-space:nowrap;text-align:left}
+.screen.is-flow-home .home-search-prefix{white-space:pre;flex:none}
+.screen.is-flow-home .home-search-words{display:grid;width:8ch;height:18px;overflow:hidden;flex:none}
+.screen.is-flow-home .home-search-word{grid-area:1/1;display:block;line-height:18px;transform:translateY(0);opacity:1}
+.screen.is-flow-home .home-search-word.is-next{transform:translateY(100%);opacity:0}
+.screen.is-flow-home .home-search-words.is-cycling .home-search-word{transition:transform 300ms ease,opacity 300ms ease}
+.screen.is-flow-home .home-search-words.is-cycling .is-current{transform:translateY(-100%);opacity:0}
+.screen.is-flow-home .home-search-words.is-cycling .is-next{transform:translateY(0);opacity:1}
+@media(prefers-reduced-motion:reduce){.screen.is-flow-home .home-search-words .home-search-word{transition:none}.screen.is-flow-home .home-search-word.is-next{display:none}}
+
+/* One control tree interpolates between the source endpoints; flow heights remain unchanged. */
+.screen.is-flow-home{--home-chrome-duration:220ms;--home-chrome-ease:cubic-bezier(.2,0,0,1)}
+.screen.is-flow-home .home-service-tabs .nav-img{opacity:1;transform:translateY(0);overflow:hidden}
+.screen.is-flow-home.is-home-scrolled .status-icons{filter:brightness(0) invert(0)}
+.screen.is-flow-home.is-home-chrome-ready .home-search-sticky{transition:top var(--home-chrome-duration) var(--home-chrome-ease),padding var(--home-chrome-duration) var(--home-chrome-ease),background-color var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .home-service-tabs{transition:top var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .home-service-tabs .nav-tabs{transition:height var(--home-chrome-duration) var(--home-chrome-ease),min-height var(--home-chrome-duration) var(--home-chrome-ease),max-height var(--home-chrome-duration) var(--home-chrome-ease),background-color var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .home-service-tabs .nav-tab{transition:height var(--home-chrome-duration) var(--home-chrome-ease),min-height var(--home-chrome-duration) var(--home-chrome-ease),gap var(--home-chrome-duration) var(--home-chrome-ease),color var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .home-service-tabs .nav-img{transition:height var(--home-chrome-duration) var(--home-chrome-ease),opacity var(--home-chrome-duration) var(--home-chrome-ease),transform var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .status-bar,.screen.is-flow-home.is-home-chrome-ready .signal i{transition:color var(--home-chrome-duration) var(--home-chrome-ease),background-color var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home.is-home-chrome-ready .status-icons{transition:filter var(--home-chrome-duration) var(--home-chrome-ease)}
+@media(prefers-reduced-motion:reduce){.screen.is-flow-home{--home-chrome-duration:0ms}}
+
+/* Native chrome masks content with constant coverage; no scrolling spacer or animated negative margin. */
+.screen.is-flow-home .flow-home-view::before,.screen.is-flow-home.is-home-scrolled .flow-home-view::before{content:none}
+.device .screen.is-flow-home .status-bar{background:var(--home-header-purple)}
+.device .screen.is-flow-home.is-home-scrolled .status-bar{background:var(--home-white)}
+.screen.is-flow-home .home-search-sticky::before{content:'';position:absolute;left:0;right:0;bottom:100%;height:0;background:inherit;pointer-events:none}
+.screen.is-flow-home.is-home-search-pinned.is-home-scrolled .home-search-sticky::before{height:14px}
+.screen.is-flow-home.is-home-chrome-ready.is-home-search-pinned .home-search-sticky::before{transition:height var(--home-chrome-duration) var(--home-chrome-ease),background-color var(--home-chrome-duration) var(--home-chrome-ease)}
