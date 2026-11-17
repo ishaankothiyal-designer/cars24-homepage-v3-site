@@ -1,0 +1,175 @@
+/* CSS-only iPhone 14 Pro presentation shell.
+   Apple dimensions: 71.45 × 147.46 mm; active display: 65.08 × 141.09 mm.
+   Source: https://developer-mdn.apple.com/download/files/accessories/dimensional-drawings/iphone-14-pro.pdf
+   Island and safe-area point sizes are nominal presentation values.
+   1179 × 2556 pixels at 3× corresponds to the 393 × 852 point screen.
+   Finish/radii/button treatment follows the user's supplied zinc frame example. */
+:root{
+ --iphone-body-width-mm:71.45;
+ --iphone-body-height-mm:147.46;
+ --iphone-active-width-mm:65.08;
+ --iphone-active-height-mm:141.09;
+ --iphone-inset-mm:3.185;
+ --iphone-body-limit:432px;
+ --iphone-fit-gap:90px;
+ --iphone-page-gutter:24px;
+ --phone-width:min(var(--iphone-body-limit),calc((100dvh - var(--iphone-fit-gap)) * .4845375017),calc(100vw - var(--iphone-page-gutter)));
+ --iphone-frame:var(--prototype-color-17181b,#18181b);
+ --iphone-rim:rgba(63,63,70,.4);
+ --iphone-key-face:#27272a;
+ --iphone-key-edge:#52525b;
+ --iphone-glass:#050506;
+ --iphone-lens-outer:#08090e;
+ --iphone-lens-center:#14213a;
+ --iphone-shadow:0 24px 60px rgba(24,24,27,.16),0 3px 10px rgba(24,24,27,.13);
+}
+.device-wrap{
+ --iphone-body-scale:calc(var(--phone-width) / 288);
+ --iphone-mm:calc(var(--phone-width) / var(--iphone-body-width-mm));
+ --iphone-point:calc(var(--phone-width) * .91084674598 / 393);
+ --iphone-bezel:calc(var(--iphone-mm) * var(--iphone-inset-mm));
+ --iphone-border:calc(var(--iphone-body-scale) * 8);
+ --iphone-outer-radius:calc(var(--iphone-body-scale) * 45);
+ --iphone-display-radius:calc(var(--iphone-point) * 54);
+ width:var(--phone-width);
+}
+.device{
+ box-sizing:border-box;
+ width:100%;
+ height:calc(var(--iphone-mm) * var(--iphone-body-height-mm));
+ aspect-ratio:var(--iphone-body-width-mm) / var(--iphone-body-height-mm);
+ padding:calc(var(--iphone-bezel) - var(--iphone-border));
+ border:var(--iphone-border) solid var(--iphone-frame);
+ border-radius:var(--iphone-outer-radius);
+ background:var(--iphone-frame);
+ box-shadow:var(--iphone-shadow);
+ isolation:isolate;
+}
+.device::before{
+ content:'';
+ position:absolute;
+ inset:calc(var(--iphone-body-scale) * -1);
+ z-index:3;
+ border:calc(var(--iphone-body-scale) * 3) solid var(--iphone-rim);
+ border-radius:calc(var(--iphone-outer-radius) - var(--iphone-body-scale) * 5.3);
+ box-shadow:inset 0 0 0 calc(var(--iphone-body-scale) * .5) rgba(255,255,255,.08);
+ pointer-events:none;
+}
+.device .screen{
+ box-sizing:border-box;
+ width:100%;
+ height:100%;
+ min-height:0;
+ border:0;
+ border-radius:var(--iphone-display-radius);
+ background:var(--bg-primary,#fff);
+ overflow:hidden;
+ position:relative;
+ z-index:1;
+}
+/* The speaker stays in the frame; it never overlays or intercepts the product UI. */
+.device .screen::before{
+ content:'';
+ position:absolute;
+ top:calc(var(--iphone-point) * 1.5);
+ left:50%;
+ width:calc(var(--iphone-point) * 58);
+ height:calc(var(--iphone-point) * 1);
+ border-radius:999px;
+ background:var(--iphone-glass);
+ opacity:.42;
+ transform:translateX(-50%);
+ pointer-events:none;
+ z-index:31;
+}
+.device .status-bar,
+.device .screen:is(.is-flow-home,.is-flow-search,.is-flow-listing,.is-flow-detail) .status-bar{
+ box-sizing:border-box;
+ height:calc(var(--iphone-point) * 59);
+ flex:0 0 calc(var(--iphone-point) * 59);
+ padding:calc(var(--iphone-point) * 4) calc(var(--iphone-point) * 26) 0;
+ font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+ font-size:calc(var(--iphone-point) * 17);
+ font-weight:600;
+ line-height:1;
+ letter-spacing:calc(var(--iphone-point) * -.3);
+}
+.device .dynamic-island{
+ top:calc(var(--iphone-point) * 11);
+ left:50%;
+ width:calc(var(--iphone-point) * 126);
+ height:calc(var(--iphone-point) * 37);
+ border:0;
+ border-radius:999px;
+ background:var(--iphone-glass);
+ transform:translateX(-50%);
+ pointer-events:none;
+}
+.device .dynamic-island::before{
+ content:'';
+ position:absolute;
+ left:calc(var(--iphone-point) * 15);
+ top:calc(var(--iphone-point) * 12.5);
+ width:calc(var(--iphone-point) * 57);
+ height:calc(var(--iphone-point) * 12);
+ border-radius:999px;
+ background:linear-gradient(180deg,#060609,#09090c);
+ opacity:.65;
+}
+.device .dynamic-island::after{
+ content:'';
+ position:absolute;
+ right:calc(var(--iphone-point) * 11.5);
+ top:calc(var(--iphone-point) * 12.5);
+ width:calc(var(--iphone-point) * 12);
+ height:calc(var(--iphone-point) * 12);
+ border:calc(var(--iphone-point) * 1) solid var(--iphone-lens-outer);
+ border-radius:50%;
+ background:radial-gradient(circle at 38% 34%,#27354c 0 8%,var(--iphone-lens-center) 19%,#0c1220 42%,#06070b 68%);
+ box-shadow:0 0 0 calc(var(--iphone-point) * 2) #07080b;
+}
+.device .status-icons{gap:calc(var(--iphone-point) * 5);height:calc(var(--iphone-point) * 16)}
+.device .status-icons .signal{width:calc(var(--iphone-point) * 18);height:calc(var(--iphone-point) * 12);gap:calc(var(--iphone-point) * 1)}
+.device .status-icons .ui-icon-wifi{width:calc(var(--iphone-point) * 17);height:calc(var(--iphone-point) * 16)}
+.device .status-icons .ui-icon-battery{width:calc(var(--iphone-point) * 25);height:calc(var(--iphone-point) * 16)}
+.device .home-indicator,
+.device .screen:is(.is-flow-home,.is-flow-search,.is-flow-listing,.is-flow-detail) .home-indicator{
+ height:calc(var(--iphone-point) * 34);
+ flex:0 0 calc(var(--iphone-point) * 34);
+}
+/* Preserve the empty native safe area requested for the prototype. */
+.device .home-indicator::before,.device .home-indicator::after{content:none}
+.device .side-key,.device::after{
+ position:absolute;
+ width:calc(var(--iphone-body-scale) * 6);
+ border:calc(var(--iphone-body-scale) * .5) solid var(--iphone-key-edge);
+ border-radius:calc(var(--iphone-body-scale) * 2);
+ background:var(--iphone-key-face);
+ box-shadow:inset calc(var(--iphone-body-scale) * 1) 0 0 rgba(255,255,255,.08);
+ z-index:-1;
+ pointer-events:none;
+}
+.device .side-key{left:calc(var(--iphone-body-scale) * -12)}
+.device .key-one{top:calc(var(--iphone-body-scale) * 80);height:calc(var(--iphone-body-scale) * 32)}
+.device .key-two{top:calc(var(--iphone-body-scale) * 144);height:calc(var(--iphone-body-scale) * 48)}
+.device .key-three{top:calc(var(--iphone-body-scale) * 208);height:calc(var(--iphone-body-scale) * 48)}
+.device::after{content:'';right:calc(var(--iphone-body-scale) * -12);left:auto;top:calc(var(--iphone-body-scale) * 144);height:calc(var(--iphone-body-scale) * 64)}
+@media(max-width:760px){:root{--iphone-fit-gap:76px}}
+/* Receiver slit belongs to the top bezel, outside the active display. */
+.device::before{background:linear-gradient(var(--iphone-key-edge),var(--iphone-frame)) no-repeat center 0 / calc(var(--iphone-point) * 58) calc(var(--iphone-point) * 1)}
+.device .screen::before{content:none}
+/* Explicit active-area dimensions avoid fractional CSS border rounding changing the screen ratio. */
+.device .screen{
+ position:absolute;
+ width:calc(var(--iphone-mm) * var(--iphone-active-width-mm));
+ height:calc(var(--iphone-mm) * var(--iphone-active-height-mm));
+ left:calc(50% - var(--iphone-mm) * var(--iphone-active-width-mm) / 2);
+ top:calc(50% - var(--iphone-mm) * var(--iphone-active-height-mm) / 2);
+}
+/* The hardware cutout is a screen sibling of the status bar, including during splash. */
+.device .dynamic-island{position:absolute;z-index:40}
+/* The shell owns the 34pt safe area; navigation must not reserve it a second time. */
+.device{--bottom-nav-height:72px}
+.device .flow-bottom-nav{height:72px;padding:8px var(--bottom-nav-edge) 10px}
+/* Nonvehicle personal cards use one compact density in the native-height viewport. */
+.device .deck-card:not(.deck-buy):not(.deck-cars){padding:var(--spacing-12);gap:var(--spacing-6)}

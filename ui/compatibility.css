@@ -1,0 +1,271 @@
+/* Explicit no-redesign exceptions. These values have no exact source token.
+ * Preserve source UI geometry/artwork/colours; do not call these V3 tokens.
+ * Review or remove only in a separately authorised visual-normalisation pass. */
+:root{
+  --prototype-splash-logo-width: 160px;
+  --prototype-logical-width: 360px;
+  --prototype-service-art-height: 250px;
+  --prototype-measure-1px: 1px;
+  /* Preserve fallback glyphs (e.g. ↗) in the original presentation shell. */
+  --prototype-font-family: Geist,Arial,sans-serif;
+  --prototype-color-00000006: #00000006;
+  --prototype-color-0002: #0002;
+  --prototype-color-08080b: #08080b;
+  --prototype-color-0f172b: #0f172b;
+  --prototype-color-11131a: #11131a;
+  --prototype-color-14102b18: #14102b18;
+  --prototype-color-141414: #141414;
+  --prototype-color-157348: #157348;
+  --prototype-color-161616: #161616;
+  --prototype-color-17181b: #17181b;
+  --prototype-color-171b2b: #171b2b;
+  --prototype-color-1a1a1a: #1a1a1a;
+  --prototype-color-2530541e: #2530541e;
+  --prototype-color-333: #333;
+  --prototype-color-388367: #388367;
+  --prototype-color-392bcb: #392bcb;
+  --prototype-color-4933ff: #4933ff;
+  --prototype-color-53545a: #53545a;
+  --prototype-color-62748e: #62748e;
+  --prototype-color-6c6e74: #6c6e74;
+  --prototype-color-778599: #778599;
+  --prototype-color-7d8495: #7d8495;
+  --prototype-color-7e88a2: #7e88a2;
+  --prototype-color-848b9b: #848b9b;
+  --prototype-color-8490a3: #8490a3;
+  --prototype-color-8892a3: #8892a3;
+  --prototype-color-8e98aa: #8e98aa;
+  --prototype-color-9299a9: #9299a9;
+  --prototype-color-939aaa: #939aaa;
+  --prototype-color-999ba2: #999ba2;
+  --prototype-color-b42318: #b42318;
+  --prototype-color-b8b3ff: #b8b3ff;
+  --prototype-color-black: black;
+  --prototype-color-c7cede: #c7cede;
+  --prototype-color-ccd0db: #ccd0db;
+  --prototype-color-d2ccff: #d2ccff;
+  --prototype-color-d6d7db: #d6d7db;
+  --prototype-color-d8dce5: #d8dce5;
+  --prototype-color-d95c37: #d95c37;
+  --prototype-color-dddfe7: #dddfe7;
+  --prototype-color-dfe1e9: #dfe1e9;
+  --prototype-color-e0dcff: #e0dcff;
+  --prototype-color-e0dfff: #e0dfff;
+  --prototype-color-e2e3e9: #e2e3e9;
+  --prototype-color-e3e1ff: #e3e1ff;
+  --prototype-color-f3f4f7: #f3f4f7;
+  --prototype-color-f4c7c3: #f4c7c3;
+  --prototype-color-f4f1e9: #f4f1e9;
+  --prototype-color-f4f3ff: #f4f3ff;
+  --prototype-color-f4f4f7: #f4f4f7;
+  --prototype-color-f7f6ff: #f7f6ff;
+  --prototype-color-f8f7ff: #f8f7ff;
+  --prototype-color-fff9f9: #fff9f9;
+  --prototype-color-rgba-225-224-255-72: rgba(225,224,255,.72);
+  --prototype-color-rgba-255-255-255-5: rgba(255,255,255,.5);
+  --prototype-color-rgba-255-255-255-65: rgba(255,255,255,.65);
+  --prototype-color-rgba-255-255-255-98: rgba(255,255,255,.98);
+  --prototype-leading-1-12: 1.12;
+  --prototype-leading-1-19: 1.19;
+  --prototype-leading-1-3: 1.3;
+  --prototype-leading-1-4: 1.4;
+  --prototype-leading-1-5: 1.5;
+  --prototype-leading-1-55: 1.55;
+  --prototype-leading-1-6: 1.6;
+  --prototype-leading-1-65: 1.65;
+  --prototype-leading-1-8: 1.8;
+  --prototype-measure-1-4px: 1.4px;
+  --prototype-measure-1-6px: 1.6px;
+  --prototype-measure-108px: 108px;
+  --prototype-measure-10px: 10px;
+  --prototype-measure-110px: 110px;
+  --prototype-measure-112px: 112px;
+  --prototype-measure-114px: 114px;
+  --prototype-measure-115px: 115px;
+  --prototype-measure-11px: 11px;
+  --prototype-measure-130px: 130px;
+  --prototype-measure-132px: 132px;
+  --prototype-measure-13px: 13px;
+  --prototype-measure-140px: 140px;
+  --prototype-measure-146px: 146px;
+  --prototype-measure-150px: 150px;
+  --prototype-measure-15px: 15px;
+  --prototype-measure-160px: 160px;
+  --prototype-measure-166px: 166px;
+  --prototype-measure-180px: 180px;
+  --prototype-measure-190px: 190px;
+  --prototype-measure-19px: 19px;
+  --prototype-measure-203px: 203px;
+  --prototype-measure-204px: 204px;
+  --prototype-measure-20px: 20px;
+  --prototype-measure-210px: 210px;
+  --prototype-measure-220px: 220px;
+  --prototype-measure-22px: 22px;
+  --prototype-measure-230px: 230px;
+  --prototype-measure-23px: 23px;
+  --prototype-measure-250px: 250px;
+  --prototype-measure-25px: 25px;
+  --prototype-measure-26px: 26px;
+  --prototype-measure-27px: 27px;
+  --prototype-measure-280px: 280px;
+  --prototype-measure-2px: 2px;
+  --prototype-measure-30px: 30px;
+  --prototype-measure-33-907px: 33.907px;
+  --prototype-measure-33-914px: 33.914px;
+  --prototype-measure-340px: 340px;
+  --prototype-measure-34px: 34px;
+  --prototype-measure-38px: 38px;
+  --prototype-measure-390px: 390px;
+  --prototype-measure-3px: 3px;
+  --prototype-measure-42px: 42px;
+  --prototype-measure-44px: 44px;
+  --prototype-measure-45px: 45px;
+  --prototype-measure-480px: 480px;
+  --prototype-measure-48px: 48px;
+  --prototype-measure-50px: 50px;
+  --prototype-measure-52px: 52px;
+  --prototype-measure-54px: 54px;
+  --prototype-measure-550px: 550px;
+  --prototype-measure-560px: 560px;
+  --prototype-measure-56px: 56px;
+  --prototype-measure-57px: 57px;
+  --prototype-measure-5px: 5px;
+  --prototype-measure-60px: 60px;
+  --prototype-measure-62px: 62px;
+  --prototype-measure-640px: 640px;
+  --prototype-measure-647px: 647px;
+  --prototype-measure-65px: 65px;
+  --prototype-measure-67px: 67px;
+  --prototype-measure-70px: 70px;
+  --prototype-measure-744px: 744px;
+  --prototype-measure-76px: 76px;
+  --prototype-measure-7px: 7px;
+  --prototype-measure-85px: 85px;
+  --prototype-measure-90px: 90px;
+  --prototype-measure-94px: 94px;
+  --prototype-measure-95px: 95px;
+  --prototype-measure-97px: 97px;
+  --prototype-measure-999px: 999px;
+  --prototype-measure-9px: 9px;
+  --prototype-tracking-tight-display: -1.6px;
+  --prototype-tracking-tight-small: -.5px;
+  --prototype-tracking-tight-label: -.6px;
+  --prototype-tracking-tight-heading: -.8px;
+  --prototype-measure-17px: 17px;
+}
+
+/* CLP source-specific geometry and exact visual values from Figma 14783:253475. */
+:root{
+  --clp-header-height:222px;
+  --clp-note-size:7px;
+  --clp-sort-width:130px;
+  --clp-seller-width:120px;
+  --clp-photo-height:162px;
+  --clp-car-height:124px;
+  --clp-photo-compact:112px;
+  --clp-car-compact:92px;
+  --clp-footer-height:364px;
+  --clp-footer-car-width:217.952px;
+  --clp-card-height:324px;
+  --clp-body-height:126px;
+  --clp-toolbar-height:56px;
+  --clp-control-height:32px;
+  --clp-card-title:13px;
+  --clp-card-small:11px;
+  --clp-price-size:15px;
+  --clp-results-top:12px;
+  --clp-inventory-top:28px;
+  --clp-badge-surface:#e0fce9;
+  --clp-badge-ink:#15834a;
+  --clp-count-height:16px;
+  --clp-seller-height:66px;
+  --clp-footer-paper:#f5f5f5;
+  --clp-footer-dark:#353536;
+  --clp-footer-road:#101010;
+  --clp-footer-heading:36px;
+  --clp-footer-leading:34px;
+  --clp-footer-car-left:120.5px;
+  --clp-footer-car-top:152.091px;
+  --clp-footer-bubble-top:121px;
+  --clp-footer-bubble-width:138px;
+  --clp-footer-bubble-height:40px;
+  --clp-footer-bubble-left:15px;
+  --clp-footer-sky-width:385px;
+  --clp-footer-sky-height:252px;
+  --clp-footer-sky-left:-15px;
+  --clp-footer-sky-top:35px;
+  --clp-footer-road-top:270px;
+  --clp-footer-road-height:130px;
+  --clp-footer-road-rotate:-4deg;
+  --clp-footer-heading-top:50px;
+  --clp-footer-heading-leading:18px;
+  --clp-card-half-border:.5px;
+  --clp-card-shadow:0 0 12px #0000000f;
+  --clp-seller-bottom:13px;
+  --clp-photo-stage-width:419px;
+  --clp-photo-stage-height:76px;
+  --clp-photo-stage-top:63px;
+  --clp-filter-width:99px;
+  /* Keep the native chevron and Sort by label visible together. */
+  --clp-sort-control-width:110px;
+  --clp-category-width:115px;
+  --clp-chip-radius:20px;
+  --clp-source-line:#bab4ff;
+  --clp-selected-paper:#f8fafc;
+  --clp-car-slot-width:252px;
+  --clp-car-slot-height:146px;
+  --clp-elite-width:48.197px;
+  --clp-elite-height:8px;
+  --clp-source-owner-bg:#f3f2ff;
+  --clp-source-dealer-bg:#f5fffc;
+  --clp-source-dealer-line:#127c69;
+  --clp-source-dealer-ink:#368c61;
+  --clp-source-direct-bg:#fff5f2;
+  --clp-source-direct-line:#ffbdb1;
+  --clp-source-direct-ink:#ff4c1a;
+  --clp-ribbon-width:73px;
+  --clp-ribbon-cap-width:27px;
+  --clp-source-assurance-blue:#ecf3ff;
+  --clp-source-assurance-blue-line:#7cb1fc;
+  --clp-status-time-left:37px;
+  --clp-status-time-top:19px;
+  --clp-status-time-size:17px;
+  --clp-status-right-left:256px;
+  --clp-status-right-top:19px;
+  --clp-status-right-width:77.4px;
+  --clp-status-right-height:13px;
+  --clp-header-row-height:64px;
+  --clp-nav-label-size:15px;
+  --clp-header-search-height:40px;
+  --clp-dots-bottom:10px;
+  --clp-dots-size:4px;
+  --clp-dot-gap:2px;
+  --clp-wave-height:38px;
+  --clp-road-top:236.75px;
+  --clp-road-left:-14.66px;
+  --clp-road-width:384.961px;
+  --clp-road-height:329.868px;
+  --clp-road-inner-width:380.2px;
+  --clp-road-inner-height:270.557px;
+  --clp-road-rotate:-9deg;
+  --clp-road-skew:-7deg;
+}
+:root{--clp-compact-height:176px}
+
+/* Source CLP uses Inter in the footer and real Geist Bold in card headings. */
+:root{--clp-font-footer:CLPInter,Arial,sans-serif;--clp-font-title:CLPGeist,Geist,sans-serif;}
+
+/* Exact footer artwork transforms from CLP frame 14783:253489. */
+:root{--clp-footer-car-height:120.447px;--clp-footer-heading-gap:3px;--clp-road-surface-left:-196px;--clp-road-surface-top:240px;--clp-road-surface-width:731.987px;--clp-road-surface-height:61.465px;--clp-road-surface-inner-width:587.849px;--clp-road-surface-inner-height:147px;--clp-road-surface-transform:rotate(-4deg) scaleY(.21) skewX(78deg);--clp-road-surface-gradient:linear-gradient(238.16763070879392deg,#0f0f10 .99091%,#717272 120.32%);--clp-thought-small-left:136px;--clp-thought-small-top:180px;--clp-thought-large-left:123px;--clp-thought-large-top:163px;--clp-thought-medium-left:131px;--clp-thought-medium-top:173px;}
+
+:root{--clp-assurance-gradient:linear-gradient(180deg,var(--bg-primary),var(--color-electric-violet-50));--clp-tab-icon-radius:4.571px;--clp-tab-icon-owned:#4031e5;}
+
+:root{--clp-road-inner-transform:rotate(-9deg) skewX(-7deg) scaleY(.99);}
+
+:root{--clp-source-small-leading:17px;--clp-seller-logo-gap:1px;}
+
+/* Edge fades reveal which assurance-chip content remains available to scroll. */
+:root{--clp-assurance-mask-start:linear-gradient(to right,var(--ink) calc(100% - var(--spacing-12)),transparent);--clp-assurance-mask-middle:linear-gradient(to right,transparent,var(--ink) var(--spacing-12),var(--ink) calc(100% - var(--spacing-12)),transparent);--clp-assurance-mask-end:linear-gradient(to right,transparent,var(--ink) var(--spacing-12));}
+
+/* CLP source Page control: I14783:253483;19267:372286;19267:243486. */
+:root{--clp-gallery-pages-top:118px;}

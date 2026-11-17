@@ -1,0 +1,22 @@
+/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 */
+/* Logo coordinates live in src/makes.json and reproduce Figma's 40 × 30 crop. */
+.make-logo{display:inline-block;position:relative;overflow:hidden;width:var(--spacing-40);height:auto;aspect-ratio:4/3;flex-shrink:0;vertical-align:middle}
+.make-logo>img{position:absolute;max-width:none;object-fit:fill;pointer-events:none}
+.make-field-label{display:flex;align-items:center;gap:var(--spacing-8)}
+.make-exploration{margin:var(--spacing-16) 0}
+.make-exploration h3{font-size:var(--font-size-sm);font-weight:var(--font-weight-semibold);margin:0 0 var(--spacing-12)}
+.make-rail{display:flex;gap:var(--spacing-12);overflow-x:auto;padding:var(--spacing-4);scroll-padding:var(--spacing-4)}
+.make-rail-button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--spacing-8);flex:0 0 var(--spacing-88);min-height:var(--spacing-80);padding:var(--spacing-8) var(--spacing-4);font-size:var(--font-size-xs);color:var(--text-primary);border:var(--border-width-thin) solid var(--border-secondary);border-radius:var(--radius-alt-md);background:var(--bg-primary)}
+.make-rail-button[aria-pressed=true],.make-filter-choice[aria-pressed=true]{border-color:var(--border-brand-base);background:var(--bg-brand-subtler)}
+.make-rail-button:focus-visible,.make-filter-choice:focus-visible{outline:var(--spacing-2) solid var(--border-brand-base);outline-offset:var(--spacing-2)}
+.search-experience .brand-mark .make-logo{width:var(--spacing-40);height:auto;aspect-ratio:4/3}
+.search-experience .brand-mark .make-logo>img{object-fit:fill}
+.search-experience .make-filter-choice{display:inline-flex;align-items:center;justify-content:center;gap:var(--spacing-8);min-height:var(--spacing-48);padding:var(--spacing-8) var(--spacing-12);border:var(--border-width-thin) solid var(--border-secondary);border-radius:var(--radius-alt-md);background:var(--bg-primary);color:var(--text-primary);font-size:var(--size-label-3)}
+.search-experience .make-filter-choice[aria-pressed=true]{border-color:var(--border-brand-base);background:var(--bg-brand-subtler)}
+
+/* Give make exploration its own viewport card so vehicle cards retain their space. */
+.deck-makes{gap:var(--spacing-8)}
+.deck-makes .subcopy{margin:0}
+.deck-makes .make-exploration{margin:0}
+.deck-makes .make-rail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-flow:row;grid-auto-columns:auto;height:auto;overflow:visible;gap:var(--spacing-8)}
+.deck-makes .make-rail-button{width:100%;min-height:var(--spacing-64);gap:var(--spacing-4);padding:var(--spacing-4)}

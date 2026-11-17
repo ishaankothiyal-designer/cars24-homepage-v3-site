@@ -1,0 +1,36 @@
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 */
+/* Appointment adaptation: source date rail, four-column time grid and confirmation. */
+.appointment-view .form-content{padding-bottom:var(--spacing-24)}
+.appointment-view h2{font-size:var(--font-size-2xl);line-height:var(--line-height-display-1);margin-bottom:var(--spacing-8)}
+.appointment-context,.appointment-demo{font-size:var(--font-size-xs);color:var(--secondary);margin:var(--spacing-8) 0 var(--spacing-16)}
+.appointment-steps{display:flex;gap:var(--spacing-12);padding:var(--spacing-12) 0;border-bottom:var(--border-width-thin) solid var(--line);margin-bottom:var(--spacing-20);font-size:var(--font-size-xs);color:var(--secondary)}
+.appointment-steps [aria-current]{color:var(--brand);font-weight:var(--font-weight-semibold)}
+.appointment-locations{display:grid;gap:var(--spacing-8);margin-top:var(--spacing-12)}
+.appointment-location,.appointment-date,.appointment-time{background:var(--surface);color:var(--ink);border:var(--border-width-thin) solid var(--line);border-radius:var(--radius-sm);min-height:var(--spacing-48);padding:var(--spacing-12);font:inherit;text-align:center;cursor:pointer}
+.appointment-location{text-align:left;min-height:var(--spacing-64)}
+.appointment-location.selected,.appointment-date.selected,.appointment-time.selected{border-color:var(--brand);background:var(--active);color:var(--brand);box-shadow:inset 0 0 0 var(--border-width-thin) var(--brand)}
+.appointment-fieldset{border:0;padding:0;margin:var(--spacing-20) 0;min-width:0}
+.appointment-fieldset legend{font-weight:var(--font-weight-semibold);margin-bottom:var(--spacing-12)}
+.appointment-date-rail{display:flex;overflow:auto;gap:var(--spacing-8);padding:var(--spacing-4);scroll-snap-type:x proximity}
+.appointment-date{flex:0 0 var(--spacing-96);min-height:var(--spacing-64);font-size:var(--font-size-sm);scroll-snap-align:start;white-space:normal}
+.appointment-time-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--spacing-8)}
+.appointment-time{padding:var(--spacing-8) var(--spacing-4);font-size:var(--font-size-sm);min-width:0}
+.appointment-time:disabled{color:var(--color-slate-400);background:var(--color-slate-200);cursor:not-allowed}
+.appointment-location-summary{font-size:var(--font-size-sm);display:flex;align-items:center;gap:var(--spacing-8);color:var(--secondary)}
+.appointment-details{margin:var(--spacing-16) 0;border:var(--border-width-thin) solid var(--line);border-radius:var(--radius);background:var(--surface);padding:0 var(--spacing-16)}
+.appointment-details div{padding:var(--spacing-12) 0;border-bottom:var(--border-width-thin) solid var(--line)}
+.appointment-details div:last-child{border-bottom:0}
+.appointment-details dt{font-size:var(--font-size-xs);color:var(--secondary);margin-bottom:var(--spacing-4)}
+.appointment-details dd{margin:0;font-size:var(--font-size-sm);font-weight:var(--font-weight-medium);overflow-wrap:anywhere}
+.appointment-success{background:var(--brand);color:var(--color-base-white-500);padding:var(--spacing-24) var(--spacing-16);border-radius:var(--radius);display:flex;align-items:center;flex-direction:column;gap:var(--spacing-12);text-align:center}
+.appointment-success>.ui-icon{font-size:var(--font-size-4xl)}
+.appointment-success strong{font-size:var(--font-size-xl)}
+.appointment-next ol{padding-left:var(--spacing-20);display:grid;gap:var(--spacing-16)}
+.appointment-next li{font-size:var(--font-size-sm);font-weight:var(--font-weight-medium)}
+.appointment-next small{display:block;font-weight:var(--font-weight-normal);color:var(--secondary);line-height:var(--line-height-body-2);margin-top:var(--spacing-4)}
+.appointment-view button:focus-visible{outline:var(--border-width-regular) solid var(--brand);outline-offset:var(--spacing-4)}
+
+.appointment-periods{grid-template-columns:1fr}
+.appointment-treatment{font-size:var(--font-size-sm);color:var(--secondary);margin-bottom:var(--spacing-12)}
+
+.appointment-view>.actions{flex:none;margin:0;padding:var(--spacing-12) var(--spacing-24) var(--spacing-8);border-top:var(--border-width-thin) solid var(--line);background:var(--surface)}

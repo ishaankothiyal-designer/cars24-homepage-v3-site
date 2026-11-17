@@ -1,0 +1,17 @@
+{
+  "source": "https://www.figma.com/design/vUWcEjqUnCCUhKiNZ4DNWn?node-id=16119-22",
+  "retrieved": "2026-11-16",
+  "reason": "Exact transmission icons absent from inspected Autonaut catalogue; supplied Global Icon System fallback",
+  "icons": [
+    {
+      "name": "transmission-automatic",
+      "nodeId": "15255:2194",
+      "sha256": "08e34b1fc5b44c21d8478a875d3181deb7f9bb023d6c6f364993f835efd72ed7"
+    },
+    {
+      "name": "transmission-manual",
+      "nodeId": "15255:2308",
+      "sha256": "787c87a723b8d8118afe9eab727fdb776bcf66c53c4bcff64a0542482485b012"
+    }
+  ]
+}

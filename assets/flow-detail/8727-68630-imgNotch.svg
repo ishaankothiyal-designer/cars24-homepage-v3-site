@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="121" height="36" viewBox="0 0 121 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Notch">
+<rect width="121" height="36" rx="18" fill="black"/>
+<circle id="Camera" cx="102" cy="18" r="6.5" fill="url(#paint0_radial_0_207)" stroke-width="5" stroke="#212121"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_207" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(102 18) rotate(-180) scale(9 3.22841)">
+<stop offset="0.319066"/>
+<stop offset="1" stop-color="#5B5B5B"/>
+</radialGradient>
+</defs>
+</svg>

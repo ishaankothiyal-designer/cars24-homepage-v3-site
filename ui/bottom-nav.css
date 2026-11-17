@@ -1,0 +1,25 @@
+/* Source-backed navigation: original tab artwork, CarGPT orb and frosted glass. */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
+:root{
+ --bottom-nav-glass:color-mix(in srgb,var(--bg-primary) 62%,transparent);
+ --bottom-nav-selected:color-mix(in srgb,var(--bg-primary) 72%,transparent);
+ --bottom-nav-glass-edge:color-mix(in srgb,var(--bg-primary) 90%,transparent);
+ --bottom-nav-glass-tint:color-mix(in srgb,var(--color-cobalt-blue-100) 40%,transparent);
+}
+.bottom-nav-pill,.bottom-nav-search{
+ background:linear-gradient(145deg,var(--bottom-nav-glass-edge),var(--bottom-nav-glass) 42%,var(--bottom-nav-glass-tint));
+ border-color:var(--bottom-nav-glass-edge);
+ box-shadow:inset 0 var(--prototype-measure-1px) 0 var(--bg-primary),inset 0 calc(var(--prototype-measure-1px) * -1) var(--spacing-4) var(--bottom-nav-glass-tint),var(--drop-shadow-sm);
+ backdrop-filter:blur(var(--spacing-24)) saturate(1.5);
+ -webkit-backdrop-filter:blur(var(--spacing-24)) saturate(1.5);
+}
+.bottom-nav-tab[aria-current=page]{
+ background:var(--bottom-nav-selected);
+ box-shadow:inset 0 var(--prototype-measure-1px) 0 var(--bg-primary),var(--bottom-nav-shadow);
+}
+.bottom-nav-search .cargpt-entry-orb{width:var(--spacing-48);height:var(--spacing-48);object-fit:contain;pointer-events:none}
+.nav-img>img{object-fit:contain}
+
+/* Phase V2 source 8266:36509: full service row scrolls within the mobile canvas. */
+.card-home .nav-tabs{flex:none;min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}
+.card-home .nav-tab{flex:0 0 var(--prototype-measure-70px);min-width:var(--prototype-measure-70px);width:var(--prototype-measure-70px)}

@@ -1,0 +1,208 @@
+{
+  "figmaFile": "ttwWd3vH4lRPzfPLM8rOun",
+  "accessed": "2026-11-17",
+  "assets": [
+    {
+      "file": "imgTypeSedan.png",
+      "sourceNode": "8727:57814",
+      "sha256": "c008108a15cae4934ce13bb3d64d96752391c44b36100af826d824fcf4c5a143"
+    },
+    {
+      "file": "imgImage21949.png",
+      "sourceNode": "8727:57814",
+      "sha256": "b27af00969892dbbfe1c580552cd84907e2cc225e3eb2b11b64a8ba6666e1bbd"
+    },
+    {
+      "file": "imgCarBrandLogo43Png.png",
+      "sourceNode": "8727:57814",
+      "sha256": "6114bb440458ba941eebcd9183ec39931962b03289e0cae4188933ca01e17170"
+    },
+    {
+      "file": "imgCarBrandLogo43Png1.png",
+      "sourceNode": "8727:57814",
+      "sha256": "82c168ebd21f615dafbeafa90c8a2bbf9454d2e96015bac4ebec558090b54af1"
+    },
+    {
+      "file": "imgCarBrandLogo43Png2.png",
+      "sourceNode": "8727:57814",
+      "sha256": "96183fcd0468258595c9ae76ea122f3472b71bbdfef83695b741a3e25a6c04af"
+    },
+    {
+      "file": "imgCarBrandLogo43Png3.png",
+      "sourceNode": "8727:57814",
+      "sha256": "4e9002e12664ddaeb50e82f2e95216b39c85f41224ee353827aa77a0d4109001"
+    },
+    {
+      "file": "imgCarBrandLogo43Png4.png",
+      "sourceNode": "8727:57814",
+      "sha256": "b51587b8215360fb028e4181ea866da91461357a71dd7800926ff6b5c1fac384"
+    },
+    {
+      "file": "imgImage2.png",
+      "sourceNode": "8727:57814",
+      "sha256": "b288d7635f3bae389541575d985d6df18977be6e6c91208dc2ad62ba2f080c29"
+    },
+    {
+      "file": "imgImage84139848.png",
+      "sourceNode": "8727:57814",
+      "sha256": "5a6249d385050cbc4e9c9e79819a514a5227e48b781123b4534e3316f091e30f"
+    },
+    {
+      "file": "imgImage3.png",
+      "sourceNode": "8727:57814",
+      "sha256": "0785b2097eda178427a32e9872b9f2c410a9dd86191e249b2327ae6f8e226796"
+    },
+    {
+      "file": "imgImage4.png",
+      "sourceNode": "8727:57814",
+      "sha256": "6d489d30f81950608021ba195cf7a92cf887951d54ab5e27270409a63890e8d5"
+    },
+    {
+      "file": "imgImage5.png",
+      "sourceNode": "8727:57814",
+      "sha256": "f97640f4ad70a5307ce3fc5c59f6822aff770c9135e9ef4b8a3c71d36379f3e4"
+    },
+    {
+      "file": "imgImage.png",
+      "sourceNode": "8727:57814",
+      "sha256": "45c06f6266ce031e0244bdd04cc349706d4ec8973555dec4e7a4eb6f198b6109"
+    },
+    {
+      "file": "imgImage1.png",
+      "sourceNode": "8727:57814",
+      "sha256": "cb8edd58fda410886a68c2545c563f6073acc231be67d5c7ec1b92b81d4c6e05"
+    },
+    {
+      "file": "imgImage6.png",
+      "sourceNode": "8727:57814",
+      "sha256": "782d5e36732c75a23f83d22fe2efc0b22ed45e5b3714c9160edb46d0b357fa89"
+    },
+    {
+      "file": "imgCar.png",
+      "sourceNode": "8727:57814",
+      "sha256": "4ca5123a4bf1ec4dd0f01dbc54f10989fdcda9459d7ecb99c1d3640f93fc3827"
+    },
+    {
+      "file": "imgCar1.png",
+      "sourceNode": "8727:57814",
+      "sha256": "fb6a571a241492cee23e792716d4b0e68aa9fd223ee88e0e4ee61e82fe48d284"
+    },
+    {
+      "file": "imgImage84139896.png",
+      "sourceNode": "8727:57814",
+      "sha256": "48258206e0edb7e531f3639fdca06485428c22e673884c77a40b790ff3100e20"
+    },
+    {
+      "file": "imgCar2.png",
+      "sourceNode": "8727:57814",
+      "sha256": "a64fa4f92d2dfc8398eff44e2df1773220ea5b409260263260e10dbb01747665"
+    },
+    {
+      "file": "imgCar3.png",
+      "sourceNode": "8727:57814",
+      "sha256": "1d25c54dfd844226544148755a85ae00ca90c88ab671dcb959d62a927a5a6f0f"
+    },
+    {
+      "file": "imgCar4.png",
+      "sourceNode": "8727:57814",
+      "sha256": "4a57f9e4a7f8f0c980812470bb50cc6c95677fc83eb0c4a616f0fc9e0c3d7b23"
+    },
+    {
+      "file": "imgVector4.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "90f8f64fb32b1b19c42f15a91a2ebcb7963703cbf76c686f81b9a8de96dd933e"
+    },
+    {
+      "file": "imgEllipse10801.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "e8845741e995243fe81b8664715f711e483fb69d3db7e1d490b247cc767fb187"
+    },
+    {
+      "file": "imgVector5.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "4f45ad77d6c006fd7a2c9f8e4ee94b60a2621cf93d203962a0f2547991ad8085"
+    },
+    {
+      "file": "imgBg.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "c2e0965f3ad6b777ecd7393505dbf6beee4e62b75ba2a9b8517eb3d688f07f4b"
+    },
+    {
+      "file": "imgBg1.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "3ef0a21ff98dec14bf1aa35d2291d3fdbc41af40a0105dfe6e16cb556beab825"
+    },
+    {
+      "file": "imgVector8499.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "69bcd4d7a0fc512c69e196971343b76626d2b8382bb33485a08e76178d26dc86"
+    },
+    {
+      "file": "imgBg2.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "a91d781f08e7e0a3078f32099a4d7bd8de67962efc12b2822259d4b4e7aaf4f9"
+    },
+    {
+      "file": "imgVector8498.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "3b9a61b7dd5e592c38670ece94ebca6ec4383e56b0bd13d0e9fdcfbef8f6235a"
+    },
+    {
+      "file": "imgBg3.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "6e858624b45e9d579e7deff309d47c431c2e23a459f1618682cce6885de506ff"
+    },
+    {
+      "file": "imgBg4.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "beb962b9e317c13d185c3784332ba852edf1960b851ce6039a411ec457d5697c"
+    },
+    {
+      "file": "imgBg5.svg",
+      "sourceNode": "8727:57814",
+      "sha256": "b4c3758690a30b561b59e1395a1bbb70aab3d52839a7814fc369f1038079438a"
+    },
+    {
+      "file": "back.svg",
+      "sourceNode": "I8727:57815;25697:3840;428:12718",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "ec39a3c02924106fa64075f8285adae5881f8f257dc2691232b369168d6b2426"
+    },
+    {
+      "file": "close.svg",
+      "sourceNode": "I8727:57815;25697:3840;428:12720",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "27b375670da814b8ef96e073031c2030ca6a78f1bd5bebe0cd1735fa66faed5c"
+    },
+    {
+      "file": "history.svg",
+      "sourceNode": "I8727:57820;584:17948",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "ce7cbb5eb774a608cb946459f3306977e3ddef4acb71e1bbade1d74720d96174"
+    },
+    {
+      "file": "filter.svg",
+      "sourceNode": "I8727:60958;9620:26809;9620:25862",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "9eeaf37281e1a841a04d7d58221ecb1e080cb44b1c74f9f256e66d79c0448b91"
+    },
+    {
+      "file": "trending.svg",
+      "sourceNode": "I8727:57830;584:17948",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "648e226ca2de3de27c41b44415caa630fb269405e689474cb20fd2b99118c1b9"
+    },
+    {
+      "file": "back-inverse.svg",
+      "sourceNode": "I8727:60957;10374:146171;2711:31154;2648:22194;2648:21741",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "210d33e32f30afc42c4a5a63185bc17f2f13f4c46758ea1735df27da562b355f"
+    },
+    {
+      "file": "heart-inverse.svg",
+      "sourceNode": "I8727:60957;10374:146171;2711:31154;2941:31702;2941:31416;2648:21741",
+      "export": "Original SVG export; geometry unchanged",
+      "sha256": "0a44fff2ccc64e285f04127d029d2cba8cc6c1d9f79691dfe6c93db722878ae6"
+    }
+  ]
+}

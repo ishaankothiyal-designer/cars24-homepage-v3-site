@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="38.4353" height="38.4353" viewBox="0 0 38.4353 38.4353" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147233070">
+<circle id="Ellipse 22243" cx="19.2176" cy="19.2176" r="19.2176" fill="#3C8BFB"/>
+<g id="vector">
+<path d="M27.1132 10.6797L31.208 14.7745L16.979 29.0034L8.54102 20.5654L12.6358 16.4706L16.979 20.8138L27.1132 10.6797Z" fill="white"/>
+<mask id="stroke0_0_399" fill="white">
+<path d="M27.1132 10.6797L31.208 14.7745L16.979 29.0034L8.54102 20.5654L12.6358 16.4706L16.979 20.8138L27.1132 10.6797Z"/>
+</mask>
+<path d="M31.208 14.7745L27.1132 10.6797L16.979 20.8138L12.6358 16.4706L8.54102 20.5654L16.979 29.0034L31.208 14.7745Z" stroke-width="0.574326" stroke="white" mask="url(#stroke0_0_399)"/>
+</g>
+</g>
+</svg>

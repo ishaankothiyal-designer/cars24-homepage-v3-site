@@ -1,0 +1,109 @@
+/* Autonaut Cars24 artwork; colour and dimensions inherit existing DLS tokens. */
+.ui-icon{display:inline-block;flex-shrink:0;width:1em;height:1em;font-style:normal;vertical-align:middle;background-color:currentColor;mask:var(--autonaut-icon) center/contain no-repeat;-webkit-mask:var(--autonaut-icon) center/contain no-repeat}
+.ui-icon::before{content:none!important}
+.ui-icon.is-filled{--autonaut-icon:var(--autonaut-filled)}
+.glass.ui-icon{background-image:none;background-position:initial;background-size:initial;background-color:currentColor;color:var(--brand)}
+.nav-img .ui-icon{font-size:var(--font-size-2xl)}
+.bottom-nav-search .ui-icon{font-size:var(--font-size-2xl)}
+.check .ui-icon,.chev .ui-icon{width:1em;height:1em}
+.deck-service>.ui-icon{font-size:var(--font-size-2xl);color:var(--brand)}
+.icon-btn .ui-icon,.header-search>.ui-icon,.search-wrap>.ui-icon{font-size:var(--font-size-xl)}
+.brand-location .ui-icon{font-size:var(--font-size-sm)}
+.save-car .ui-icon{font-size:var(--font-size-xl)}
+.status-icons .ui-icon{font-size:var(--font-size-sm)}
+.status-icons .ui-icon:last-child{font-size:var(--font-size-xl)}
+/* Icons use spare card corners so service cards keep their existing height. */
+.deck-service>.ui-icon:not(.glass){position:absolute;inset-block-start:var(--spacing-10);inset-inline-end:var(--spacing-10);font-size:var(--font-size-xl)}
+.deck-service:has(>.ui-icon:not(.glass))>strong{padding-inline-end:var(--spacing-24)}
+
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
+/* Choice rows keep task artwork compact and arrows aligned independently. */
+.choice>.glass.ui-icon{width:var(--spacing-24);height:var(--spacing-24)}
+.choice>.chev{display:inline-flex;align-items:center;justify-content:center;width:var(--spacing-20);height:var(--spacing-20);font-size:var(--font-size-xl)}
+
+.ui-icon-buy{--autonaut-icon:url('../assets/autonaut/car-front-view-regular.svg');--autonaut-filled:url('../assets/autonaut/car-front-view-fill.svg')}
+.ui-icon-sell{--autonaut-icon:url('../assets/autonaut/key-2-regular.svg');--autonaut-filled:url('../assets/autonaut/key-2-fill.svg')}
+.ui-icon-loans{--autonaut-icon:url('../assets/autonaut/money-hand-regular.svg');--autonaut-filled:url('../assets/autonaut/money-hand-fill.svg')}
+.ui-icon-checks{--autonaut-icon:url('../assets/autonaut/square-checklist-magnifying-glass-regular.svg');--autonaut-filled:url('../assets/autonaut/square-checklist-magnifying-glass-fill.svg')}
+.ui-icon-challan{--autonaut-icon:url('../assets/autonaut/receipt-bill-regular.svg');--autonaut-filled:url('../assets/autonaut/receipt-bill-fill.svg')}
+.ui-icon-insurance{--autonaut-icon:url('../assets/autonaut/shield-check-regular.svg');--autonaut-filled:url('../assets/autonaut/shield-check-fill.svg')}
+.ui-icon-ownership{--autonaut-icon:url('../assets/autonaut/garage-regular.svg');--autonaut-filled:url('../assets/autonaut/garage-fill.svg')}
+.ui-icon-care{--autonaut-icon:url('../assets/autonaut/toolbox-regular.svg');--autonaut-filled:url('../assets/autonaut/toolbox-fill.svg')}
+.ui-icon-all{--autonaut-icon:url('../assets/autonaut/layout-grid-1-regular.svg');--autonaut-filled:url('../assets/autonaut/layout-grid-1-fill.svg')}
+.ui-icon-home{--autonaut-icon:url('../assets/autonaut/home-personal-feed-regular.svg');--autonaut-filled:url('../assets/autonaut/home-personal-feed-fill.svg')}
+.ui-icon-orders{--autonaut-icon:url('../assets/autonaut/receipt-check-regular.svg');--autonaut-filled:url('../assets/autonaut/receipt-check-fill.svg')}
+.ui-icon-garage{--autonaut-icon:url('../assets/autonaut/garage-regular.svg');--autonaut-filled:url('../assets/autonaut/garage-fill.svg')}
+.ui-icon-ai{--autonaut-icon:url('../assets/autonaut/sparkles-three-regular.svg');--autonaut-filled:url('../assets/autonaut/sparkles-three-fill.svg')}
+.ui-icon-search{--autonaut-icon:url('../assets/autonaut/magnifying-glass-regular.svg');--autonaut-filled:url('../assets/autonaut/magnifying-glass-fill.svg')}
+.ui-icon-account{--autonaut-icon:url('../assets/autonaut/contacts-regular.svg');--autonaut-filled:url('../assets/autonaut/contacts-fill.svg')}
+.ui-icon-back{--autonaut-icon:url('../assets/autonaut/arrow-left-regular.svg');--autonaut-filled:url('../assets/autonaut/arrow-left-fill.svg')}
+.ui-icon-close{--autonaut-icon:url('../assets/autonaut/cross-large-regular.svg');--autonaut-filled:url('../assets/autonaut/cross-large-fill.svg')}
+.ui-icon-next{--autonaut-icon:url('../assets/autonaut/chevron-right-regular.svg');--autonaut-filled:url('../assets/autonaut/chevron-right-fill.svg')}
+.ui-icon-down{--autonaut-icon:url('../assets/autonaut/chevron-down-small-regular.svg');--autonaut-filled:url('../assets/autonaut/chevron-down-small-fill.svg')}
+.ui-icon-external{--autonaut-icon:url('../assets/autonaut/arrow-up-right-regular.svg');--autonaut-filled:url('../assets/autonaut/arrow-up-right-fill.svg')}
+.ui-icon-forward{--autonaut-icon:url('../assets/autonaut/arrow-right-regular.svg');--autonaut-filled:url('../assets/autonaut/arrow-right-fill.svg')}
+.ui-icon-refresh{--autonaut-icon:url('../assets/autonaut/arrow-rotate-counter-clockwise-regular.svg');--autonaut-filled:url('../assets/autonaut/arrow-rotate-counter-clockwise-fill.svg')}
+.ui-icon-check{--autonaut-icon:url('../assets/autonaut/checkmark-1-regular.svg');--autonaut-filled:url('../assets/autonaut/checkmark-1-fill.svg')}
+.ui-icon-save{--autonaut-icon:url('../assets/autonaut/heart-regular.svg');--autonaut-filled:url('../assets/autonaut/heart-fill.svg')}
+.ui-icon-saved{--autonaut-icon:url('../assets/autonaut/heart-regular.svg');--autonaut-filled:url('../assets/autonaut/heart-fill.svg')}
+.ui-icon-location{--autonaut-icon:url('../assets/autonaut/map-pin-regular.svg');--autonaut-filled:url('../assets/autonaut/map-pin-fill.svg')}
+.ui-icon-filter{--autonaut-icon:url('../assets/autonaut/filter-1-regular.svg');--autonaut-filled:url('../assets/autonaut/filter-1-fill.svg')}
+.ui-icon-sort{--autonaut-icon:url('../assets/autonaut/sort-arrow-up-down-regular.svg');--autonaut-filled:url('../assets/autonaut/sort-arrow-up-down-fill.svg')}
+.ui-icon-history{--autonaut-icon:url('../assets/autonaut/clock-regular.svg');--autonaut-filled:url('../assets/autonaut/clock-fill.svg')}
+.ui-icon-loan{--autonaut-icon:url('../assets/autonaut/money-hand-regular.svg');--autonaut-filled:url('../assets/autonaut/money-hand-fill.svg')}
+.ui-icon-emi{--autonaut-icon:url('../assets/autonaut/calendar-check-regular.svg');--autonaut-filled:url('../assets/autonaut/calendar-check-fill.svg')}
+.ui-icon-gold{--autonaut-icon:url('../assets/autonaut/coins-regular.svg');--autonaut-filled:url('../assets/autonaut/coins-fill.svg')}
+.ui-icon-credit{--autonaut-icon:url('../assets/autonaut/chart-2-regular.svg');--autonaut-filled:url('../assets/autonaut/chart-2-fill.svg')}
+.ui-icon-fastag{--autonaut-icon:url('../assets/autonaut/tag-regular.svg');--autonaut-filled:url('../assets/autonaut/tag-fill.svg')}
+.ui-icon-pdi{--autonaut-icon:url('../assets/autonaut/checklist-regular.svg');--autonaut-filled:url('../assets/autonaut/checklist-fill.svg')}
+.ui-icon-vehicle-history{--autonaut-icon:url('../assets/autonaut/page-search-regular.svg');--autonaut-filled:url('../assets/autonaut/page-search-fill.svg')}
+.ui-icon-rto{--autonaut-icon:url('../assets/autonaut/page-text-regular.svg');--autonaut-filled:url('../assets/autonaut/page-text-fill.svg')}
+.ui-icon-odometer{--autonaut-icon:url('../assets/autonaut/dashboard-middle-regular.svg');--autonaut-filled:url('../assets/autonaut/dashboard-middle-fill.svg')}
+.ui-icon-roadside{--autonaut-icon:url('../assets/autonaut/toolbox-regular.svg');--autonaut-filled:url('../assets/autonaut/toolbox-fill.svg')}
+.ui-icon-warranty{--autonaut-icon:url('../assets/autonaut/shield-check-regular.svg');--autonaut-filled:url('../assets/autonaut/shield-check-fill.svg')}
+.ui-icon-health{--autonaut-icon:url('../assets/autonaut/heart-beat-regular.svg');--autonaut-filled:url('../assets/autonaut/heart-beat-fill.svg')}
+.ui-icon-life{--autonaut-icon:url('../assets/autonaut/shield-regular.svg');--autonaut-filled:url('../assets/autonaut/shield-fill.svg')}
+.ui-icon-valuation{--autonaut-icon:url('../assets/autonaut/coin-rupees-regular.svg');--autonaut-filled:url('../assets/autonaut/coin-rupees-fill.svg')}
+.ui-icon-exchange{--autonaut-icon:url('../assets/autonaut/arrows-repeat-right-left-regular.svg');--autonaut-filled:url('../assets/autonaut/arrows-repeat-right-left-fill.svg')}
+.ui-icon-scrap{--autonaut-icon:url('../assets/autonaut/arrows-repeat-regular.svg');--autonaut-filled:url('../assets/autonaut/arrows-repeat-fill.svg')}
+.ui-icon-bike{--autonaut-icon:url('../assets/autonaut/bike-regular.svg');--autonaut-filled:url('../assets/autonaut/bike-fill.svg')}
+.ui-icon-car{--autonaut-icon:url('../assets/autonaut/car-front-view-regular.svg');--autonaut-filled:url('../assets/autonaut/car-front-view-fill.svg')}
+.ui-icon-wifi{--autonaut-icon:url('../assets/autonaut/wifi-full-regular.svg');--autonaut-filled:url('../assets/autonaut/wifi-full-fill.svg')}
+.ui-icon-battery{--autonaut-icon:url('../assets/autonaut/battery-full-regular.svg');--autonaut-filled:url('../assets/autonaut/battery-full-fill.svg')}
+.ui-icon-voice{--autonaut-icon:url('../assets/autonaut/microphone-regular.svg');--autonaut-filled:url('../assets/autonaut/microphone-fill.svg')}
+.ui-icon-transmission-automatic{--autonaut-icon:url('../assets/autonaut/settings-gear-1-regular.svg');--autonaut-filled:url('../assets/autonaut/settings-gear-1-fill.svg')}
+.ui-icon-transmission-manual{--autonaut-icon:url('../assets/autonaut/steering-wheel-regular.svg');--autonaut-filled:url('../assets/autonaut/steering-wheel-fill.svg')}
+.ui-icon-fuel-petrol{--autonaut-icon:url('../assets/autonaut/gas-regular.svg');--autonaut-filled:url('../assets/autonaut/gas-fill.svg')}
+.ui-icon-fuel-diesel{--autonaut-icon:url('../assets/autonaut/drop-regular.svg');--autonaut-filled:url('../assets/autonaut/drop-fill.svg')}
+.ui-icon-fuel-cng{--autonaut-icon:url('../assets/autonaut/fire-1-regular.svg');--autonaut-filled:url('../assets/autonaut/fire-1-fill.svg')}
+.ui-icon-fuel-electric{--autonaut-icon:url('../assets/autonaut/lightning-regular.svg');--autonaut-filled:url('../assets/autonaut/lightning-fill.svg')}
+.ui-icon-play{--autonaut-icon:url('../assets/autonaut/play-regular.svg');--autonaut-filled:url('../assets/autonaut/play-fill.svg')}
+.ui-icon-recommend{--autonaut-icon:url('../assets/autonaut/thumbs-up-regular.svg');--autonaut-filled:url('../assets/autonaut/thumbs-up-fill.svg')}
+i.arrow-left-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/arrow-left-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/arrow-left-regular.svg') center/contain no-repeat}i.arrow-left-filled::before{content:none!important}
+i.arrow-left-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/arrow-left-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/arrow-left-regular.svg') center/contain no-repeat}i.arrow-left-outline::before{content:none!important}
+i.cross-large-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat}i.cross-large-outline::before{content:none!important}
+i.cross-large-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat}i.cross-large-filled::before{content:none!important}
+i.close-line{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/cross-large-regular.svg') center/contain no-repeat}i.close-line::before{content:none!important}
+i.chevron-down-small-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/chevron-down-small-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/chevron-down-small-regular.svg') center/contain no-repeat}i.chevron-down-small-outline::before{content:none!important}
+i.chevron-right-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/chevron-right-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/chevron-right-regular.svg') center/contain no-repeat}i.chevron-right-outline::before{content:none!important}
+i.chevron-small-right-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/chevron-right-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/chevron-right-regular.svg') center/contain no-repeat}i.chevron-small-right-outline::before{content:none!important}
+i.heart-like-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/heart-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/heart-regular.svg') center/contain no-repeat}i.heart-like-outline::before{content:none!important}
+i.magnifying-glass-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/magnifying-glass-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/magnifying-glass-regular.svg') center/contain no-repeat}i.magnifying-glass-outline::before{content:none!important}
+i.ownership-line{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/contacts-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/contacts-regular.svg') center/contain no-repeat}i.ownership-line::before{content:none!important}
+i.map-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/map-pin-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/map-pin-regular.svg') center/contain no-repeat}i.map-filled::before{content:none!important}
+i.filter-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/filter-1-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/filter-1-regular.svg') center/contain no-repeat}i.filter-outline::before{content:none!important}
+i.sparkle-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/sparkles-three-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/sparkles-three-regular.svg') center/contain no-repeat}i.sparkle-filled::before{content:none!important}
+i.clock-time-timer-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/clock-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/clock-regular.svg') center/contain no-repeat}i.clock-time-timer-outline::before{content:none!important}
+i.clock-timer-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/clock-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/clock-regular.svg') center/contain no-repeat}i.clock-timer-outline::before{content:none!important}
+i.car-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/car-front-view-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/car-front-view-regular.svg') center/contain no-repeat}i.car-outline::before{content:none!important}
+i.car-check-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/square-checklist-magnifying-glass-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/square-checklist-magnifying-glass-regular.svg') center/contain no-repeat}i.car-check-outline::before{content:none!important}
+i.car-insurance-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/shield-check-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/shield-check-regular.svg') center/contain no-repeat}i.car-insurance-outline::before{content:none!important}
+i.credit-card-2-card-payment-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/money-hand-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/money-hand-regular.svg') center/contain no-repeat}i.credit-card-2-card-payment-outline::before{content:none!important}
+i.receipt-bill-purchase-invoice-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/receipt-bill-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/receipt-bill-regular.svg') center/contain no-repeat}i.receipt-bill-purchase-invoice-outline::before{content:none!important}
+i.home-personal-feed-for-you-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/home-personal-feed-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/home-personal-feed-regular.svg') center/contain no-repeat}i.home-personal-feed-for-you-filled::before{content:none!important}
+i.receipt-check-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/receipt-check-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/receipt-check-regular.svg') center/contain no-repeat}i.receipt-check-outline::before{content:none!important}
+i.car-front-view{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/car-front-view-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/car-front-view-regular.svg') center/contain no-repeat}i.car-front-view::before{content:none!important}
+i.checkmark-1-filled{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/checkmark-1-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/checkmark-1-regular.svg') center/contain no-repeat}i.checkmark-1-filled::before{content:none!important}
+i.checkmark-1-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/checkmark-1-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/checkmark-1-regular.svg') center/contain no-repeat}i.checkmark-1-outline::before{content:none!important}
+i.microphone-outline{display:inline-block;width:1em;height:1em;flex-shrink:0;background-color:currentColor;mask:url('../assets/autonaut/microphone-regular.svg') center/contain no-repeat;-webkit-mask:url('../assets/autonaut/microphone-regular.svg') center/contain no-repeat}i.microphone-outline::before{content:none!important}
+.search-save.is-saved .ui-icon-save{--autonaut-icon:var(--autonaut-filled)}

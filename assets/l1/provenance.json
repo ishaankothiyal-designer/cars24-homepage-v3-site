@@ -1,0 +1,1402 @@
+{
+  "sourceFile": "ttwWd3vH4lRPzfPLM8rOun",
+  "sourceSection": "8266:36243",
+  "accessed": "2026-11-17",
+  "assets": [
+    {
+      "file": "figma-87b7b.webp",
+      "bytes": 789790,
+      "sha256": "9baf562ca3829d315f5e3b036bc8eb0f45bc54dfcc4e2ed49461e0d95a600217",
+      "sourceFile": "figma-87b7b.png",
+      "sourceSha256": "b5f3d22a43ee2f1487907a66ed5b3ee3ff06534416d26ce8854c333256252060",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-e6d9f.webp",
+      "bytes": 636516,
+      "sha256": "eb9e8e2c224aa166338bcce82a3ab8825eba8abef43c4ebba22330ab9a48cbca",
+      "sourceFile": "figma-e6d9f.png",
+      "sourceSha256": "140dcfd675e3e861dd698cf9faab7acb8ae2054b1552cf75bb582208c3f71b1c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-fd622.webp",
+      "bytes": 862884,
+      "sha256": "5a9cdd1e8ece3b23dcc5c98aed94ca05c5ba3969237b1b4816a5bfc630134295",
+      "sourceFile": "figma-fd622.png",
+      "sourceSha256": "8e57b2c9def9626e48cf204971501fde384659ff21f85bf3f12bd359b4b93587",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-a72f8.webp",
+      "bytes": 826042,
+      "sha256": "7ccdd60d32dcde1830b6e750c9536c314adee22e824d8012eaf3ed21aa03bef4",
+      "sourceFile": "figma-a72f8.png",
+      "sourceSha256": "944a3c69e00204e7690c539941172131b4856ee59535392ee806c00e24b63d5f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-65166.webp",
+      "bytes": 846660,
+      "sha256": "95d248106d6b6b142717aad002c04fb6132c1a55241d606249af9d5beb0e6701",
+      "sourceFile": "figma-65166.png",
+      "sourceSha256": "ef4aa59472020199d7ecf8560ee4190e77f75df98c695257f8f79ca8ab01c1d8",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-54d67.svg",
+      "bytes": 751,
+      "sha256": "159aaf0f006abdcf0a7229c32578406084834704d2d6cbaa6d66bc3f51a0ad91"
+    },
+    {
+      "file": "figma-575a0.webp",
+      "bytes": 594564,
+      "sha256": "33265fbcc21552f7b9f83721c696b79c0f3b61e7a81e3c85c837321094c21e92",
+      "sourceFile": "figma-575a0.png",
+      "sourceSha256": "d802e8b002ab5ef37c139ca8343e9c225fedcca9634c2fdca643665d38c81982",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-82918.webp",
+      "bytes": 660722,
+      "sha256": "66609cce4180f088a2e9d872b77e3ec74a32529df1d46a10889ae1d0719e30f9",
+      "sourceFile": "figma-82918.png",
+      "sourceSha256": "045f5d802c8254caaaed179f3341b5be63e1724d9b2ab2da308fa3082137d45c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-1a17b.webp",
+      "bytes": 444030,
+      "sha256": "465781e304a3d312fed66339422e680561c61d1d90c2e00bb0253996f3c3ac26",
+      "sourceFile": "figma-1a17b.png",
+      "sourceSha256": "de27f2d56e8b878513d964fa96d6d7e348d71a7bd700ec0931dcbca4eb7cc66a",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-15e99.webp",
+      "bytes": 666906,
+      "sha256": "e53d8cd67dbf872297e6e32dc527ca3135c948e26af918e786b24f168716757f",
+      "sourceFile": "figma-15e99.png",
+      "sourceSha256": "ffee9744e5793da60aee471595e2cd6f41a3f1dadb315a7173a9f7251b8baa63",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c1f47.webp",
+      "bytes": 1043000,
+      "sha256": "d4804ad65b40ed897573ac6a90a95c788c78e210ac3387a8f2f3bcec295b43ac",
+      "sourceFile": "figma-c1f47.png",
+      "sourceSha256": "252eb34b3600340cdf73d00c275f28f26b85f8a626fe3927e0f4038b86a9e032",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d5115.svg",
+      "bytes": 320,
+      "sha256": "9b2cb8f22f0d2b2757ffa5b88cf002ede345e48b5935caaa884a025664ea1673"
+    },
+    {
+      "file": "figma-90b11.svg",
+      "bytes": 935,
+      "sha256": "a1d1f7b3bde8e43239a82dd01fa638fd46adc284055746328815111738939984"
+    },
+    {
+      "file": "figma-3696c.svg",
+      "bytes": 775,
+      "sha256": "bdd10e5ec0eb099d25a37ce3f56e973dc47a2c5da83897b7ad962052cdee82e4"
+    },
+    {
+      "file": "figma-2cecd.svg",
+      "bytes": 310,
+      "sha256": "e5b2dd2b4ccf76900f30129b0f41d4184e6abe29c901739586c26eafb84ef006"
+    },
+    {
+      "file": "figma-fc3c4.svg",
+      "bytes": 323,
+      "sha256": "3349954b40e450ca616ef6b01a27793efc704ae26dd16eb692b63d4cde08cd5d"
+    },
+    {
+      "file": "figma-87a42.svg",
+      "bytes": 555,
+      "sha256": "bcc611eda75f70fb4f1a2759618824991db1f40bdba13b0c39c5200ee04a2263"
+    },
+    {
+      "file": "figma-8cf0a.svg",
+      "bytes": 998,
+      "sha256": "a889f5ca3f06f56e0e89e46e5c0d1abf426cba51580cce26806c43daa5c01bc7"
+    },
+    {
+      "file": "figma-1d5b0.svg",
+      "bytes": 942,
+      "sha256": "2950e945dfd20a8810451bcbe3d5f909f99d15746af5a15573cc827161f691bc"
+    },
+    {
+      "file": "figma-320bb.webp",
+      "bytes": 510100,
+      "sha256": "19763d3d2cc2eda3816d32b81e792f032f2cb7bc7ce043770b34e9a8be0353f3",
+      "sourceFile": "figma-320bb.png",
+      "sourceSha256": "656f765177e63d1dfd508bf74609c67ef85a07f6b744faf84f83b10abedde366",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ce245.webp",
+      "bytes": 1149800,
+      "sha256": "9ca85308e5c8a808b770bf0da6594a7b9dfa893f23b4888cc7a23f304e8bb769",
+      "sourceFile": "figma-ce245.png",
+      "sourceSha256": "c824a8aa24d87eed647a1f2b0b9bf40588e453a5be0d0004f90b5d78367f39cd",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-5ad14.webp",
+      "bytes": 1212526,
+      "sha256": "40fc592c64c1da3188b186b464ae5c6012108aebad41c4ab36d5c384d26977de",
+      "sourceFile": "figma-5ad14.png",
+      "sourceSha256": "5f761a6feb2bf303ee44931377657425104d17bf8fc816423a9878015ede2d8e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-70047.webp",
+      "bytes": 509652,
+      "sha256": "438d592ff80eafcd942506e41ca9a2ad34c9c6ee11e4e6be41764908e7d0677f",
+      "sourceFile": "figma-70047.png",
+      "sourceSha256": "098e7eaac23dcfcd6b936ebc0fba3b323e40ce9e58b3b5a5db6b0570bca49e65",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d1232.svg",
+      "bytes": 759,
+      "sha256": "24225deec05d10aa3488b5907fbb0cd623cf2c3a55c5c5158fbb4cadad197a8a"
+    },
+    {
+      "file": "figma-92991.webp",
+      "bytes": 713984,
+      "sha256": "21dca654a73c1cea6edd3d520ef864e7fd40f494acb8c761030f86ecf250b940",
+      "sourceFile": "figma-92991.png",
+      "sourceSha256": "8503a785b177186bb5dd862194db6ee8979fc244a76f6a0e2a4b7c9ae648b82e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-269b2.webp",
+      "bytes": 894026,
+      "sha256": "d419f04c12bf8b4b51f7497adc86eb706b4a59252d0c01d591b1889ee1873e93",
+      "sourceFile": "figma-269b2.png",
+      "sourceSha256": "8af468854fbf86f8be5b4981af7bedbaad5862ebc764b3f7765d5f7dca3cfe5f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-1135c.webp",
+      "bytes": 772604,
+      "sha256": "b78b41a3c4daf7a9a771aae0adc2d0de3558e2f7fe0ca5b255ba8c7c04dfd967",
+      "sourceFile": "figma-1135c.png",
+      "sourceSha256": "a74c633e831e54e0e9f93e801771faa0ed7905e257a99085846c59052bfd3b1c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-e21ee.webp",
+      "bytes": 684692,
+      "sha256": "68383f34e6f2b33eb0c34b2f8deff6a6c47366521193515132335d8695cd5f8f",
+      "sourceFile": "figma-e21ee.png",
+      "sourceSha256": "9045b5f88a1f4e89e5ede6a21c87b32c34d81dbce7d761083c679db273ed0499",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-dfaf1.webp",
+      "bytes": 511786,
+      "sha256": "d0109080764185c7f4a63c0c8d5c9ca371845dbd3887da53b4e073178d2e06aa",
+      "sourceFile": "figma-dfaf1.png",
+      "sourceSha256": "e5592911277100ef12c1c0969ba9cf0acd5e350005702be36fb94d5cb98834c4",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-b2714.webp",
+      "bytes": 469678,
+      "sha256": "a7da179ab04e902ab7e29bc46b5d7e4dc63b280abe2cd7a4b827237373875be2",
+      "sourceFile": "figma-b2714.png",
+      "sourceSha256": "90e7854e9d5120ac22b81302bcabe195b5b40dbe56b02e3e1d3997ad79e4f139",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-32d20.svg",
+      "bytes": 681,
+      "sha256": "f4f53017805b324dd2ff30d301389c6e3ea576a4362feefc2a563c190877956f"
+    },
+    {
+      "file": "figma-d6517.webp",
+      "bytes": 480168,
+      "sha256": "cf6da7587f71b255e86e82fe6ab1ad465f38c561ff80c200a2e0b863b1551b13",
+      "sourceFile": "figma-d6517.png",
+      "sourceSha256": "9c00e700b6d81ad2fe04bc3afa0335ba8a63dbcf28650858619b5ca45221eb08",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-03e5d.webp",
+      "bytes": 915556,
+      "sha256": "69cedbbe158a719039304aa149372a295c7728bef05b44a3ff561c8a88a3c963",
+      "sourceFile": "figma-03e5d.png",
+      "sourceSha256": "25a36216c6e710961be284ab4975023789557a3161446246379fe9f764c85c42",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-4a789.webp",
+      "bytes": 728922,
+      "sha256": "4313742a9af01930fb2f0b6b6a15a23c04a4787a1af0b0c1455f3b4bfd15462d",
+      "sourceFile": "figma-4a789.png",
+      "sourceSha256": "b11a730b78da398a7f5dbd7197df3eb374e3d90129600ff5aab9aa93f9067144",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-32567.svg",
+      "bytes": 753,
+      "sha256": "1178e1a9f1c55af57d8e466c3002ed6dd5cfa67d11b79b0b72719503356801c0"
+    },
+    {
+      "file": "figma-2da18.svg",
+      "bytes": 734,
+      "sha256": "64dae3b4ae3ed354382720e0b73ea1dc35cb22b318c4148f802d93febc8c7920"
+    },
+    {
+      "file": "figma-3307e.webp",
+      "bytes": 719486,
+      "sha256": "dedd2f3b9db8def8b9df7ff9c4272060c904213457150acb9bf7049215988281",
+      "sourceFile": "figma-3307e.png",
+      "sourceSha256": "dbc8ba23d172f0027848277d4ee8bcf3ab34f395d54c863955e35d9382b74274",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-72389.webp",
+      "bytes": 765864,
+      "sha256": "f1000d776cbf8d41f87350afb73b3967cb78c895d5db01d121a9e787c6721622",
+      "sourceFile": "figma-72389.png",
+      "sourceSha256": "b2bb102049e36ee5aa55daf8bb27707704565e5f5f0f4c7a2eb7b65a667b04ea",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f48ba.webp",
+      "bytes": 629482,
+      "sha256": "79b690395ee32289018868f3e2f34c6653a50b781fed7c77a89ddb6c479ee2eb",
+      "sourceFile": "figma-f48ba.png",
+      "sourceSha256": "75a30d7e10e0ea2d678803799e94991114b7ca7b81a27dcd5c28e65a5794020c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-1991b.svg",
+      "bytes": 1520,
+      "sha256": "55addecf5f37a548f69c0cd45c6903c3d2531f25b3c788f8961899680d2cfdc5"
+    },
+    {
+      "file": "figma-7f430.webp",
+      "bytes": 942576,
+      "sha256": "74cf1c70595c7af5c5f184d1fb63faf39db85518476fcb93e115bddf469383ff",
+      "sourceFile": "figma-7f430.png",
+      "sourceSha256": "69bb7e9b19c3f23b1c616d8b8c8093cd6d2814791acb7c5aab3a9dc1819e416c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-65184.svg",
+      "bytes": 724,
+      "sha256": "f34ce29e47c5917fc6d1453b5bb76e0840d9ada951d74bf6baa560350e97b499"
+    },
+    {
+      "file": "figma-84054.svg",
+      "bytes": 979,
+      "sha256": "a7bcf692959ad1209d605141f8ebfa1b6702316cc2a0b56196482a4011a23885"
+    },
+    {
+      "file": "figma-5e608.svg",
+      "bytes": 537,
+      "sha256": "10834f6f173eeff08a0851b4955029add2321948bd536c37b766e58dd68eac0a"
+    },
+    {
+      "file": "figma-629cd.svg",
+      "bytes": 1209,
+      "sha256": "c6a51c55c4320ebea065ea6facbca1c660df1c2ca1835c6fee768ffcdb9102cc"
+    },
+    {
+      "file": "figma-6aff8.svg",
+      "bytes": 537,
+      "sha256": "211f0faf09f42b82531153465b00d25d37d4ecc8c8d1e32b67b6858b6b4e0232"
+    },
+    {
+      "file": "figma-1736d.svg",
+      "bytes": 2542,
+      "sha256": "b73d4c6d4bd8d1b50081cf6eb5cbfcc9c2eb187661cf0e6858d0a42d3b3a7d2a"
+    },
+    {
+      "file": "figma-3c3b3.webp",
+      "bytes": 2283784,
+      "sha256": "5ae2574670758831cdc82b8cf069c00251e6977855e64783d9dece8c401ed2e5",
+      "sourceFile": "figma-3c3b3.png",
+      "sourceSha256": "c25ac6051a636d9c83b47fa5c675ecdc0bd7746033bcf32463fc1481bde68ca9",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ed9ab.webp",
+      "bytes": 2499146,
+      "sha256": "19865e7eb554b437ebd7553db4b0f5e574bb9713f80ae1df1df65590ab95e49b",
+      "sourceFile": "figma-ed9ab.png",
+      "sourceSha256": "5eaa709764abc8ef0a36cc00ed99e89769f448b55cd30ea55dfacffa4c26ab42",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-fd45f.webp",
+      "bytes": 1087978,
+      "sha256": "b262eb18f20f5d15e2c38592aa363f14d7e3edd775f1e550698091a5ce9d8792",
+      "sourceFile": "figma-fd45f.png",
+      "sourceSha256": "30e3d05d06a193f674d24fc903578dc1e3a7e4ed5605115d3817d07e51ada2b0",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-5db8f.webp",
+      "bytes": 21108,
+      "sha256": "b6670bb7f4362fce5fdf9835116edd6428deae8295571d3177753477bf46c995",
+      "sourceFile": "figma-5db8f.png",
+      "sourceSha256": "1ea8fd690d4bcec2340c08fbfc98a7f74a19ba46360da12ff17a8fd62199a51d",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-11e31.webp",
+      "bytes": 1209376,
+      "sha256": "95360755caf93b9132d62caaec18701211838df9c41f3f90c3f53fa4e7f04f0f",
+      "sourceFile": "figma-11e31.png",
+      "sourceSha256": "4ddd239520ee67387b01b0664360df8332bf97405ae3fd06c592efb93a943173",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7e492.svg",
+      "bytes": 347,
+      "sha256": "79f4388051ed941ac4f06c4713d52ace6ecc362f906a2bdb893be3e68026a81d"
+    },
+    {
+      "file": "figma-d5123.svg",
+      "bytes": 253,
+      "sha256": "1e4a342bee686b0d7db35d9699c777e72433c0392c05a1f2f0f4a8b335fb6093"
+    },
+    {
+      "file": "figma-2bd2e.svg",
+      "bytes": 262,
+      "sha256": "df53fbb7e21b65b310ff666021435d0348831ff6d46cb1e79033eee86cb60d55"
+    },
+    {
+      "file": "figma-e4f33.svg",
+      "bytes": 598,
+      "sha256": "c6092b82cb361801ed3c320de9ed143da3f6ef0ffe30c51b7d01100c706d9bbf"
+    },
+    {
+      "file": "figma-6db45.svg",
+      "bytes": 249,
+      "sha256": "969afea66d3503ba26a3dff8fb6cac78c100afc81e1f77eeb5a4308f66f06cfc"
+    },
+    {
+      "file": "figma-ce407.webp",
+      "bytes": 438210,
+      "sha256": "3662ee0b6733a1ddd332552029667563041b3978310fb231ca36e9af4a608d0a",
+      "sourceFile": "figma-ce407.png",
+      "sourceSha256": "70ee5498220dc64e46b9f2023ab871ed6ab0ebc39ab21849948803eb297d5ffa",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-4fe61.webp",
+      "bytes": 10786,
+      "sha256": "c9bd2bb8649eb4091b628173e2fd2b3c435b9a9fc371ea3790c46a51a93bb8c1",
+      "sourceFile": "figma-4fe61.png",
+      "sourceSha256": "6e91b4b8c7a0ac5826d6dd8a900a75595ef91db2effd441d98665bfd064c5dde",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-dd32a.webp",
+      "bytes": 1170416,
+      "sha256": "358a50fca5c721b5c0b2a43cc668ebfd2800a93d41d3c90b2c573fc462e98521",
+      "sourceFile": "figma-dd32a.png",
+      "sourceSha256": "9bf6fbe6de1c11d4847d56393f1ff1c150353ab628ba459eed8a055265374acb",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ac7c7.webp",
+      "bytes": 510416,
+      "sha256": "9457862b9ae2040e43ca43e4c63451b6416d03cd6f2f891f7c5a241527be1f40",
+      "sourceFile": "figma-ac7c7.png",
+      "sourceSha256": "fe11cf043d26a65659b2efd55186626ab303603f4aa21e4a306597cb6dc04318",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-03f55.webp",
+      "bytes": 697872,
+      "sha256": "e512411fcc3dfdcb8188397142a076f775733dfd5c22f75d924de8518541dbef",
+      "sourceFile": "figma-03f55.png",
+      "sourceSha256": "c9266ee09ab9c8518ffe3e459e2a2e58a2a94aaeb4119a945dabfc7554a97937",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-bacc8.webp",
+      "bytes": 540916,
+      "sha256": "398fec1be386243141fe6e324ce98423ffd4143625b11be825c68a4cdac6ace9",
+      "sourceFile": "figma-bacc8.png",
+      "sourceSha256": "3cf414251d76d1df5a61f08e3574f1280323a061fbf0c78e8a9fb3d481beec74",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ce9ce.webp",
+      "bytes": 489606,
+      "sha256": "f40c018616099e1220784cc2ad44d63a881b66569e6cc924f455b51a4baa0a17",
+      "sourceFile": "figma-ce9ce.png",
+      "sourceSha256": "84dd0c52eab60461be6d418ffc4fb150ad7b8a6e8938adf3e5290d5b95750fc4",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f18f0.webp",
+      "bytes": 18482,
+      "sha256": "a1d62c35b836d93ba7f93910bea2394c95e4dac4b42430d9ab694dbbb1ead3ed",
+      "sourceFile": "figma-f18f0.png",
+      "sourceSha256": "d4fe4a3e2e65f71919c4c0bd4b9f8a0ea23b58226adfa926a0633bbc21920b29",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-20f3a.webp",
+      "bytes": 269708,
+      "sha256": "7eb90a0960e17918aa017c23f11d81e17c9e75aa3c0408f548e5928df028b02d",
+      "sourceFile": "figma-20f3a.png",
+      "sourceSha256": "d6494c1410d7e71362ac2239eac9e64d7a9f23c980ff25bbf6447babba4bc0de",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7e00e.webp",
+      "bytes": 26726,
+      "sha256": "94df9d13965de809b537934a4da173adc36bc2599fede2524761b95b8efd670d",
+      "sourceFile": "figma-7e00e.png",
+      "sourceSha256": "52ae278af8b3d07903864a9c6c35ff2a2d5daa697592288957476950ed516131",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f7d6f.webp",
+      "bytes": 49916,
+      "sha256": "146920a678b74e966d9cc4f3d11d211ba7dc72bfee2fdba1e0218ba67d00fed6",
+      "sourceFile": "figma-f7d6f.png",
+      "sourceSha256": "dee02843ac4192e1e04e54e16943d02296a90ee6d9d442d4794651b630ea2fb4",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d8fb3.webp",
+      "bytes": 348426,
+      "sha256": "c389c6db96b173e99d1a4f906cf0259b2a4bc065c8b140988501997273547927",
+      "sourceFile": "figma-d8fb3.png",
+      "sourceSha256": "8b6cc885677691e06927c0d2dd9b9e35c5d7a4b697ac9c7df8caa37c5974bb05",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d4bb1.webp",
+      "bytes": 35564,
+      "sha256": "c3cc491cc5d9ff01ba53b6ef7fcb394689441e6e3df1a24537ffb92636634b88",
+      "sourceFile": "figma-d4bb1.png",
+      "sourceSha256": "ffa2178d9559791fba17b969de2d01d88e3ed6f46361dbe7edf738083060777e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-8cfaa.webp",
+      "bytes": 38178,
+      "sha256": "c5b06d515672ba92b60f2e12d574c4267ec10f9dfb6da51776abb13162df34c5",
+      "sourceFile": "figma-8cfaa.png",
+      "sourceSha256": "041335a70d29e8d942be15809339f1538b985d463304eeba56eab5091a610934",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c9d7e.svg",
+      "bytes": 1945,
+      "sha256": "2f367185ef6adf8ce15b2f084d41ca2ca7dcc1967b72955016565391372f1c10"
+    },
+    {
+      "file": "figma-35f7b.webp",
+      "bytes": 843582,
+      "sha256": "1011c0cddb8adb96c6f9b735f15aa32f3bb6f0f4074d886f543db1661c4c2cc4",
+      "sourceFile": "figma-35f7b.png",
+      "sourceSha256": "1f0a053ddf3b4ede64dc2e3b5d20f687077d870f470ab16f07ac5bdb397cdfaa",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ec81a.webp",
+      "bytes": 702908,
+      "sha256": "4ccaa4a4f930ddf60e6dcfff5bc138afb1c244b2015be07b958a81157a226553",
+      "sourceFile": "figma-ec81a.png",
+      "sourceSha256": "5a7de01ae3eeafc2b17a9ad4a86eae3b41498d98afa366850fe57f8b964975ef",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-98cc5.webp",
+      "bytes": 584790,
+      "sha256": "61302e00fae8946b1250a710a512bdb263e342b26f453ef0f04d9b3dc2cb09b3",
+      "sourceFile": "figma-98cc5.png",
+      "sourceSha256": "00e58a943ace36b298c109398c8c9f04b03e8db8b7c3f805350a4bda7bf484aa",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-df361.webp",
+      "bytes": 604016,
+      "sha256": "c59ada5bee1823faf938f53b67e17763d872106363fe0cb28277e9ade35ee984",
+      "sourceFile": "figma-df361.png",
+      "sourceSha256": "5e9284f4b035e7569e091e626b6d756f4c7ba2e80b3f2ccaaed4d3289d97bc16",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7b3f7.webp",
+      "bytes": 572484,
+      "sha256": "a8e7e9fc22e139abbb56a95116ab5a51434b6640ed7d90b63606566be90e520a",
+      "sourceFile": "figma-7b3f7.png",
+      "sourceSha256": "3d4cea12a6d9fb451da068470c5680d6a693d6f06df92fdb40b6f51048e1bcaa",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-1b87a.webp",
+      "bytes": 553094,
+      "sha256": "2f4ed32aa82c9d1f3875565c45e19b01e3ec987a181c31a28a56fa15e1f0d52d",
+      "sourceFile": "figma-1b87a.png",
+      "sourceSha256": "5e2ac15d3a80c301dabc1449dd131ee1210c7e047b9cc5a51664397a0c661379",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-48415.webp",
+      "bytes": 452698,
+      "sha256": "e42729e1a2aa11f26f4f76cacd15fbfbe6074abac219c4245cc28400fe7f3724",
+      "sourceFile": "figma-48415.png",
+      "sourceSha256": "c009a6aad394477ad6d495d8a2e4b62c8c66218b21fc58810e53659ca06e0c14",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c175c.webp",
+      "bytes": 519018,
+      "sha256": "f6301ba6c0a08f108f8a1fa4792b0dd04da0f71468d0766dd2882b7465625e30",
+      "sourceFile": "figma-c175c.png",
+      "sourceSha256": "6efe3b19e4d0d66eb9a065c95e0b4a6e9e2105db9121487708f59d16aef50c87",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-51a2e.webp",
+      "bytes": 610362,
+      "sha256": "f248299b29a1648dbe5026b6d000070ccab63c814c343ed681bb89cb9127903c",
+      "sourceFile": "figma-51a2e.png",
+      "sourceSha256": "602f91b090de92106f5296b889e1be857a80b6c9ebeb27b87d7bb85f425b3d6a",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c5533.svg",
+      "bytes": 285,
+      "sha256": "71425fa16b30ea580bc93cac7807d2a08f8826ea075aa37d03cd9fddb54b9cda"
+    },
+    {
+      "file": "figma-2798e.svg",
+      "bytes": 32467,
+      "sha256": "7afbc81cc88caed3e33e68449a694fdd08fe6896c5c546967289c9e216bca48e"
+    },
+    {
+      "file": "figma-cef3d.svg",
+      "bytes": 285,
+      "sha256": "c743e48ecbcd6393c09e60467a725e5a6009d42c9e10fab35f45830a0cd326a7"
+    },
+    {
+      "file": "figma-b76c7.svg",
+      "bytes": 15481,
+      "sha256": "fd977875eba8f9b5dc2242b0462402a49a7c5499e6d13a508cacf27fcff97866"
+    },
+    {
+      "file": "figma-b41a4.svg",
+      "bytes": 16377,
+      "sha256": "4a58072a692b9c088889ac264fdca7b4468e9fd414bd7650ab0818759f7c4be5"
+    },
+    {
+      "file": "figma-16f28.svg",
+      "bytes": 11518,
+      "sha256": "4a8bef95caded9e83d143723082b1bd67f82d88e0e0e18c7338778f8235dffd7"
+    },
+    {
+      "file": "figma-a8cd3.svg",
+      "bytes": 27564,
+      "sha256": "7a32053a7bf8c1829b0d40259b2d0b38a00b577ea28fb1d2fb3c8137df415b60"
+    },
+    {
+      "file": "figma-7d8a4.svg",
+      "bytes": 3631,
+      "sha256": "3136c9a4b5a3c2296a0e03b308926ae5d508eb98c619fcc60c269f2025fa1f60"
+    },
+    {
+      "file": "figma-62571.svg",
+      "bytes": 1584,
+      "sha256": "10f10128d8d2297b20009f64f1e9b82e435dbc5cc494d9088b05781af34d36a6"
+    },
+    {
+      "file": "figma-457fd.svg",
+      "bytes": 6409,
+      "sha256": "89b4cea18b352e419046acbf5e1f8a96886dff79602c1fe64192c8718bebc32b"
+    },
+    {
+      "file": "figma-007e4.svg",
+      "bytes": 1222,
+      "sha256": "724bcef0f3d505f9cb664cfb9f89941303db007b17b046f024337eaeefb66100"
+    },
+    {
+      "file": "figma-898d6.svg",
+      "bytes": 11780,
+      "sha256": "6b304820080f3d17adfde409f9169434849928f2c7581475a7dc4e138e931619"
+    },
+    {
+      "file": "figma-f4549.webp",
+      "bytes": 1149372,
+      "sha256": "cf6ba11453a4aaa490615650c8a5b0ab318cd24880c617106c9969b8ba83eb48",
+      "sourceFile": "figma-f4549.png",
+      "sourceSha256": "a85a9a5719fb6d97fbf0e29fc5e81141eeded78950859c9a46d12f64bef26f26",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c1873.webp",
+      "bytes": 6605500,
+      "sha256": "62d667a63f0e4364b8d4499e9a25fefa0b00b1fb194ef3aae41ef6c242261fbf",
+      "sourceFile": "figma-c1873.png",
+      "sourceSha256": "187cc878472e53e5f7a02289cc1cc4279b1a2faeea27552129cdb778c06b2163",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-be9f7.webp",
+      "bytes": 1098104,
+      "sha256": "fbe0161bd43161bae4008eb20314df82d0eae6a15bd38910fec53941c35a2da1",
+      "sourceFile": "figma-be9f7.png",
+      "sourceSha256": "21cecf1f7ede7ef1f949c9ae1381bcec78108fb57cd129b2361c2670736e7eb2",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-a9bb1.webp",
+      "bytes": 150956,
+      "sha256": "5f760f4d148f467907682ebaca15cc472e05766044f4d2a7a5acf8b20fde7868",
+      "sourceFile": "figma-a9bb1.png",
+      "sourceSha256": "b81ca82a7c0b53cfd241d94d349d14144710bf185293aeaebc20aafa0815b00c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-89277.svg",
+      "bytes": 15525,
+      "sha256": "9a9205d63b30005733ad7de630f7f9e13949b64398db60b535afa88743f544a1"
+    },
+    {
+      "file": "figma-f7955.svg",
+      "bytes": 1617,
+      "sha256": "4ef8fc9e42676b3038123ba05e20a542ffed7acf069d4759dcb712f5683ca10e"
+    },
+    {
+      "file": "figma-125cc.svg",
+      "bytes": 2622,
+      "sha256": "87eb7352380394df6be5ced8120b9bfe5828773b9b3322c5301e81841fe2b86f"
+    },
+    {
+      "file": "figma-b6fb0.svg",
+      "bytes": 15577,
+      "sha256": "d8eae86cb2a87652b1d70a64314d45c4115f303c647bfef0f0fb3a650fddac56"
+    },
+    {
+      "file": "figma-a521b.webp",
+      "bytes": 288316,
+      "sha256": "4cdbb364075c9f6a8d6124f4c7b42389eae22be78241925449610db961743e86",
+      "sourceFile": "figma-a521b.png",
+      "sourceSha256": "998454d2b1d4227769e909376c64157561f0e17af42a348a14b10086e1d629f2",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-a1887.webp",
+      "bytes": 399410,
+      "sha256": "45a8b8afa5e3b587087c663866c5ad6da579ab4805f3e2cbb6c79433d07707dc",
+      "sourceFile": "figma-a1887.png",
+      "sourceSha256": "c0d6c8ac8d2f1b82995ba2fb31c48231698c1f4593658f10efc401f35aed538f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-9a3ce.webp",
+      "bytes": 297142,
+      "sha256": "cecf21d7323bba67adbd2b46d01096ae76d0e9e04c1b831f478b92c2645caa7c",
+      "sourceFile": "figma-9a3ce.png",
+      "sourceSha256": "c8d9395af799e9fe2eaa6155e0e69e99d231f1b11792af85a44b76bfd51bf879",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-6fb56.webp",
+      "bytes": 730924,
+      "sha256": "23384216494bf8b7017a5beb85984153ca2becac66554e2f5ec8432d8f60bb7a",
+      "sourceFile": "figma-6fb56.png",
+      "sourceSha256": "74e26d6cbcc94eced4b82b86b5e4767f0f6114b0217a4b04c8093c7344ba167e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-6d0c0.webp",
+      "bytes": 594312,
+      "sha256": "267c517f68ee3bb76fbc045356c08649615875916d0c0acc80a1e2ffc9585503",
+      "sourceFile": "figma-6d0c0.png",
+      "sourceSha256": "85ef2086fe970344c5fa9364cafc8409d57ba3905ac4275cbf30d357f735b552",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c6928.webp",
+      "bytes": 5310,
+      "sha256": "f0cb9f65869e3f6c6bd30a1a47ca612b4eff2e994e89582b1b9a4b82cfa7ae10",
+      "sourceFile": "figma-c6928.png",
+      "sourceSha256": "0bdac685f09b200acf093f23bd1a625381b75fc0c08041f7ef89bf0d1e119b25",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-51815.webp",
+      "bytes": 528722,
+      "sha256": "86eea681f01b79c4fd57ce7d21546a0ff0ccbfce424a44dfc3f1b3a8befd50b9",
+      "sourceFile": "figma-51815.png",
+      "sourceSha256": "19b544ba157d1b4ca2426d46509b03ef1d48b090a787eed9991a4c05e1c7e45b",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-b2453.webp",
+      "bytes": 58696,
+      "sha256": "c2ff7a4cc3ac1671dc5f73d6e2b6e36e52ec9930a515bf1169eab56f0e010f3a",
+      "sourceFile": "figma-b2453.png",
+      "sourceSha256": "deabb23fd972a995ce2b9a4e1191f8aa7e0ae26ae3f0642f53c2e342801b6e3e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-27fe6.webp",
+      "bytes": 32860,
+      "sha256": "d0e1ee84e80c9b7e94ba998c02969cc45fedcd72c3b24d09d7a1a1450eb283b0",
+      "sourceFile": "figma-27fe6.png",
+      "sourceSha256": "84a0c94c5f118ce691980446da67140ddb2bb82b8d6b0e9077c9dc0a4d82fdbe",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d17a8.webp",
+      "bytes": 7202,
+      "sha256": "675974bb83a34f216b433d70d3092f630cc6427208d49d20aa86fe2a914ea127",
+      "sourceFile": "figma-d17a8.png",
+      "sourceSha256": "c09ce0e8faf1a233ccf0e3d8555a4fbfadd16a4c3b1c18fa48a8804b95b9634d",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f7aef.webp",
+      "bytes": 10624,
+      "sha256": "7df9832fea3f13d32643009b35d1e72cbec181119b3550b9096055011d23466a",
+      "sourceFile": "figma-f7aef.png",
+      "sourceSha256": "bdcd760b66218ea698dc2950e459f8b106b1dcc5a9bb3f3129c217b73f4f10c9",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-2914e.webp",
+      "bytes": 14956,
+      "sha256": "7ea99433d907ac8e0656f3266ebe5418af9d852602b02444691959b167da13f3",
+      "sourceFile": "figma-2914e.png",
+      "sourceSha256": "f218239749bc514bed8a92fe4e898caccf7dce84dbfcb4ce7f4234808b7d1435",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-b6661.webp",
+      "bytes": 65112,
+      "sha256": "4099e430c96c4a3c12aff784f940d027355113655df23a0cb941cebf1e5a71f4",
+      "sourceFile": "figma-b6661.png",
+      "sourceSha256": "83575250aef28bec8967590d315798f23a6f8bad78c3fab4109a7090ba18a511",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-e70dc.webp",
+      "bytes": 12594,
+      "sha256": "1ac4c7f182f8d4b13bbdeea226c7284bd94d3b03c7fe2f46a9d67569bb2e6685",
+      "sourceFile": "figma-e70dc.png",
+      "sourceSha256": "0ec444dbaf7023db75ca48185acbc15748a3b1864c9cf8de331cdef0ce7a0491",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c43d6.webp",
+      "bytes": 349046,
+      "sha256": "a6b0fc5214aeb9bc8c9a9e3760c541ecdaad509b1668ef4d7863f46db8f1ab41",
+      "sourceFile": "figma-c43d6.png",
+      "sourceSha256": "670f1735963fbc673242abb815a7fb7d2da5cc489a08ee72c5c6e2dbe2e943a4",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-01822.webp",
+      "bytes": 424672,
+      "sha256": "b902f62814296087ddcd9b7382ddf9799ba0d54359ff21b2feed9e9a8801b2d0",
+      "sourceFile": "figma-01822.png",
+      "sourceSha256": "69944aa0e78b94ded7bb0dc1c0e4ec3b0543228880b6e618690f7bbd4ec74665",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-9ab79.webp",
+      "bytes": 183530,
+      "sha256": "22bf59a812a1f523e4c212c276fa5bfe6dc71317f19f6f56af3f553ec9a78663",
+      "sourceFile": "figma-9ab79.png",
+      "sourceSha256": "d329acc8486b6778e23eab06c9cc38b929362cae8964fd2fa5dfb24174ef89c4",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-a3330.webp",
+      "bytes": 236718,
+      "sha256": "76411af11912f2335422f9fa32a03bd31251f43849caafd814b009b1969c8dfa",
+      "sourceFile": "figma-a3330.png",
+      "sourceSha256": "82c168ebd21f615dafbeafa90c8a2bbf9454d2e96015bac4ebec558090b54af1",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-96cc1.webp",
+      "bytes": 34852,
+      "sha256": "51323d231b0259e5357a30208c38e31dfd7d7a650798799640852469b67031e8",
+      "sourceFile": "figma-96cc1.png",
+      "sourceSha256": "162d1b719a0a6b835175e17b1ea026682a542cfb8fce917eb746a51ad20ada48",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-84ed6.svg",
+      "bytes": 1328,
+      "sha256": "f738516cb5ef291250eb91a8ddb65615256aba9e212142da73b66ded3533ea97"
+    },
+    {
+      "file": "figma-8aa6c.svg",
+      "bytes": 1330,
+      "sha256": "0093e0eef0040d0ab2d87cc5dd4ee0afb76d7e98c12e2b4b9024170639ffa3c6"
+    },
+    {
+      "file": "figma-25deb.svg",
+      "bytes": 1040,
+      "sha256": "8a76c689d1ec9edcd23e321e9b33a568d07c8ab01676a7227e8b92b664b8dd6d"
+    },
+    {
+      "file": "figma-f4cac.svg",
+      "bytes": 1261,
+      "sha256": "67610405aae7b30c75688328e0bc40fa357fe3418d629c32dedb15f731642eb3"
+    },
+    {
+      "file": "figma-d5d89.svg",
+      "bytes": 936,
+      "sha256": "88b26474a3010ca5cb644796b2e8f8bb9ec48dfac7873be0a61a8e84dedeea57"
+    },
+    {
+      "file": "figma-1ee4f.svg",
+      "bytes": 298,
+      "sha256": "42861384adb4828f1f71d65b01ed8764991bab0e661bb0b66c3ee1f8ba50a71a"
+    },
+    {
+      "file": "figma-5b092.svg",
+      "bytes": 263,
+      "sha256": "71d5ed4f13d17dbbf6a2c4874b196d04d37cb715ac5cc99a1e9494d8ff49feb9"
+    },
+    {
+      "file": "figma-f6b19.svg",
+      "bytes": 654,
+      "sha256": "45dbaeb7bcd81f106db5051a8b5a7398d4848d2387c28d51c7d78ed714b6a06d"
+    },
+    {
+      "file": "figma-be6c1.svg",
+      "bytes": 1017,
+      "sha256": "1e21c89061898f616e45b293d4c1c46319d4c79cfbfaa716a948248ed9fbed35"
+    },
+    {
+      "file": "figma-d2205.svg",
+      "bytes": 985,
+      "sha256": "93a60f91a37c48f570554c081e713071cc437174a6b0391ba54a194ae714dabb"
+    },
+    {
+      "file": "figma-0d6f8.svg",
+      "bytes": 782,
+      "sha256": "fca6000fda3e6f3710c39efee29be88b6af5e459e0249930b6d1d92ff09fb8fc"
+    },
+    {
+      "file": "figma-94560.svg",
+      "bytes": 676,
+      "sha256": "fe748b57720b01eec18e8b0ce7d6af30c197c1cedf614ed80de34e57fa3487d9"
+    },
+    {
+      "file": "figma-b465f.webp",
+      "bytes": 683592,
+      "sha256": "4cee2929317fec531cd4d445fa8021889b7d23fffdf475a8c2938c8e7ecb9cc9",
+      "sourceFile": "figma-b465f.png",
+      "sourceSha256": "76bedc8f425722c003b7e432751975cb9bec98ba97b90806008729dbd8307093",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-14b35.webp",
+      "bytes": 559332,
+      "sha256": "eb8fea39186714de41174377f6d32afb63eab9046a31acfc2cf9ef1502ea4a97",
+      "sourceFile": "figma-14b35.png",
+      "sourceSha256": "c36668fb4dcd637e9fc59e19be9d378277b7d1e2fee0265053f942d54c20055c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-08884.webp",
+      "bytes": 691160,
+      "sha256": "39a498b9667cb0e40336c894d7e7089a8a9344244b5807f2671303b6158fb51f",
+      "sourceFile": "figma-08884.png",
+      "sourceSha256": "e80ca97dbbe4ebb057ca29ce17476e7c54c7a252dcd43da1657cff1567e5d74f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-af35e.webp",
+      "bytes": 877052,
+      "sha256": "48d6c0a3fa2b06a77e36486386a65ecb1ce85c3a37f39350d4fec6cc07d9449b",
+      "sourceFile": "figma-af35e.png",
+      "sourceSha256": "5f52a2079feb0ad538ca49df79ec093ef3c877d0ae8c297482ae740cf83372dd",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-e2efa.svg",
+      "bytes": 15525,
+      "sha256": "fe116c5e4102abc48b3c4d2f9d53200091719a45efcb204926571bf0cd614ab0"
+    },
+    {
+      "file": "figma-1555a.svg",
+      "bytes": 15577,
+      "sha256": "1a58c292a9d6f9670870900ac79c1d1c0112221faf53eeb75f06185374765e3f"
+    },
+    {
+      "file": "figma-635f9.webp",
+      "bytes": 340408,
+      "sha256": "ddd252a56a16f5acd376c1aeaae4d4cf496a497137db70e34ac5a839cf8af3d6",
+      "sourceFile": "figma-635f9.png",
+      "sourceSha256": "b210b5cd2099932fbd70f48fb6b8846101e1f3fd437e0c0f67d010b3006e3c0b",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-04b07.webp",
+      "bytes": 487126,
+      "sha256": "a0d945f6c05793643e6eea6279d5ae92e4d16fec1738cc3cc75e1bd5a3ce1882",
+      "sourceFile": "figma-04b07.png",
+      "sourceSha256": "f91d24d15a750f9e7dd921c896f7996360355a282619e75269f842163beedd23",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-72a7f.webp",
+      "bytes": 239778,
+      "sha256": "c2e2d419ac6410e5311bdfc9d65fa466cdaaa7461bc4d51b27c0334985556007",
+      "sourceFile": "figma-72a7f.png",
+      "sourceSha256": "f874b6fc8c83b05ba7ad7f21bab66d5a11354778a72040a0f5093c925caadb66",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-8fa91.svg",
+      "bytes": 244,
+      "sha256": "31c61b13b8841ccd1bd80053ddba3b9edb93d920c0c8bfd014b0e570ee93161a"
+    },
+    {
+      "file": "figma-51ce9.svg",
+      "bytes": 760,
+      "sha256": "66020254f2c3dc1c6198f6bca06e1e8c32c933fd5697510e88b3dcd4278fbcb5"
+    },
+    {
+      "file": "figma-17abe.webp",
+      "bytes": 13828,
+      "sha256": "c9328f248650f032726d251541636dbaa717256ee5deb8532d82e3cc51332edb",
+      "sourceFile": "figma-17abe.png",
+      "sourceSha256": "53256c549b7cd3b95c8fc45fe5c3e5b4d2696e49331a2100eb299da8bb08cf8f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-8118a.webp",
+      "bytes": 87476,
+      "sha256": "1b2500479d3f95aab7d11b4d15ef3701642e6d090e9a434d2df6f2318f914cb5",
+      "sourceFile": "figma-8118a.png",
+      "sourceSha256": "fb0086f09fbd3783fd374707a11f41836c7c042fd0ea18730ce6cb05e8085736",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-3e17b.webp",
+      "bytes": 34806,
+      "sha256": "5c0853a2ef2a9962390c160aaef8ca884cb3f03f775fd14924a1e22e7914e446",
+      "sourceFile": "figma-3e17b.png",
+      "sourceSha256": "d7b1c9c1858e5a90e322dc4827a8b672d593e261865bd330d89a1a44221ccd8b",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7a45c.webp",
+      "bytes": 43704,
+      "sha256": "7bf18c2b0793a0907997db3b8d840d0208dddd9bb403a3fe2be04df5965d1fc7",
+      "sourceFile": "figma-7a45c.png",
+      "sourceSha256": "bec0c144269490b11038ef2e0e7558426802427b274db2bb2ebb91b5c738b30f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-df332.webp",
+      "bytes": 11310,
+      "sha256": "1e6f3d9f7a15889b7a0ed83ebdcad97c88b9561b3e1410e47036cc53c0d7bd30",
+      "sourceFile": "figma-df332.png",
+      "sourceSha256": "a89c533f077ad78bf335e107b8b45a48850400cb147faa4adff912a3ecb56e15",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-565ab.webp",
+      "bytes": 940022,
+      "sha256": "212922548ebf2a380a616a474894fb39c4e25aea809cfbe960503aed47a2f62b",
+      "sourceFile": "figma-565ab.png",
+      "sourceSha256": "26e2c3f401c1a7bf8e48460900ec0915556122363ff5abb562256c7abb0b5fd3",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d3a3f.webp",
+      "bytes": 873276,
+      "sha256": "1b7bb208b843866bb6f4fa23ba041da38080d2646adef5031b427e9b66d10ab5",
+      "sourceFile": "figma-d3a3f.png",
+      "sourceSha256": "185568347eba53f294b05b9c54bc3979ef50d2fc137ce410657d7490fceac4ef",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-e496b.svg",
+      "bytes": 15487,
+      "sha256": "156b5901e6189e9b78426bc13ce941866d2cfb8231aabca6b7a0840a40166eec"
+    },
+    {
+      "file": "figma-cd457.svg",
+      "bytes": 15599,
+      "sha256": "a83093a14bb5f9c65768f222f10ff30bc640e26ea49cc943c4800f00770c7c3f"
+    },
+    {
+      "file": "figma-493a4.webp",
+      "bytes": 289826,
+      "sha256": "7241795903060e1c7fda6064c92a260ea29740cef078deec3dcfe34e7bb3d4f7",
+      "sourceFile": "figma-493a4.png",
+      "sourceSha256": "7f059633725a3bfab954085a5a5397d12006b8f43165d9ecdc940177927f13f8",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-a38b4.webp",
+      "bytes": 516704,
+      "sha256": "30cdbfd125028aec78bfac1f461fbfcf550dd9da26b3929912ca5087ba13524f",
+      "sourceFile": "figma-a38b4.png",
+      "sourceSha256": "4d11171c7415e2e7d34424725f86e8418142a344fdfb4d01d00516ec332eb842",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-3d71d.webp",
+      "bytes": 394464,
+      "sha256": "b1b743827d4eab154bd252444bcc2f77b7539f979b0f52e54f3874f5c71d63c8",
+      "sourceFile": "figma-3d71d.png",
+      "sourceSha256": "7bf76d7f564b2e7796af01ea1754c9955ab883deb14821bab463a44aebfbaa97",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d213a.svg",
+      "bytes": 539939,
+      "sha256": "fc3365416dbf1094989676d552f99222b463ea0d1d0568b2c07a10727e16e2c0"
+    },
+    {
+      "file": "figma-239e1.webp",
+      "bytes": 636332,
+      "sha256": "ba87398ccf54d62585d05b659b351da9e62bd58e0494b56df80f71ec12907f58",
+      "sourceFile": "figma-239e1.png",
+      "sourceSha256": "4783dc705d011b3fad78f885de5006a595493ff92e62acb99d72de2b9fb1e95f",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-57399.webp",
+      "bytes": 30448,
+      "sha256": "9758458fda663c26d34121fbdcd3f0c84dc17e4c9d75af875a93472c7a0e2ad9",
+      "sourceFile": "figma-57399.png",
+      "sourceSha256": "b0f1dbabc3bba6d11a53ffb590f998e44992f4ce1ee9ea4b0798302899bd80e0",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c6b7a.webp",
+      "bytes": 14290,
+      "sha256": "b9e121e8f57aa0ea917fccee9c53529927693e9915cc537ca5ce31106745bdb7",
+      "sourceFile": "figma-c6b7a.png",
+      "sourceSha256": "e161dbf6d03e0f4263e4266e96d6fba2bf1eab48cc771222e58353c9d4bafe98",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-5f5a9.svg",
+      "bytes": 3306,
+      "sha256": "05a0ab87dc8c657518c7ec5e4f737e37f3c508f6cdc9db6d5b760c24f84e2401"
+    },
+    {
+      "file": "figma-59290.svg",
+      "bytes": 300,
+      "sha256": "e0c58ab3b0bef1a540b18f98cdefe11dbc5ff9da5802a27ef55684d6990fc58f"
+    },
+    {
+      "file": "figma-69996.svg",
+      "bytes": 303,
+      "sha256": "86383fb8268ed17685ac973d5fa502238185e981e482c058fc51059f5da5015e"
+    },
+    {
+      "file": "figma-ab164.svg",
+      "bytes": 600,
+      "sha256": "5689aff3e4ee842826718953b7a71f415a56d9d4dd47a8fbbd60d98c5ae2f11a"
+    },
+    {
+      "file": "figma-f27a4.svg",
+      "bytes": 3396,
+      "sha256": "bce5200e13f62122b48e305f43a3f1ea8e67ca2e52dd839eeb8bbf58d6f12c48"
+    },
+    {
+      "file": "figma-ca584.webp",
+      "bytes": 3058,
+      "sha256": "54dbbdb8b81dd85a9487c4f9fbfd75c22fb30d2616f4b2c4398ecf0dabb89b4d",
+      "sourceFile": "figma-ca584.png",
+      "sourceSha256": "0ec2826ba54528bb2704f967ac19a65bb543db5ff760ae54bdab9416bd87dc76",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-49097.webp",
+      "bytes": 57004,
+      "sha256": "e70752906065314408679385a1dae35fff035c91ce8be7b0af4de4e487de4c76",
+      "sourceFile": "figma-49097.png",
+      "sourceSha256": "68d88c8348283e1cb2a8f0cd15f3b9677949a386a97692aa2b21b338cfa9f604",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-14632.webp",
+      "bytes": 1618,
+      "sha256": "c735aeb2b394626d9b3a32e5065f124f991374902bfe4f9e0a3b9861e3637bc7",
+      "sourceFile": "figma-14632.png",
+      "sourceSha256": "b1a7390e6107841016477ae0b2849790d8ee9ac2fe68582fb64225281eb97315",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-43732.webp",
+      "bytes": 14718,
+      "sha256": "cc1e1d6faf2d6d7ce431c6ce906febd1a2c4312a91f310e9cc2d4926c631d9ce",
+      "sourceFile": "figma-43732.png",
+      "sourceSha256": "798501037ffe2132abd8a1b994fe4b6951e1f9773dedc160612e67a2a0abb80e",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f59fa.svg",
+      "bytes": 223,
+      "sha256": "0d063cd099003ae664ddeb770ca0b04f7b2b183862038a5b400f43e95a541a89"
+    },
+    {
+      "file": "figma-219e1.svg",
+      "bytes": 3783,
+      "sha256": "1231ac7604701328c9900a1588721b6d9b855b8518505ce2a7437bf896f534d5"
+    },
+    {
+      "file": "figma-0fa8d.webp",
+      "bytes": 443248,
+      "sha256": "fecbf1d7ffb54012af950cb5d60f2ab2050aa797e737b90533425f830bc89f94",
+      "sourceFile": "figma-0fa8d.png",
+      "sourceSha256": "7a0b40af5089c02ef73ce656a6d13ece5b415c7c2f01bd47c288bdb9197b2407",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-fe5e4.webp",
+      "bytes": 931824,
+      "sha256": "dc49cb17544a803937f95949309974dde597a2bdeec4219f9f6f5b73a67950c9",
+      "sourceFile": "figma-fe5e4.png",
+      "sourceSha256": "7296f4d1893299e8fc629fad1f7f7b6e0eb1e0906da74f9489c0ddbc66019618",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7d439.webp",
+      "bytes": 762106,
+      "sha256": "53614f5d81916812d992eaafa124fc6e1860929d03596d476eb9d08b7f0ae80c",
+      "sourceFile": "figma-7d439.png",
+      "sourceSha256": "94cf8ef1cca2085d6ec311f166ff8ec500df4cfa277da991504d161e11e4b0f1",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c14ee.webp",
+      "bytes": 633188,
+      "sha256": "dcd24e35c342f2deffd08e28e42ce4983113b31f6a7437516ddddbf6d1e2ff9c",
+      "sourceFile": "figma-c14ee.png",
+      "sourceSha256": "cdc4ac00b6e22de32339b7333406b9e24796b68c05822ac9935510161d90f8f2",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-7d856.webp",
+      "bytes": 624488,
+      "sha256": "9b17ca65508486520f8653e555a480438070770074a398f8a4504dcb617bf095",
+      "sourceFile": "figma-7d856.png",
+      "sourceSha256": "4d430768b650430137d84f7e0523e9958f7501fd2fe049b95fe6fc8519bc893a",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-87a0f.webp",
+      "bytes": 559264,
+      "sha256": "13f2c42acb40bdd8c8a6f06fa7a98d7ffbb9ea9a7cb54c3188e9fcd65b2b06af",
+      "sourceFile": "figma-87a0f.png",
+      "sourceSha256": "904c8c024c89a853d5cfe350afa10d18e19a144b7df6a23686336fd947d0dfef",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-11080.svg",
+      "bytes": 15488,
+      "sha256": "8e184fb9408d431013e9272245e898a865d233ff2eb6f3789de592423fc81cc0"
+    },
+    {
+      "file": "figma-df4ea.svg",
+      "bytes": 15554,
+      "sha256": "9ebbf8a9f96bd555629464a0d84f8f53325ba8e8fe78a472af1ce2ec03ce3c9b"
+    },
+    {
+      "file": "figma-e92df.svg",
+      "bytes": 618,
+      "sha256": "51a257bf96f28a6cf678eba2351df811c190572728759ef84baeee97d475c390"
+    },
+    {
+      "file": "figma-4c339.svg",
+      "bytes": 753,
+      "sha256": "1e426e6631e4c07a37c0a73c85f7f3783b116cf3b7b52ad41a704420a8bf9c39"
+    },
+    {
+      "file": "figma-69f43.webp",
+      "bytes": 217842,
+      "sha256": "f5931d2ce0da217bed11cdb0e4f9fd17a1cd246e846c51277737276dc1837441",
+      "sourceFile": "figma-69f43.png",
+      "sourceSha256": "25ece00c81ca7389528b00e708ab689e8579f62f3b9ed379c3e00af36db82c55",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-2ee53.svg",
+      "bytes": 229,
+      "sha256": "761e5c81bb2b97d7348f1d7ad75ee2f4b80fe9b6b3751c967eb8729ce54409d7"
+    },
+    {
+      "file": "figma-6c412.webp",
+      "bytes": 973908,
+      "sha256": "4f0563d070d402ff7d422cca6d8662fc851e20a1eeffda1a305ec8252455d49f",
+      "sourceFile": "figma-6c412.png",
+      "sourceSha256": "276581494be400c66e5e34bbf66454c895d36c004f4e90af02563c775929c2ff",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-1ff66.webp",
+      "bytes": 378626,
+      "sha256": "121000eaf379a479e602b6423ada8a7ebe05f97c44e4406ae6235cc1a4599e06",
+      "sourceFile": "figma-1ff66.png",
+      "sourceSha256": "e275774e01fdfab13143ee86ee9efe4523f8cb9413be47d90fd8e9177f94557a",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-27e4e.webp",
+      "bytes": 2144016,
+      "sha256": "258b1b54abcf3a58d4633e3d956a7dcecdc4505d394b88c57bc3125e4f7a9565",
+      "sourceFile": "figma-27e4e.png",
+      "sourceSha256": "10d06b3096a47d6a43fddbf72f30e5e6d4870fce10bd471b982763768a105cf5",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-82534.webp",
+      "bytes": 371450,
+      "sha256": "63186f2c7251e404d8c8b1348e3af322063511e2c253941e6fd5fd7281be1ea0",
+      "sourceFile": "figma-82534.png",
+      "sourceSha256": "3a0ee2032e6204583d988f8a1e8a2ad58667e154cfb6f2adf50dc376a9838fe7",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-572d9.webp",
+      "bytes": 254926,
+      "sha256": "806f1038583579829a967cb1c7aa143cea8288774d98372a3c377443b66b30ce",
+      "sourceFile": "figma-572d9.png",
+      "sourceSha256": "8e7422164426cf3f2179b2dede17b5d0771afc455b745ae74839a0e2143ff31c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-c0ba9.png",
+      "bytes": 11534729,
+      "sha256": "ecb1d974610941fe7e52942d7010c7532fee5745219b2eeed2986d04d3de9087"
+    },
+    {
+      "file": "figma-d0f00.webp",
+      "bytes": 313242,
+      "sha256": "0dcddf5a1c2e9e8732112373e1b1baf3b1da5188b71a358084e959cecfc46ad0",
+      "sourceFile": "figma-d0f00.png",
+      "sourceSha256": "ab009b5add002c97f2b5078b6bde6b6809b820596eb2154eb8d799bd5bafed2d",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-05960.svg",
+      "bytes": 1401,
+      "sha256": "0629b6f2465b1bbecc0ba6b407a90eff7eb7510ef13e95b8566a80c31eb986b0"
+    },
+    {
+      "file": "figma-a7205.svg",
+      "bytes": 1548,
+      "sha256": "ced1128f796157693010fad56be83d363dc45e3c4e212291f202fe9a78504418"
+    },
+    {
+      "file": "figma-22cbc.svg",
+      "bytes": 11093,
+      "sha256": "f7380c4955b780bb26a4eeaec929b71e34e28af31c68eb59cd856822c43e9cf6"
+    },
+    {
+      "file": "figma-15831.svg",
+      "bytes": 15559,
+      "sha256": "2d39a8cf7102f613d27d2dec849f10245fd60e3ea692ceb6568b4bba4e7517d9"
+    },
+    {
+      "file": "figma-f4194.svg",
+      "bytes": 15611,
+      "sha256": "4e945b8797308322232533396daa0db22eba3a41ad8baa3d8e962ad6604fa705"
+    },
+    {
+      "file": "figma-06497.webp",
+      "bytes": 14842,
+      "sha256": "ba3dffbc14bc99e5f87f356c46ba340b637fc013e069aa1947d5113ebe1a2bd7",
+      "sourceFile": "figma-06497.png",
+      "sourceSha256": "da4969cb15c3f256919751dcc5e6cc3168426e9368b2b2b1dfc1cbb92287460c",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-100a3.webp",
+      "bytes": 669734,
+      "sha256": "fae19bc855777e2f461cad602dd6c23401b07796aaeb4e99be65a16b9969ab01",
+      "sourceFile": "figma-100a3.png",
+      "sourceSha256": "4bead499ee1df23016d7a8b29376c86c531c4e809fb4fc9ff61bdbd371747f53",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-4aea0.webp",
+      "bytes": 833084,
+      "sha256": "aa3be9a942d4e5a34dea9cd052a337b5c7318ab8df88dab1a37e04a034d1e85b",
+      "sourceFile": "figma-4aea0.png",
+      "sourceSha256": "43c055c739ce73915f41a1801997482da9b2f3dbc44200f2b39017f176fd503a",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-f0bf5.webp",
+      "bytes": 601504,
+      "sha256": "ee46bd89013d81eeb05c55ee6f2ffdaa856f26f9b5487bcc276fdd39c093eb92",
+      "sourceFile": "figma-f0bf5.png",
+      "sourceSha256": "c01f292a159cd77de0443e10f5fa4c0e110dd59e59d237ac799d8c6522375a39",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-b4b95.webp",
+      "bytes": 396414,
+      "sha256": "72e9890a3f43d66206b6e36cad4b5eaeebc465ec6f1fc0cb45546894bef28e28",
+      "sourceFile": "figma-b4b95.png",
+      "sourceSha256": "846ad50360e21e2bf648454cd19989fbf60162c63fe4aa26bb450bfd52773805",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-ffd3c.webp",
+      "bytes": 766008,
+      "sha256": "1cd18cbe27ae8a100acf74a048399be5bc5403eb4335d0b183bd75ca73151595",
+      "sourceFile": "figma-ffd3c.png",
+      "sourceSha256": "1520e9ac873233987b4882c17794908692f13dbd3860fd0fc65e0e73c65af2a1",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-b5b83.webp",
+      "bytes": 719120,
+      "sha256": "9186680d06fe8c51461fb45bfdd5db2eb79290f7b635c51fb13787d3e183d91b",
+      "sourceFile": "figma-b5b83.png",
+      "sourceSha256": "e136b26fb71b9793b82b26b8807e655d71a2c9f74e3f71b43233951b8eb1e642",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-d3a48.webp",
+      "bytes": 704596,
+      "sha256": "f3bc89d02b1113ff649688be0618be1156ffbfcc1d837e1a9857f743ef563a81",
+      "sourceFile": "figma-d3a48.png",
+      "sourceSha256": "181ecff598533f71d9400a964487b0d1918911652f28a70329b8b66eaaeb66fc",
+      "encoding": "lossless-webp; decoded RGBA pixels verified identical"
+    },
+    {
+      "file": "figma-5c301.svg",
+      "bytes": 15523,
+      "sha256": "f6bb9c2061225b6d2fe210e7b5611b2084656d0b155f2ec7a0b9253eb134e068"
+    },
+    {
+      "file": "figma-87403.svg",
+      "bytes": 15592,
+      "sha256": "b6752d8683aeea55ba95e6a242e10e845565809e230b8ad2a282107e8b3620a1"
+    }
+  ],
+  "font": {
+    "file": "Parkinsans.ttf",
+    "source": "Existing local Parkinsans font, Newsletter x flatland/pitstop/dist/fonts/Parkinsans.ttf",
+    "sha256": "a4e64caa56ec94dcc82335be924e68c2a4a24544646d819abffe035d87158fa8",
+    "bytes": 93096
+  }
+}

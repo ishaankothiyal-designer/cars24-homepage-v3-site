@@ -1,0 +1,25 @@
+/* Shared header dimensions and Core checkbox choices. Turbo UI source tokens. */
+:root{--prototype-header-logo-width:var(--size-96);--prototype-page-gutter:var(--spacing-24)}
+.focus-header{padding-inline:calc(var(--prototype-page-gutter) - (var(--size-44) - var(--spacing-20))/2)}
+.focus-header .mini-brand,.brand-location>img{width:var(--prototype-header-logo-width);height:auto;object-fit:contain;object-position:left}
+.form-content{padding-inline:var(--prototype-page-gutter)}
+.listing-view{--prototype-page-gutter:var(--spacing-12)}
+.body-type-choice .check{border-radius:var(--radius-xxs)}
+.body-type-choice[aria-checked=true] .check{background:var(--bg-brand-base);border-color:var(--border-brand-base);color:var(--text-primary-inverse)}
+.body-type-choice[aria-checked=false] .check{background:var(--bg-primary);border-color:var(--border-secondary);color:transparent}
+.body-type-legend{font-size:var(--font-size-sm);font-weight:var(--font-weight-semibold);margin-bottom:var(--spacing-8)}
+.body-type-fieldset{border:0;padding:0;margin:var(--spacing-12) 0}
+.ownership-groups .choice{min-height:var(--size-56)}
+.ownership-groups .glass{width:var(--size-32);height:var(--size-32)}
+@media(max-width:760px){:root{--prototype-page-gutter:var(--spacing-20)}}
+/* Back glyphs keep the same inset with either source SVGs or packaged icons. */
+.focus-header .icon-btn>.ui-icon{font-size:var(--spacing-20);width:var(--spacing-20);height:var(--spacing-20)}
+
+/* Hallmark · pre-emit critique: P5 H4 E5 S5 R5 V4 */
+.make-choice .check{border-radius:var(--radius-xxs)}
+.make-choice[aria-checked=true] .check{background:var(--bg-brand-base);border-color:var(--border-brand-base);color:var(--text-primary-inverse)}
+.make-choice[aria-checked=false] .check{background:var(--bg-primary);border-color:var(--border-secondary);color:transparent}
+.make-search-field{margin-top:var(--spacing-16)}
+.make-picker .make-options{margin-top:var(--spacing-12)}
+.make-picker .make-choice{min-height:var(--size-64)}
+.make-filter-fieldset{border:0;padding:0;margin:var(--spacing-12) 0}

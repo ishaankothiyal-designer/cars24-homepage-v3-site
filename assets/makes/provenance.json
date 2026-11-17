@@ -1,0 +1,105 @@
+{
+  "source": "https://www.figma.com/design/PU6FSOC7YuOY2R96bhVAzC/Asset-Library?node-id=1551-93",
+  "sourceId": "FIGMA-CAR-MAKE-LOGOS",
+  "retrieved": "2026-11-16",
+  "format": "Original PNG image fills, used with exact source 4:3 frame crop from Figma design context.",
+  "alias": "Maruti Suzuki/Maruti uses supplied suzuki component 69:8; product labels stay Maruti Suzuki.",
+  "assets": [
+    {
+      "make": "Maruti Suzuki",
+      "file": "maruti-suzuki.png",
+      "nodeId": "69:8",
+      "sha256": "83575250aef28bec8967590d315798f23a6f8bad78c3fab4109a7090ba18a511"
+    },
+    {
+      "make": "Hyundai",
+      "file": "hyundai.png",
+      "nodeId": "1:57",
+      "sha256": "0ec444dbaf7023db75ca48185acbc15748a3b1864c9cf8de331cdef0ce7a0491"
+    },
+    {
+      "make": "Tata",
+      "file": "tata.png",
+      "nodeId": "69:2",
+      "sha256": "69944aa0e78b94ded7bb0dc1c0e4ec3b0543228880b6e618690f7bbd4ec74665"
+    },
+    {
+      "make": "Honda",
+      "file": "honda.png",
+      "nodeId": "55:700",
+      "sha256": "d329acc8486b6778e23eab06c9cc38b929362cae8964fd2fa5dfb24174ef89c4"
+    },
+    {
+      "make": "Mahindra",
+      "file": "mahindra.png",
+      "nodeId": "1:83",
+      "sha256": "670f1735963fbc673242abb815a7fb7d2da5cc489a08ee72c5c6e2dbe2e943a4"
+    },
+    {
+      "make": "Kia",
+      "file": "kia.png",
+      "nodeId": "69:39",
+      "sha256": "3b4c10233d97434dc22bce7db6017089961f0c00864128789b07319492d6bbf6"
+    },
+    {
+      "make": "Audi",
+      "file": "audi.png",
+      "nodeId": "38:98",
+      "sha256": "870549d03a93394491154873ac6e69f4b4420147007c964ad90412a237fda670"
+    },
+    {
+      "make": "BMW",
+      "file": "bmw.png",
+      "nodeId": "20:359",
+      "sha256": "d7f96c972385238661a95a4c883831dd0664db270c94640e18eee80fccf7b2c0"
+    },
+    {
+      "make": "Ford",
+      "file": "ford.png",
+      "nodeId": "53:636",
+      "sha256": "162d1b719a0a6b835175e17b1ea026682a542cfb8fce917eb746a51ad20ada48"
+    },
+    {
+      "make": "Jeep",
+      "file": "jeep.png",
+      "nodeId": "55:696",
+      "sha256": "b1e911ee010f2cf4987ef5e3137a768795332e56a83c37d5ade693bd37b8c3d7"
+    },
+    {
+      "make": "MG",
+      "file": "mg.png",
+      "nodeId": "7:223",
+      "sha256": "4e9002e12664ddaeb50e82f2e95216b39c85f41224ee353827aa77a0d4109001"
+    },
+    {
+      "make": "Nissan",
+      "file": "nissan.png",
+      "nodeId": "54:652",
+      "sha256": "6114bb440458ba941eebcd9183ec39931962b03289e0cae4188933ca01e17170"
+    },
+    {
+      "make": "Renault",
+      "file": "renault.png",
+      "nodeId": "69:55",
+      "sha256": "b19a37249b2ca9a40959fe7952b435b117ddf11ec6bac6d19b124a19c9af2389"
+    },
+    {
+      "make": "Skoda",
+      "file": "skoda.png",
+      "nodeId": "13:236",
+      "sha256": "938e2fc44b2d96913ab9ad682ca9caa4f28c2ccf44ee64bd95a129bd65227f63"
+    },
+    {
+      "make": "Toyota",
+      "file": "toyota.png",
+      "nodeId": "1:161",
+      "sha256": "82c168ebd21f615dafbeafa90c8a2bbf9454d2e96015bac4ebec558090b54af1"
+    },
+    {
+      "make": "Volkswagen",
+      "file": "volkswagen.png",
+      "nodeId": "1:165",
+      "sha256": "bf04a05885437d7600eee6c5ba567fad639c70a741b0f8bca5b6305685f3a767"
+    }
+  ]
+}

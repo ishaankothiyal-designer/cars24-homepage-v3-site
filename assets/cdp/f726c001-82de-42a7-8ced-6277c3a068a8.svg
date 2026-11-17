@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 2147235565">
+<circle id="Ellipse 22330" cx="34" cy="34" r="34" fill="#9D55FF" fill-opacity="0.1"/>
+<g id="Zero Worry Max">
+<path id="Base" d="M33.7905 12L52.6476 23V45L33.7905 56L14.9333 45V23L33.7905 12Z" fill="url(#paint0_linear_0_500)"/>
+<path id="vector" d="M22.2667 34.0478C28.1571 31.8389 31.8387 28.1573 34.0476 22.2668C36.2566 28.1573 39.9381 31.8389 45.8286 34.0478C39.9381 36.2567 36.2566 39.9383 34.0476 45.8288C31.8387 39.9383 28.1571 36.2567 22.2667 34.0478Z" fill="white"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_500" x1="45.0758" y1="48.8591" x2="24.1082" y2="21.6013" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4E188D"/>
+<stop offset="1" stop-color="#893EE0"/>
+</linearGradient>
+</defs>
+</svg>

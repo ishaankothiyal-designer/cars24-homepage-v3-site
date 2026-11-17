@@ -1,0 +1,49 @@
+/* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 */
+@font-face{font-family:L1Parkinsans;src:url('../assets/l1/Parkinsans.ttf') format('truetype');font-weight:300 800;font-display:swap}
+.l1-view{display:flex;flex-direction:column;height:100%;min-height:0;background:var(--bg-primary)}
+.l1-view>.app-header{position:relative;inset:auto;flex:none}
+.l1-scroll{flex:1;min-height:0;overflow-y:auto;overflow-x:clip;overscroll-behavior:none;scrollbar-width:none;background:var(--bg-primary);padding-bottom:0}
+.l1-scroll::-webkit-scrollbar{display:none}
+.l1-source{width:360px;max-width:100%;color:var(--text-primary);font-family:var(--prototype-font-family);font-size:var(--font-size-sm);line-height:normal;--font-syle:var(--prototype-font-family);--font-family\/active:var(--prototype-font-family);--color-black:var(--text-primary);--color-white:var(--bg-primary)}
+.l1-source *,.l1-source *::before,.l1-source *::after{box-sizing:border-box;border-width:0;border-style:solid}
+.l1-source p,.l1-source h2{margin:0;font:inherit;letter-spacing:inherit;color:inherit;max-width:none}
+.l1-source img{display:block;max-width:100%;vertical-align:middle}
+.l1-widget{width:100%;min-width:0;margin:0;background:var(--bg-primary)}
+.l1-widget>div{height:auto}
+.l1-source .l1-control{cursor:pointer;text-align:inherit;font:inherit;color:inherit;background-color:transparent;margin:0;appearance:none}
+.l1-source .l1-control:focus-visible,.l1-source summary:focus-visible,.l1-registration:focus-visible{outline:var(--border-width-medium) solid var(--border-brand-base);outline-offset:var(--spacing-2)}
+.l1-source .l1-registration{min-width:0;width:100%;border:0;border-radius:0;background:transparent;box-shadow:none;padding:0;color:var(--text-primary);font:inherit;font-size:var(--font-size-xl);font-weight:var(--font-weight-semibold);text-transform:uppercase}
+.l1-registration::placeholder{color:var(--text-tertiary);text-transform:none;font-size:var(--font-size-base)}
+.l1-source .l1-faq{display:block;cursor:default}
+.l1-faq summary{display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-12);list-style:none;cursor:pointer;font-size:var(--font-size-sm);line-height:var(--spacing-20);font-weight:var(--font-weight-medium)}
+.l1-faq summary::-webkit-details-marker{display:none}
+.l1-faq summary::after{content:'+';flex:none;font-size:var(--font-size-xl)}
+.l1-faq[open] summary::after{content:'−'}
+.l1-source .l1-faq-answer{margin-top:var(--spacing-8);font-size:var(--font-size-xs);line-height:var(--spacing-16);color:var(--text-secondary)}
+.flow-links a[aria-current=page]{color:var(--text-brand-primary);font-weight:var(--font-weight-semibold);background:var(--bg-brand-subtler);border-radius:var(--radius-md)}
+.l1-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--spacing-4) var(--spacing-8)}
+.l1-links a{min-height:var(--size-44);padding:var(--spacing-8);font-size:var(--font-size-sm)}
+.persona-panel{max-height:calc(100dvh - var(--spacing-48));overflow-y:auto;scrollbar-width:thin;padding-right:var(--spacing-8)}
+@media(max-width:760px){.persona-panel{max-height:none;overflow:visible;padding-right:0}}
+
+.l1-source [data-name="Slider widget"] [data-name="_base-container-box"]{overflow-x:auto;max-width:100%;scrollbar-width:none}
+
+.l1-source [data-name="Brand_carousal"]{overflow-x:auto;scrollbar-width:none}
+
+/* Source sections replace the service deck body; existing header/nav rules stay. */
+.l1-home{height:100%;min-height:0;min-width:0;grid-template-columns:minmax(0,1fr);background:var(--bg-primary)}
+.l1-home .l1-scroll{height:100%;min-width:0;width:100%;scroll-snap-type:none;scroll-behavior:auto;padding-bottom:0}
+.l1-home .l1-source{width:100%}
+.l1-footer{max-height:calc(var(--l1-footer-source-height) - var(--spacing-48));overflow:clip}
+.l1-footer [data-footer-slogan],.l1-footer [data-footer-slogan]>p{font-family:var(--font-family-primary);font-size:var(--l1-footer-slogan-size);line-height:var(--l1-footer-slogan-leading);font-weight:var(--font-weight-semibold);letter-spacing:var(--l1-footer-slogan-tracking);word-spacing:normal;white-space:nowrap}
+.l1-footer .l1-footer-heart{color:var(--color-race-flame-600);width:var(--spacing-16);height:var(--spacing-16);flex:none}
+.l1-home .l1-context{padding:var(--spacing-12);background:var(--bg-primary)}
+.l1-home .l1-context .deck-card{height:auto;min-height:0;overflow:visible;gap:var(--spacing-12)}
+.l1-home .l1-context .deck-actions{margin-top:var(--spacing-8)}
+.l1-home .l1-context .buy-preferences .subcopy{overflow:visible;display:block}
+.l1-home .l1-context .buy-results-rail{flex:none;overflow-x:auto;overflow-y:hidden}
+.l1-home .l1-context .deck-vehicle strong{font-size:var(--font-size-base)}
+
+.l1-source [data-name="Brand_carousal"]{overflow-x:auto;scrollbar-width:none}
+
+.l1-source [data-name="Brand_carousal"]{overflow-x:auto;scrollbar-width:none}

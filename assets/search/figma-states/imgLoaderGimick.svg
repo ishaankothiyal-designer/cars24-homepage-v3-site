@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Loader-gimick">
+<path id="shape" d="M18.4286 12C18.4286 8.4496 15.5504 5.57143 12 5.57143C8.44963 5.57143 5.57146 8.4496 5.57146 12C5.57146 15.5504 8.44963 18.4286 12 18.4286C15.5504 18.4286 18.4286 15.5504 18.4286 12ZM21 12C21 16.9706 16.9706 21 12 21C7.02947 21 3.00003 16.9706 3.00003 12C3.00003 7.02944 7.02947 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="#E3E1FF"/>
+<path id="shape_2" d="M12 5.57143C15.5504 5.57143 18.4286 8.4496 18.4286 12H21C21 7.02944 16.9706 3 12 3V5.57143Z" fill-rule="evenodd" clip-rule="evenodd" fill="#4736FE"/>
+</g>
+</svg>

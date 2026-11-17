@@ -1,0 +1,31 @@
+/* Prototype role aliases. Exact Turbo UI values; exceptions are in compatibility.css. */
+:root{
+  --brand:var(--color-cobalt-blue-500);
+  --brand-dark:var(--prototype-color-392bcb);
+  --ink:var(--prototype-color-0f172b);
+  --secondary:var(--prototype-color-62748e);
+  --subtle:var(--color-slate-50);
+  --surface:var(--bg-primary);
+  --line:var(--color-slate-200);
+  --active:var(--prototype-color-f4f3ff);
+  --black:var(--prototype-color-161616);
+  --error:var(--prototype-color-b42318);
+  --success:var(--prototype-color-157348);
+  --canvas:var(--prototype-color-f4f4f7);
+  --radius:var(--radius-alt-lg);
+  --small-radius:var(--radius-sm);
+  --pill:var(--prototype-measure-999px);
+  --s1:var(--spacing-4);
+  --s2:var(--spacing-8);
+  --s3:var(--spacing-12);
+  --s4:var(--spacing-16);
+  --s5:var(--spacing-20);
+  --s6:var(--spacing-24);
+  --s8:var(--spacing-32);
+  --s10:var(--spacing-40);
+  --duration:180ms;
+  --ease:cubic-bezier(.2,0,0,1);
+}
+
+/* Exact source card height in Figma onboarding 8672:85804; no 132px size primitive. */
+:root{--prototype-measure-132px:132px}

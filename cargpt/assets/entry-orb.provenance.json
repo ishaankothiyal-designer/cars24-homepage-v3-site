@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "kind": "static-frame-of-existing-C3-renderer",
+  "source": "public/cargpt/visuals/orb.js",
+  "shader": "public/cargpt/visuals/orb.frag",
+  "shaderSha256": "4d77a9479d2a506234652fa52e5229ba4d46880001ef2472e81a4288a9cd4d5e",
+  "capture": {
+    "browser": "Google Chrome",
+    "phase": "idle",
+    "size": 150,
+    "canvasCssSize": 180,
+    "deviceScaleFactor": 2,
+    "reducedMotion": true
+  },
+  "use": "Bottom navigation CarGPT entry artwork. Full CarGPT uses unchanged live source renderer."
+}

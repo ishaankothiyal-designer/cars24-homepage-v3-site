@@ -1,0 +1,98 @@
+{
+  "figmaFile": "ttwWd3vH4lRPzfPLM8rOun",
+  "accessed": "2026-11-17",
+  "assets": [
+    {
+      "file": "imgNavigationChevronRight.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "f511d66d05e3b0f3ad1725f94190dbabc6c29231891ac24948da9b3ffa2bb3d9"
+    },
+    {
+      "file": "imgNavigationChevronRight1.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "83457be97c36778f22759928ba49efcbb4f4a2189b0cbd083ef9d0a7638633bc"
+    },
+    {
+      "file": "imgChevronBottom.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "f4c7db5ed55f1290d2a255394e35931de5e54dd1d44f9102ff32e1ba43e3571d"
+    },
+    {
+      "file": "imgMagnifyingGlass2Search.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "1b13edf881c1007e1f35bea71821fbd76ff7fd13c1ab32beb752afbaa31706c3"
+    },
+    {
+      "file": "imgOutlineDots.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "fa7fc02039c0e21c56e5f522b36343848013a19dbad454637d6ff6baaaa761cd"
+    },
+    {
+      "file": "imgOutlineDots1.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "eff5bc68761202e03241d54907291c8bac16c1b01f68e3180008af409f1f49e7"
+    },
+    {
+      "file": "imgOutlineDots2.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "fa7fc02039c0e21c56e5f522b36343848013a19dbad454637d6ff6baaaa761cd"
+    },
+    {
+      "file": "imgOutlineDots3.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "fa7fc02039c0e21c56e5f522b36343848013a19dbad454637d6ff6baaaa761cd"
+    },
+    {
+      "file": "imgOutlineDots4.svg",
+      "sourceNode": "8727:60957",
+      "sha256": "fa7fc02039c0e21c56e5f522b36343848013a19dbad454637d6ff6baaaa761cd"
+    },
+    {
+      "file": "imgChevronDownSmall.svg",
+      "sourceNode": "8727:60958",
+      "sha256": "fcd19e9de763af12e2990ba8d6b1d9700036bbddc9f09cea33d59ca8fd1e73af"
+    },
+    {
+      "file": "imgFilter2Sort.svg",
+      "sourceNode": "8727:60958",
+      "sha256": "353ae12c64e89648b3c65a8f31d5c9f0dd8af101e9c879761eda0ed12c2f1379"
+    },
+    {
+      "file": "imgPlaceholderGenerate.svg",
+      "sourceNode": "8727:60960",
+      "sha256": "ef7ae71b00efa0e38d66fa5dacfc74896e9558fd860aca41944163fad2cb4213"
+    },
+    {
+      "file": "imgGroup70485.svg",
+      "sourceNode": "8727:60960",
+      "sha256": "40dc05217221723a26d74aa36819ae8fee93871b8c6eaba5ff8eb69e4602091d"
+    },
+    {
+      "file": "imgSquareGridCircleLayoutGridListCategoryCategories.svg",
+      "sourceNode": "8727:60960",
+      "sha256": "488106784354bf2560f1eda85c987911ed19ac5d95905e21cb1a3f2bed95f68b"
+    },
+    {
+      "file": "imgVTtLqs.svg",
+      "sourceNode": "8727:60960",
+      "sha256": "e7072fb429c470a7d16d4ddb1b48ccd4f444eaa2f580773b929db51800130aa6"
+    },
+    {
+      "file": "imgVector8399.svg",
+      "sourceNode": "8727:60960",
+      "sha256": "15f9a859bbdf2aecc459d63c2b26cdafcaa3aff08b69d699041704411ecff2aa"
+    },
+    {
+      "file": "promo-logo.png",
+      "sourceNode": "I8727:60957;10374:146167;4016:140064",
+      "export": "Original artwork group PNG at native scale; no UI screenshot",
+      "sha256": "3bf0b1572ed93be79d179385cbf5d561d8eb8fc2097cd8056949dada48b8cde9"
+    },
+    {
+      "file": "promo-car.png",
+      "sourceNode": "I8727:60957;10374:146167;4016:141126",
+      "export": "Original artwork group PNG at native scale; no UI screenshot",
+      "sha256": "e21c191ddde4ab36a3860c5a7a99ccb993f15cd266debcc8602e63d9ea6d523d"
+    }
+  ]
+}

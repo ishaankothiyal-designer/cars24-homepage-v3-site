@@ -1,0 +1,85 @@
+.flow-home-view{height:100%;overflow-y:auto;overflow-x:hidden;overscroll-behavior-y:contain;background:var(--bg-primary);scrollbar-width:none}
+.flow-bottom-nav .bottom-nav-tab>img{display:block;object-fit:contain;flex:none}
+.flow-bottom-nav .bottom-nav-search>img{display:block;object-fit:contain;flex:none}
+.screen.is-flow-listing .status-bar{background:var(--home-purple);color:var(--home-white)}
+.screen.is-flow-home .status-icons,.screen.is-flow-listing .status-icons{filter:brightness(0) invert(1)}
+.screen.is-flow-home .status-icons i,.screen.is-flow-listing .status-icons i{color:var(--home-white)}
+.flow-filter-panel{padding:var(--spacing-16);display:flex;flex-direction:column;gap:var(--spacing-12);border-bottom:var(--border-width-thin) solid var(--border-secondary);background:var(--bg-primary)}
+.flow-filter-panel h2{font-size:var(--size-heading-h4,17px);line-height:var(--spacing-24)}
+.flow-filter-panel .field{margin:0}.flow-filter-panel .field select{width:100%;min-height:var(--size-44)}
+#flow-assistant-root{position:absolute;inset:0;z-index:60;pointer-events:none}#flow-assistant-root>*{pointer-events:auto}
+#app:focus{outline:none}
+.screen:is(.is-flow-home,.is-flow-search,.is-flow-listing,.is-flow-detail) .status-bar{height:var(--flow-status-height);flex-basis:var(--flow-status-height)}
+.screen:is(.is-flow-home,.is-flow-search,.is-flow-listing,.is-flow-detail) .home-indicator{height:var(--flow-handle-height);background:var(--bg-primary)}
+.screen.is-flow-home .bottom-nav-content{height:100%}
+.screen.is-flow-home .bottom-nav{height:72px;padding-top:var(--spacing-8);padding-bottom:var(--spacing-10);background:transparent}
+.screen.is-flow-home .home-indicator{background:var(--bg-primary)}
+.screen.is-flow-assistant .home-indicator{background:var(--bg-primary)}
+.screen.is-flow-assistant .status-bar{filter:brightness(.6)}
+.flow-filter-panel fieldset{padding:0;border:0;min-width:0}.flow-filter-panel legend{font-size:var(--font-size-xs);margin-bottom:var(--spacing-8)}.flow-filter-panel .choice{min-height:var(--size-44)}.flow-emi-status{padding:var(--spacing-12);background:var(--bg-brand-subtler);font-size:var(--font-size-xs);line-height:var(--spacing-20)}
+
+.screen.is-flow-home.is-home-scrolled .status-bar{color:var(--text-primary)}
+.screen.is-flow-home.is-home-scrolled .status-icons{filter:brightness(0)}
+.screen.is-flow-home.is-home-scrolled .status-icons i{color:var(--text-primary)}
+
+.screen.is-flow-home.is-home-scrolled .status-icons img{filter:brightness(0)}
+.screen.is-flow-home.is-home-scrolled .signal i{background:var(--text-primary)}
+.screen.is-flow-home{--home-nav-easing:cubic-bezier(.4,0,.2,1)}
+.screen.is-flow-home .bottom-nav{transition:transform var(--duration-300) var(--home-nav-easing),opacity var(--duration-300) var(--home-nav-easing)}
+.screen.is-flow-home.is-home-scrolled .bottom-nav{transform:translateY(var(--spacing-16));opacity:0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.screen.is-flow-home .bottom-nav,.screen.is-flow-home #app::after{transition:none}}
+
+/* Home artwork continues behind native chrome; safe insets protect controls without painted bands. */
+.device .screen.is-flow-home .status-bar{position:absolute;inset:0 0 auto;background:transparent;z-index:30;pointer-events:none}
+.device .screen.is-flow-home .home-indicator{position:absolute;inset:auto 0 0;background:transparent;pointer-events:none}
+.screen.is-flow-home .home-masthead{padding-top:var(--home-native-top-inset);height:calc(56px + var(--home-native-top-inset))}
+.screen.is-flow-home .bottom-nav{bottom:var(--home-native-bottom-inset)}
+
+.screen.is-flow-home .flow-home-view::before{content:'';display:block;position:sticky;top:0;height:var(--home-header-surface-height,var(--home-native-top-space));margin-bottom:calc(-1 * var(--home-header-surface-height,var(--home-native-top-space)));background:transparent;z-index:21;pointer-events:none}
+.screen.is-flow-home .home-search-sticky{position:sticky;top:var(--home-native-top-inset);height:56px;padding-bottom:var(--spacing-12);display:flow-root;z-index:22;background:var(--home-purple)}
+.screen.is-flow-home .home-hero{position:relative;height:144px;overflow:clip;color:var(--home-white)}
+.screen.is-flow-home.is-home-scrolled .home-search-sticky{background:transparent}
+.screen.is-flow-home.is-home-scrolled .flow-home-view::before{background:linear-gradient(to bottom,color-mix(in srgb,var(--home-white) 96%,transparent),color-mix(in srgb,var(--home-white) 88%,transparent) 60%,transparent);backdrop-filter:blur(var(--spacing-12));-webkit-backdrop-filter:blur(var(--spacing-12));mask-image:linear-gradient(to bottom,var(--home-white) calc(100% - var(--spacing-12)),transparent)}
+.screen.is-flow-home.is-home-scrolled .home-search{background:var(--home-light);color:var(--text-primary);border-color:var(--home-line)}
+.screen.is-flow-home.is-home-scrolled .home-location,.screen.is-flow-home.is-home-scrolled .home-header-icon{color:var(--text-primary)}
+.screen.is-flow-home.is-home-scrolled .home-location small{color:var(--home-muted)}
+.screen.is-flow-home.is-home-scrolled .home-header-icon img{filter:brightness(0)}
+
+.device .screen .home-indicator::after{content:'';display:block;position:absolute;left:50%;bottom:calc(var(--iphone-point) * 8);width:calc(var(--iphone-point) * 134);height:calc(var(--iphone-point) * 5);border-radius:var(--pill);background:var(--text-primary);transform:translateX(-50%);pointer-events:none}
+.screen.is-flow-home #app::after{content:'';position:absolute;inset:auto 0 0;height:calc(var(--home-native-bottom-inset) + 72px + var(--spacing-32));background:linear-gradient(to top,var(--bg-primary),color-mix(in srgb,var(--bg-primary) 90%,transparent) 48%,transparent);backdrop-filter:blur(var(--spacing-12));-webkit-backdrop-filter:blur(var(--spacing-12));mask-image:linear-gradient(to top,var(--bg-primary) 60%,transparent);z-index:19;pointer-events:none;opacity:1;transition:opacity var(--duration-300) var(--home-nav-easing)}
+.screen.is-flow-home.is-home-scrolled #app::after{opacity:0}
+
+.device .screen.is-flow-listing .status-bar{position:absolute;inset:0 0 auto;background:transparent;z-index:30;pointer-events:none}
+.device .screen.is-flow-listing .home-indicator{position:absolute;inset:auto 0 0;background:transparent;pointer-events:none}
+.screen.is-flow-listing.is-listing-scrolled .status-bar,.screen.is-flow-listing.is-listing-scrolled .status-icons i{color:var(--text-primary)}.screen.is-flow-listing.is-listing-scrolled .status-icons{filter:brightness(0)}.screen.is-flow-listing.is-listing-scrolled .status-icons img{filter:brightness(0)}.screen.is-flow-listing.is-listing-scrolled .signal i{background:var(--text-primary)}
+.screen.is-flow-listing #app::after{content:'';position:absolute;inset:auto 0 0;height:calc(var(--home-native-bottom-inset) + var(--spacing-24));background:linear-gradient(to top,var(--bg-primary),transparent);backdrop-filter:blur(var(--spacing-12));-webkit-backdrop-filter:blur(var(--spacing-12));mask-image:linear-gradient(to top,var(--bg-primary),transparent);z-index:19;pointer-events:none}
+
+/* USER-HOMEPAGE-SLIDE-SELECTIONS: shared service tabs and retained navigation behavior. */
+.screen.is-flow-home .home-service-tabs{position:sticky;top:calc(var(--home-native-top-inset) + var(--spacing-56));z-index:22;background:var(--bg-primary)}
+.screen.is-flow-home .home-service-tabs .nav-tabs{height:var(--spacing-88);min-height:var(--spacing-88);padding-top:var(--spacing-4);border-bottom:var(--border-width-thin) solid var(--border-secondary)}
+.screen.is-flow-home .bottom-nav,.screen.is-flow-home.is-home-scrolled .bottom-nav{opacity:1;transform:none;pointer-events:auto;background:transparent}
+.screen.is-flow-home #app::after,.screen.is-flow-home.is-home-scrolled #app::after{opacity:1}
+.screen.is-flow-home .bottom-nav-content{height:100%}
+.screen.is-flow-home .flow-home-view{padding-bottom:calc(var(--bottom-nav-height) + var(--home-native-bottom-inset))}
+.screen.is-flow-home .home-service-tabs .nav-tab{font-family:var(--font-family-primary)}
+.screen.is-flow-home .home-service-tabs .nav-tabs{height:calc(var(--spacing-88) + var(--spacing-8));min-height:calc(var(--spacing-88) + var(--spacing-8))}
+.screen.is-flow-home .home-service-tabs .nav-tab{font-size:var(--prototype-measure-11px)}
+.screen.is-flow-home .home-service-tabs .nav-tab.active::after{bottom:var(--spacing-4);background:var(--text-brand-base)}
+
+/* USER-L1-FOOTER-END: artwork ends behind floating navigation, with no trailing band. */
+.bottom-nav-content:has(>.l1-view){height:100%}
+.screen.is-flow-home .flow-home-view{padding-bottom:0}
+.screen.is-flow-home #app{--footer-nav-safe-inset:var(--home-native-bottom-inset)}
+.screen.is-flow-home #app::after,
+#app.has-bottom-nav:has(.l1-scroll)::after{
+ content:'';position:absolute;inset:auto 0 0;
+ height:calc(var(--bottom-nav-height) + var(--spacing-48) + var(--footer-nav-safe-inset,0px));
+ background:linear-gradient(to top,var(--bg-primary),color-mix(in srgb,var(--bg-primary) 90%,transparent) 24%,color-mix(in srgb,var(--bg-primary) 55%,transparent) 52%,color-mix(in srgb,var(--bg-primary) 16%,transparent) 78%,transparent);
+ backdrop-filter:blur(var(--spacing-16));-webkit-backdrop-filter:blur(var(--spacing-16));
+ mask-image:linear-gradient(to top,var(--bg-primary) 20%,color-mix(in srgb,var(--bg-primary) 85%,transparent) 48%,color-mix(in srgb,var(--bg-primary) 35%,transparent) 76%,transparent);
+ -webkit-mask-image:linear-gradient(to top,var(--bg-primary) 20%,color-mix(in srgb,var(--bg-primary) 85%,transparent) 48%,color-mix(in srgb,var(--bg-primary) 35%,transparent) 76%,transparent);
+ z-index:19;pointer-events:none;
+}
+
+/* Keep the last footer anchored when users continue scrolling at the boundary. */
+.screen.is-flow-home .flow-home-view{overscroll-behavior-y:none}

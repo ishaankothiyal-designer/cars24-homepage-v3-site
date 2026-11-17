@@ -1,0 +1,58 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "section": "8743:96834",
+  "retrieved": "2026-11-16",
+  "usage": "Source illustration assets; contained media deliberately preserves the full car per user correction. Actual selected model and inventory remain data-backed.",
+  "assets": [
+    {
+      "file": "used-car.png",
+      "nodeId": "8672:85905",
+      "sha256": "a895970f4126d5c1919b0df854dfb7908c1c6bea7742690a38457c2ebb2ad62f"
+    },
+    {
+      "file": "new-car.png",
+      "nodeId": "8672:85907",
+      "sha256": "7bc573d87ebcf683a670e55561d68629f0a06c1a0a5b7d26d03856ae4d620a31"
+    },
+    {
+      "file": "new-car-search.png",
+      "nodeId": "8672:85913",
+      "sha256": "5d3f2e2d3b464232d0985ff5aa75e28603c0d31c3c2853aed8a7e5c75a5f2f0b"
+    },
+    {
+      "file": "budget.png",
+      "nodeId": "8672:85918",
+      "sha256": "3cf414251d76d1df5a61f08e3574f1280323a061fbf0c78e8a9fb3d481beec74"
+    },
+    {
+      "file": "mid-range.png",
+      "nodeId": "8672:85924",
+      "sha256": "c9266ee09ab9c8518ffe3e459e2a2e58a2a94aaeb4119a945dabfc7554a97937"
+    },
+    {
+      "file": "premium.png",
+      "nodeId": "8672:85930",
+      "sha256": "84dd0c52eab60461be6d418ffc4fb150ad7b8a6e8938adf3e5290d5b95750fc4"
+    },
+    {
+      "file": "hatchback.png",
+      "nodeId": "8672:85967",
+      "sha256": "1f0a053ddf3b4ede64dc2e3b5d20f687077d870f470ab16f07ac5bdb397cdfaa"
+    },
+    {
+      "file": "suv.png",
+      "nodeId": "8672:85973",
+      "sha256": "5a7de01ae3eeafc2b17a9ad4a86eae3b41498d98afa366850fe57f8b964975ef"
+    },
+    {
+      "file": "sedan.png",
+      "nodeId": "8672:85979",
+      "sha256": "00e58a943ace36b298c109398c8c9f04b03e8db8b7c3f805350a4bda7bf484aa"
+    },
+    {
+      "file": "brand-symbol.svg",
+      "nodeId": "8672:86003",
+      "sha256": "6f876c7c9700241809df8ecbf2f9ec9db0e8e0bebb877f2b23de0da704af28fc"
+    }
+  ]
+}

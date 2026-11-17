@@ -1,0 +1,35 @@
+/* Reusable retail compositions, built on source tokens and the existing Core bridge.
+ * Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V4 */
+.retail-view h2{font-size:var(--font-size-3xl);line-height:var(--line-height-display-1)}
+.retail-view h3{margin:var(--spacing-16) 0 var(--spacing-8);font-size:var(--font-size-lg)}
+.retail-view .result-summary{margin:var(--spacing-16) 0}
+.retail-view .result-summary dd{max-width:60%;overflow-wrap:anywhere}
+.retail-view details{border-block-end:var(--prototype-measure-1px) solid var(--line);padding:var(--spacing-16) 0}
+.retail-view summary{cursor:pointer;min-height:var(--spacing-48);display:flex;align-items:center;gap:var(--spacing-8);font-weight:var(--font-weight-semibold)}
+.retail-view summary::before{content:'+';color:var(--brand)}
+.retail-view details[open]>summary::before{content:'−'}
+.retail-view summary:focus-visible{outline:var(--spacing-2) solid var(--brand);outline-offset:var(--spacing-4)}
+.retail-view .retail-filter-editor{margin-block:var(--spacing-12)}
+.retail-view .retail-section{margin-block:var(--spacing-24);border-block-start:var(--prototype-measure-1px) solid var(--line);padding-block-start:var(--spacing-16)}
+.retail-view .retail-section>p{font-size:var(--font-size-sm);color:var(--secondary);margin-block-end:var(--spacing-16)}
+.retail-view .car-list{display:grid;gap:var(--spacing-16)}
+.retail-view .retail-card-actions{display:flex;flex-wrap:wrap;gap:var(--spacing-8);justify-content:space-between}
+.retail-view .retail-card-actions>button{flex:1;min-height:var(--spacing-48)}
+.retail-view .retail-car{min-width:0;margin-block-end:var(--spacing-12)}
+.retail-view .car-card{margin:0}
+.retail-view .retail-comparison{display:grid;gap:var(--spacing-24)}
+.retail-view .retail-comparison section{border-block-start:var(--prototype-measure-1px) solid var(--line);padding-block:var(--spacing-8)}
+.retail-view .retail-offer{display:block;color:var(--success);font-size:var(--font-size-xs);margin:var(--spacing-8) 0}
+.retail-view .retail-offer-card{padding:var(--spacing-12);background:var(--subtle)}
+.retail-view .notice{overflow-wrap:anywhere}
+.retail-view .choice{min-height:var(--spacing-48)}
+.retail-view .field input,.retail-view .field select{min-height:var(--spacing-48)}
+.retail-view .chips{gap:var(--spacing-8);flex-wrap:wrap}
+.retail-view .progress-label{margin-block-end:var(--spacing-16)}
+
+.retail-view .retail-presets{flex-wrap:nowrap;overflow-x:auto;padding-block-end:var(--spacing-4)}
+.retail-view .retail-presets button{flex-shrink:0;white-space:nowrap}
+.retail-view .retail-filter-editor{margin-block:var(--spacing-4);padding-block:var(--spacing-4)}
+
+/* Keep added stakeholder controls from moving the phone below the viewport. */
+.studio .inspector{max-height:calc(100dvh - var(--spacing-48));overflow-y:auto;scrollbar-width:thin}
