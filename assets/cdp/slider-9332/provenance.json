@@ -32,7 +32,8 @@
     "The shell reuses the canonical CDP and action callbacks, scaling its content to the source 304px card width. Vehicle facts and existing design-example disclosures remain unchanged.",
     "Inventory-backed listing seller badges open the preview. C3 slider artwork and its separate bridge remain unchanged. Existing photo and View Details actions retain their normal fullscreen CDP entry.",
     "Utility CodeConnect paths asset/icon/svg are absent locally. Supplied vector exports use their intrinsic sizes inside 20px icon slots.",
-    "The captured background uses inert static markup, with IDs, actions and Rive attributes removed. Static shadow-card snapshots preserve the original scroll and native canvas color below one 40% scrim."
+    "The captured background uses inert static markup, with IDs, actions and Rive attributes removed. Static shadow-card snapshots preserve the original scroll and native canvas color below one 40% scrim.",
+    "User correction after415981b supersedes the source reserved header row within seller previews only: canonical hero starts at frame top in both states; Down/save/share float above it with expanded native-safe offsets. The duplicate make/model-title save control is hidden only inside this overlay. Ordinary CDP and image composition remain unchanged. Bounded endpoint sizing now reserves no header height."
   ],
   "assets": [
     {
