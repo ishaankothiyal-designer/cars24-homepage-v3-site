@@ -1,0 +1,143 @@
+{
+  "fileKey": "hgBc8XfaCoPyZal2xpyi9K",
+  "sourceNode": "5678:157596",
+  "accessed": "2026-11-18",
+  "authority": "User requests Gallery design and supplied demo photos; fixed design media do not describe the selected vehicle. Actual vehicle hero and facts remain separate.",
+  "geometry": {
+    "canvas": [
+      360,
+      3278
+    ],
+    "headerHeight": 56,
+    "contentCardWidth": 328,
+    "imageHeight": 184,
+    "cardRadius": 16,
+    "cardBorder": 0.5,
+    "horizontalPadding": 16,
+    "cardGap": 12,
+    "imageOnlyCardOuter": [
+      328,
+      184
+    ],
+    "firstCardOuter": [
+      328,
+      216
+    ],
+    "strokeAlignment": "inside",
+    "sectionHeights": {
+      "exterior": 692,
+      "interior": 856,
+      "features": 464,
+      "tyres": 464,
+      "highlights": 464
+    },
+    "contentAfterChromeGap": 13
+  },
+  "counts": {
+    "exterior": 3,
+    "interior": 4,
+    "features": 2,
+    "tyres": 2,
+    "highlights": 2,
+    "imperfections": 4
+  },
+  "adaptations": [
+    "Source placeholder56 counts replaced by supplied item counts.",
+    "Unknown-angle badges use category labels rather than incorrect exterior-angle labels.",
+    "Existing native status and home-indicator shells own safe areas; no duplicated source OS artwork.",
+    "No actual360 or video media supplied; retain honest demo still/availability states."
+  ],
+  "assets": [
+    {
+      "file": "exterior-diagonal.png",
+      "sourceVariable": "imgProperty1Ex1",
+      "sha256": "f4e2f4b9487263446f424cc4b46f9e4e7baca42f6baf3cfdcd2f5c78358f14e8",
+      "bytes": 149465
+    },
+    {
+      "file": "exterior-front.png",
+      "sourceVariable": "imgProperty1Ex2",
+      "sha256": "cddc99869a8915b94ebf1c6adc442e67c66db67d755e3542b999eb8eac080dec",
+      "bytes": 124484
+    },
+    {
+      "file": "exterior-back.png",
+      "sourceVariable": "imgProperty1Back",
+      "sha256": "516b4388c9f80dc8cb2fb18515210db51d80e5464b85c6e84eede32517d23897",
+      "bytes": 120571
+    },
+    {
+      "file": "interior-dashboard.png",
+      "sourceVariable": "imgProperty1In",
+      "sha256": "bad2e991eaeb3757e2d871e98ecc4bde1c07a26f5d7ef33a51481c2b1189a9de",
+      "bytes": 178676
+    },
+    {
+      "file": "interior-cluster.png",
+      "sourceVariable": "imgProperty1In2",
+      "sha256": "bd669448ba17aa63bc3689334c97b779fa7fda130c21ff031c19224ce831e707",
+      "bytes": 141007
+    },
+    {
+      "file": "interior-footwell.png",
+      "sourceVariable": "imgProperty1In3",
+      "sha256": "ac79e866df597bf8b81e344a8f30481568c0780dce44d25a7420e4450439b5b0",
+      "bytes": 299924
+    },
+    {
+      "file": "feature-seat.png",
+      "sourceVariable": "imgProperty1FEature1",
+      "sha256": "6a9ac2a870897c7121856d0f161e51407aba6388e31612c7ec7c2fce23a2b8cb",
+      "bytes": 186385
+    },
+    {
+      "file": "feature-storage.png",
+      "sourceVariable": "imgProperty1FEature2",
+      "sha256": "186a9e5eb5024895dd58d78fc38cc61ef452df0ee54748fbd10f002376558aef",
+      "bytes": 203311
+    },
+    {
+      "file": "tyre-tread.png",
+      "sourceVariable": "imgRightFrontTyreTreadOriginal21",
+      "sha256": "4bc4cac529fe21a5b2dda9cddf74627722f62e8675f12ba59aa09c517a510347",
+      "bytes": 423727
+    },
+    {
+      "file": "highlight-calendar.svg",
+      "sourceNode": "I5678:157628;4922:283170;5687:157042",
+      "width": 12,
+      "height": 12,
+      "sha256": "0553d0157ae4252a4189fcff2eb703c7cf9ea3f19984f2d3e9c1693cd4849dbe",
+      "bytes": 1326,
+      "method": "Exact source connected calendar-line export; all4rows intentionally use same12px sourceicon in20px paddedwrapper."
+    }
+  ],
+  "imperfectionsUpdate": {
+    "authority": "User subsequently supplied Figma9438:84402 with four composited demo photos.",
+    "sourceManifest": "../cdp-gallery-imperfections-9438/source.json",
+    "count": 4,
+    "labels": "Neutral Imperfection photo N; no inferred panel defect, severity, NEW, or inspected-vehicle claims.",
+    "fit": "contain for full1200x896 composite including coin markers in Gallery and fullscreen preview.",
+    "railWidth": 96,
+    "railWidthAuthority": "Implementation extension to keep full Imperfections label visible; original seven source tiles remain76px.",
+    "emptyFallback": "No imperfection photos added yet remains when no supplied items."
+  },
+  "mainReconciliation": {
+    "base": "2ffb1cd",
+    "video": "GalleryVideo now opens existing authorized Main VideoTour through cdp-panel/video with its existing mock-footage poster/player; selectedcategory/scroll/Back retained. Supersedes prior unavailable-video adaptation.",
+    "360": "Main has no interactive360 media; keep honest static preview availability state."
+  },
+  "userGalleryCorrections": {
+    "authority": "User explicitly removes Gallery footer, requests body-part captions and aspect-preserving filled images, and direct Video tab playback.",
+    "footer": "Gallery has no Call/Reserve/Test drive bar; ordinary CDP retains all original actions.",
+    "video": "Explicit Video shortcut or Gallery Video tab opens existing Main VideoTour immediately with Gallery Video context captured for Close/Back. Existing Gallery video poster remains available after returning. No new player.",
+    "imperfectionCaptions": [
+      "Front body panel",
+      "Fuel-filler body panel",
+      "Lower body panel",
+      "Body panel"
+    ],
+    "captionAuthority": "Conservative visible-body-part descriptions, not verified defect findings; user explicitly confirmed Body panel for photo4 in this demo.",
+    "imperfectionFit": "cover, aspect ratio preserved without stretching; focalY60/58/65/58 keeps supplied coin markers visible in16:9 cards and preview. Original1200x896 composites unchanged. Supersedes initial contain/numbered-label adaptation."
+  }
+}

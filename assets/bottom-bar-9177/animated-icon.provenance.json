@@ -46,5 +46,16 @@
       "riveCanvasFilter": "none",
       "pageErrors": 0
     }
+  },
+  "sharedMaterialRepair": {
+    "date": "2026-11-18",
+    "sourceBoard": "9182:62624",
+    "sourceNode": "9187:62776",
+    "freshSourceSha256": "d0fdd32431d811fa869b65a3b07c0cd1c44d14e4756a970aa665f325ca385528",
+    "observation": "Fresh full source SVG is identical to the stored source. The shared renderer had dropped its background material image and applied the tab-pill fill/shadow to the AI button.",
+    "change": "Restore background-only SVG at native 98x98 dimensions, offset -17,-10 inside the existing64x64 hit target; retain live circular backdrop blur10px. Remove generic tab-pill material from AI hit surface.",
+    "foreground": "Exactly one existing animated Rive canvas, current size44x44/offset10,10 and playback call unchanged. No static foreground glyph.",
+    "scope": "Only renderBottomNav consumers; tab pill, selected indicator, navigation, standalone CLP/CDP CarGPT launchers unchanged.",
+    "validation": "Fresh source context/screenshot, source SHA and derivation audit; runtime verification pending coordinated build."
   }
 }

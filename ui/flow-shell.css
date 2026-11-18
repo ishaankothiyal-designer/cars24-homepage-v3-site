@@ -83,3 +83,7 @@
 
 /* Keep the last footer anchored when users continue scrolling at the boundary. */
 .screen.is-flow-home .flow-home-view{overscroll-behavior-y:none}
+
+/* L1 scenery continues through the native handle slot; floating controls keep their anchor. */
+.device .screen:not(.is-flow-home)>#app.has-bottom-nav:has(>.bottom-nav-content>:is(.l1-view,.l1-home)){overflow:visible}
+.device .screen:not(.is-flow-home)>#app.has-bottom-nav>.bottom-nav-content:has(>:is(.l1-view,.l1-home)){height:calc(100% + var(--home-native-bottom-inset))}

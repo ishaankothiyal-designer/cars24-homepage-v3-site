@@ -39,7 +39,3 @@
 
 
 .device .screen .bottom-nav-9177 .bottom-nav-search::before{content:'';position:absolute;inset:0;border-radius:inherit;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);pointer-events:none}
-
-/* Both capsules share the same light glass material. The authored Rive stays Idle. */
-.device .screen .bottom-nav-9177 .bottom-nav-search{background:var(--bottom-nav-9177-pill);box-shadow:var(--bottom-nav-9177-pill-shadow);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.device .screen .bottom-nav-9177 .bottom-nav-search::before{content:none}

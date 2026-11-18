@@ -1,0 +1,154 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "nodeId": "9438:84402",
+  "checked": "2026-11-18",
+  "authority": "User-supplied design-demo images. Not verified defects of selected inventory.",
+  "sourceCaptions": [],
+  "sourceBadges": [],
+  "sourceCount": 4,
+  "composition": "Each exact Figma image-group export preserves the uploaded panel photo plus separately placed/rotated rupee-coin marker; original photo and coin layers retained alongside. No screenshot of UI used as a runtime asset.",
+  "entries": [
+    {
+      "id": "imperfection-1",
+      "category": "imperfections",
+      "label": "Imperfection photo 1",
+      "src": "./assets/cdp-gallery-imperfections-9438/imperfection-1-composite.png",
+      "isNew": false,
+      "objectPosition": "50% 50%",
+      "objectFit": "contain",
+      "demo": true,
+      "sourceNode": "9438:84398"
+    },
+    {
+      "id": "imperfection-2",
+      "category": "imperfections",
+      "label": "Imperfection photo 2",
+      "src": "./assets/cdp-gallery-imperfections-9438/imperfection-2-composite.png",
+      "isNew": false,
+      "objectPosition": "50% 50%",
+      "objectFit": "contain",
+      "demo": true,
+      "sourceNode": "9438:84399"
+    },
+    {
+      "id": "imperfection-3",
+      "category": "imperfections",
+      "label": "Imperfection photo 3",
+      "src": "./assets/cdp-gallery-imperfections-9438/imperfection-3-composite.png",
+      "isNew": false,
+      "objectPosition": "50% 50%",
+      "objectFit": "contain",
+      "demo": true,
+      "sourceNode": "9438:84401"
+    },
+    {
+      "id": "imperfection-4",
+      "category": "imperfections",
+      "label": "Imperfection photo 4",
+      "src": "./assets/cdp-gallery-imperfections-9438/imperfection-4-composite.png",
+      "isNew": false,
+      "objectPosition": "50% 50%",
+      "objectFit": "contain",
+      "demo": true,
+      "sourceNode": "9438:84400"
+    }
+  ],
+  "files": {
+    "imperfection-1-coin.png": {
+      "size": [
+        722,
+        722
+      ],
+      "bytes": 61004,
+      "sha256": "652fbf45149d7c5617abbcd9db41c889a7715b2192f0a4125c28795d9b31da59"
+    },
+    "imperfection-1-composite.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 1560584,
+      "sha256": "8ba7fc20d5c8e07ffda295622685b7141f072380330c4df70948649aa0cf62d1"
+    },
+    "imperfection-1-photo.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 2069081,
+      "sha256": "ba846dc807e89c0bb50a1a4cecb818ad32d328d81573b17131a3c140ba669d23"
+    },
+    "imperfection-2-coin.png": {
+      "size": [
+        722,
+        722
+      ],
+      "bytes": 61004,
+      "sha256": "652fbf45149d7c5617abbcd9db41c889a7715b2192f0a4125c28795d9b31da59"
+    },
+    "imperfection-2-composite.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 1188802,
+      "sha256": "7cd0dcbe1c0d4a6a9baa4d0dc37884cc823d2368f1fc2ddb00e154e336d50e49"
+    },
+    "imperfection-2-photo.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 1432717,
+      "sha256": "178e512047bd170f7e9dcde70ec82da958f566cdf4490cfffc0c29039f71835d"
+    },
+    "imperfection-3-coin.png": {
+      "size": [
+        722,
+        722
+      ],
+      "bytes": 61004,
+      "sha256": "652fbf45149d7c5617abbcd9db41c889a7715b2192f0a4125c28795d9b31da59"
+    },
+    "imperfection-3-composite.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 883603,
+      "sha256": "05635d961a28c39395c647888719bca1abef67f0e7c93255ee6913e8d14b9c53"
+    },
+    "imperfection-3-photo.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 1047642,
+      "sha256": "535d71de2041f1de5a797b9dbebf23a17c8c4da87352ef6d7828287b37983aa4"
+    },
+    "imperfection-4-coin.png": {
+      "size": [
+        722,
+        722
+      ],
+      "bytes": 61004,
+      "sha256": "652fbf45149d7c5617abbcd9db41c889a7715b2192f0a4125c28795d9b31da59"
+    },
+    "imperfection-4-composite.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 918226,
+      "sha256": "4be8bc55f6b9eaea8848942c2b9a938855fd01a20e44620481719ae9ac472121"
+    },
+    "imperfection-4-photo.png": {
+      "size": [
+        1200,
+        896
+      ],
+      "bytes": 1178164,
+      "sha256": "1355482d6fe70da7dc91195fa8f47dffd6042d2100dfaae18a0a121ed5190830"
+    }
+  }
+}

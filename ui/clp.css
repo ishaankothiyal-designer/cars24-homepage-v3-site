@@ -469,3 +469,7 @@ body:has(.screen.is-clp) .clp-source-note{display:block;}
 .clp-inline-filter-row .clp-inline-rail{margin-right:-12px;padding-right:12px}
 .clp-inline-fuel .clp-inline-tile{background:linear-gradient(#f1f5f9,#e2e8f0)}
 .clp-inline-filters .clp-inline-choice{height:36px;max-height:36px;box-sizing:border-box}
+
+/* Listing scenery fills the handle slot without moving its floating assistant or sticky chrome. */
+.device .screen.is-clp>#app:has(>.clp-source){overflow:visible}
+.device .screen.is-clp>#app>.clp-source>.clp-scroll{height:calc(100% + var(--home-native-bottom-inset))}
