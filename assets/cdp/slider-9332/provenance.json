@@ -1,0 +1,57 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "source": "9332:84231",
+  "observedAt": "2026-11-18",
+  "states": {
+    "collapsed": "9319:83740",
+    "expanded": "9332:84183"
+  },
+  "sourceGeometry": {
+    "canvas": [
+      360,
+      800
+    ],
+    "collapsedCard": [
+      304,
+      708
+    ],
+    "cardOrigin": [
+      28,
+      68
+    ],
+    "nativeAnnotation": 44,
+    "outerVerticalPadding": 24,
+    "neighborGap": 12,
+    "radius": 24,
+    "headerHeight": 56,
+    "controlSize": 32,
+    "controlIconSlot": 20
+  },
+  "adaptations": [
+    "The existing shell owns native OS chrome. Measured native insets replace the source 44px annotation. The card starts at native top + 24px and keeps 24px below; short viewports use 12px vertical padding. The expanded card fills the screen and reserves the existing native inset above its header.",
+    "The shell reuses the canonical CDP and action callbacks, scaling its content to the source 304px card width. Vehicle facts and existing design-example disclosures remain unchanged.",
+    "Inventory-backed listing seller badges open the preview. C3 slider artwork and its separate bridge remain unchanged. Existing photo and View Details actions retain their normal fullscreen CDP entry.",
+    "Utility CodeConnect paths asset/icon/svg are absent locally. Supplied vector exports use their intrinsic sizes inside 20px icon slots.",
+    "The captured background uses inert static markup, with IDs, actions and Rive attributes removed. Static shadow-card snapshots preserve the original scroll and native canvas color below one 40% scrim."
+  ],
+  "assets": [
+    {
+      "file": "down.svg",
+      "width": "10.9161",
+      "height": "6.25",
+      "sha256": "e7edd072bd1e2543ff5affb8bcc01afc6e1622fe7c5204c812f7fb14cde7310b"
+    },
+    {
+      "file": "save.svg",
+      "width": "16.6756",
+      "height": "15.4166",
+      "sha256": "9fb5634712a7b48fc95d39baccb43b651db38270476dc348612301d7c4870b50"
+    },
+    {
+      "file": "share.svg",
+      "width": "15",
+      "height": "15",
+      "sha256": "639aa4af88a74e2c77b2393cc6db3f70c97ed60a4005b95b7b32a033909ff938"
+    }
+  ]
+}

@@ -14,9 +14,14 @@ export function demoDifferences(car,profile,seller='all'){
  return differences;
 }
 /** Prefer exact fixtures, then sourced catalogue, then explicitly labelled nearest alternatives. */
-export function discoverDemoCars(profile,{seller='all',accept=()=>true,limit=24}={}){
+export function discoverDemoCars(profile,{seller='all',accept=()=>true,limit=24,populateUnfiltered=false}={}){
  const accepts=c=>(seller==='all'||c.seller===seller)&&accept(c);
  const original=matches(profile,CARS).filter(accepts);
+ const unfiltered=populateUnfiltered&&seller==='all'&&(!profile.budget||profile.budget==='any')&&!bodySelection(profile.body).length&&!makeSelection(profile.make).length&&!fuelSelection(profile.fuel).length&&['transmission','model','seats'].every(key=>!profile[key]||profile[key]==='Any');
+ if(unfiltered){
+  const cars=matches(profile,ALL_DEMO_CARS).filter(accepts);
+  if(cars.length)return {cars:cars.slice(0,limit),total:cars.length,mode:'expanded',notice:`Sourced demo listings · ${cars.find(c=>c.isDemoSnapshot)?.fetchedAt||cars[0].fetchedAt} snapshot. Prices and availability may have changed.`};
+ }
  if(original.length)return {cars:original,total:original.length,mode:'original',notice:''};
  const exact=matches(profile,DEMO_CARS).filter(c=>accepts(c)&&(!profile.seats||profile.seats==='Any'||c.seats===Number(profile.seats)));
  if(exact.length)return {cars:exact.slice(0,limit),total:exact.length,mode:'expanded',notice:`Sourced demo listings · ${exact[0].fetchedAt} snapshot. Prices and availability may have changed.`};

@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="shield-badge-check-filled">
+<path id="shape" d="M15.2083 2.5C16.474 2.5 17.5 3.52601 17.5 4.79167V13.8021C17.5 14.6407 17.0416 15.4122 16.3053 15.8138L11.097 18.6548C10.4131 19.0278 9.58691 19.0278 8.90299 18.6548L3.69466 15.8138C2.95844 15.4122 2.5 14.6407 2.5 13.8021V4.79167C2.5 3.52601 3.52601 2.5 4.79167 2.5H15.2083ZM12.5252 8.09977C12.2811 7.8557 11.8855 7.8557 11.6414 8.09977L9.16667 10.5745L8.35856 9.76644C8.11448 9.52236 7.71885 9.52236 7.47477 9.76644C7.23069 10.0105 7.23069 10.4061 7.47477 10.6502L8.72477 11.9002C8.84198 12.0174 9.00091 12.0833 9.16667 12.0833C9.33243 12.0833 9.49135 12.0174 9.60856 11.9002L12.5252 8.98356C12.7693 8.73948 12.7693 8.34385 12.5252 8.09977Z" fill-rule="evenodd" clip-rule="evenodd" fill="url(#paint0_linear_0_202)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_202" x1="10" y1="2.5" x2="10" y2="18.9345" gradientUnits="userSpaceOnUse">
+<stop stop-color="#90A1B9"/>
+<stop offset="1" stop-color="#1D293D"/>
+</linearGradient>
+</defs>
+</svg>

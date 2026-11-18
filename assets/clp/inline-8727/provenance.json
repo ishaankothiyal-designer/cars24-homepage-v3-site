@@ -1,0 +1,176 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "frame": "8727:60954",
+  "observedAt": "2026-11-18",
+  "nodes": {
+    "filters": "9283:67683",
+    "fuel": "9285:68348",
+    "budget": "9285:68341",
+    "people": "9266:62693",
+    "curated": "9283:67619",
+    "body": "9285:68324",
+    "brand": "9285:68334",
+    "seller": "9285:68359"
+  },
+  "method": "Fresh Figma MCP screenshot and child high-fidelity contexts; exact exports downloaded with curl -L.",
+  "adaptations": [
+    "Current user correction requires all eight source families in source order after every four actual cards: People, curated, Make/Transmission, body, brand, budget, fuel, seller; repeat the eight-family sequence for longer inventories. Supersedes the earlier three-family cycle and observed live8/11/15 placement.",
+    "User requested more cars to reveal every widget. An opt-in unfiltered listing population uses32distinct existing dated source records, retaining current city. Search/Home price paths and filtered recovery retain existing scope; no invented or duplicate inventory.",
+    "People placeholder templates replaced with actual catalog make/model/fuel/transmission/body queries routed through existing CarGPT listing-query entry with current constraints and Back state.",
+    "Curated Budget friendly means under \u20b95lakh with genuine constrained local count. As good as new and High safety have no supporting inventory facts: count slots show unavailable em dash and actions ask existing CarGPT with complete criteria; no inferred quality/safety tags.",
+    "Make/Transmission uses an Apply action from observed live behavior. Its button appears only with draft selections; source162px resting composition grows for this action. Placeholder utility icons receive existing semantic icons.",
+    "Budgets begin with source3/5/7/10/15lakh options; additional observed live caps follow. Counts use actual constrained local listings, never source/live placeholder totals.",
+    "Body rail uses three verified catalog body types rather than duplicate placeholder Hatchback. Brand PNG crops, intrinsic SVGs, separate wave/diagonal borders and sourcefont exception CLPInter600 for final three brands preserve source compositions.",
+    "All supplied source copy is visual reference, not independently verified service claims or stock availability. Seller category picks filter recorded seller values; unsupported categories return honest zero results."
+  ],
+  "assets": [
+    {
+      "file": "body-imgImage84140920.png",
+      "sha256": "00e58a943ace36b298c109398c8c9f04b03e8db8b7c3f805350a4bda7bf484aa"
+    },
+    {
+      "file": "body-imgImage84140921.png",
+      "sha256": "1f0a053ddf3b4ede64dc2e3b5d20f687077d870f470ab16f07ac5bdb397cdfaa"
+    },
+    {
+      "file": "body-imgImage84140922.png",
+      "sha256": "5a7de01ae3eeafc2b17a9ad4a86eae3b41498d98afa366850fe57f8b964975ef"
+    },
+    {
+      "file": "body-imgWrapper.svg",
+      "sha256": "4c4617e98baded7a0a173568fd7e9b9e5f81cb68e0f873f2812b6e929a340190"
+    },
+    {
+      "file": "body-imgWrapper1.svg",
+      "sha256": "0166b40c81d8894af08d2c514a35c542e3b0225cd73886d47fba8c1a2b8f93aa"
+    },
+    {
+      "file": "brand-imgBitmap.png",
+      "sha256": "d6494c1410d7e71362ac2239eac9e64d7a9f23c980ff25bbf6447babba4bc0de"
+    },
+    {
+      "file": "brand-imgImage84139498.png",
+      "sha256": "ffa2178d9559791fba17b969de2d01d88e3ed6f46361dbe7edf738083060777e"
+    },
+    {
+      "file": "brand-imgImage84139530.png",
+      "sha256": "8b6cc885677691e06927c0d2dd9b9e35c5d7a4b697ac9c7df8caa37c5974bb05"
+    },
+    {
+      "file": "brand-imgImage84139531.png",
+      "sha256": "d4fe4a3e2e65f71919c4c0bd4b9f8a0ea23b58226adfa926a0633bbc21920b29"
+    },
+    {
+      "file": "brand-imgImage84139573.png",
+      "sha256": "52ae278af8b3d07903864a9c6c35ff2a2d5daa697592288957476950ed516131"
+    },
+    {
+      "file": "brand-imgImage84139574.png",
+      "sha256": "dee02843ac4192e1e04e54e16943d02296a90ee6d9d442d4794651b630ea2fb4"
+    },
+    {
+      "file": "brand-imgImage84139575.png",
+      "sha256": "041335a70d29e8d942be15809339f1538b985d463304eeba56eab5091a610934"
+    },
+    {
+      "file": "brand-imgLogo08.svg",
+      "sha256": "2f367185ef6adf8ce15b2f084d41ca2ca7dcc1967b72955016565391372f1c10"
+    },
+    {
+      "file": "brand-imgWrapper.svg",
+      "sha256": "2cbc6004e36ceedcae5472da818b0a7bed8c78c9b29cc2627dd591988658db52"
+    },
+    {
+      "file": "brand-imgWrapper1.svg",
+      "sha256": "5ab692b7b57632ae29cd7e0cb4a4f5be4085375db0c3505632f81d5e243f4ea8"
+    },
+    {
+      "file": "cng.svg",
+      "sha256": "73ea1781deb53cd613d906ca01e9e1285e7b3006985afbb71902f52d4a6a5cca"
+    },
+    {
+      "file": "curated-imgShieldBadgeCheckFilled.svg",
+      "sha256": "640ee043fa57b7b096f30779b43a651222280f2417a27e2cd2a0115b4b43cdd4"
+    },
+    {
+      "file": "curated-imgSparkleFilled.svg",
+      "sha256": "5d3e30c4484532a39d28d3cb8b585ce13ca4aa6c04d92dd2aba7ae2e943c8278"
+    },
+    {
+      "file": "curated-imgTagSaleFilled.svg",
+      "sha256": "8ed7d480d5ee883ad573f9adde3415c717f52dc0aa6e2d9b8d61b3a26e82a2e1"
+    },
+    {
+      "file": "curated-imgWrapper.svg",
+      "sha256": "759d513c48b0f9cc7d3aed9bbb5178db06c130e7288b3cc6020090b8a97f317b"
+    },
+    {
+      "file": "curated-imgWrapper1.svg",
+      "sha256": "4e9f83edd14b8169da3158bb652d999f1c46f51b1a4039d19561c156900cd142"
+    },
+    {
+      "file": "diesel.svg",
+      "sha256": "d0b2217259837df413412168cfd9ccce96f252d6871f7ff95b60aeee906619c2"
+    },
+    {
+      "file": "electric.svg",
+      "sha256": "122a3655675091f41855c2d4441b0140efe18533264e4a976b0db97f9342469a"
+    },
+    {
+      "file": "fuel-imgWrapper.svg",
+      "sha256": "d7e355bff869cb9235bf822631ba5e3684760c0ebf2619b9b1b1974b4e080533"
+    },
+    {
+      "file": "fuel-imgWrapper1.svg",
+      "sha256": "b3f7097ed4826ac25bb4fb01b11bc165a3b27ba3ac584e7b2f2560dd3702b1bb"
+    },
+    {
+      "file": "hybrid.svg",
+      "sha256": "f4b47bd00e61e5a30d7bc3ebe095da6639b896dccb278cffdb6ec994d64b349f"
+    },
+    {
+      "file": "people-imgWrapper.svg",
+      "sha256": "4ced2f30641a2f29971c57b60907cd57bfb78dd0c910e13855d760f99474fd35"
+    },
+    {
+      "file": "people-imgWrapper1.svg",
+      "sha256": "cab5498e034adb2816a394319ebf88bc70dc5c385536f1d067d3a155dff8c5e9"
+    },
+    {
+      "file": "petrol.svg",
+      "sha256": "0dac8531705eddd904d1272224a75071e2335af42dca0b325d3f452ebf8ea758"
+    },
+    {
+      "file": "seller-imgArrowRightFilled.svg",
+      "sha256": "4a6beaebb80b0662a34cf48837e50f5a9349880c80cebf418eff3865dc448f9b"
+    },
+    {
+      "file": "seller-imgCategoryOwnedStockTypeWordmark.svg",
+      "sha256": "7981bb8bcef8820403a352c47bdd969f752c09a7033671406d62483dcf833bac"
+    },
+    {
+      "file": "seller-imgSellerTypeBadge.svg",
+      "sha256": "186ccec80ae03fb9ffc141aac01ff11e204d3480e260ea4c86f801510c77ed3e"
+    },
+    {
+      "file": "seller-imgSellerTypeBadge1.svg",
+      "sha256": "270249b245180aaeb7bf9e444e78866e68f27612a0b7045cc57a022d0161846b"
+    },
+    {
+      "file": "seller-imgWrapper.svg",
+      "sha256": "8cf435ddf6c1716ff842a4728ef738468089d3df8c06e65f424bab573e7c0fdb"
+    },
+    {
+      "file": "seller-imgWrapper1.svg",
+      "sha256": "8cf435ddf6c1716ff842a4728ef738468089d3df8c06e65f424bab573e7c0fdb"
+    },
+    {
+      "file": "wave-bottom.svg",
+      "sha256": "30a2e389ea931c1ee03cd0d09251183f7a6031e3b9494ed17246b83a40c9cb06"
+    },
+    {
+      "file": "wave-top.svg",
+      "sha256": "2a110e5ef93777bc853e9082a68f5ae8225ec871037d3d17acacf8c3ad43ea08"
+    }
+  ]
+}

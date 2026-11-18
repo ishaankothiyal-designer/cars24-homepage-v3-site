@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="360" height="24" viewBox="0 0 360 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="wrapper">
+<g id="Vector">
+<path d="M175 17.4062V24L0 14.0225V7.02246L175 17.4062Z" fill-rule="evenodd" clip-rule="evenodd" fill="#5AE8A1"/>
+<path d="M175 14.0225V7.02246L360 18V24L175 14.0225Z" fill-rule="evenodd" clip-rule="evenodd" fill="#5AE8A1"/>
+</g>
+<g id="Vector_2">
+<path d="M0 0.0224609L175 10.4062V17.4062L0 7.02246V0.0224609Z" fill-rule="evenodd" clip-rule="evenodd" fill="#4736FE"/>
+<path d="M360 18L175 7.02246V0.0224609L360 11V18Z" fill-rule="evenodd" clip-rule="evenodd" fill="#4736FE"/>
+</g>
+</g>
+</svg>

@@ -174,5 +174,26 @@
     "inputTextNode": "I9134:64405;22175:31232",
     "source": "Fresh high-fidelity Figma context and screenshot; source wrapper has 16px top, 16px horizontal and 4px bottom padding. The 328\u00d740 field sits at x16/y16 below native chrome; its inside Back uses the existing Autonaut utility glyph in a 20\u00d720 slot. Placeholder is Geist Regular 14px/18px, #64748b. Existing white pill and drop-shadow/sm remain.",
     "implementation": "Discovery and suggestions share the corrected entry field position; the separate AI loading composition remains unchanged. The 60px header height and discovery body positions remain unchanged. No asset bytes changed."
+  },
+  "relatedSearchesReview": {
+    "accessed": "2026-11-18",
+    "node": "9266:62432",
+    "source": "Fresh Search9133:74688 hierarchy and child high-fidelity context: People are also searching follows Trending now and precedes Search by brand;360x122 section,12px padding/gaps, two28px horizontally scrolling chip rails. It contains text-only chips and no new static artwork.",
+    "implementation": "Reuse packagedChip component. Source template labels become eight illustrative preference queries using existing models/fuel/budget vocabulary, not live analytics or availability. Color requests retain the existing unsupported-color CarGPT fallback; other requests use the same AI-to-CLP submission flow. No parser or inventory changes.",
+    "queries": [
+      [
+        "White Nexon Automatic",
+        "Tata under \u20b910 lakh",
+        "Hyundai SUV",
+        "Under \u20b95 lakh"
+      ],
+      [
+        "Honda City Petrol",
+        "Black Nexon Petrol",
+        "White Nexon under \u20b910 lakh",
+        "Under \u20b95 lakh"
+      ]
+    ],
+    "recents": "The entire Recent searches block and its following divider render only when actual recent entries exist. No heading, empty message or reserved gap remains when history is empty."
   }
 }

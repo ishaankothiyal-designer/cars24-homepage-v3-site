@@ -67,17 +67,12 @@
 .cargpt-view .cargpt-feed,.cargpt-view[data-mode="text"] .cargpt-feed{height:auto;flex:1;min-height:0;padding:24px 12px;background:var(--c3-white)}
 .cargpt-identity>span{color:var(--c3-brand)}
 .cargpt-view[data-mode="voice"]{background:transparent}
-.cargpt-view[data-mode="voice"] .cargpt-feed{padding-bottom:calc(180px + var(--c3-permission-height,0px));scroll-padding-bottom:calc(180px + var(--c3-permission-height,0px))}
+.cargpt-view[data-mode="voice"] .cargpt-feed{padding-bottom:180px;scroll-padding-bottom:180px}
 /* Source 190pt dock includes the shell's 34pt safe area. Content scrolls
    behind the white fade; bottom insets keep its final action reachable. */
 .cargpt-dock{position:absolute;bottom:0;left:0;right:0;height:156px;background:linear-gradient(180deg,#fff0,var(--c3-white) 30%);isolation:isolate}
 .cargpt-dock::before{content:"";position:absolute;left:0;right:0;bottom:-34px;height:130px;background:url('./assets/voice-floor.png') center bottom/100% 100% no-repeat;pointer-events:none}
 .cargpt-composer{position:relative;bottom:auto;left:auto;right:auto;flex:none}
-.cargpt-permission-panel{position:absolute;left:12px;right:12px;bottom:156px;z-index:3;max-height:180px;overflow:auto;background:var(--c3-white);border:1px solid var(--c3-hairline);border-radius:12px;box-shadow:0 2px 8px #1f293705,0 6px 16px #1f29370a;font-size:13px;line-height:18px}
-.cargpt-permission-panel[hidden]{display:none}
-.cargpt-permission-action{display:flex;align-items:flex-start;gap:10px;width:100%;min-height:44px;padding:12px;text-align:left;background:transparent;color:var(--c3-ink)}
-.cargpt-permission-action>.cargpt-icon{font-size:20px;line-height:24px;color:var(--c3-brand)}
-.cargpt-permission-action>span{display:flex;flex-direction:column;gap:6px;min-width:0}.cargpt-permission-action strong{font-weight:600}.cargpt-permission-action .cargpt-permission-cta{color:var(--c3-brand);font-weight:600;display:flex;align-items:center;gap:4px}
 .c3-source-visuals{position:absolute;inset:0;pointer-events:none}
 .c3-source-orb{position:absolute;left:50%;top:103px;width:180px;height:180px;transform:translate(-50%,-50%);pointer-events:none}
 .c3-source-visuals[data-phase="permission-required"] .c3-source-orb{top:84px}

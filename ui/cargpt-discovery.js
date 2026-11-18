@@ -7,8 +7,7 @@ export function carGPTDiscoveryMarkup({surface='listing',carId=''}={}){
 }
 
 // Preserve a revealed CDP on return from chat. CLP always stays compact.
-// Nudges follow scroll direction: tucked away on the way down, revealed when
-// the user scrolls back up. Native horizontal scrolling stays independent.
+// Nudges open while scrolling down and collapse to the orb while scrolling up. Native horizontal scrolling stays independent.
 const revealed=new Set();
 export function mountCarGPTDiscovery(root){
  let dead=false;const cleanups=[];
@@ -30,13 +29,13 @@ export function mountCarGPTDiscovery(root){
   let lastTop=scroll.scrollTop;
   const expand=value=>{if(entry.dataset.expanded===String(value))return;if(keyboardScroll)entry.dataset.instant='true';else delete entry.dataset.instant;entry.dataset.expanded=String(value);rail.inert=!value;if(value)revealed.add(key);else{revealed.delete(key);if(rail.contains(document.activeElement))entry.querySelector('.cargpt-discovery-launcher').focus({preventScroll:true});}};
   if(lastTop>0&&revealed.has(key)){expand(true);entry.dataset.instant='true';}else revealed.delete(key);
-  const reveal=()=>{const top=scroll.scrollTop,delta=top-lastTop;if(!delta||(Math.abs(delta)<8&&top!==0))return;expand(delta<0);lastTop=top;};
+  const reveal=()=>{const top=scroll.scrollTop,delta=top-lastTop;if(!delta||(Math.abs(delta)<8&&top!==0))return;expand(delta>0);lastTop=top;};
   const onKey=event=>{
    if(rail.contains(event.target)||event.target.matches('input,textarea,select,[contenteditable="true"]')||!['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key))return;
    keyboardScroll=true;event.preventDefault();const top=scroll.scrollTop,page=scroll.clientHeight*.8;
    const amount=event.key==='ArrowDown'?40:event.key==='ArrowUp'?-40:event.key==='PageUp'||(event.key===' '&&event.shiftKey)?-page:page;
    const next=Math.max(0,Math.min(scroll.scrollHeight-scroll.clientHeight,event.key==='Home'?0:event.key==='End'?scroll.scrollHeight:top+amount));
-   if(next!==top)expand(next<top);lastTop=next;scroll.scrollTo({top:next,behavior:'instant'});
+   if(next!==top)expand(next>top);lastTop=next;scroll.scrollTo({top:next,behavior:'instant'});
   };
   const onPointer=()=>{keyboardScroll=false;};
   root.addEventListener('keydown',onKey);scroll.addEventListener('scroll',reveal,{passive:true});scroll.addEventListener('pointerdown',onPointer,{passive:true});scroll.addEventListener('wheel',onPointer,{passive:true});

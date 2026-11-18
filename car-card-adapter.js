@@ -7,7 +7,7 @@ export function cardData(car, saved=false, recommended=false) {
  return {
   id:car.id, name:`${car.year} ${car.model}`, variant:car.variant || car.body,
   tags:[`${car.km.toLocaleString('en-IN')} km`,car.fuel,car.transmission==='Automatic'?'Auto':car.transmission,car.registrationRegion].filter(Boolean),
-  price:`₹${car.price.toFixed(2)} lakh`, photos,photo:photos[0],photoCount:photos.length,photoIndex:0,
+  price:`₹${car.price.toFixed(2)} lakh`, photos,photo:car.isDemoSnapshot&&car.cutoutImageUrl?car.cutoutImageUrl:photos[0],photoCount:photos.length,photoIndex:0,
   seller:car.seller,city:car.city,freeTestDrive:!!car.freeTestDrive,location:car.location || car.city,sourceNote:`${car.seller} · Checked ${car.fetchedAt}`,
   listingUrl:car.listingUrl,wishlisted:saved,owned:car.seller==='Cars24 Owned Stock',
   elite:car.category==='ELITE',categoryLabel:car.category==='PRIME'?'PRIME':'',recommended,

@@ -1,0 +1,73 @@
+{
+  "source": "Figma",
+  "fileKey": "hpM8CDgv3rxbN0kHhc1o8a",
+  "frame": "10537:142838",
+  "verified": "2026-11-18",
+  "assets": [
+    {
+      "file": "winner-ribbon.png",
+      "nodeId": "7687:14522",
+      "sha256": "cac2ff4145d42613c1a3717fd9ca834e928213b6e2dde4dcbd1b301d405c52b9",
+      "width": 116,
+      "height": 34
+    },
+    {
+      "file": "winner-rays.png",
+      "nodeId": "7687:14499",
+      "sha256": "16fa7e7cdcd1571a2e0bd31e2f21ebe69de4b27a5f71c136d0c6dda3d51fc9e6",
+      "width": 180,
+      "height": 111
+    },
+    {
+      "file": "ground.svg",
+      "nodeId": "7687:14498",
+      "sha256": "faf4e52a9b9601340f8dacc8ff9dde87698747ed507da20d82ddddb8e1b66125",
+      "intrinsicDimensions": {
+        "width": "180",
+        "height": "111"
+      }
+    },
+    {
+      "file": "versus.svg",
+      "nodeId": "7687:14505",
+      "sha256": "b2420cb9dffbc9e9c8b01698f6444102660f69c49fbbd7a133ece21f6ad8b646",
+      "intrinsicDimensions": {
+        "width": "20",
+        "height": "20"
+      }
+    }
+  ],
+  "adaptation": "18 November review override: production rendering uses inline vector OUR PICK ribbon and transparent fan rays in src/car-comparison-ui.tsx, with Geist and Cars24 mint/cobalt tokens. Original PNG exports remain source references only. Both cars retain the same source gradient ground. Utility tasks use project Autonaut; Turbo Button/ButtonCore reused. Dimensions/Engine fallback fixtures are explicitly labelled demo specifications and never rank the pick.",
+  "designGeometry": {
+    "width": 360,
+    "headerHeight": 56,
+    "identityHeight": 224,
+    "headingSize": 15,
+    "carHeadingSize": 13,
+    "bodySize": 15,
+    "labelSize": 11,
+    "sourceBodyInset": 32
+  },
+  "tokenExceptions": "Native ribbon/gradient artwork retains original colour/effects; other surfaces use existing theme tokens. Header includes native shell inset.",
+  "reviewOverride": {
+    "source": "USER-NAMAN-COMPARISON-POLISH-2026-11-18",
+    "date": "2026-11-18",
+    "ribbon": "SVG geometry and live Geist OUR PICK text; no embedded bitmap",
+    "rays": "Transparent inline SVG fan, winner only; shared gradient stays visible on both sides",
+    "fixtures": "src/car-comparison-fixtures.js; illustrative fallback fields only, explicit values win"
+  },
+  "motion": {
+    "authority": "USER-NAMAN-COMPARISON-MOTION-2026-11-18",
+    "implementation": "src/car-comparison-motion.js and car-comparison.css",
+    "tool": "CSS transitions; IntersectionObserver/RAF lifecycle only",
+    "scope": "One-shot new chat comparison / pointer-opened full-page identities; no history or idle loop",
+    "tokens": "Existing --duration (180ms), --c3-nudge-duration (200ms), --c3-ease",
+    "staggerMs": [
+      0,
+      40,
+      80
+    ],
+    "reducedMotion": "120ms opacity only, no transforms or stagger",
+    "keyboard": "Immediate; keyboard activity settles a running reveal"
+  }
+}

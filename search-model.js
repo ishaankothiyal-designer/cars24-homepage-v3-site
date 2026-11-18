@@ -1,4 +1,5 @@
-import {CARS,CITIES} from './model.js';
+import {CARS,CITIES,ALL_DEMO_CARS,searchMatches} from './model.js';
+import {resolveVehicleModel,resolveVehicleMake,sameVehicleModel,vehicleWords} from './vehicle-models.js';
 // Query interpretation is deterministic prototype behaviour; no AI/API request.
 export const SEARCH_SERVICES=[
  {label:'Sell my car',family:'sell',icon:'car-outline',aliases:'sell selling valuation exchange',route:'sell'},
@@ -21,7 +22,10 @@ export const PROMPTS=['SUV cars under ₹12 lakh','Car for my parents','Automati
 const clean=s=>s.toLowerCase().replace(/₹/g,' ').replace(/[^a-z0-9\s.-]/g,' ').replace(/\s+/g,' ').trim();
 export const openFilters=(city='Gurugram')=>({city,min:0,max:50,body:'Any',make:'Any',model:'Any',fuel:'Any',transmission:'Any'});
 export function interpretQuery(query,city='Gurugram'){
- const q=clean(query),filters=openFilters(city),explicit=[];
+ const numbers={one:1,two:2,three:3,four:4,five:5,six:6,seven:7,eight:8,nine:9,ten:10,eleven:11,twelve:12,thirteen:13,fourteen:14,fifteen:15,sixteen:16,seventeen:17,eighteen:18,nineteen:19,twenty:20,thirty:30,forty:40,fifty:50};
+ const spoken=query.replace(/\b(twenty|thirty|forty|fifty)[ -](one|two|three|four|five|six|seven|eight|nine)\b/gi,(_,tens,ones)=>String(numbers[tens.toLowerCase()]+numbers[ones.toLowerCase()]));
+ const q=clean(spoken.replace(/\b(one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty)\b/gi,word=>String(numbers[word.toLowerCase()])).replace(/(\d+)\s+point\s+(\d+)/g,'$1.$2')),filters=openFilters(city),explicit=[];
+ const year=q.match(/\b(19[89]\d|20[0-3]\d)\b/);if(year){filters.year=Number(year[1]);explicit.push('year');}
  const max=q.match(/(?:under|below|upto|up to|less than)\s*(\d+(?:\.\d+)?)\s*(?:lakh|lac|l\b)?/);
  const range=q.match(/(?:between\s*)?(\d+(?:\.\d+)?)\s*(?:-|and|to)\s*(\d+(?:\.\d+)?)\s*(?:lakh|lac)/);
  if(max){filters.max=+max[1];explicit.push('max');}
@@ -29,9 +33,10 @@ export function interpretQuery(query,city='Gurugram'){
  for(const [pattern,key,value] of [[/\bsuvs?\b/,'body','SUV'],[/\bhatchbacks?\b/,'body','Hatchback'],[/\bsedans?\b/,'body','Sedan'],[/\bmuvs?\b/,'body','MUV'],[/\bautomatic\b|\bamt\b/,'transmission','Automatic'],[/\bmanual\b/,'transmission','Manual'],[/\bpetrol\b/,'fuel','Petrol'],[/\bdiesel\b/,'fuel','Diesel'],[/\belectric\b|\bev\b/,'fuel','Electric'],[/\bcng\b/,'fuel','CNG']])if(pattern.test(q)){filters[key]=value;explicit.push(key);}
  let correction=null;
  if(/\bbalenol\b/.test(q))correction='Baleno';
- const car=CARS.find(c=>q.includes(clean(c.model))||q.split(' ').includes(clean(c.model.split(' ').at(-1))))||(correction?CARS.find(c=>c.model==='Maruti Baleno'):null);
+ const car=resolveVehicleModel(q,ALL_DEMO_CARS)||(correction?CARS.find(c=>c.model==='Maruti Baleno'):null),make=resolveVehicleMake(q);
  if(car){filters.model=car.model;explicit.push('model');}
- else for(const make of ['Maruti Suzuki','Tata','Hyundai','Honda','Mahindra','Kia','Toyota','MG','Renault','Skoda','Volkswagen','Nissan','Ford','Jeep','Mercedes-Benz','BMW','Audi'])if(q.includes(clean(make))||(make==='Maruti Suzuki'&&q.includes('maruti'))){filters.make=make;explicit.push('make');break;}
+ if(make){filters.make=make;explicit.push('make');}
+ if(make&&!car){const ignored=new Set(('show me find want need a an the my please buy used second hand car cars for in under below up to between and lakh lakhs lac lacs automatic manual petrol diesel cng electric suv hatchback sedan muv parents family daily office commute budget rupees with of '+CITIES.join(' ')+' gurgaon').toLowerCase().split(' '));const brand=new Set(vehicleWords(make).split(' ')),unknown=vehicleWords(q).split(' ').filter(word=>!brand.has(word)&&!ignored.has(word)&&!/^\d+(?:\.\d+)?$/.test(word));if(unknown.length){filters.model=make+' '+unknown.join(' ');explicit.push('model');}}
  const absentModels=[[/\bseltos\b/,'Kia Seltos'],[/\bsierra\b/,'Tata Sierra.EV'],[/\bverna\b/,'Hyundai Verna'],[/\be[ -]?vitara\b/,'Maruti Suzuki e-Vitara'],[/\bbe[ -]?6\b/,'Mahindra BE 6'],[/\bcurvv\b/,'Tata Curvv']];
  const absentModel=absentModels.find(([pattern])=>pattern.test(q));if(absentModel&&!car){filters.model=absentModel[1];explicit.push('model');}
  const queryCity=CITIES.find(c=>q.includes(c.toLowerCase()))||(q.includes('gurgaon')?'Gurugram':null);
@@ -63,6 +68,8 @@ export function buySuggestions(query){
   return [...new Set(variants)].map(variant=>[model,variant,suffix].filter(Boolean).join(' '));
  }).filter(label=>tokens.every(token=>clean(label).split(' ').some(word=>word.startsWith(token)))||(parsed.correction&&label==='Maruti Baleno')).slice(0,8);
 }
-export function matchingCars(f,cars=CARS){return cars.filter(c=>c.price>=f.min&&c.price<=f.max&&(!f.city||!c.city||c.city===f.city)&&['body','make','model','fuel','transmission'].every(k=>!f[k]||f[k]==='Any'||(Array.isArray(f[k])?(!f[k].length||f[k].includes(c[k])):c[k]===f[k])));}
+export function matchingCars(f,cars){if(!cars)return searchMatches({...f,budget:`search:${f.min}:${f.max}`,clpFilters:f.year?{year:{min:f.year,max:f.year}}:{}});return cars.filter(c=>c.price>=f.min&&c.price<=f.max&&(!f.city||!c.city||c.city===f.city)&&(!f.year||c.year===Number(f.year))&&['body','make','model','fuel','transmission'].every(k=>!f[k]||f[k]==='Any'||(Array.isArray(f[k])?(!f[k].length||f[k].includes(c[k])):k==='model'?sameVehicleModel(c[k],f[k]):c[k]===f[k])));}
+export function searchModelSuggestions(query){const words=vehicleWords(query),seen=new Set();return ALL_DEMO_CARS.filter(car=>{const key=vehicleWords(car.model);if(seen.has(key))return false;seen.add(key);return key.includes(words);}).slice(0,8);}
+export function canonicalSearchModel(value){return resolveVehicleModel(value,ALL_DEMO_CARS)?.model||value;}
 export function filterChips(f){return [f.min>0||f.max<50?{key:'budget',label:f.min>0?`₹${f.min}–${f.max} lakh`:`Under ₹${f.max} lakh`}:null,...['body','model','make','transmission','fuel'].filter(k=>f[k]&&f[k]!=='Any').map(key=>({key,label:f[key]}))].filter(Boolean);}
 export function removeFilter(filters,key){return key==='budget'?{...filters,min:0,max:50}:{...filters,[key]:'Any'};}

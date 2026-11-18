@@ -53,7 +53,7 @@
 .vc-type-desktop-body{font-size:14px;line-height:20px;font-weight:500}
 .vc-type-desktop-previous{font-size:12px;line-height:18px;font-weight:400}
 .vc-type-prime{font-size:9px;line-height:9px;font-weight:700}
-.vc-assurance-copy{white-space:nowrap}.vc-emi-content{white-space:nowrap}.vc-seller{font-size:9px;line-height:14px;font-weight:600}.vc-desktop-grid .vc-seller{font-size:11px;line-height:17px}.vc-missing-image{font-size:9px;line-height:14px;font-weight:400}
+.vc-assurance-copy{white-space:nowrap}.vc-emi-content{white-space:nowrap}.vc-card .vc-seller{font-size:9px;line-height:14px;font-weight:600}.vc-desktop-grid .vc-seller{font-size:11px;line-height:17px}.vc-missing-image{font-size:9px;line-height:14px;font-weight:400}
 
 /* Utility glyph geometry is independent of text typography. */
 .vc-card .ui-icon{font-size:var(--spacing-12)}

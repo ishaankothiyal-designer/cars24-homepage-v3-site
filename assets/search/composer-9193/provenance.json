@@ -1,0 +1,52 @@
+{
+  "source": "Figma",
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "section": "9193:129341",
+  "states": {
+    "default": "9193:126793",
+    "typing": "9193:127272",
+    "listening": "9193:127429"
+  },
+  "icons": {
+    "arrow-left-outline": "existing source-backed theme/Autonaut mapping",
+    "voice-1-wave-outline": "existing Turbo theme glyph",
+    "arrow-up-filled": "existing Turbo theme glyph",
+    "arrow-right-outline": "existing Turbo theme glyph",
+    "stop-filled": {
+      "fileKey": "vUWcEjqUnCCUhKiNZ4DNWn",
+      "nodeId": "16030:73",
+      "file": "stop-filled.svg",
+      "width": 24,
+      "height": 24,
+      "sha256": "ebfae99a4767690b970928f40bc421ce538e198d6f7efabc05e914c6015df483"
+    }
+  },
+  "sourceGeometry": {
+    "composerWidth": 328,
+    "height": 56,
+    "outerRadius": 32,
+    "voiceRadius": 28,
+    "control": 32,
+    "glyph": 24,
+    "widgetPadding": 16,
+    "gap": 12,
+    "waveformBarWidth": 2.5,
+    "waveformGap": 3,
+    "waveformRadius": 1.25
+  },
+  "date": "2026-11-18",
+  "notes": "Code Connect canonical import path is absent in this checkout, as recorded in vendor/turbo-ui/README.md. Reuse the available matching theme glyphs; stop-filled is the unchanged original Global Icon System export. Waveform is a decorative listening-state indicator, not measured amplitude.",
+  "overrides": {
+    "date": "2026-11-18",
+    "authority": "USER-NAMAN-SEARCH-MICROPHONE-2026-11-18",
+    "defaultVoiceIcon": "Autonaut Cars24 microphone-regular.svg via packaged microphone-outline mapping",
+    "reason": "User explicitly replaces the default waveform action with a microphone; the listening waveform is retained."
+  },
+  "updatedDefault": {
+    "frame": "9193:126776",
+    "composer": "9193:126793",
+    "verified": "2026-11-18",
+    "appearance": "plain Autonaut microphone on white, 328x56 composer, source border, Geist 15/20",
+    "authority": "Current user Figma clarification for switchable App Store/Blinkit variants"
+  }
+}

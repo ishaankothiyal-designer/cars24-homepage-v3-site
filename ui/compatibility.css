@@ -273,3 +273,6 @@
 /* Similar Cars Figma 9103:45937 / user pointer 9085:18740.
    Exact reviewed values absent from Turbo Core; scoped consumption in similar-cars.css. */
 :root{--similar-cars-surface:#e4e1ff;--similar-cars-media:74px;--similar-cars-height:148px;--similar-cars-source-shadow:0 0 16px 2px rgb(71 55 250 / .14);}
+
+/* Figma 9193 search composer exact source exceptions; nearest slate/alpha tokens differ. */
+:root{--search-composer-placeholder:#90a1b9;--search-composer-stop-fill:rgba(10,10,10,.04)}
