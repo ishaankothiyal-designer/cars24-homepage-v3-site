@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-18",
+  "requirement": "Restore previous animated foreground only, with modestly faster motion. Preserve the latest source button material.",
+  "source": "cargpt-frame.svg",
+  "sourceSha256": "d0fdd32431d811fa869b65a3b07c0cd1c44d14e4756a970aa665f325ca385528",
+  "background": "cargpt-background.svg",
+  "backgroundSha256": "ca64b3869cd4a1299459d8ca504e86a08294007c0046ccf03a00fb2f884b612c",
+  "derivedEdit": "Removed only the static purple foreground Group 2147231662. Retained Vector 8400 as the source blurred white specular material highlight, plus the original outer material, stroke, all effects, foreignObject, definitions and 98\u00d798 root.",
+  "foreground": "../../cargpt/assets/rive/aurora-orb.riv",
+  "playbackRate": 1.2,
+  "clock": "Nav-only public low-level StateMachineInstance.advanceAndApply(elapsedSeconds \u00d7 1.2); original asset, default voice and standalone clocks unchanged.",
+  "reducedMotion": "Authored reducedMotion view-model property and one retained non-advancing frame.",
+  "materialRecheck": {
+    "date": "2026-11-18",
+    "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+    "node": "9187:62776",
+    "freshSvgSha256": "d0fdd32431d811fa869b65a3b07c0cd1c44d14e4756a970aa665f325ca385528",
+    "comparison": "Latest source replaces node9164:62609 with9187:62776 and changes the first inner shadow from black25% to white25%; all geometry, outer shadow, second inner highlight and specular gloss retain their source values.",
+    "rootCause": "Earlier background derivation incorrectly removed Vector 8400, a blurred white specular highlight belonging to the button material. Restored it; only the purple foreground group is removed.",
+    "exactEffects": [
+      "radial white \u2192 #FF82EE \u2192 #4736FE fill at .5 opacity",
+      "background blur radius20",
+      "drop shadow0 7 blur17 black.1",
+      "inner shadow0 4 blur4 white.25",
+      "inner shadow0 -2 blur6 white.25",
+      "Vector8400 white specular highlight with5px Gaussian standard deviation"
+    ]
+  },
+  "liveBackdrop": {
+    "sourceNode": "9187:62776",
+    "nativeFigmaEffect": {
+      "type": "BACKGROUND_BLUR",
+      "radius": 20
+    },
+    "sourceCssTranslation": "The same-source high-fidelity pill context and AI SVG foreignObject both translate Figma effect radius20 to CSS/Gaussian blur10px.",
+    "implementation": "A 64px circular clipped live backdrop-filter blur10px behind the unmodified source material SVG and animated Rive foreground. External SVG image backdrop filters cannot sample the surrounding HTML page. The image and foreground are not themselves blurred.",
+    "reason": "The exported foreignObject records the source effect but external image isolation prevents it from blurring the underlying page; a live HTML backdrop layer restores the behavior.",
+    "validation": {
+      "method": "Real rendered button with a checkerboard HTML layer behind it; compare live backdrop disabled/enabled. Static material and reduced-motion Rive pixels are otherwise unchanged.",
+      "highFrequencyEnergyWithoutBackdrop": 3.4558823529411766,
+      "highFrequencyEnergyWithBackdrop": 1.1486928104575163,
+      "ratio": 0.33238770685579194,
+      "outsideCircleMaxRgbDifference": 0,
+      "computedBackdropFilter": "blur(10px)",
+      "materialImageFilter": "none",
+      "riveCanvasFilter": "none",
+      "pageErrors": 0
+    }
+  }
+}

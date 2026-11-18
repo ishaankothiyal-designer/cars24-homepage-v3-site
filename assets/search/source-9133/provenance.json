@@ -1,0 +1,178 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "node": "9133:74688",
+  "accessed": "2026-11-17",
+  "method": "Exact high-fidelity Figma context assets downloaded using curl -L. OS annotation graphics excluded; shared native chrome retained.",
+  "assets": [
+    {
+      "sourceName": "imgTypeSedan",
+      "file": "body-suv.png",
+      "sha256": "c008108a15cae4934ce13bb3d64d96752391c44b36100af826d824fcf4c5a143",
+      "slotNode": "8727:57681"
+    },
+    {
+      "sourceName": "imgCarBrandLogo43Png",
+      "file": "brand-maruti.png",
+      "sha256": "83575250aef28bec8967590d315798f23a6f8bad78c3fab4109a7090ba18a511",
+      "slotNode": "I9133:74725;22271:22428;22241:156353;22271:14661;336:21137"
+    },
+    {
+      "sourceName": "imgCarBrandLogo43Png1",
+      "file": "brand-hyundai.png",
+      "sha256": "0ec444dbaf7023db75ca48185acbc15748a3b1864c9cf8de331cdef0ce7a0491",
+      "slotNode": "I9133:74725;22271:22428;22241:156354;22271:14661;336:21148"
+    },
+    {
+      "sourceName": "imgCarBrandLogo43Png2",
+      "file": "brand-tata.png",
+      "sha256": "e217593c39351ded294018e5646fd0ea58d9883bc5a2dc61c41aa7f5fefdc6a2",
+      "slotNode": "I9133:74725;22271:22428;22241:156355;22271:14661;336:21153"
+    },
+    {
+      "sourceName": "imgCarBrandLogo43Png3",
+      "file": "brand-honda.png",
+      "sha256": "d329acc8486b6778e23eab06c9cc38b929362cae8964fd2fa5dfb24174ef89c4",
+      "slotNode": "I9133:74725;22271:22428;22241:156356;22271:14661;336:21157"
+    },
+    {
+      "sourceName": "imgCarBrandLogo43Png4",
+      "file": "brand-mahindra.png",
+      "sha256": "670f1735963fbc673242abb815a7fb7d2da5cc489a08ee72c5c6e2dbe2e943a4",
+      "slotNode": "I9133:74725;22271:22428;22241:156357;22271:14661;336:21161"
+    },
+    {
+      "sourceName": "imgImage2",
+      "file": "popular-swift.png",
+      "sha256": "b288d7635f3bae389541575d985d6df18977be6e6c91208dc2ad62ba2f080c29",
+      "slotNode": "I9133:74727;22271:22428;22241:156353;22271:14649;49:42914"
+    },
+    {
+      "sourceName": "imgImage84139848",
+      "file": "popular-honda-city.png",
+      "sha256": "5a6249d385050cbc4e9c9e79819a514a5227e48b781123b4534e3316f091e30f",
+      "slotNode": "I9133:74727;22271:22428;22241:156354;22271:14649;137:11694"
+    },
+    {
+      "sourceName": "imgImage3",
+      "file": "popular-hyundai-i10.png",
+      "sha256": "0785b2097eda178427a32e9872b9f2c410a9dd86191e249b2327ae6f8e226796",
+      "slotNode": "I9133:74727;22271:22428;22241:156355;22271:14649;49:42919"
+    },
+    {
+      "sourceName": "imgImage4",
+      "file": "popular-creta.png",
+      "sha256": "6d489d30f81950608021ba195cf7a92cf887951d54ab5e27270409a63890e8d5",
+      "slotNode": "I9133:74727;22271:22428;22241:156356;22271:14649;129:19412"
+    },
+    {
+      "sourceName": "imgImage5",
+      "file": "popular-baleno.png",
+      "sha256": "f97640f4ad70a5307ce3fc5c59f6822aff770c9135e9ef4b8a3c71d36379f3e4",
+      "slotNode": "I9133:74727;22271:22428;22241:156357;22271:14649;49:42925"
+    },
+    {
+      "sourceName": "imgImage",
+      "file": "body-hatchback.png",
+      "sha256": "cb8edd58fda410886a68c2545c563f6073acc231be67d5c7ec1b92b81d4c6e05",
+      "slotNode": "I9133:74746;22068:150362;22138:128253;22279:146034;339:24041"
+    },
+    {
+      "sourceName": "imgImage1",
+      "file": "body-sedan.png",
+      "sha256": "45c06f6266ce031e0244bdd04cc349706d4ec8973555dec4e7a4eb6f198b6109",
+      "slotNode": "I9133:74746;22068:150362;22138:128244;22279:146034;339:24043"
+    },
+    {
+      "sourceName": "imgVector4",
+      "file": "shadow-swift.svg",
+      "sha256": "64b409b1318c6dbe006b5b0483c990e3e77c862c11bfba49013442ea74c62a85",
+      "slotNode": "I9133:74727;22271:22428;22241:156353;22271:14649;129:19377"
+    },
+    {
+      "sourceName": "imgEllipse10801",
+      "file": "shadow-creta.svg",
+      "sha256": "4ccb690f17af4f2571377ec96ec19dde8edafa5ff8831ce9aa11adf6234742a1",
+      "slotNode": "I9133:74727;22271:22428;22241:156356;22271:14649;140:11684"
+    },
+    {
+      "sourceName": "imgVector5",
+      "file": "shadow-baleno.svg",
+      "sha256": "e0ce21c4569c746609d2828bc1000127188b0994936d259562f2daf088106e00",
+      "slotNode": "I9133:74727;22271:22428;22241:156357;22271:14649;129:19368"
+    },
+    {
+      "sourceNode": "9133:74689",
+      "file": "gradient.svg",
+      "method": "Read-only native SVG export of decorative gradient only; no interface content.",
+      "sha256": "1876b1c96bd7c36fe9c64c560b971df68a29d107bd55451296d0813381d4383b"
+    },
+    {
+      "sourceNode": "9133:74694",
+      "file": "sparkle.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "79b67fe142341f2968a7513cc38d3e9e2234398925e24b32912a973129b8831b"
+    },
+    {
+      "sourceNode": "I9133:74708;584:17948",
+      "file": "clock.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "75bac611bb77f446903f7da719f89506877e6ac6f829db3574b5b14c7082cda3"
+    },
+    {
+      "sourceNode": "I9133:74718;584:17948",
+      "file": "trending.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "17285ddf81d2568e4dea4c58838bf1a23f4a6dd042f90628efc9b769d59006f1"
+    },
+    {
+      "sourceNode": "I9133:74748;7578:8555;11173:479;290:36852",
+      "file": "sell.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "39eda5c7de84be26ad29c7a6b68f8d586b81f87432c26aa1ba7ff887f05494aa"
+    },
+    {
+      "sourceNode": "I9133:74748;7578:8556;11173:479;290:36855",
+      "file": "buy.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "f5f764345385cda61f66402d547ef531f0ca63af619a3df4ea9c5117ca500877"
+    },
+    {
+      "sourceNode": "I9133:74748;7578:8557;11173:479;290:36858",
+      "file": "loan.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "7fc5719c31a576439a83684e66b3f7da6f2a4438b7b5e8b0556c419236e17846"
+    },
+    {
+      "sourceNode": "I9133:74748;7578:8555;7489:109000",
+      "file": "chevron.svg",
+      "method": "Read-only native SVG export of exact source glyph instance; intrinsic dimensions retained.",
+      "sha256": "90be1e522d898d6610a213eaa49aa5551159253d8e85fb8d67b7b0c0026f0104"
+    },
+    {
+      "sourceNode": "9133:74648",
+      "file": "challan.svg",
+      "method": "Read-only native24px master glyph export; SVG intrinsic dimensions retained. Its24px wrapper uses source20/24 instance scale, producing the verified20px source glyph centered in36px service slot. Master neutral fill is themed to source brandpurple using native SVG alpha as wrapper mask; original SVG file and dimensions unchanged.",
+      "sha256": "badedce14786f3a5dab7dc8d9df0db3a5f90530139a36b81a4037b3ee095b3f5",
+      "instanceNode": "I9133:74748;7578:8631;11173:479;290:36861",
+      "nativeSize": 24,
+      "instanceSize": 20,
+      "wrapperScale": 0.8333333333333334
+    }
+  ],
+  "adaptations": [
+    "Shared native white status bar replaces source OS annotation; gradient is cropped by44 source pixels in the app.",
+    "Recent searches use actual session history; fresh session shows empty hint in the82px source slot.",
+    "Offscreen Elara/Jovian placeholder chips omitted from Trending and budget rows; source monetary choices and legitimate query labels retained.",
+    "Static car/brand/body illustrations are source discovery artwork; query callbacks retain real local inventory and existing CarGPT fallback.",
+    "Explicit Popular/Trending model selections keep source query text and a canonical selected-model constraint. Actual Recent entries replay that intent; generic typed queries retain the existing parser."
+  ],
+  "assetReuseVerification": "All13 current PNG downloads match the previous local FigmaDiscovery source images byte-for-byte. Current SVG shadows and glyphs were re-downloaded/exported for this frame.",
+  "headerReview": {
+    "accessed": "2026-11-18",
+    "wrapperNode": "9134:63476",
+    "inputNode": "9134:64405",
+    "inputTextNode": "I9134:64405;22175:31232",
+    "source": "Fresh high-fidelity Figma context and screenshot; source wrapper has 16px top, 16px horizontal and 4px bottom padding. The 328\u00d740 field sits at x16/y16 below native chrome; its inside Back uses the existing Autonaut utility glyph in a 20\u00d720 slot. Placeholder is Geist Regular 14px/18px, #64748b. Existing white pill and drop-shadow/sm remain.",
+    "implementation": "Discovery and suggestions share the corrected entry field position; the separate AI loading composition remains unchanged. The 60px header height and discovery body positions remain unchanged. No asset bytes changed."
+  }
+}

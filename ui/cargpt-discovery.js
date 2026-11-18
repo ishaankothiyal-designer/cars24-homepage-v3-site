@@ -1,5 +1,5 @@
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const carGPTOrbMarkup=()=>'<canvas class="cargpt-entry-live" data-cargpt-orb aria-hidden="true"></canvas>';
+export const carGPTOrbMarkup=({playbackRate=1}={})=>`<canvas class="cargpt-entry-live" data-cargpt-orb${playbackRate!==1?` data-playback-rate="${playbackRate}"`:''} aria-hidden="true"></canvas>`;
 export function carGPTDiscoveryMarkup({surface='listing',carId=''}={}){
  const detail=surface==='detail',action=detail?'cdp-ask':'clp-cargpt';
  const prompts=['Show me all photos of this car','Book test drive for this car','Is this a good deal?','Show me similar cars'];
@@ -17,7 +17,7 @@ export function mountCarGPTDiscovery(root){
   const update=()=>orb?.update({phase:'idle',active:visible&&!document.hidden});
   const observer=new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;update();});observer.observe(canvas);
   document.addEventListener('visibilitychange',update);
-  import('./cargpt-rive.js').then(({mountRiveOrb})=>{if(dead)return;orb=mountRiveOrb(canvas);update();}).catch(()=>{if(!dead)canvas.dataset.renderer='unavailable';});
+  import('./cargpt-rive.js').then(({mountRiveOrb})=>{if(dead)return;orb=mountRiveOrb(canvas,{playbackRate:Number(canvas.dataset.playbackRate)||1});update();}).catch(()=>{if(!dead)canvas.dataset.renderer='unavailable';});
   cleanups.push(()=>{observer.disconnect();document.removeEventListener('visibilitychange',update);orb?.destroy();});
  }
  for(const entry of root.querySelectorAll('[data-cargpt-discovery]')){

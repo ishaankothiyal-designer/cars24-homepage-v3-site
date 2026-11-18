@@ -1,0 +1,107 @@
+/* Approved Home service strip, reused by personalised Home and L1 headers. */
+.service-tabs{
+ --service-tabs-surface:#5b4dfa;
+ --service-tabs-ink:#fff;
+ --service-tabs-indicator:var(--service-tabs-ink);
+ --service-tabs-height:88px;
+ --service-tabs-width:72px;
+ --service-tabs-art-height:50px;
+ --service-tabs-label-size:13px;
+ --service-tabs-label-height:18px;
+ --service-tabs-all-art:44px;
+ --service-tabs-sell-art:42px;
+ --service-tabs-sell-rotation:-7.42deg;
+ --service-tabs-loans-art:46px;
+ --service-tabs-challan-height:34px;
+}
+.l1-home .service-tabs,.l1-view .service-tabs{
+ --service-tabs-surface:var(--bg-primary);
+ --service-tabs-ink:var(--text-primary);
+ --service-tabs-indicator:var(--text-brand-base);
+}
+.nav-tabs.service-tabs[data-service-tabs-variant=standard]{
+ flex:none;
+ width:100%;
+ max-width:100%;
+ min-width:0;
+ height:var(--service-tabs-height);
+ min-height:var(--service-tabs-height);
+ max-height:var(--service-tabs-height);
+ padding:0 var(--spacing-12);
+ gap:var(--spacing-8);
+ background:var(--service-tabs-surface);
+ border-bottom:0;
+ overflow-x:auto;
+ overflow-y:hidden;
+ overscroll-behavior-x:contain;
+}
+.service-tabs[data-service-tabs-variant=standard] .nav-tab{
+ flex:0 0 var(--service-tabs-width);
+ width:var(--service-tabs-width);
+ min-width:var(--service-tabs-width);
+ height:var(--service-tabs-height);
+ min-height:var(--service-tabs-height);
+ padding:var(--spacing-8) 0 0;
+ gap:var(--spacing-4);
+ justify-content:flex-start;
+ color:var(--service-tabs-ink);
+ font-family:var(--font-family-primary);
+ font-size:var(--service-tabs-label-size);
+ line-height:var(--service-tabs-label-height);
+ font-weight:400;
+}
+.service-tabs[data-service-tabs-variant=standard] .nav-tab.active{color:var(--service-tabs-ink);font-weight:600}
+.service-tabs[data-service-tabs-variant=standard] .nav-tab.active::after{bottom:0;height:var(--spacing-2);background:var(--service-tabs-indicator)}
+.service-tabs[data-service-tabs-variant=standard] .nav-tab:focus-visible{outline-color:var(--service-tabs-ink);outline-offset:calc(-1 * var(--spacing-2))}
+.service-tabs[data-service-tabs-variant=standard] .nav-img{
+ position:relative;
+ display:grid;
+ place-items:center;
+ flex:none;
+ width:var(--service-tabs-width);
+ height:var(--service-tabs-art-height);
+ padding:0 10px;
+ grid-template-columns:50px;
+}
+.service-tabs[data-service-tabs-variant=standard] .nav-img img{
+ position:relative;
+ width:var(--service-tabs-art-height);
+ height:var(--service-tabs-art-height);
+ max-width:none;
+ object-fit:contain;
+}
+.service-tabs[data-service-tabs-variant=standard] [data-value=all] img{width:var(--service-tabs-all-art);height:var(--service-tabs-all-art)}
+.service-tabs[data-service-tabs-variant=standard] [data-value=sell] img{width:var(--service-tabs-sell-art);height:var(--service-tabs-sell-art);transform:translate(var(--spacing-2),var(--spacing-2)) rotate(var(--service-tabs-sell-rotation))}
+.service-tabs[data-service-tabs-variant=standard] [data-value=loans] img{width:var(--service-tabs-loans-art);height:var(--service-tabs-loans-art)}
+.service-tabs[data-service-tabs-variant=standard] [data-value=challan] img{width:var(--service-tabs-art-height);height:var(--service-tabs-challan-height)}
+.service-tabs[data-service-tabs-variant=standard] .nav-img .home-insurance-layer{position:absolute;left:var(--spacing-10);top:0}
+/* The 88px strip replaces a 64px strip; keep its selected indicator inside the header. */
+.card-home:has(>.service-header){--deck-header:190px}
+.l1-view>.service-header{border-bottom:0}
+
+.l1-home .service-tabs [data-value=all] img,.l1-view .service-tabs [data-value=all] img{filter:brightness(0) saturate(100%);opacity:.8}
+.has-service-chrome{position:relative}
+.has-service-chrome>.l1-scroll{position:absolute;inset:0;height:100%;overflow-anchor:none}
+.has-service-chrome .service-header{display:contents}
+/* Source artwork layers must stay below the sticky controls, including their hit targets. */
+.has-service-chrome .l1-source,.has-service-chrome .l1-context{position:relative;z-index:0;isolation:isolate}
+.has-service-chrome .service-masthead{height:var(--service-masthead-height);padding-top:var(--service-row-top);background:var(--bg-primary)}
+.has-service-chrome .service-search-rail{position:sticky;top:0;height:var(--service-search-flow);z-index:7}
+.has-service-chrome .service-search-inner{height:var(--service-search-flow);padding:8px 0 0;background:var(--bg-primary)}
+.has-service-chrome .header-search{width:calc(100% - 24px);height:var(--service-search-height);min-height:var(--service-search-height);margin:0 12px}
+.has-service-chrome .service-tabs-rail{position:sticky;top:var(--service-search-flow);height:var(--service-tabs-flow);z-index:6;pointer-events:none}
+.has-service-chrome .service-tabs{pointer-events:auto}
+.has-service-chrome.is-service-collapsed .service-search-inner{height:62px;padding:14px 0 8px}
+.has-service-chrome.is-service-collapsed .header-search{height:40px;min-height:40px}
+.has-service-chrome.is-service-collapsed .service-tabs-rail{top:62px}
+.has-service-chrome.is-service-collapsed .service-tabs{height:34px;min-height:34px;max-height:34px;box-shadow:inset 0 -1px 0 var(--border-secondary)}
+.has-service-chrome.is-service-collapsed .service-tabs .nav-tab{height:34px;min-height:34px;padding:8px 0 0;gap:0}
+.has-service-chrome.is-service-collapsed .service-tabs .nav-img{height:0;opacity:0;transform:translateY(-8px);overflow:hidden}
+.has-service-chrome.is-service-chrome-ready{--service-chrome-duration:220ms;--service-chrome-ease:cubic-bezier(.2,0,0,1)}
+.is-service-chrome-ready .service-search-inner{transition:height var(--service-chrome-duration) var(--service-chrome-ease),padding var(--service-chrome-duration) var(--service-chrome-ease)}
+.is-service-chrome-ready .header-search{transition:height var(--service-chrome-duration) var(--service-chrome-ease),min-height var(--service-chrome-duration) var(--service-chrome-ease)}
+.is-service-chrome-ready .service-tabs-rail{transition:top var(--service-chrome-duration) var(--service-chrome-ease)}
+.is-service-chrome-ready .service-tabs{transition:height var(--service-chrome-duration) var(--service-chrome-ease),min-height var(--service-chrome-duration) var(--service-chrome-ease),max-height var(--service-chrome-duration) var(--service-chrome-ease)}
+.is-service-chrome-ready .service-tabs .nav-tab{transition:height var(--service-chrome-duration) var(--service-chrome-ease),min-height var(--service-chrome-duration) var(--service-chrome-ease),gap var(--service-chrome-duration) var(--service-chrome-ease)}
+.is-service-chrome-ready .service-tabs .nav-img{transition:height var(--service-chrome-duration) var(--service-chrome-ease),opacity var(--service-chrome-duration) var(--service-chrome-ease),transform var(--service-chrome-duration) var(--service-chrome-ease)}
+@media(prefers-reduced-motion:reduce){.has-service-chrome.is-service-chrome-ready{--service-chrome-duration:0ms}}

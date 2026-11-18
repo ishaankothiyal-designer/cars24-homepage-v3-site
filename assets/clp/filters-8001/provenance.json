@@ -1,0 +1,43 @@
+{
+  "figmaFile": "mVJpojNrPpEcTofJxcBCed",
+  "filterFrame": "8001:86041",
+  "sortSection": "8001:88807",
+  "sortFrames": [
+    "8001:88811",
+    "8001:88832"
+  ],
+  "sourceCanvas": [
+    360,
+    800
+  ],
+  "assets": [
+    {
+      "file": "placeholder-generate-outline.svg",
+      "node": "I8001:86062;19334:11748;19818:135533",
+      "intrinsicSize": [
+        20,
+        20
+      ],
+      "sha256": "017a38b3d5e168cd8dbf837177db0376feef5e0bca832894086458788fb8f2b5",
+      "method": "Read-only native SVG exportAsync from source instance, bytes retained unchanged."
+    },
+    {
+      "file": "chevron-down-large-outline.svg",
+      "node": "I8001:86062;19334:11748;19334:11781;3346:21867",
+      "intrinsicSize": [
+        16,
+        16
+      ],
+      "sha256": "7e8bb1289f63e2b9f333289d5c7ae2ac08ef0d9a3a7b4d2886ddeb1857c8d8fb",
+      "method": "Read-only native SVG exportAsync from source instance, bytes retained unchanged."
+    }
+  ],
+  "adaptations": [
+    "Native OS44 and home indicator34 annotations use the existing shared shell once.",
+    "Mapped Figma Dls Compose components / asset/icon/svg imports are absent in this web checkout. Existing Turbo UI Core bridge, native input semantics and exact exported source row glyphs implement this packaged web adaptation.",
+    "Popular model/brand data and approved local logo assets are dynamic; current public Cars24 labels replace reference placeholder brand-model combinations and counts.",
+    "All count values derive from the local inventory snapshot and are labelled sample cars; live stock counts were not copied.",
+    "Source city placeholders render the stored city; no location is fabricated.",
+    "Source footer Apply filter reproduces verified native fills: #4736fe base plus 20% white vertical overlay, 1px inner brand shadow, 14px corners and 239×44 layout. The Figma Compose implementation is unavailable."
+  ]
+}

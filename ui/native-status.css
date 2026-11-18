@@ -1,0 +1,84 @@
+/* Native geometry stays in screen coordinates, outside each route's content zoom. */
+.device .screen{
+ --page-canvas-surface:#fff;
+ --native-status-ink:#020617;
+ --native-status-art-filter:brightness(0);
+ background:var(--page-canvas-surface);
+}
+.device .screen:is(.is-flow-home,.is-flow-listing,.is-clp,.is-splash){
+ --page-canvas-surface:var(--home-header-purple,#5b4dfa);
+ --native-status-ink:#fff;
+ --native-status-art-filter:brightness(0) invert(1);
+}
+.device .screen:is(.is-home-scrolled,.is-listing-scrolled,.is-clp-scrolled){
+ --page-canvas-surface:#fff;
+ --native-status-ink:#020617;
+ --native-status-art-filter:brightness(0);
+}
+.device .screen.is-splash{--page-canvas-surface:var(--splash-background,#5b4dfa)}
+.device .screen[class] > .status-bar[aria-label]{
+ display:flex;
+ box-sizing:border-box;
+ height:calc(var(--iphone-point) * 59);
+ flex:0 0 calc(var(--iphone-point) * 59);
+ padding:calc(var(--iphone-point) * 4) calc(var(--iphone-point) * 26) 0;
+ align-items:center;
+ justify-content:space-between;
+ color:var(--native-status-ink);
+ background:transparent;
+ filter:none;
+}
+.device .screen .status-bar>span:first-child{
+ position:static;
+ font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;
+ font-size:calc(var(--iphone-point) * 17);
+ font-weight:600;
+ line-height:1;
+ letter-spacing:calc(var(--iphone-point) * -.3);
+}
+/* Reuse the supplied Home cluster without changing its existing rendered size. */
+.device .screen .status-bar .status-icons{
+ position:static;
+ width:66.333px;
+ height:11px;
+ background:url('../assets/flow-home/2916-102613-Right1.svg') center/66.333px 11px no-repeat;
+ filter:var(--native-status-art-filter);
+}
+.device .screen .status-bar .status-icons>*{visibility:hidden}
+.device .screen .dynamic-island{visibility:visible}
+/* Only mounted CLP chrome animates its theme; route entry paints its initial theme immediately. */
+.device .screen:has(.clp-source.is-clp-chrome-ready) > .status-bar{
+ transition:color 220ms cubic-bezier(.2,0,0,1);
+}
+.device .screen:has(.clp-source.is-clp-chrome-ready) .status-icons{
+ transition:filter 220ms cubic-bezier(.2,0,0,1);
+}
+@media(prefers-reduced-motion:reduce){
+ .device .screen:has(.clp-source.is-clp-chrome-ready) > .status-bar,
+ .device .screen:has(.clp-source.is-clp-chrome-ready) .status-icons{transition-duration:0ms}
+}
+
+/* Search shares the screen mesh; OS geometry and other route themes stay unchanged. */
+.device .screen:has(.search-source)>.status-bar[aria-label]{--native-status-ink:#020617;--native-status-art-filter:brightness(0);background:transparent}
+
+/* The route canvas continues behind native chrome; full-bleed content paints below its viewport. */
+.device .screen:has(.home-masthead--light){--page-canvas-surface:#f6f6ff}
+.device .screen:has(.is-service-collapsed .home-masthead--light){--page-canvas-surface:#f6f6ff}
+.device .screen:is(.is-flow-home,.is-flow-listing)>#app{clip-path:inset(var(--home-native-top-space) 0 0)}
+.device .screen:is(.is-home-chrome-ready,.is-listing-chrome-ready):not(.is-splash),
+.device .screen:has(.clp-source.is-clp-chrome-ready){transition:background-color 220ms cubic-bezier(.2,0,0,1)}
+@media(prefers-reduced-motion:reduce){
+ .device .screen:is(.is-home-chrome-ready,.is-listing-chrome-ready),
+ .device .screen:has(.clp-source.is-clp-chrome-ready){transition-duration:0ms}
+}
+
+/* Fullscreen CLP sheets share the white canvas of their own header. */
+.device .screen:has(.clp-filter-modal){--page-canvas-surface:#fff;--native-status-ink:#020617;--native-status-art-filter:brightness(0);transition:none}
+.device .screen:has(.clp-filter-modal)>.status-bar,
+.device .screen:has(.clp-filter-modal) .status-icons{transition:none}
+.device .screen.is-clp-modal-restoring,
+.device .screen.is-clp-modal-restoring>.status-bar,
+.device .screen.is-clp-modal-restoring .status-icons{transition:none}
+
+/* Home and L1 share the compact lavender canvas from Header9156:62369. CLP retains its white endpoint. */
+.device .screen.is-flow-home.is-home-scrolled{--page-canvas-surface:#f6f6ff}

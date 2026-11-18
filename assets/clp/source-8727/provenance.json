@@ -1,0 +1,134 @@
+{
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "frame": "8727:60954",
+  "accessed": "2026-11-18",
+  "method": "High-fidelity Figma MCP context; assets downloaded with curl -L as instructed.",
+  "codeConnect": "Canonical packages/web and packages/native paths are absent in this repository; existing Turbo Core markup bridge, source icon registry and shared car-card custom element are reused.",
+  "adaptations": [
+    "OS annotation assets excluded; current native shell supplies status once. Source header content226px excludes44px source OS area.",
+    "Car slot placeholders replaced with actual shared inventory-backed car-card elements. Source placeholder heights are not card constraints.",
+    "Filter Label placeholders receive runtime filter taxonomy. Count and inventory remain runtime data.",
+    "Stored locality/address shown when present; Choose location fallback does not invent a street.",
+    "Static campaign and its claim are supplied design content, not independently verified current terms."
+  ],
+  "assets": [
+    {
+      "node": "I9120:70284;29150:6955;9120:70283",
+      "file": "campaign.png",
+      "sha256": "b16577d849c8813f92e78c0d32e362a867b5905fbc4401153c0d56988f1016eb"
+    },
+    {
+      "node": "I9120:70284;29798:29060;26569:34845",
+      "file": "back.svg",
+      "sha256": "f5bd8aac85db16770742ff48975717adf9a65318c237175d7adf5ebec96af40f"
+    },
+    {
+      "node": "I9120:70284;28726:9452",
+      "file": "page-control.svg",
+      "sha256": "aec7ac9f1c4fbd6af82867243ef5a7931573fd7851b329757b44134270cd83ae"
+    },
+    {
+      "node": "9120:70285",
+      "file": "location-chevron.svg",
+      "sha256": "f4c7db5ed55f1290d2a255394e35931de5e54dd1d44f9102ff32e1ba43e3571d"
+    },
+    {
+      "node": "I8727:60960;9839:4391",
+      "file": "count-line.svg",
+      "sha256": "1601a46871098caf56dcf152e280052b5be9cc12500d0a5ed10d487addf02f91"
+    },
+    {
+      "node": "8727:60966",
+      "file": "support.svg",
+      "sha256": "a34017d14e58134299e5603751d869105ec8be740e3ab47a97770b8f6c96c8fa"
+    },
+    {
+      "node": "I9120:70284;28726:9453;29757:57343",
+      "file": "filter-separator.svg",
+      "intrinsic": [
+        1,
+        20
+      ],
+      "sha256": "8161e8d564687d469a32d867e4c34a3beaaba41a71235d777c618188d9fd47ea"
+    },
+    {
+      "node": "29755:39162",
+      "file": "filter-chevron.svg",
+      "intrinsic": [
+        24,
+        24
+      ],
+      "sha256": "21fc8b9ae7443b6ec37d154bcd5f3fb41dfc3e3038687911ec36a8f1090d6c71"
+    },
+    {
+      "node": "29757:57380",
+      "file": "filter-cross.svg",
+      "intrinsic": [
+        20,
+        20
+      ],
+      "sha256": "34bb64b0fe0b25a3bfd43728a656e2ec12694120646c522f1fbf2f6ca82f62ee"
+    },
+    {
+      "node": "29755:39118",
+      "file": "filter-sparkle.svg",
+      "intrinsic": [
+        12,
+        12
+      ],
+      "sha256": "591f3c35fc79581b057996da8f09638f9d2a85018b7a75e66f092a636a02b94d"
+    },
+    {
+      "node": "29757:58737",
+      "file": "filter-arrow.svg",
+      "intrinsic": [
+        12,
+        12
+      ],
+      "sha256": "8732143725deb3acb97fa7333353dc6853d500552b78368861077883ff196c8e"
+    }
+  ],
+  "filterBarReview": {
+    "node": "I9120:70284;28726:9453",
+    "sourceFrame": [
+      360,
+      100
+    ],
+    "availableRow": {
+      "x": 16,
+      "y": 12,
+      "height": 32,
+      "gap": 8,
+      "filtersWidth": 103,
+      "sortWidth": 110
+    },
+    "appliedRow": {
+      "x": 16,
+      "y": 56,
+      "height": 32,
+      "gap": 8,
+      "clearWidth": 63,
+      "separatorWidth": 0,
+      "separatorPaint": [
+        1,
+        20
+      ],
+      "firstChipX": 95
+    },
+    "emptyHeight": 56,
+    "chipLabel": {
+      "size": 14,
+      "lineHeight": 18,
+      "weight": 500
+    },
+    "appliedSurface": "#f6f6ff",
+    "appliedBorder": "#c8ccfb",
+    "adaptations": [
+      "Source Label placeholders remain real existing filter labels and selections. No filter data or matching rules changed.",
+      "Connected canonical packages/web paths are absent. The packaged Autonaut icon registry supplies semantic filter/sort symbols in the design placeholder slots. Exact downloaded source SVGs supply chevrons, crosses, sparkle and arrow at their intrinsic sizes.",
+      "Clear all and individual removal keep their existing scoped CLP actions. The trailing source arrow opens the existing full filter editor.",
+      "Source Filters and default Sort slots retain 103px and 110px widths with the existing verified Geist font. Chosen sort labels remain dynamic.",
+      "Existing explicit review requirements retain transparent toolbar paint at rest, white only when pinned, and its subtle bottom divider."
+    ]
+  }
+}

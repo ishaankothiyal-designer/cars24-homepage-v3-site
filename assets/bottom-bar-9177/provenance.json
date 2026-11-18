@@ -1,0 +1,137 @@
+{
+  "source": "https://www.figma.com/design/ttwWd3vH4lRPzfPLM8rOun?node-id=9182-62624",
+  "originalRequestedNode": "9177:62621",
+  "currentBoardNode": "9182:62624",
+  "barNode": "9164:62590",
+  "accessed": "2026-11-18",
+  "supersession": "The user requested a fresh recheck during implementation. The earlier frame9177:62621 was replaced by section9182:62624. Current source supersedes Activity and75px tabs: Home, Order, Showroom, Garage;72px cells; -8px overlap; no horizontal cell padding;72x56 indicator.",
+  "geometry": {
+    "canvas": [
+      360,
+      80
+    ],
+    "outsidePadding": {
+      "horizontal": 16,
+      "vertical": 8
+    },
+    "pill": {
+      "x": 16,
+      "y": 8,
+      "width": 256,
+      "height": 64,
+      "padding": 4,
+      "fill": "rgba(237,237,237,0.29)",
+      "blur": 10,
+      "shadow": "0 7px 17px rgba(0,0,0,.08)"
+    },
+    "tab": {
+      "width": 88,
+      "height": 56,
+      "gap": 4,
+      "paddingVertical": 6,
+      "paddingHorizontal": 0,
+      "overlap": -8,
+      "fontSize": 12,
+      "lineHeight": 16,
+      "fontWeight": 500,
+      "icon": [
+        24,
+        24
+      ]
+    },
+    "indicator": {
+      "width": 88,
+      "height": 56,
+      "x": [
+        4,
+        84,
+        164
+      ],
+      "y": 4,
+      "shadow": "0 0 7px rgba(0,0,0,.08)"
+    },
+    "assistant": {
+      "x": 280,
+      "y": 8,
+      "width": 64,
+      "height": 64,
+      "assetWidth": 98,
+      "assetHeight": 98,
+      "assetOffset": [
+        -17,
+        -10
+      ]
+    }
+  },
+  "implementation": {
+    "component": "@cars24/prototype-ui/bottom-navigation",
+    "stylesheet": "@cars24/prototype-ui/bottom-navigation.css",
+    "safeArea": "The pure360x80 source component contains no native home handle. Its80px wrapper ends above the existing shell-owned34pt native safe area. The latest16px horizontal and8px vertical outside padding stay inside the component.",
+    "consumers": "Home, existing service L1 contexts, Orders, Garage and the connected Showroom directory; independent CarGPT launchers on CLP/CDP are outside this CSS scope.",
+    "sourceAssets": "The six exactlocal24pxSVGstate exports renderat their intrinsicdimensions. The latestAIframe source9187:62776 supplies98pxbackground-onlymaterial atnative(-17,-10) offsets inside the64px hit target; onlythestaticpurpleforegroundGroup is replaced by the originalRive animation. The Vector8400gloss, frame texture and exactsourcewhiteinset shadows remain. A live10pxcircularbackdrop beneath material preservesblur of theactualpage.",
+    "preservedOutsideComponent": "Existing footer backdrop and source body artwork remain. Existing Orders/Garage/CarGPT routes remain; the source Showroom tab connects to the dated verified hub directory and existing CLP filtering.",
+    "ordersScope": "The Order tab and its unused source exports are removed. Existing orders and booking routes remain unchanged and use Home as their valid parent navigation selection. Profile and an Orders-in-Profile entry are explicitly deferred."
+  },
+  "assets": [
+    {
+      "file": "home-rest.svg",
+      "node": "9171:62132",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "9992d5bd2b4d700b2257445f6407301091ed2922040aefe0fec3ced6e78b045f",
+      "bytes": 1068
+    },
+    {
+      "file": "home-active.svg",
+      "node": "9171:62131",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "0cfbb41d148cd1b9378581a3afa632cb969669d7d9f9b3a1b853c21406652ac2",
+      "bytes": 1317
+    },
+    {
+      "file": "showroom-rest.svg",
+      "node": "9171:62147",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "00f2436b195731791ffd0b0f15195f0fe0ac5508c820864a2a898044e635e037",
+      "bytes": 1748
+    },
+    {
+      "file": "showroom-active.svg",
+      "node": "9171:62149",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "d01514d87c1d97e7df0a5250cd3700503b93a8b6cda02c0013fb1f77b123e672",
+      "bytes": 2097
+    },
+    {
+      "file": "garage-rest.svg",
+      "node": "9177:62255",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "6a6c258e36b1d914069372fc1948ec5eb5b5a39471b55917bb743bb5142773d0",
+      "bytes": 2185
+    },
+    {
+      "file": "garage-active.svg",
+      "node": "9177:62257",
+      "width": 24.0,
+      "height": 24.0,
+      "sha256": "f96e87c24bcec4bc20be10063c138d96bf14275c6fbc5ec93610ab1da926d130",
+      "bytes": 2541
+    },
+    {
+      "file": "cargpt-frame.svg",
+      "node": "9187:62776",
+      "width": 98.0,
+      "height": 98.0,
+      "sha256": "d0fdd32431d811fa869b65a3b07c0cd1c44d14e4756a970aa665f325ca385528",
+      "bytes": 6273
+    }
+  ],
+  "latestRecheck": "Fresh9182:62624 and9164:62590 context after the user asked again to check the updated bottom bar: geometry, tab order and padding unchanged; pill adds0 7px17px rgba(0,0,0,.08) shadow; the AI control is now an exact98x98 exportedSVG containing its64px material and shadow at(-17,-10) relative to the unchanged64px hit target.",
+  "latestMaterialRecheck": "Fresh source after the latest color, blur and inner-shadow correction: bar9164:62591 uses black8% fill and10px background blur, superseding white40%/6px. Shadow0/7/17black8% and all three-tab geometry are unchanged. AI component is now9187:62776; its first inset shadow0/4/4 changes from black25% to white25%. The fresh98x98 export replaces priorbytes; animated background removes only the staticpurpleGroup while retaining the Vector8400 gloss, frame texture and fullmaterial/shadowchain.",
+  "latestNavigationRecheck": "After the user said My Orders is moving to a future Profile task, fresh9182:62624 and9164:62590 context removes Order: Home, Showroom, Garage. Horizontal outside padding is now16px; vertical8px and wrapper360x80 stay. Pill is256x64 atx16; AI64px slot atx280. Cells/indicator are88px wide with-8px overlap, starts4/84/164. White40%,6px blur and7px/17px/.08 shadow stay. The latest98x98 AI export changed bytes again and replaces the previous file at unchanged(-17,-10) offsets.",
+  "latestPillColorRecheck": "Fresh9164:62590 context and screenshot after the user updated the color behind tabs: onlybar9164:62591 fill changes fromblack8% torgba(237,237,237,0.29). Selectedindicator stayswhite, outerwrapper stays transparent;10pxblur, source shadow, three-tab geometry and AI animation/material stayunchanged."
+}

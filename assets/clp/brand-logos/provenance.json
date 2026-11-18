@@ -1,0 +1,164 @@
+{
+  "retrieved": "2026-11-18",
+  "source": "https://www.cars24.com/buy-used-cars-gurgaon/",
+  "method": "Public Make & Model sidebar image alt labels and static media URLs; brand images only, no live counts or inventory copied.",
+  "existingAssets": "Sixteen existing approved Figma make assets retain their recorded 4:3 crop metadata and source bytes. See assets/makes/provenance.json. This modal-only map does not change global MAKE_NAMES.",
+  "assets": [
+    {
+      "brand": "Datsun",
+      "file": "datsun.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/f57bc692-a323-43ec-b6ed-37a2e205815aDatsun.png?w=32&dpr=3",
+      "sha256": "7250cf2721611433af2091d1bec961b234e6e14cd7d1ca8bca6e597dcd54637a",
+      "width": 96,
+      "height": 45,
+      "format": "PNG"
+    },
+    {
+      "brand": "Mercedes Benz",
+      "file": "mercedes-benz.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/dc82422b-f740-40ed-816a-25c4569ee2e8mercedesbenz.png?w=32&dpr=3",
+      "sha256": "f80ff292b4e5154fe00fd801d7626c2bec20e531e5fc2c4b3d39e9d00e3f6ec7",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Lexus",
+      "file": "lexus.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/a8ffced6-3d8e-4a36-af22-390fa3eb5bb6lexus.png?w=32&dpr=3",
+      "sha256": "88ad2f687e6c8f86d48927c0ff91b62b6a2cfa3ac09a4ffbdaddde4816583ee6",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Chevrolet",
+      "file": "chevrolet.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/e592850b-b7e3-4af7-886b-0d29c9b6b6a6chevrolet.png?w=32&dpr=3",
+      "sha256": "32023ab15bc26bcc48ba4d09d1f14eea2c7d59d1df36fa3f02fc663db2591f82",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "CITROEN",
+      "file": "citroen.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/7283ce70-c507-4a27-826d-a1a011e1b83acitroen.png?w=32&dpr=3",
+      "sha256": "8f6bc37d4399cb7a71769875cdc7350911a78604acf8e1d464b2a63ab1b74dd0",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "ISUZU",
+      "file": "isuzu.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/7af35363-085d-4e89-8a45-543dfa905cb9isuzu.png?w=32&dpr=3",
+      "sha256": "e69dea3383fb3caf38a8a77576c1713214501eb35ae3935a168e96361aadbab3",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Porsche",
+      "file": "porsche.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/1028e800-976d-48df-97f7-05f9fb71b2eaporsche.png?w=32&dpr=3",
+      "sha256": "aa25006b511646230c2f51d0e4dfe8d5258e46d0579cc9263b491abc47ea87e1",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Landrover",
+      "file": "landrover.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/5918e47a-44bd-4f94-b89e-cbc7e9201a4elandrover.png?w=32&dpr=3",
+      "sha256": "592840c75724a923a37b14b1bc826e2f6cfbd2234e060391628963c06039d070",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Mahindra Renault",
+      "file": "mahindra-renault.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/e4807558-1759-40d9-a15d-1d5d8f8872a3MahindraRenault.png?w=32&dpr=3",
+      "sha256": "4dd1e66f0ff91db7cdad6f2099f3977682906dc819fd8afd95f14db2c83059bc",
+      "width": 96,
+      "height": 96,
+      "format": "PNG"
+    },
+    {
+      "brand": "Fiat",
+      "file": "fiat.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/1ebf295b-28fd-46e0-a799-1ec8b14fd735fiat.png?w=32&dpr=3",
+      "sha256": "e9e061e8fd2e9679f44e14b92c2ee41ef8280100df7670f2a32dd6ad8f42cd74",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Mitsubishi",
+      "file": "mitsubishi.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/97365c0c-992b-4230-af4c-0b0e6986b3bemitsubishi.png?w=32&dpr=3",
+      "sha256": "a09b4ce973e6cf0ec56f5ef2a782879fcfc8b447ca494710c264dbf815e796ab",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Mini",
+      "file": "mini.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/a94a0828-3a13-4ad4-b9ed-4fd43bd4553fmini.png?w=32&dpr=3",
+      "sha256": "ce2244089e0c6d9d1caada19ff3cf01cfcf60062dd6c6494e01c85ec04604184",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Ssangyong",
+      "file": "ssangyong.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/55cd475a-886f-4f6b-9315-c61e64685d4eFrame2147227737.png?w=32&dpr=3",
+      "sha256": "43dbdb723dc5b2e82d3b2956a43a2f14d49a0d70ebea73d49f0efbf93f4dbcbd",
+      "width": 90,
+      "height": 45,
+      "format": "PNG"
+    },
+    {
+      "brand": "Vinfast",
+      "file": "vinfast.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/deb4f372-ead3-4b09-9d80-99a118f79fecvinfast.png?w=32&dpr=3",
+      "sha256": "0ed1cf499457b8e44fc665953421e4733f56f29f9beac8f1fff2ae3fae44942f",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Force Motors",
+      "file": "force-motors.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/c88f935f-11c1-4859-84e1-bc6f767eca55Forcemotors.png?w=32&dpr=3",
+      "sha256": "edf736509ec45e17eb531f120d7878c4a3525cc5e393111575d2c1c6f335b263",
+      "width": 96,
+      "height": 96,
+      "format": "PNG"
+    },
+    {
+      "brand": "Volvo",
+      "file": "volvo.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/bf855cd4-dfe3-46ec-933d-8a6fdfd3b332volvo.png?w=32&dpr=3",
+      "sha256": "b3fe8659440d8e2848db631423bb2fad5e321ec938a458e70cf922ea418956b2",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    },
+    {
+      "brand": "Jaguar",
+      "file": "jaguar.png",
+      "sourceUrl": "https://media.cars24.com/cars24/brand/c2f89efa-19b4-4d4a-bfbc-aea249404c64jaguar.png?w=32&dpr=3",
+      "sha256": "3b82e22f3c659f6532889747a21ab7ffc97c82344f8cd559ce86b4373445854b",
+      "width": 96,
+      "height": 72,
+      "format": "PNG"
+    }
+  ],
+  "identityNotes": [
+    "The Cars24 Mahindra Renault row explicitly supplies its MahindraRenault.png asset, whose artwork is the Renault diamond. This preserves the verified public row mapping; no combined mark was invented."
+  ]
+}

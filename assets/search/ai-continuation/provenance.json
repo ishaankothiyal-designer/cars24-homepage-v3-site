@@ -1,0 +1,48 @@
+{
+  "source": "https://www.figma.com/design/ygnwNd6Cjikr7CDo4Rb9eQ/Unified-search-experience?node-id=1167-174817",
+  "inspectedAt": "2026-11-17",
+  "fileKey": "ygnwNd6Cjikr7CDo4Rb9eQ",
+  "reviewedNodes": [
+    "1167:174817",
+    "1167:174818",
+    "1167:174954",
+    "1167:174944",
+    "1575:61930"
+  ],
+  "assets": [
+    {
+      "file": "sparkle.png",
+      "width": 76,
+      "height": 76,
+      "nodeId": "1167:174831",
+      "sha256": "4ce07dfdc83209ba060922a3dc22ddd430bad288a3de0cd0d683f0d5d73bcef4"
+    },
+    {
+      "file": "caption-mask.svg",
+      "width": 134.254,
+      "height": 11.544,
+      "nodeId": "1167:174818",
+      "sha256": "59e7ca5512afd4a0378806b9275a83ec1106e79315cdd63e6546345dcd588976"
+    },
+    {
+      "file": "caption-shimmer.svg",
+      "width": 42,
+      "height": 46,
+      "nodeId": "1167:174818",
+      "sha256": "7385d706b213cd8e3f422f9e0ddfc3b4ef60165d8450d2dcf399e9f6229cf30b"
+    },
+    {
+      "file": "bottom-glow.svg",
+      "width": 675,
+      "height": 362,
+      "nodeId": "1167:174818",
+      "sha256": "77c1dd937272ac325500252efea6d48296dec4cd1c7895a68f7487114a3fa312"
+    }
+  ],
+  "motionLimit": "Loader sparkle context exposes a static exported frame, not the original video. The prototype animates this exact PNG in CSS and disables motion for reduced-motion preferences.",
+  "adaptations": [
+    "Retained functional Back and Clear controls in loader for cancellation.",
+    "Used the existing listing collection and CarGPT no-match recovery.",
+    "Added a prototype sample-listing label below the loading skeleton."
+  ]
+}

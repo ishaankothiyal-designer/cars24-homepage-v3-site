@@ -1,0 +1,8 @@
+.showroom-directory{display:flex;flex-direction:column;gap:var(--spacing-20);min-width:0}
+.showroom-intro{margin:0;color:var(--text-secondary);font-size:var(--font-size-sm);line-height:1.5}
+.showroom-list{display:grid;gap:var(--spacing-12);min-width:0}
+.showroom-card{display:flex;flex-direction:column;gap:var(--spacing-16);min-width:0;padding:var(--spacing-16);border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-primary)}
+.showroom-card h3{margin:0;color:var(--text-primary);font-size:var(--font-size-base);font-weight:var(--font-weight-semibold);line-height:1.5;overflow-wrap:anywhere}
+.showroom-card .secondary{width:100%;min-height:44px}
+.showroom-empty{display:flex;flex-direction:column;gap:var(--spacing-16)}
+.showroom-empty h3{margin:0}

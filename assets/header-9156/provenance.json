@@ -1,0 +1,370 @@
+{
+  "figmaFile": "ttwWd3vH4lRPzfPLM8rOun",
+  "section": "9156:62369",
+  "frames": {
+    "all": "9154:61799",
+    "light": "8893:54686",
+    "compact": "9154:62044",
+    "states": "9154:61969"
+  },
+  "assets": [
+    {
+      "file": "all-active.png",
+      "nodeId": "481:35879",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "917de3165def31ebee04419e6753caccfe769af4c55a5242fe3a517dce92d91c",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "all-brand-active.png",
+      "nodeId": "I9154:61802;481:35879",
+      "intrinsicSize": [
+        1024,
+        1024
+      ],
+      "sha256": "ecfe26e83d5d39c423cde1fcd95425738f1b5aa411a4d5b56b1636b10aaf8202",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "all-inactive.png",
+      "nodeId": "481:35874",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "c1a4e074ed9e13bee4420b9d2671d319e76b1c32d17cba2d6129640b8e4f83ba",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "brand-bell-outline.svg",
+      "nodeId": "I9154:61848;15010:35694;3358:22627",
+      "intrinsicSize": [
+        18.0,
+        18.0
+      ],
+      "sha256": "c3ba2f53649963bd72c05c4ecb77a4e7d90368514ba300566b362e389e893b51",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "brand-chevron-down-small-outline.svg",
+      "nodeId": "I9154:61848;15010:35702",
+      "intrinsicSize": [
+        16.0,
+        16.0
+      ],
+      "sha256": "e9ee8026e4fadc974e3daa695f0073d7621dab7e16e78f97427650b33985d607",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "brand-icon.svg",
+      "nodeId": "I9154:61848;15010:35699",
+      "intrinsicSize": [
+        16.0,
+        16.0
+      ],
+      "sha256": "01b928a620ed5bcb1c4b2ad765328c1a090d8edd3e98696b63d377abd881d1e0",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "brand-people-circle-user-circle-avatar-profile-outline.svg",
+      "nodeId": "I9154:61848;15010:35696;3358:22627",
+      "intrinsicSize": [
+        18.0,
+        18.0
+      ],
+      "sha256": "047d1edd23650ee59fccf3e3e2cc7ac1803f0bc309391d0672cea71539497e0a",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "buy-active.png",
+      "nodeId": "481:35882",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "92d64e94f684c1dcfdb7dabc5a82535e47b1c0f90045d8258fe0b41b4caf8f42",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "buy-inactive.png",
+      "nodeId": "481:35951",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "da65fa7c78472043398fee1d0b9b6d95f4c19eb7d48ccbd3a6c31775e5a8840a",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "challan-active.png",
+      "nodeId": "481:37303",
+      "intrinsicSize": [
+        1535,
+        1024
+      ],
+      "sha256": "58849b98787b2621f1c404431ad89ac7ad3a0d0cfa1f33bc777107595c87eede",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "challan-inactive.png",
+      "nodeId": "524:37308",
+      "intrinsicSize": [
+        1535,
+        1025
+      ],
+      "sha256": "b53254719ba44c1be6cc6eec64ab3e726b686eb834ffc050c2a17f60767d4d47",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "checks-active.png",
+      "nodeId": "2727:116403",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "6a98714434a8ebab1d77779ad191da8680f4e90310759c5b08db9d09cbd9fb78",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "checks-inactive.png",
+      "nodeId": "2727:116282",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "5599a26938b873a3639b7ca7eb4acb09c587df3fde1012f6294984e11b07214c",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "insurance-overlay.png",
+      "nodeId": "524:37500",
+      "intrinsicSize": [
+        1024,
+        1024
+      ],
+      "sha256": "e3dd506213e8301fb9f6e210f79a81a30a6762ed8fd6954ec51e266c78ab936c",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "insurance-shield.png",
+      "nodeId": "524:37486 / 524:37488",
+      "intrinsicSize": [
+        1024,
+        1024
+      ],
+      "sha256": "6d9e75b4ad7024c9b7bf322af2963ef859d07d78cb25c871a1abe10c39088f47",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "light-bell-outline.svg",
+      "nodeId": "I8963:56530;15010:35726;14859:4233",
+      "intrinsicSize": [
+        18.0,
+        18.0
+      ],
+      "sha256": "7b16b9a1061ce03a8308cc6a73b481401b55bd288972580c8ddb7bf7056ec5c8",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "light-chevron-down-small-outline.svg",
+      "nodeId": "I8963:56530;15010:35734",
+      "intrinsicSize": [
+        16.0,
+        16.0
+      ],
+      "sha256": "74b93e9179c85ed07a43c6c2b374edfdfc4d6ef14f5557afaa1b4453f61ffd9d",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "light-icon.svg",
+      "nodeId": "I8963:56530;15010:35731",
+      "intrinsicSize": [
+        16.0,
+        16.0
+      ],
+      "sha256": "548b20158b0737a8b220b18adffbefa4c3c3e3380c7c75dbf1309182e7bcb95a",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "light-people-circle-user-circle-avatar-profile-outline.svg",
+      "nodeId": "I8963:56530;15010:35728;14859:4119",
+      "intrinsicSize": [
+        18.0,
+        18.0
+      ],
+      "sha256": "883d6be81ba369d47c5d4078895f03fe12d3fb88c85b46f1be57b6bccc053737",
+      "method": "Read-only native exportAsync SVG_STRING from exact source glyph instance; bytes unchanged."
+    },
+    {
+      "file": "loans-active.png",
+      "nodeId": "481:36805",
+      "intrinsicSize": [
+        1024,
+        1024
+      ],
+      "sha256": "54aab2451a10f53448b11f9e9c3f7783f5091ec926da4d869c0537b7847272d1",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "loans-inactive.png",
+      "nodeId": "481:36755",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "52ff48049659359f3b0fdd5b9a3d792b94fab091bc97e10db0a18d47579e0099",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "sell-active.png",
+      "nodeId": "481:36195",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "9eabc91654476480ee9841b812c093edb26c19fa1d0b1eeda840ebcb97bd3f3d",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "sell-inactive.png",
+      "nodeId": "481:36198",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "9b8a336b2af1ca15d003879a9d95e1b9a402ee721cbe226aebc8727e706865ac",
+      "method": "curl -L from high-fidelity get_design_context asset source; bytes unchanged."
+    },
+    {
+      "file": "warranty-logo.svg",
+      "nodeId": "9154:61813",
+      "intrinsicSize": [
+        70.9161,
+        24.0
+      ],
+      "sha256": "4283d14d429d841cb9f21b6eeeacda874d6350c06c763e5423381f4cfb2eb1cf",
+      "method": "curl -L source asset; bytes unchanged.",
+      "verifiedAt": "2026-11-18"
+    },
+    {
+      "file": "hero-curve.svg",
+      "nodeId": "9154:61847",
+      "intrinsicSize": [
+        360,
+        8
+      ],
+      "sha256": "3a96e599c045e7826527bab9a5803fa14795704779cd4949e3e42778a5173d86",
+      "method": "curl -L from fresh high-fidelity source asset; SVG bytes and root dimensions unchanged.",
+      "verifiedAt": "2026-11-18"
+    }
+  ],
+  "verifiedReuse": [
+    {
+      "file": "flow-home/2916-102613-Kv21.png",
+      "nodeId": "9154:61846",
+      "sha256": "0694fc60726615204df1cc9704e8ada0d896a3525d0eec869fbd7f857944f07b"
+    },
+    {
+      "file": "flow-home/home-brand-logo.png",
+      "nodeId": "I9154:61848;15010:35691",
+      "sha256": "2f710524e6d6ba3f7823f9f420730c458d26c513d065cb48ac98307802790853"
+    },
+    {
+      "file": "l1-header/brand-logo.png",
+      "nodeId": "I8963:56530;15010:35723",
+      "sha256": "fc9b753dc21b116dd40c0b3fde79bf9a8211cede00a90b4f65442e2fa395293b"
+    }
+  ],
+  "sourceGeometry": {
+    "canvasWidth": 360,
+    "allHeight": 396,
+    "lightHeight": 252,
+    "nativeOSAnnotationHeight": 44,
+    "mastheadContentHeight": 72,
+    "expandedSearch": [
+      16,
+      124,
+      328,
+      40
+    ],
+    "expandedTabs": [
+      0,
+      164,
+      360,
+      88
+    ],
+    "compactSearch": [
+      16,
+      60,
+      328,
+      40
+    ],
+    "compactTabs": [
+      0,
+      100,
+      360,
+      34
+    ],
+    "expandedSearchWrapper": {
+      "height": 48,
+      "paddingTop": 8
+    },
+    "compactSearchWrapper": {
+      "height": 56,
+      "paddingTop": 16
+    },
+    "serviceCellWidth": 72,
+    "serviceCellGap": 8,
+    "imageContainer": {
+      "width": 72,
+      "height": 50,
+      "paddingHorizontal": 10,
+      "innerGridWidth": 50
+    },
+    "hero": {
+      "width": 360,
+      "height": 144,
+      "photo": [
+        135.558,
+        13.552,
+        364.205,
+        195.707
+      ],
+      "curve": [
+        360,
+        8
+      ]
+    },
+    "bodyBelowHero": {
+      "canvasWidth": 375,
+      "zoom": 0.96
+    },
+    "scrollBoundary": {
+      "exit": 118,
+      "enter": 134,
+      "initial": 126
+    }
+  },
+  "sourcePaint": {
+    "lightAndCompact": "#f6f6ff",
+    "searchOutline": "#cbd5e1",
+    "searchInk": "#64748b",
+    "brandActions": "rgba(255,255,255,.15)",
+    "lightActions": "#ffffff"
+  },
+  "adaptations": [
+    "Existing native OS geometry and transparent status remain; no source OS or duplicate home indicator is rendered.",
+    "Expanded purple All uses the white active indicator, matching the latest verified source and earlier explicit user instruction; compact/light use purple.",
+    "Earlier user removal of the white tab-to-banner seam remains; no white line is restored.",
+    "All uses the exact supplied aligned purple active variant on light surfaces, aligned white active variant on brand surfaces and rotated-block purple inactive variant.",
+    "Source placeholder Search remains the existing user-requested animated Search for prompt and routes to the existing Search flow.",
+    "Stored city/locality replaces reference location; no address is fabricated.",
+    "Canonical CodeConnect packages/web and packages/native component files are absent; the packaged Turbo UI Core bridge and shared renderers remain in use.",
+    "Header and Hero use the fresh 360px source grid. Only content below the Hero retains the preceding 375px canvas at 0.96 zoom. Shared Home/L1 collapse boundaries derive from the 208px expanded flow and 90px compact stack. CLP remains outside this source board.",
+    "The Search backing spans one source pixel above and below the native clip boundary throughout motion. This clipped two-pixel paint overlap prevents fractional-zoom raster seams without moving controls or painting the status element."
+  ],
+  "freshSourceVerified": "2026-11-18"
+}

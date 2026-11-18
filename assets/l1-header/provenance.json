@@ -1,0 +1,94 @@
+{
+  "figmaFile": "ttwWd3vH4lRPzfPLM8rOun",
+  "frame": "8893:54686",
+  "assets": [
+    {
+      "file": "brand-logo.png",
+      "node": "I8963:56530;15010:35723;19796:3100",
+      "intrinsicSize": [
+        2640,
+        560
+      ],
+      "sha256": "fc9b753dc21b116dd40c0b3fde79bf9a8211cede00a90b4f65442e2fa395293b"
+    },
+    {
+      "file": "avatar.svg",
+      "node": "I8963:56530;15010:35728;14859:4119",
+      "intrinsicSize": [
+        18.0,
+        18.0
+      ],
+      "sha256": "bde10405bd1318716bf5071f7338fad9b5d870d87690ebf5ba1d3d4c1fda558f"
+    },
+    {
+      "file": "location-pin.svg",
+      "node": "I8963:56530;15010:35731;15130:4299",
+      "intrinsicSize": [
+        10.6667,
+        13.0968
+      ],
+      "sha256": "9b4aa3ddc396988f3730343ef47c7aaeb676016196ca8dadbc60ff1c00163669"
+    },
+    {
+      "file": "location-chevron.svg",
+      "node": "I8963:56530;15010:35734;15201:276",
+      "intrinsicSize": [
+        6.33322,
+        3.66654
+      ],
+      "sha256": "2ee1f102da4adaa5135187df97153cd1d469a77f949d5fdf79bad3ff1f2985a6"
+    },
+    {
+      "file": "tab-all.png",
+      "node": "I8963:55004;481:35874",
+      "intrinsicSize": [
+        1254,
+        1254
+      ],
+      "sha256": "c1a4e074ed9e13bee4420b9d2671d319e76b1c32d17cba2d6129640b8e4f83ba"
+    }
+  ],
+  "slots": {
+    "logoContainer": [
+      87.7145,
+      26.58015
+    ],
+    "logoImage": [
+      87.7145,
+      18.6061
+    ],
+    "avatar": [
+      18,
+      18
+    ],
+    "pinContainer": [
+      16,
+      16
+    ],
+    "chevronContainer": [
+      16,
+      16
+    ],
+    "allArtwork": [
+      44,
+      44
+    ]
+  },
+  "reusedAssets": {
+    "buy": "../flow-home/top-buy.png",
+    "sell": "../flow-home/top-sell.png",
+    "loans": "../flow-home/top-loans.png",
+    "checks": "../flow-home/top-checks.png",
+    "challan": "../flow-home/top-challan.png",
+    "insurance": [
+      "../flow-home/top-insurance.png",
+      "../flow-home/top-insurance-base.png"
+    ]
+  },
+  "adaptations": [
+    "Global native status uses the existing white variant; the source native OS annotation is not rendered again.",
+    "Stored city/locality replaces reference location text; no address is fabricated.",
+    "Existing canonical Autonaut bell-outline glyph renders at source18px; source mapped canonical component is absent from this checkout.",
+    "Source tab imagery other than All reuses the existing supplied matching artwork; interactions and routes remain data driven."
+  ]
+}

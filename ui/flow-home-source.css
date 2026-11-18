@@ -5,10 +5,10 @@
 @font-face{font-family:'Home Serif';font-style:italic;font-weight:700;font-display:swap;src:url('../assets/flow-home/IBM-Plex-Serif-700.ttf') format('truetype')}
 .screen.is-flow-home{
  --home-header-purple:#5b4dfa;--home-font-sauce:'Home Campaign',sans-serif;--home-font-serif:'Home Serif',serif;--font-family-primary:GeistCDP,Geist,system-ui,sans-serif;
- --home-source-masthead-height:72px;--home-source-search-block:48px;--home-source-tabs-height:88px;--home-source-header-white:var(--home-white);--home-source-icon-surface:var(--home-surface-alpha);--home-source-search-shadow:0 6px 16px #1f29370a,0 2px 8px #1f293705;
+ --home-source-masthead-height:72px;--home-source-search-ink:#64748b;--home-source-search-block:48px;--home-source-tabs-height:88px;--home-source-header-white:var(--home-white);--home-source-icon-surface:rgba(255,255,255,.15);--home-source-search-shadow:0 6px 16px #1f29370a,0 2px 8px #1f293705;
 }
 .screen.is-flow-home .home-reference{font-family:var(--font-family-primary)}
-.screen.is-flow-home .home-masthead{height:calc(var(--home-native-top-inset) + var(--home-source-masthead-height));padding-top:var(--home-native-top-inset);background:var(--home-header-purple);overflow:visible}
+.screen.is-flow-home .home-masthead{height:calc(var(--home-native-top-space) + var(--home-source-masthead-height));padding-top:var(--home-native-top-space);background:var(--home-header-purple);overflow:visible}
 .screen.is-flow-home .home-brand-row{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
 .screen.is-flow-home .home-brand-logo{display:block;width:87.7145px;height:26.58015px;object-fit:contain}
 .screen.is-flow-home .home-header-actions{gap:6px}
@@ -20,15 +20,15 @@
 .screen.is-flow-home .home-location-pin{background:none;box-shadow:none;width:16px;height:16px;border-radius:0}
 .screen.is-flow-home .home-location i{font-size:16px;line-height:16px;flex:none}
 .screen.is-flow-home .home-location-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
-.screen.is-flow-home .home-search-sticky{height:var(--home-source-search-block);padding:8px 16px 0;background:var(--home-header-purple)}
-.screen.is-flow-home .home-reference .home-search{margin:0;width:343px;height:40px;border:0;border-radius:999px;background:var(--home-white);color:var(--home-muted);padding:10px 12px;gap:8px;box-shadow:var(--home-source-search-shadow);font-family:var(--font-family-primary);font-size:14px;line-height:18px;font-weight:400}
-.screen.is-flow-home .home-search-sticky .home-search i{font-size:20px;color:var(--home-muted)}
-.screen.is-flow-home .home-service-tabs{height:var(--home-source-tabs-height);top:calc(var(--home-native-top-inset) + var(--home-source-search-block));background:var(--home-header-purple)}
+.screen.is-flow-home .home-search-sticky{top:var(--home-native-top-space);height:var(--home-source-search-block);padding:0;background:var(--home-header-purple)}
+.screen.is-flow-home .home-header360 .home-search{display:flex;align-items:center;text-align:left;margin:0 16px;width:calc(100% - 32px);height:40px;min-height:40px;border:0;border-radius:999px;background:var(--home-white);color:var(--home-source-search-ink);padding:10px 12px;gap:8px;box-shadow:var(--home-source-search-shadow);font-family:var(--font-family-primary);font-size:14px;line-height:18px;font-weight:400}
+.screen.is-flow-home .home-search-sticky .home-search i{font-size:20px;color:var(--home-source-search-ink)}
+.screen.is-flow-home .home-service-tabs{height:var(--home-source-tabs-height);top:calc(var(--home-native-top-space) + var(--home-source-search-block));background:var(--home-header-purple)}
 .screen.is-flow-home .home-service-tabs .nav-tabs{height:88px;min-height:88px;max-height:88px;padding:0 12px;gap:8px;border-bottom:1px solid transparent;background:var(--home-header-purple);overflow-x:auto;overflow-y:hidden}
-.screen.is-flow-home .home-service-tabs .nav-tab{width:70px;min-width:70px;flex:0 0 70px;height:88px;min-height:88px;padding:8px 0 0;gap:4px;font-family:var(--font-family-primary);font-size:13px;line-height:18px;font-weight:400;color:var(--home-white)}
+.screen.is-flow-home .home-service-tabs .nav-tab{width:72px;min-width:72px;flex:0 0 72px;height:88px;min-height:88px;padding:8px 0 0;gap:4px;font-family:var(--font-family-primary);font-size:13px;line-height:18px;font-weight:400;color:var(--home-white)}
 .screen.is-flow-home .home-service-tabs .nav-tab.active{font-weight:600}
 .screen.is-flow-home .home-service-tabs .nav-tab.active::after{bottom:0;height:2px;background:var(--home-white)}
-.screen.is-flow-home .home-service-tabs .nav-img{position:relative;display:grid;place-items:center;width:70px;height:50px;flex:none}
+.screen.is-flow-home .home-service-tabs .nav-img{position:relative;display:grid;place-items:center;width:72px;height:50px;flex:none;padding:0 10px;grid-template-columns:50px}
 .screen.is-flow-home .home-service-tabs .nav-img img{width:50px;height:50px;max-width:none;object-fit:contain;position:relative}
 .screen.is-flow-home .home-service-tabs [data-value=all] img{width:44px;height:44px}
 .screen.is-flow-home .home-service-tabs [data-value=sell] img{width:42px;height:42px;transform:translate(2px,2px) rotate(-7.42deg)}
@@ -52,12 +52,12 @@
 .screen.is-flow-home .home-header-icon .home-header-avatar{width:18px;height:18px}
 
 /* The compact source header keeps its expanded flow space so scrolling never changes the page height. */
-.screen.is-flow-home{--home-source-search-outline:#c6d2e1;--home-source-compact-divider:rgba(0,0,0,.1);--home-source-compact-text:#020617}
-.screen.is-flow-home.is-home-scrolled .home-search-sticky{top:calc(var(--home-native-top-inset) + 14px);padding:0 16px;background:var(--home-white)}
-.screen.is-flow-home.is-home-scrolled .home-reference .home-search{background:var(--home-white);border:1px solid var(--home-source-search-outline);box-shadow:var(--home-source-search-shadow);color:var(--home-muted)}
-.screen.is-flow-home.is-home-scrolled .home-service-tabs{top:calc(var(--home-native-top-inset) + 62px);background:transparent;pointer-events:none}
-.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tabs{height:34px;min-height:34px;max-height:34px;padding:0 12px;gap:8px;background:var(--home-white);border-bottom:0;box-shadow:inset 0 -1px 0 var(--home-source-compact-divider);pointer-events:auto}
-.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab{height:34px;min-height:34px;padding:8px 0 0;gap:0;justify-content:flex-start;color:var(--home-source-compact-text)}
+.screen.is-flow-home{--home-source-search-outline:#cbd5e1;--home-source-compact-divider:#e2e8f0;--home-source-compact-text:#0f172b;--home-source-compact-secondary:#62748e;--home-source-compact-surface:#f6f6ff}
+.screen.is-flow-home.is-home-scrolled .home-search-sticky{top:var(--home-native-top-space);padding:0;background:var(--home-source-compact-surface)}
+.screen.is-flow-home.is-home-scrolled .home-header360 .home-search{background:var(--home-white);border:1px solid var(--home-source-search-outline);box-shadow:var(--home-source-search-shadow);color:var(--home-source-search-ink)}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs{top:calc(var(--home-native-top-space) + 56px);background:transparent;pointer-events:none}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tabs{height:34px;min-height:34px;max-height:34px;padding:0 12px;gap:8px;background:var(--home-source-compact-surface);border-bottom:0;box-shadow:inset 0 -1px 0 var(--home-source-compact-divider);pointer-events:auto}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab{height:34px;min-height:34px;padding:8px 0 0;gap:0;justify-content:flex-start;color:var(--home-source-compact-secondary)}
 .screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-img{height:0;opacity:0;transform:translateY(-8px);overflow:hidden}
 .screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab.active::after{bottom:0;background:var(--text-brand-base)}
 
@@ -91,6 +91,39 @@
 .screen.is-flow-home .flow-home-view::before,.screen.is-flow-home.is-home-scrolled .flow-home-view::before{content:none}
 .device .screen.is-flow-home .status-bar{background:var(--home-header-purple)}
 .device .screen.is-flow-home.is-home-scrolled .status-bar{background:var(--home-white)}
-.screen.is-flow-home .home-search-sticky::before{content:'';position:absolute;left:0;right:0;bottom:100%;height:0;background:inherit;pointer-events:none}
-.screen.is-flow-home.is-home-search-pinned.is-home-scrolled .home-search-sticky::before{height:14px}
+.screen.is-flow-home .home-search-sticky::before{content:'';position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:2px;background:inherit;pointer-events:none}
 .screen.is-flow-home.is-home-chrome-ready.is-home-search-pinned .home-search-sticky::before{transition:height var(--home-chrome-duration) var(--home-chrome-ease),background-color var(--home-chrome-duration) var(--home-chrome-ease)}
+
+/* Header board9156:62369 supplies state-specific art and the compact90px paint endpoint. */
+.screen.is-flow-home .home-header-icon .home-masthead-glyph{width:auto;height:auto}
+.screen.is-flow-home .home-location-pin .home-masthead-glyph{display:block}
+.screen.is-flow-home.is-home-scrolled .home-search-sticky{padding-bottom:0}
+.screen.is-flow-home.is-home-scrolled .home-service-tabs .nav-tab.active{color:var(--home-source-compact-text)}
+.screen.is-flow-home .home-service-tabs [data-value=buy].active img{width:48px;height:48px}
+.screen.is-flow-home .home-service-tabs [data-value=sell].active img{transform:translateY(2px)}
+.screen.is-flow-home .home-service-tabs [data-value=checks] img{transform:translateY(3px)}
+.screen.is-flow-home .home-service-tabs [data-value=checks].active img{width:44px;height:44px;transform:none}
+
+/* Shared header and campaign use360px; the body below the campaign keeps its375px canvas. */
+.screen.is-flow-home .home-header360{display:contents;font-family:var(--font-family-primary);font-size:13px;line-height:16px;color:var(--home-white)}
+.screen.is-flow-home .home-header360 *{box-sizing:border-box}
+.screen.is-flow-home .home-header360 button{font-family:inherit;min-width:0;border:0;background:none;padding:0;cursor:pointer}
+.screen.is-flow-home .home-header360 button:focus-visible{outline:2px solid var(--text-brand-base);outline-offset:3px}
+.screen.is-flow-home .home-header360 .home-masthead{position:relative;color:var(--home-white)}
+.screen.is-flow-home .home-header360 .home-location{display:flex;align-items:center}
+.screen.is-flow-home .home-header360 .home-header-icon{position:relative;background:none;color:var(--home-white)}
+
+.screen.is-flow-home .home-search-inner{height:48px;padding:8px 0 0;background:inherit}
+.screen.is-flow-home.is-home-scrolled .home-search-inner{height:56px;padding:16px 0 0}
+.screen.is-flow-home.is-home-chrome-ready .home-search-inner{transition:height var(--home-chrome-duration) var(--home-chrome-ease),padding var(--home-chrome-duration) var(--home-chrome-ease)}
+.screen.is-flow-home .home-header360{--home-header-hero-gradient:linear-gradient(178.32813235772238deg,rgb(91,78,250) 11.392%,rgb(134,184,255) 118.74%);--home-header-hero-ink:#0f172b;--home-header-hero-cta-shadow:0 1px 4px #6d78fc}
+.screen.is-flow-home .home-header360 .home-hero{position:relative;width:100%;height:144px;overflow:hidden}
+.screen.is-flow-home .home-header360 .home-warranty{background:var(--home-header-hero-gradient)}
+.screen.is-flow-home .home-header360 .home-warranty-copy{left:19px;top:21.9683px;width:155px}
+.screen.is-flow-home .home-header360 .home-warranty h2{margin:6px 0 0;width:166.193px;height:36px;font:800 16px/17.6px var(--home-font-sauce);letter-spacing:-.32px;color:var(--home-white)}
+.screen.is-flow-home .home-header360 .home-warranty-action{display:flex;align-items:center;justify-content:center;width:75.5px;height:21px;min-height:21px;margin-top:14px;padding:3.75px 9px;gap:3px;border-radius:999px;background:var(--home-white);color:var(--home-header-hero-ink);box-shadow:var(--home-header-hero-cta-shadow);font:600 8.25px/12.75px var(--font-family-primary);position:relative}
+
+.screen.is-flow-home .home-header360 i{font-style:normal}
+.screen.is-flow-home .home-header360 .home-warranty-image,.screen.is-flow-home .home-header360 .home-hero-curve{max-width:none}
+
+.screen.is-flow-home .home-header360 .home-hero-curve{width:auto;height:auto}

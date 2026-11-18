@@ -1,0 +1,51 @@
+/* The light variant shares Home's 48px brand row and 24px location row. */
+.service-header.has-home-masthead{height:auto;padding-top:0;gap:0}
+.home-masthead--light{
+ --masthead-ink:var(--text-primary);
+ --masthead-surface:#f6f6ff;
+ --masthead-location:#64748b;
+ --masthead-pin:#94a3b8;
+ --masthead-action-surface:var(--bg-primary);
+ height:72px;min-height:72px;margin-bottom:8px;flex:none;color:var(--masthead-ink);background:var(--masthead-surface);font-family:var(--font-family-primary);
+}
+.home-masthead--light .home-brand-row{height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.home-masthead--light .home-brand-mark{width:87.7145px;height:26.58015px;display:grid;place-items:center}
+.home-masthead--light .home-brand-logo{display:block;width:87.7145px;height:18.6061px;object-fit:contain}
+.home-masthead--light .home-header-actions{display:flex;gap:6px}
+.home-masthead--light .home-header-icon{position:relative;display:grid;place-items:center;width:32px;height:32px;min-height:32px;border-radius:50%;background:var(--masthead-action-surface);color:var(--masthead-ink)}
+.home-masthead--light .home-header-icon i{font-size:18px;line-height:18px}
+.home-masthead--light .home-header-avatar{display:block;width:18px;height:18px}
+.home-masthead--light .home-location-row{height:24px;display:flex;align-items:flex-start;padding:0 16px}
+.home-masthead--light .home-location{position:relative;display:flex;align-items:center;height:16px;min-height:16px;gap:4px;max-width:100%;font-size:12px;line-height:16px;font-weight:500;color:var(--masthead-location)}
+.home-masthead--light .home-location::after{content:"";position:absolute;inset:-14px auto -14px 0;width:min(100%,240px);min-height:44px}
+.home-masthead--light .home-location-pin{display:grid;place-items:center;width:16px;height:16px;flex:none;color:var(--masthead-pin)}
+.home-masthead--light .home-location i{font-size:16px;line-height:16px;flex:none}
+.home-masthead--light .home-location-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.has-service-chrome .service-masthead:has(>.home-masthead--light){padding-top:0}
+.has-service-chrome .home-masthead--light{margin-bottom:0}
+
+/* Light L1 source 8893:54686: Search starts 80px below native chrome, followed by the 88px strip. */
+.l1-home:has(.home-masthead--light),.l1-view:has(.home-masthead--light){--l1-header-source-surface:#f6f6ff;--l1-header-source-secondary:#62748e;--l1-header-source-primary:#0f172b;--l1-header-source-search-ink:#64748b;--l1-header-source-search-outline:#cbd5e1;--l1-header-source-search-shadow:0 6px 16px #1f29370a,0 2px 8px #1f293705}
+.has-service-chrome .service-masthead:has(>.home-masthead--light),.has-service-chrome:has(.home-masthead--light) .service-search-inner{background:var(--l1-header-source-surface)}
+.service-header.has-home-masthead .header-search{height:40px;min-height:40px;margin:0 16px;padding:10px 12px;gap:8px;border:1px solid var(--l1-header-source-search-outline);border-radius:999px;background:var(--bg-primary);color:var(--l1-header-source-search-ink);font-size:14px;line-height:18px;font-weight:400;box-shadow:var(--l1-header-source-search-shadow)}
+.has-service-chrome:has(.home-masthead--light) .header-search{width:calc(100% - 32px);margin:0 16px}
+.has-service-chrome:has(.home-masthead--light) .service-tabs{--service-tabs-surface:var(--l1-header-source-surface);--service-tabs-ink:var(--l1-header-source-secondary)}
+.has-service-chrome:has(.home-masthead--light) .service-tabs .nav-tab.active{color:var(--l1-header-source-primary)}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=all] img{filter:none;opacity:1}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=buy].active img{width:48px;height:48px}
+.has-service-chrome:has(.home-masthead--light).is-service-collapsed .service-search-inner{height:56px;padding:16px 0 0;background:var(--l1-header-source-surface)}
+.has-service-chrome:has(.home-masthead--light).is-service-collapsed .service-tabs{--service-tabs-surface:var(--l1-header-source-surface)}
+
+.home-masthead .home-location-glyph{display:grid;place-items:center;width:16px;height:16px;flex:none}
+.has-service-chrome:has(.home-masthead--light).is-service-collapsed .header-search{width:calc(100% - 32px);margin:0 16px}
+
+.has-service-chrome:has(.home-masthead--light) .header-search:is(:hover,:focus,:active){background:var(--bg-primary);color:var(--l1-header-source-search-ink)}
+.service-header.has-home-masthead .header-search i{width:20px;height:20px;font-size:20px;line-height:20px;flex:none}
+
+.has-service-chrome:has(.home-masthead--light).is-service-collapsed .service-tabs-rail{top:56px}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=buy]:not(.active) img{width:50px;height:50px}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=sell].active img{transform:translateY(2px)}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=checks] img{transform:translateY(3px)}
+.has-service-chrome:has(.home-masthead--light) .service-tabs [data-value=checks].active img{width:44px;height:44px;transform:none}
+
+.home-masthead .home-header-icon .home-masthead-glyph,.home-masthead .home-location .home-masthead-glyph{width:auto;height:auto;display:block}
