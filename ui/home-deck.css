@@ -71,3 +71,6 @@
 .card-home .deck-buy{padding-block:var(--spacing-4)}
 
 .card-home .deck-makes{gap:var(--spacing-4)}
+
+/* Compact Buy vehicle rail: source card height plus existing vertical inset. */
+.card-home .deck-buy .buy-results-rail:has(car-card[data-family="carousel-grid"]){height:164px;min-height:164px}

@@ -269,3 +269,7 @@
 
 /* CLP source Page control: I14783:253483;19267:372286;19267:243486. */
 :root{--clp-gallery-pages-top:118px;}
+
+/* Similar Cars Figma 9103:45937 / user pointer 9085:18740.
+   Exact reviewed values absent from Turbo Core; scoped consumption in similar-cars.css. */
+:root{--similar-cars-surface:#e4e1ff;--similar-cars-media:74px;--similar-cars-height:148px;--similar-cars-source-shadow:0 0 16px 2px rgb(71 55 250 / .14);}

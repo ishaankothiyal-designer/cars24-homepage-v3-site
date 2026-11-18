@@ -52,3 +52,30 @@ car-card{display:block;min-width:0;width:100%}.source-listing-link{display:flex;
 .flow-links a:hover{color:var(--brand-dark)}
 .flow-links .ui-icon{flex-shrink:0}
 .flow-hint{margin-top:var(--spacing-12);font-size:var(--font-size-2xs);line-height:var(--prototype-leading-1-5);color:var(--secondary)}
+
+/* Buy contextual vehicle options use the source compact carousel family. */
+.buy-results-rail .inventory-card-block:has(car-card[data-family="carousel-grid"]){flex-basis:160px;width:160px}.buy-results-rail car-card[data-family="carousel-grid"]{width:160px}
+
+/* Keep CLP review settings accessible when the ordinary RHS inspector collapses. */
+#clp-display-settings{padding:var(--spacing-12);border:1px solid var(--line);border-radius:var(--spacing-12);background:var(--bg-primary)}
+#clp-display-settings[hidden]{display:none}
+#clp-display-settings>.study-rule{display:none}
+#clp-display-settings+.small-label{margin-top:var(--spacing-24)}
+@media(min-width:1000px) and (max-width:1100px){
+ .studio:has(.screen.is-clp){grid-template-columns:minmax(180px,220px) var(--phone-width) minmax(160px,200px);gap:var(--spacing-16)}
+ .studio:has(.screen.is-clp) .inspector{display:block;align-self:start}
+ .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
+}
+@media(min-width:761px) and (max-width:999px){
+ .studio:has(.screen.is-clp){grid-template-columns:var(--phone-width) minmax(160px,200px);gap:var(--spacing-24)}
+ .studio:has(.screen.is-clp) .device-wrap{grid-column:1;grid-row:1}
+ .studio:has(.screen.is-clp) .inspector{display:block;grid-column:2;grid-row:1;align-self:start}
+ .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
+ .studio:has(.screen.is-clp) .intro{grid-column:1/-1;grid-row:2;max-width:650px;margin-inline:auto}
+}
+@media(max-width:760px){
+ .studio:has(.screen.is-clp){--phone-width:min(390px,calc((100dvh - 220px)*.4493),calc(100vw - 22px));flex-direction:column;align-items:center;gap:var(--spacing-12)}
+ .studio:has(.screen.is-clp) .inspector{display:block;order:-1;width:min(100%,var(--phone-width))}
+ .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
+ .studio:has(.screen.is-clp) #clp-display-settings>.small-label{margin:0 0 var(--spacing-8)}
+}

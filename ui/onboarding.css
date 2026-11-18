@@ -165,3 +165,23 @@
 .onboard-login-sheet .onboard-demo-note,.onboard-login-terms{font-size:var(--font-size-xs);line-height:var(--spacing-16);color:var(--text-secondary)}
 .onboard-login-terms a{color:var(--text-brand-base);text-decoration:underline}
 .onboard-login-description{font-size:var(--font-size-sm);line-height:var(--spacing-20);color:var(--text-secondary)}
+
+/* Shared onboarding chrome. Footer is a flex sibling of each scroll region. */
+.onboarding-header{width:100%;min-width:0;box-sizing:border-box}
+.onboarding-header>.icon-btn{flex:none;min-width:var(--size-44);min-height:var(--size-44)}
+.onboarding-header>h2,.onboarding-header-brand{flex:1;min-width:0}
+.onboarding-header-brand{display:flex;align-items:center}
+.onboarding-header-brand .mini-brand{width:auto;height:var(--size-20);max-width:100%;object-fit:contain}
+.onboarding-header>.text-btn{flex:none;min-width:var(--size-44);min-height:var(--size-44);margin-left:auto}
+.onboard-intent{padding:0;gap:0;overflow:hidden}
+.onboard-intent-content{flex:1;min-height:0;overflow-y:auto;padding:var(--spacing-16);display:flex;flex-direction:column;gap:var(--spacing-16);scrollbar-width:none}
+.onboarding-shell>.form-content{padding-bottom:var(--spacing-24)}
+.onboarding-cta{position:relative;z-index:2;flex:none;align-self:stretch;min-width:0;border:0;isolation:isolate;background:var(--bg-primary);padding:var(--spacing-12) var(--spacing-16);gap:var(--spacing-8)}
+.onboarding-cta::before{content:"";position:absolute;inset:calc(-1 * var(--spacing-32)) 0 100%;pointer-events:none;background:linear-gradient(to bottom,transparent,var(--bg-primary));backdrop-filter:blur(var(--spacing-8));-webkit-backdrop-filter:blur(var(--spacing-8));mask-image:linear-gradient(to bottom,transparent,black);-webkit-mask-image:linear-gradient(to bottom,transparent,black)}
+.onboarding-cta>.actions{margin:0;padding:0;width:100%}
+.onboarding-cta>button{width:100%}
+.onboarding-cta p{text-align:center}
+.onboard-login-sheet>.onboarding-cta{padding-inline:var(--spacing-12)}
+.onboard-login-sheet>.onboarding-cta .onboard-submit{margin:0}
+.onboard-login-sheet>.onboarding-cta .onboard-demo-note{margin:0}
+.onboard-login-sheet>.onboarding-cta .onboard-login-terms{margin:0}

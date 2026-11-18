@@ -76,3 +76,9 @@
 .vc-card .vc-return-art{width:43.182px;height:14px}
 
 .vc-desktop-grid .vc-assurance-layout-library{background:none}.vc-desktop-grid .vc-assurance-layout-library>button{background:linear-gradient(90deg,var(--vc-pale),var(--vc-white))}.vc-desktop-grid .vc-assurance-layout-library .vc-secondary{font-size:9px;line-height:14px;white-space:pre-line}.vc-desktop-grid .vc-assurance-layout-library .vc-assurance-copy>.vc-type-body3-regular{color:#314158}
+
+/* Source location slots scroll horizontally when supplied hub names are longer. */
+.vc-assurance>button{flex-shrink:0}.vc-assurance>.vc-secondary{overflow-x:auto;scrollbar-width:none}
+
+/* Keep the optional tile gallery controls below the photograph's main tap point. */
+.vc-tile .vc-pagination{bottom:var(--spacing-12)}

@@ -47,3 +47,8 @@
 .l1-source [data-name="Brand_carousal"]{overflow-x:auto;scrollbar-width:none}
 
 .l1-source [data-name="Brand_carousal"]{overflow-x:auto;scrollbar-width:none}
+
+/* USER-BUY-CONTEXT-PADDING-2026-11-18: consistent shell inset and 16px card spacing. */
+.l1-home .l1-context .deck-buy{padding:var(--spacing-16);gap:var(--spacing-16)}
+.l1-home .l1-context .deck-buy .buy-results-rail{gap:var(--spacing-16)}
+.l1-home .l1-context .deck-buy .deck-actions{margin-top:0}
