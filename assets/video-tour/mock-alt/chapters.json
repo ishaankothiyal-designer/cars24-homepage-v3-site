@@ -1,0 +1,295 @@
+{
+  "profile": {
+    "name": "Tata Tiago",
+    "role": "Illustrative mock car, shared across CDPs; not listing or condition evidence"
+  },
+  "provenance": {
+    "createdAt": "2026-11-18T14:39:38.343019+00:00",
+    "brief": "docs/design/video-tour-mock-2026-11-18/alternate/production.json",
+    "briefSHA256": "95b4a68c7eb7f232fe2ca4a7d9aecb57bcf6d94fec2c11eb3dd0904d45f939a0",
+    "videoProvider": "Higgsfield",
+    "voiceProvider": "ElevenLabs",
+    "narration": {
+      "provider": "ElevenLabs",
+      "voiceName": "Prashant Nair - Warm Indian Narrator",
+      "voiceId": "XWBnHn9U9jH8OYZ1nfdO",
+      "language": "English",
+      "accent": "Indian",
+      "source": "Verified ElevenLabs voice library, English + Indian filters, 18 November 2026",
+      "model": "Eleven Multilingual v2",
+      "settings": {
+        "speed": 1.0,
+        "stability": 0.5,
+        "similarity": 0.75,
+        "style": 0,
+        "speakerBoost": true
+      },
+      "reuse": "Reuses the exact eight accepted Prashant Nair narration recordings from the first tour; no new voice or script selection."
+    },
+    "scope": "Shared illustrative mock tour; not vehicle listing or condition evidence",
+    "captionTiming": "Estimated phrase boundaries weighted by word count across narration duration; not forced alignment",
+    "normalization": "ffmpeg loudnorm single-pass I=-16 LUFS, TP=-1.5 dBTP, LRA=11; 48kHz stereo AAC128k",
+    "sourceAudio": "Discarded; generated footage audio is never mixed into the result",
+    "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "finalVideoJobs": [
+      {
+        "index": 0,
+        "job_id": "56c3caa1-e67b-4835-8510-d31da48dc12b"
+      },
+      {
+        "index": 1,
+        "job_id": "01c3bef4-0e09-46aa-8593-0c0acac9bab9"
+      },
+      {
+        "index": 2,
+        "job_id": "f943d272-ff58-4ca6-a0d6-93cb18f6a45d"
+      },
+      {
+        "index": 3,
+        "job_id": "d2db8767-69bf-41e3-9003-c6ebc8812aaf"
+      },
+      {
+        "index": 4,
+        "job_id": "a4d40ab0-717f-4225-86d2-fdf28ee09dec"
+      },
+      {
+        "index": 5,
+        "job_id": "65247c52-652e-4a33-a571-c7707b808286"
+      },
+      {
+        "index": 6,
+        "job_id": "ca7b6ad3-04ee-483a-96ca-7c089e862d78"
+      },
+      {
+        "index": 7,
+        "job_id": "b5991b65-3f64-41a1-81c4-87b214145992"
+      }
+    ],
+    "alternateTake": "Distinct generated camera paths for the same reference Tiago. This is a second mock media take, not evidence for another inventory model.",
+    "postProduction": [
+      {
+        "chapter": "driver-pov",
+        "operation": "Use first4.8seconds at0.6x speed for8seconds, preserving source original under ignored local inputs.",
+        "reason": "Avoid a tiny hand edge that appears late in the generated take."
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "index": 0,
+      "title": "Exterior",
+      "slug": "exterior",
+      "file": "exterior.mp4",
+      "poster": "exterior.jpg",
+      "captions": "exterior.vtt",
+      "start": 0.0,
+      "end": 8.0,
+      "duration": 8.0,
+      "bytes": 882017,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Start with a look around the car. Take in its shape, lights, and exterior details.",
+      "narrationDuration": 5.146063,
+      "source": {
+        "video": "exterior-video.mp4",
+        "voiceover": "exterior-voice.mp3",
+        "videoSHA256": "3133679469bc2983821b6d0b7b498303962d56fb41fd19980af99ae30ab53205",
+        "voiceSHA256": "0a7acbf218bc482bc5727a5ff56f4b5ff7eac737764e737e122be82aeadbeb16",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 1,
+      "title": "Tyres",
+      "slug": "tyres",
+      "file": "tyres.mp4",
+      "poster": "tyres.jpg",
+      "captions": "tyres.vtt",
+      "start": 8.0,
+      "end": 16.0,
+      "duration": 8.0,
+      "bytes": 1377305,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Here’s a closer look at the wheels and tyres, from the sidewall to the tread.",
+      "narrationDuration": 4.179563,
+      "source": {
+        "video": "tyres-video.mp4",
+        "voiceover": "tyres-voice.mp3",
+        "videoSHA256": "d83cc1458e274cdbad3782ae7dda169f06a1042ffe886ee64eb8002df0ab1b64",
+        "voiceSHA256": "a4ead33256bde4b81649f700764fd4c6bbbee28cc8a4d1987de2ed310d9d9f14",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 2,
+      "title": "Engine",
+      "slug": "engine",
+      "file": "engine.mp4",
+      "poster": "engine.jpg",
+      "captions": "engine.vtt",
+      "start": 16.0,
+      "end": 24.0,
+      "duration": 8.0,
+      "bytes": 1035311,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Under the bonnet, explore the engine bay and the way everything is laid out.",
+      "narrationDuration": 4.362437,
+      "source": {
+        "video": "engine-video.mp4",
+        "voiceover": "engine-voice.mp3",
+        "videoSHA256": "4e44f9dff196e75bea9de4e7714d414b8d486786e518666eff53ac2bb9170a22",
+        "voiceSHA256": "8f1356dbe8fcf668536052bb83e9f76fc7f8a80aae6a8b25b6b73a6d6bfc190c",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 3,
+      "title": "Features",
+      "slug": "features",
+      "file": "features.mp4",
+      "poster": "features.jpg",
+      "captions": "features.vtt",
+      "start": 24.0,
+      "end": 32.0,
+      "duration": 8.0,
+      "bytes": 1023882,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Next, a few everyday details, from the centre controls to the cabin’s useful touches.",
+      "narrationDuration": 4.832625,
+      "source": {
+        "video": "features-video.mp4",
+        "voiceover": "features-voice.mp3",
+        "videoSHA256": "11d4733daad623a252fff5bd3eb025b5683e704e19c736b92a071dbe96536cb5",
+        "voiceSHA256": "4b8e7de317c363ae9a07f3428689f7187f0f57172932d101c9fde30439048a27",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 4,
+      "title": "Driver POV",
+      "slug": "driver-pov",
+      "file": "driver-pov.mp4",
+      "poster": "driver-pov.jpg",
+      "captions": "driver-pov.vtt",
+      "start": 32.0,
+      "end": 40.0,
+      "duration": 8.0,
+      "bytes": 642185,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Now take the driver’s seat. See the steering wheel, driving position, and view ahead.",
+      "narrationDuration": 4.728125,
+      "source": {
+        "video": "driver-pov-video.mp4",
+        "voiceover": "driver-pov-voice.mp3",
+        "videoSHA256": "29376eebfbc161006c11b58da623067d52f911f5cb125688c36c950e0f7b3222",
+        "voiceSHA256": "b8e373ae3c25d03628f22a099ded4d5307f66ffe3a5b71067b8ab88623c55a76",
+        "videoDuration": 8.0,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 5,
+      "title": "Dashboard",
+      "slug": "dashboard",
+      "file": "dashboard.mp4",
+      "poster": "dashboard.jpg",
+      "captions": "dashboard.vtt",
+      "start": 40.0,
+      "end": 48.0,
+      "duration": 8.0,
+      "bytes": 797008,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Explore the dashboard up close, including the instrument cluster, centre console, and controls.",
+      "narrationDuration": 5.198313,
+      "source": {
+        "video": "dashboard-video.mp4",
+        "voiceover": "dashboard-voice.mp3",
+        "videoSHA256": "ec27edd334a4b3678bebe35b1f0911b310ebbf24a894b3c99596292d930617fc",
+        "voiceSHA256": "ef0c88a70372004d5018bd9f77d5ca890fbfd81c950321fabfdd02773bec2f02",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 6,
+      "title": "Seats",
+      "slug": "seats",
+      "file": "seats.mp4",
+      "poster": "seats.jpg",
+      "captions": "seats.vtt",
+      "start": 48.0,
+      "end": 56.0,
+      "duration": 8.0,
+      "bytes": 1158952,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Take a look through the cabin, with views of the front and rear seats.",
+      "narrationDuration": 3.657125,
+      "source": {
+        "video": "seats-video.mp4",
+        "voiceover": "seats-voice.mp3",
+        "videoSHA256": "2d1d37a96027c662686614ec5b1747b5b79c7e9092d32193851cfed080d996ef",
+        "voiceSHA256": "6ab509cd95d1d8f82f2d890da097a9f09f670cbb03cc83a7b415e3f5912e9fd8",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    },
+    {
+      "index": 7,
+      "title": "Boot",
+      "slug": "boot",
+      "file": "boot.mp4",
+      "poster": "boot.jpg",
+      "captions": "boot.vtt",
+      "start": 56.0,
+      "end": 64.0,
+      "duration": 8.0,
+      "bytes": 929108,
+      "width": 720,
+      "height": 1280,
+      "voiceover": "Finally, open the boot for a look at the luggage area. Tap a chapter to explore again.",
+      "narrationDuration": 5.146063,
+      "source": {
+        "video": "boot-video.mp4",
+        "voiceover": "boot-voice.mp3",
+        "videoSHA256": "ee6d44407ed546c98e9c3b1d761eda077c377a8f579dc6b49e926df873e170b4",
+        "voiceSHA256": "031e29b7d9594900750aff8d25e1dc0cbdae0c8213d6e843ab34469fab254e87",
+        "videoDuration": 8.041667,
+        "sourceTransfer": "unspecified; treated as SDR",
+        "SDRToneMapped": false,
+        "finalFrameHold": 0.0
+      }
+    }
+  ],
+  "complete": {
+    "file": "complete.mp4",
+    "captions": "complete.vtt",
+    "duration": 64.021354,
+    "bytes": 7836323,
+    "width": 720,
+    "height": 1280
+  }
+}

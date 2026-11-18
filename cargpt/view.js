@@ -1,4 +1,7 @@
+import {getCardFamily} from '../car-card-settings.js';
 import {CARS} from './catalogue.js';
+import {JOURNEY_SERVICES} from './context.js';
+import {renderCarGPTServicePicker} from '../ui/cargpt-service-picker.js';
 import '../components/car-card/car-card.js';
 import {carImage,cardData} from '../car-card-adapter.js';
 import {BOOKING_SLOTS,BOOKING_UNAVAILABLE} from './session.js';
@@ -22,7 +25,7 @@ export function mountCarGPT(root,{session,bridge}) {
  if(bridge.renderMarkup)bridge.renderMarkup(root,shell);else root.innerHTML=shell;
  const view=root.firstElementChild,feed=view.querySelector('.cargpt-feed'),transcript=view.querySelector('.cargpt-transcript'),status=view.querySelector('.cargpt-status');
  const visuals=mountC3Visuals(view.querySelector('.cargpt-visuals'));
- let snapshot=session.snapshot(),lastMarkup='',destroyed=false,date='',slot='',expanded=false,voiceMode=snapshot.outputMode!=='text'&&!bridge.textEntry&&!snapshot.searchContext,conversationScroll=0,queuedQuery=String(bridge.initialQuery||''),photoViewer=null,viewerOpening=false,viewerRevision=0;const messageTimes=new Map(),galleryStates={get:key=>session.getGalleryState(key),set:(key,value)=>session.setGalleryState(key,value)};
+ let snapshot=session.snapshot(),lastMarkup='',firstPaint=true,destroyed=false,date='',slot='',expanded=false,voiceMode=bridge.entryMode==='voice'||(snapshot.outputMode!=='text'&&!bridge.textEntry&&!snapshot.searchContext),conversationScroll=0,queuedQuery=String(bridge.initialQuery||''),photoViewer=null,viewerOpening=false,viewerRevision=0;const messageTimes=new Map(),galleryStates={get:key=>session.getGalleryState(key),set:(key,value)=>session.setGalleryState(key,value)};
  let comparisonDisposers=[],comparisonPage=null,comparisonInput='pointer';
  const revealedComparisons=new Set(snapshot.messages.filter(turn=>turn.kind==='comparison').map(turn=>String(turn.id)));
  const markComparisonInput=event=>{comparisonInput=event.type==='keydown'||event.detail===0?'keyboard':'pointer';};
@@ -32,10 +35,11 @@ export function mountCarGPT(root,{session,bridge}) {
  const welcome=()=>`<div class="cargpt-welcome">${identity()}<p>${introduction}</p>${prompts()}</div>`;
  const exit=(instant=false)=>{session.suspend();leaveCarGPT(view,bridge.close,{instant});};
  const prompts=()=>`<div class="cargpt-prompts">${(snapshot.searchContext?['Show me cars under ₹12 lakh','Any make','Search in Gurugram']:examples).map(q=>button(e(q),'example',`data-query="${e(q)}" aria-label="Try example: ${e(q)}"`)).join('')}</div>`;
+ const lookup=id=>session.getCar(id);
  const selected=s=>s.selectedCar||CARS.find(c=>c.id===s.booking?.carId)||null;
  function dateLabel(value,options={day:'numeric',month:'short',year:'numeric'}){return value?new Date(`${value}T12:00:00`).toLocaleDateString('en-IN',options):'';}
  function card(car){return `<car-card class="cargpt-result-card" data-c3-car="${e(car.id)}" data-car-id="${e(car.id)}"></car-card>`;}
- function hydrateCards(){feed.querySelectorAll('car-card[data-c3-car]').forEach(card=>{const car=CARS.find(car=>car.id===card.dataset.c3Car);if(car){card.classList.add('cargpt-result-card');card.data={...cardData(car,bridge.saved.has(car.id),true),layout:'slider'};}});}
+ function hydrateCards(){feed.querySelectorAll('car-card[data-c3-car]').forEach(card=>{const car=lookup(card.dataset.c3Car);if(car){card.classList.add('cargpt-result-card');card.data={...cardData(car,bridge.saved.has(car.id),true),layout:'slider',family:getCardFamily('contextual')};}});}
 
  function hydrateComparisons(){
   feed.querySelectorAll('[data-c3-comparison]').forEach(node=>{const turn=snapshot.messages.find(message=>String(message.id)===node.dataset.c3Comparison);if(turn?.comparison){const id=String(turn.id),animateReveal=!revealedComparisons.has(id)&&comparisonInput!=='keyboard';revealedComparisons.add(id);comparisonDisposers.push(mountComparisonWidget(node,{value:turn.comparison,animateReveal,onOpen:slot=>openComparison(turn.comparison,slot,node.querySelector('button'))}));}});
@@ -74,7 +78,8 @@ export function mountCarGPT(root,{session,bridge}) {
    if(message.role==='user')return userMessage(message);
    const current=message.id===latest,paintState=current?s:{};
    let content='';
-   if(['results','alternatives'].includes(message.kind)){const cars=(message.carIds||[]).map(id=>CARS.find(car=>car.id===id)).filter(Boolean);content=`${identity()}<p class="cargpt-response">${stream(message.text,paintState)}</p>${message.kind==='alternatives'?'<p class="cargpt-response small">Nearby alternatives · differ from your request</p>':''}<div class="cargpt-recommendations" role="region" tabindex="0" aria-label="Recommended cars">${cars.map(card).join('')}</div><p class="cargpt-response">Open a car for photos, EMI options or a test drive.</p>`;}
+   if(message.kind==='service-picker'){if(!current||s.entryContext?.journey!=='all')return '';content=renderCarGPTServicePicker(JOURNEY_SERVICES);}
+   else if(['results','alternatives'].includes(message.kind)){const cars=(message.carIds||[]).map(id=>lookup(id)).filter(Boolean);content=`${identity()}<p class="cargpt-response">${stream(message.text,paintState)}</p>${message.contextNote?`<p class="cargpt-context-note">${e(message.contextNote)}</p>`:''}${message.kind==='alternatives'?'<p class="cargpt-response small">Nearby alternatives · differ from your request</p>':''}<div class="cargpt-recommendations" role="region" tabindex="0" aria-label="Recommended cars">${cars.map(card).join('')}</div><p class="cargpt-response">Open a car for photos, EMI options or a test drive.</p>`;}
    else if(message.kind==='comparison'&&message.comparison){content=`${identity()}<p class="cargpt-response small">Here’s how these two listings compare.</p><div data-c3-comparison="${e(message.id)}"></div>`;}
    else if(message.kind==='comparison-picker'){content=`${identity()}<p class="cargpt-response">${stream(message.text,paintState)}</p><div data-c3-comparison-picker="${e(message.id)}"></div>`;}
    else if(message.kind==='detail'&&message.car){content=`${identity()}<p class="cargpt-response small">${stream(message.text,paintState)}</p>${detail({...s,selectedCar:message.car}).replace(identity(),'')}`;}
@@ -84,6 +89,9 @@ export function mountCarGPT(root,{session,bridge}) {
    else content=`${identity()}<p class="cargpt-response">${stream(message.text,paintState)}</p>`;
    return `<div class="cargpt-turn" data-c3-message="${e(message.id)}" ${current?'data-c3-latest-agent="true"':''} ${current&&['gallery','detail','booking-prompt'].includes(message.kind)?`data-c3-current-widget="${message.kind==='booking-prompt'?'slots':message.kind}"`:''}>${content}</div>`;
   }).join('');
+ }
+ function journeyOptions(question){
+  return `<div class="cargpt-journey-options" role="group" aria-label="${e(question.text||'Next steps')}">${question.options.map(option=>button(e(option.label),question.key==='continue'?'journey-continue':question.key==='loan'?'loan-type':question.key==='registration'?'manual-vehicle':question.key.startsWith('vehicle-')?'vehicle-answer':'preference',`data-field="${e(question.key)}" data-value="${e(option.value)}"`)).join('')}</div>`;
  }
  function markup(s){
 
@@ -99,11 +107,13 @@ export function mountCarGPT(root,{session,bridge}) {
   if(s.phase==='thinking')return `${history}<div class="cargpt-loading" role="status"><span></span>Finding cars that fit your request…</div>`;
   if(s.error)return history;
   const latest=(s.messages||[]).filter(m=>m.role!=='user').at(-1);
+  if(s.journeyQuestion)return history+journeyOptions(s.journeyQuestion);
   return history+((s.messages||[]).some(m=>m.role==='user')&&ready?(latest?.kind==='results'?`<div class="cargpt-prompts">${button('Automatic only','example','data-query="Automatic only"')}${button('Show cheaper cars','example','data-query="Show cheaper cars"')}</div>`:prompts()):'');
  }
  function paint(s){
   if(destroyed)return;const previous=snapshot;snapshot=s;view.dataset.stage=s.stage==='intro'?'composer':s.stage;view.dataset.mode=voiceMode?'voice':'text';view.dataset.phase=s.phase;
   const next=markup(s);if(next!==lastMarkup){
+   const opening=firstPaint;firstPaint=false;
    const scroll=feed.scrollTop,focused=feed.contains(document.activeElement)?document.activeElement:null;
    const railPositions=new Map([...feed.querySelectorAll('.cargpt-recommendations')].map(rail=>[rail.closest('[data-c3-message]')?.dataset.c3Message,rail.scrollLeft]));
    const focusedRail=focused?.matches('.cargpt-recommendations')?focused.closest('[data-c3-message]')?.dataset.c3Message:null;
@@ -118,7 +128,7 @@ export function mountCarGPT(root,{session,bridge}) {
    if(focusedRail)[...feed.querySelectorAll('.cargpt-recommendations')].find(rail=>rail.closest('[data-c3-message]')?.dataset.c3Message===focusedRail)?.focus({preventScroll:true});
    const priorUser=previous.messages?.filter(m=>m.role==='user').at(-1)?.id,currentUser=s.messages?.filter(m=>m.role==='user').at(-1)?.id;
    const priorAgent=previous.messages?.filter(m=>m.role==='assistant').at(-1)?.id,currentAgent=s.messages?.filter(m=>m.role==='assistant').at(-1)?.id;
-   const anchor=currentUser!==priorUser?[...feed.querySelectorAll('[data-c3-message]')].find(n=>n.dataset.c3Message===String(currentUser)):currentAgent!==priorAgent?feed.querySelector('[data-c3-latest-agent]'):previous.stage!==s.stage?(newWidget?feed.querySelector('[data-c3-current-widget]'):s.stage==='confirmation'?feed.querySelector('[data-c3-latest-agent]'):null):null;
+   const anchor=opening?(s.messages?.length>1?feed.querySelector('[data-c3-latest-agent]')||feed.lastElementChild:null):currentUser!==priorUser?[...feed.querySelectorAll('[data-c3-message]')].find(n=>n.dataset.c3Message===String(currentUser)):currentAgent!==priorAgent?feed.querySelector('[data-c3-latest-agent]'):previous.stage!==s.stage?(newWidget?feed.querySelector('[data-c3-current-widget]'):s.stage==='confirmation'?feed.querySelector('[data-c3-latest-agent]'):null):null;
    if(anchor)feed.scrollTop=anchor.offsetTop-feed.offsetTop;
    if(cardFocus){const card=[...feed.querySelectorAll('car-card[data-c3-car]')].find(node=>node.dataset.c3Car===cardFocus.id&&node.closest('[data-c3-message]')?.dataset.c3Message===cardFocus.message);[...card?.shadowRoot?.querySelectorAll('[data-action]')||[]].find(node=>node.dataset.action===cardFocus.action)?.focus({preventScroll:true});}
    if(focusKey?.action){const target=[...feed.querySelectorAll('[data-c3-action]')].find(n=>n.dataset.c3Action===focusKey.action&&n.dataset.id===focusKey.id&&n.dataset.slot===focusKey.slot&&n.dataset.date===focusKey.date&&n.closest('[data-c3-message]')?.dataset.c3Message===focused?.closest('[data-c3-message]')?.dataset.c3Message);target?.focus({preventScroll:true});}
@@ -143,7 +153,7 @@ export function mountCarGPT(root,{session,bridge}) {
  async function closeVoice(instant=false){if(closingVoice)return;closingVoice=true;attachments.close();session.setOutputMode('text');view.dataset.voiceClosing='true';await visuals.dismissTo(view.querySelector('[data-c3-action="close"]'),{instant});if(destroyed)return;voiceMode=false;delete view.dataset.voiceClosing;closingVoice=false;paint(session.snapshot());input.focus({preventScroll:true});}
  const headerMenu=mountCarGPTMenu(view.querySelector('.cargpt-menu-controls'),{container:view,onNewConversation:bridge.restart,onAbout:bridge.about});
  const attachments=mountAttachments(composer.querySelector('.cargpt-attachment-controls'),{tray:composer.querySelector('.cargpt-draft-attachments'),container:view,onChange:()=>onInput()});
- function galleryContext(node){const gallery=node.closest('.cargpt-gallery');if(!gallery)return null;const key=gallery.dataset.galleryKey,id=gallery.dataset.galleryCar,car=CARS.find(c=>c.id===id)||snapshot.messages.find(m=>m.car?.id===id)?.car||selected(snapshot);return{gallery,key,car,...gallerySelection(car,galleryStates.get(key))};}
+ function galleryContext(node){const gallery=node.closest('.cargpt-gallery');if(!gallery)return null;const key=gallery.dataset.galleryKey,id=gallery.dataset.galleryCar,car=lookup(id)||snapshot.messages.find(m=>m.car?.id===id)?.car||selected(snapshot);return{gallery,key,car,...gallerySelection(car,galleryStates.get(key))};}
  function syncGallery(context,index){const {gallery,key}=context;galleryStates.set(key,{...galleryStates.get(key),category:context.category,index});gallery.querySelectorAll('.cargpt-gallery-dots>span').forEach((n,i)=>n.dataset.active=String(i===index));gallery.querySelectorAll('.cargpt-gallery-thumbnails>button').forEach((n,i)=>n.setAttribute('aria-pressed',String(i===index)));gallery.querySelectorAll('.cargpt-gallery-photo').forEach((n,i)=>n.tabIndex=i===index?0:-1);}
  const onGalleryScroll=event=>{if(!event.target.matches?.('.cargpt-photo-gallery'))return;const context=galleryContext(event.target);if(context){const index=Math.max(0,Math.min(context.photos.length-1,Math.round(event.target.scrollLeft/event.target.clientWidth)));if(index!==context.index)syncGallery(context,index);}};
  // Portalling a modal can briefly move focus outside the phone before its
@@ -158,7 +168,13 @@ export function mountCarGPT(root,{session,bridge}) {
   else if(a==='exit')exit(event.detail===0);
   else if(a==='microphone'){if(snapshot.phase==='listening')session.pauseVoice();else{session.setContinuousVoice?.(true);session.startVoice({requestPermission:true});}}
   else if(a==='start-voice'){voiceMode=true;session.setContinuousVoice?.(true);session.startVoice({requestPermission:true});}
-  else if(a==='example'){session.submitExample(hit.dataset.query);}
+  else if(a==='choose-journey')session.chooseJourney(hit.dataset.journey);
+  else if(a==='preference')session.answerPreference(hit.dataset.field,hit.dataset.value,hit.textContent);
+  else if(a==='manual-vehicle')session.enterVehicleManually();
+  else if(a==='vehicle-answer')session.answerVehicle(hit.dataset.field.slice(8),hit.dataset.value);
+  else if(a==='loan-type')session.selectLoanType(hit.dataset.value);
+  else if(a==='journey-continue')bridge.continueJourney(snapshot.entryContext);
+  else if(a==='example'){snapshot.entryContext?session.submit(hit.dataset.query):session.submitExample(hit.dataset.query);}
   else if(a==='results')session.showResults();
   else if(a==='similar')session.submit('Show me similar cars');
   else if(a==='select-car')session.selectCar(id);
@@ -170,7 +186,7 @@ export function mountCarGPT(root,{session,bridge}) {
   else if(a==='cancel-booking')session.cancelBooking();
   else if(a==='reschedule'){date='';slot='';session.reschedule();}
   else if(a==='service'){session.suspend();bridge.service(hit.dataset.route,hit.dataset.family);}
-  else if(a==='source'){const car=snapshot.selectedCar?.id===id?snapshot.selectedCar:CARS.find(c=>c.id===id);if(car?.listingUrl)window.open(car.listingUrl,'_blank','noopener,noreferrer');}
+  else if(a==='source'){const car=snapshot.selectedCar?.id===id?snapshot.selectedCar:lookup(id);if(car?.listingUrl)window.open(car.listingUrl,'_blank','noopener,noreferrer');}
   else if(a==='emi'){session.selectCar(snapshot.selectedCar?.id===id?snapshot.selectedCar:id,{record:false});session.submit('Show EMI options');}
   else if(a==='gallery'){session.selectCar(snapshot.selectedCar?.id===id?snapshot.selectedCar:id,{record:false});session.submit('Show photos');}
   else if(a==='gallery-category'){const c=galleryContext(hit);galleryStates.set(c.key,{...galleryStates.get(c.key),category:hit.dataset.category,index:0});lastMarkup='';paint(snapshot);[...feed.querySelectorAll('.cargpt-gallery')].find(n=>n.dataset.galleryKey===c.key)?.querySelector(`[data-category="${hit.dataset.category}"]`)?.focus({preventScroll:true});}
@@ -178,10 +194,13 @@ export function mountCarGPT(root,{session,bridge}) {
   else if(a==='gallery-enlarge'){const c=galleryContext(hit),index=Number(hit.dataset.photo),token=++viewerRevision;photoViewer?.destroy();viewerOpening=true;import('../ui/cargpt-photo-viewer.js').then(({mountPhotoViewer})=>{if(!destroyed&&token===viewerRevision){photoViewer=mountPhotoViewer(view,{src:c.photos[index],title:`${c.car.year} ${c.car.model} · ${c.category} · ${index+1}`,trigger:hit,onClose:()=>{viewerOpening=false;photoViewer=null;}});}});}
   else if(a==='gallery-feedback'){const c=galleryContext(hit),value=hit.getAttribute('aria-pressed')==='true'?'':hit.dataset.feedback;galleryStates.set(c.key,{...galleryStates.get(c.key),category:c.category,index:c.index,feedback:value});c.gallery.querySelectorAll('[data-feedback]').forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.feedback===value)));}
   else if(a==='gallery-share'){const c=galleryContext(hit);navigator.clipboard?.writeText(c.car.listingUrl).then(()=>bridge.notice('Car listing link copied.')).catch(()=>bridge.notice('Open the original listing to share this car.'));}
-  else if(a==='address'){const car=CARS.find(car=>car.id===id)||selected(snapshot);bridge.notice(car?.location||car?.city);}
+  else if(a==='address'){const car=lookup(id)||selected(snapshot);bridge.notice(car?.location||car?.city);}
  };
  const onCardSave=event=>{const card=event.target.closest('car-card[data-c3-car]');if(!card)return;bridge.save(card.dataset.c3Car,card.wishlisted);feed.querySelectorAll('car-card[data-c3-car]').forEach(other=>{if(other.dataset.c3Car===card.dataset.c3Car&&other!==card)other.wishlisted=card.wishlisted;});};
  const onCardDetails=event=>{const card=event.target.closest('car-card[data-c3-car]');if(card){if(snapshot.searchContext){session.suspend();bridge.details(card.dataset.c3Car);}else session.selectCar(card.dataset.c3Car);}};
+ const onCardTestDrive=event=>{const card=event.target.closest('car-card[data-c3-car]');if(card)session.beginBooking(card.dataset.c3Car);};
+ const onCardAssurance=event=>{const card=event.target.closest('car-card[data-c3-car]');if(card)bridge.notice([card.data.assuranceLead,card.data.assurance,...card.data.assurances||[]].filter(Boolean).join(' · '));};
+ view.addEventListener('test-drive',onCardTestDrive);view.addEventListener('assurance-details',onCardAssurance);
  view.addEventListener('wishlist-toggle',onCardSave);view.addEventListener('view-details',onCardDetails);
  const onVisibility=()=>{if(document.hidden)session.suspend();};view.addEventListener('click',onClick);document.addEventListener('visibilitychange',onVisibility);
  const onInput=()=>{const typing=!!input.value.trim()||attachments.snapshot().length>0;send.setAttribute('aria-label',typing?'Send message':'Start voice chat');send.dataset.typing=String(typing);send.innerHTML=icon(typing?'arrow-up-outline':'voice-1-wave-outline');};
@@ -189,5 +208,5 @@ export function mountCarGPT(root,{session,bridge}) {
  const onKey=event=>{if(event.key==='Escape'&&(viewerOpening||view.querySelector('.cargpt-photo-viewer'))){event.preventDefault();event.stopPropagation();viewerRevision++;viewerOpening=false;photoViewer?.destroy();photoViewer=null;return;}const rail=event.target.closest('.cargpt-recommendations');if(rail&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();rail.scrollTo({left:event.key==='Home'?0:event.key==='End'?rail.scrollWidth:rail.scrollLeft+(event.key==='ArrowRight'?1:-1)*261,behavior:'instant'});return;}const tabs=event.target.closest('.cargpt-gallery-tabs');if(tabs&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const buttons=[...tabs.querySelectorAll('button:not(:disabled)')],index=buttons.indexOf(event.target),next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(index+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[next].click();return;}if(event.key!=='Escape'||event.defaultPrevented||view.querySelector('.cargpt-menu-popup,.cargpt-photo-viewer'))return;event.preventDefault();if(voiceMode)closeVoice(true);else exit(true);};
  input.addEventListener('input',onInput);composer.addEventListener('submit',onSubmit);view.addEventListener('keydown',onKey);
  if(voiceMode&&snapshot.permission!=='denied'&&snapshot.supported){session.setContinuousVoice(true);session.startVoice({requestPermission:true});}
- return ()=>{view.removeEventListener('keydown',markComparisonInput,true);view.removeEventListener('click',markComparisonInput,true);comparisonPage?.destroy();clearComparisons();view.removeEventListener('keydown',onKey);document.removeEventListener('keydown',onPhotoKey,true);view.removeEventListener('scroll',onGalleryScroll,true);input.removeEventListener('input',onInput);composer.removeEventListener('submit',onSubmit);destroyed=true;viewerRevision++;photoViewer?.destroy();unsubscribe();headerMenu.destroy();attachments.destroy();session.suspend();visuals.destroy();view.removeEventListener('click',onClick);view.removeEventListener('wishlist-toggle',onCardSave);view.removeEventListener('view-details',onCardDetails);document.removeEventListener('visibilitychange',onVisibility);};
+ return ()=>{view.removeEventListener('keydown',markComparisonInput,true);view.removeEventListener('click',markComparisonInput,true);comparisonPage?.destroy();clearComparisons();view.removeEventListener('keydown',onKey);document.removeEventListener('keydown',onPhotoKey,true);view.removeEventListener('scroll',onGalleryScroll,true);input.removeEventListener('input',onInput);composer.removeEventListener('submit',onSubmit);destroyed=true;viewerRevision++;photoViewer?.destroy();unsubscribe();headerMenu.destroy();attachments.destroy();session.suspend();visuals.destroy();view.removeEventListener('click',onClick);view.removeEventListener('test-drive',onCardTestDrive);view.removeEventListener('assurance-details',onCardAssurance);view.removeEventListener('wishlist-toggle',onCardSave);view.removeEventListener('view-details',onCardDetails);document.removeEventListener('visibilitychange',onVisibility);};
 }

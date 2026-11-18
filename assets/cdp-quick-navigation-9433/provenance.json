@@ -1,0 +1,114 @@
+{
+  "accessed": "2026-11-18",
+  "fileKey": "ttwWd3vH4lRPzfPLM8rOun",
+  "sourceNode": "9433:84386",
+  "authority": "User explicitly requests these same demo quick-navigation images on every car detail page. These are navigation artwork, not photographs/facts of the selected inventory car.",
+  "geometry": {
+    "card": [
+      76,
+      77
+    ],
+    "image": [
+      76,
+      52
+    ],
+    "gap": 12,
+    "cutout": [
+      64,
+      46
+    ],
+    "exteriorInteriorHighlightCrop": {
+      "widthPercent": 121.82,
+      "leftPercent": -10.91
+    },
+    "tyresCrop": {
+      "widthPercent": 120.67,
+      "leftPercent": -20.45
+    }
+  },
+  "order": [
+    "360\u00b0 view",
+    "Video",
+    "Exterior",
+    "Interior",
+    "Features",
+    "Tyres",
+    "Highlight"
+  ],
+  "assets": [
+    {
+      "file": "car-360.png",
+      "sourceNode": "9433:84306",
+      "sha256": "28eceee9b1afb1dbb229e2a0227e8283ce7cb38d14358306ce8b0c2faee42ebc",
+      "bytes": 359576
+    },
+    {
+      "file": "ellipse-front.png",
+      "sourceNode": "9433:84306",
+      "sha256": "caaffaf7ef8ec1666628ce27c7b9f2e3520dd362d626915b3bfa17ba28d2d67f",
+      "bytes": 1936
+    },
+    {
+      "file": "ellipse-back.svg",
+      "sourceNode": "9433:84306",
+      "sha256": "43dc0f166da75073628c6b8c0a2aec6ae121a5c9c08cd988b2f9b4bf7babfdec",
+      "bytes": 250
+    },
+    {
+      "file": "car-video.png",
+      "sourceNode": "9433:84307",
+      "sha256": "28eceee9b1afb1dbb229e2a0227e8283ce7cb38d14358306ce8b0c2faee42ebc",
+      "bytes": 359576
+    },
+    {
+      "file": "exterior.png",
+      "sourceNode": "9433:84308",
+      "sha256": "ac2027dc9d1cb1ee9c81b3f4cd99e82693c73e6876763051012ea4ac053449c7",
+      "bytes": 200229
+    },
+    {
+      "file": "interior.png",
+      "sourceNode": "9433:84309",
+      "sha256": "67359b53a09900638d6b07af406608f7caf74f9a1b6178bc0be3747588925477",
+      "bytes": 191890
+    },
+    {
+      "file": "features.png",
+      "sourceNode": "9433:84310",
+      "sha256": "10c5ab5790dc147dca806878f360a7b9eb1291f9e889bc8fefaaf277c566e7f7",
+      "bytes": 1415102
+    },
+    {
+      "file": "tyres.png",
+      "sourceNode": "9433:84311",
+      "sha256": "e43750958c9475195b4af5a38cadc04f3910e8ae3b36d2278af33827cfcbdee2",
+      "bytes": 229268
+    },
+    {
+      "file": "highlight.png",
+      "sourceNode": "9433:84312",
+      "sha256": "ac2027dc9d1cb1ee9c81b3f4cd99e82693c73e6876763051012ea4ac053449c7",
+      "bytes": 200229
+    },
+    {
+      "file": "play-filled.svg",
+      "sourceNode": "9433:84307",
+      "sourceInstance": "play-filled",
+      "width": 16,
+      "height": 16,
+      "sha256": "fc9e81c8e3b099c0571d6693fcf592c4bc85b10ff84c4f22390655712069fe60",
+      "bytes": 332,
+      "method": "Exact SVG_STRING export of connected icon; source import path is not present in the repository."
+    },
+    {
+      "file": "star-filled.svg",
+      "sourceNode": "9433:84312",
+      "sourceInstance": "star-filled",
+      "width": 16,
+      "height": 16,
+      "sha256": "31580d3ad9c709196baf4a4a831f746766c6decc74d732cd4ecccf1fdcdc3362",
+      "bytes": 785,
+      "method": "Exact SVG_STRING export of connected icon; source import path is not present in the repository."
+    }
+  ]
+}

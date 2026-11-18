@@ -62,20 +62,36 @@ car-card{display:block;min-width:0;width:100%}.source-listing-link{display:flex;
 #clp-display-settings>.study-rule{display:none}
 #clp-display-settings+.small-label{margin-top:var(--spacing-24)}
 @media(min-width:1000px) and (max-width:1100px){
- .studio:has(.screen.is-clp){grid-template-columns:minmax(180px,220px) var(--phone-width) minmax(160px,200px);gap:var(--spacing-16)}
- .studio:has(.screen.is-clp) .inspector{display:block;align-self:start}
- .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
+ .studio.has-card-settings{grid-template-columns:minmax(180px,220px) var(--phone-width) minmax(160px,200px);gap:var(--spacing-16)}
+ .studio.has-card-settings .inspector{display:block;align-self:start}
+ .studio.has-card-settings .inspector>:not(#clp-display-settings){display:none}
 }
 @media(min-width:761px) and (max-width:999px){
- .studio:has(.screen.is-clp){grid-template-columns:var(--phone-width) minmax(160px,200px);gap:var(--spacing-24)}
- .studio:has(.screen.is-clp) .device-wrap{grid-column:1;grid-row:1}
- .studio:has(.screen.is-clp) .inspector{display:block;grid-column:2;grid-row:1;align-self:start}
- .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
- .studio:has(.screen.is-clp) .intro{grid-column:1/-1;grid-row:2;max-width:650px;margin-inline:auto}
+ .studio.has-card-settings{grid-template-columns:var(--phone-width) minmax(160px,200px);gap:var(--spacing-24)}
+ .studio.has-card-settings .device-wrap{grid-column:1;grid-row:1}
+ .studio.has-card-settings .inspector{display:block;grid-column:2;grid-row:1;align-self:start}
+ .studio.has-card-settings .inspector>:not(#clp-display-settings){display:none}
+ .studio.has-card-settings .intro{grid-column:1/-1;grid-row:2;max-width:650px;margin-inline:auto}
 }
 @media(max-width:760px){
- .studio:has(.screen.is-clp){--phone-width:min(390px,calc((100dvh - 220px)*.4493),calc(100vw - 22px));flex-direction:column;align-items:center;gap:var(--spacing-12)}
- .studio:has(.screen.is-clp) .inspector{display:block;order:-1;width:min(100%,var(--phone-width))}
- .studio:has(.screen.is-clp) .inspector>:not(#clp-display-settings){display:none}
- .studio:has(.screen.is-clp) #clp-display-settings>.small-label{margin:0 0 var(--spacing-8)}
+ .studio.has-card-settings{--phone-width:min(390px,calc((100dvh - 220px)*.4493),calc(100vw - 22px));flex-direction:column;align-items:center;gap:var(--spacing-12)}
+ .studio.has-card-settings .inspector{display:block;order:-1;width:min(100%,var(--phone-width))}
+ .studio.has-card-settings .inspector>:not(#clp-display-settings){display:none}
+ .studio.has-card-settings #clp-display-settings>.small-label{margin:0 0 var(--spacing-8)}
 }
+
+/* Shared native vehicle cards in rails and full-width inventory slots. */
+.inventory-card-block>car-card{display:block;max-width:100%}
+.vehicle-option-rail{display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;padding:12px;max-width:100%;align-items:flex-start}
+.vehicle-option-rail>car-card{display:block;flex:0 0 auto;width:160px;max-width:336px}
+.vehicle-option-rail>car-card[data-family="tile"]{width:245px}
+.vehicle-option-rail>car-card[data-family="desktop-grid"]{width:302px}
+.vehicle-option-rail>car-card:is([data-family="list"],[data-family="india-mobile"]){width:336px}
+.cargpt-recommendations car-card[data-family="carousel-grid"]{width:160px;flex-basis:160px}
+.cargpt-recommendations car-card[data-family="desktop-grid"]{width:302px;flex-basis:302px}
+.cargpt-recommendations car-card:is([data-family="list"],[data-family="india-mobile"]){width:336px;flex-basis:336px}
+
+:is(.deck-rail,.buy-results-rail) .inventory-card-block:has(car-card[data-family="carousel-grid"]){width:160px;flex:0 0 160px}
+:is(.deck-rail,.buy-results-rail) .inventory-card-block:has(car-card[data-family="tile"]){width:245px;flex:0 0 245px}
+:is(.deck-rail,.buy-results-rail) .inventory-card-block:has(car-card[data-family="desktop-grid"]){width:302px;flex:0 0 302px}
+:is(.deck-rail,.buy-results-rail) .inventory-card-block:has(car-card:is([data-family="india-mobile"],[data-family="list"])){width:336px;flex:0 0 336px}

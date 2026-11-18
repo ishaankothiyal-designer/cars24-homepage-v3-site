@@ -19,3 +19,14 @@ export function cardData(car, saved=false, recommended=false) {
 export function cardSource(car,recommended=false) {
  return `${car.location || car.city} · CARS24 listing checked ${car.fetchedAt}${recommended?' · Recommended from your selected filters':''}`;
 }
+
+/** Shared legacy-to-source data mapping for every runtime vehicle-card consumer. */
+export function toVehicleCardData(d,{family=d.family,oneFooter=true}={}){
+ const list=family==='list',compact=family==='carousel-grid',assurance=[d.assuranceLead,d.assurance].filter(Boolean).join(' ');
+ return {id:d.id,name:d.name,variant:d.variant,tags:list?d.tags?.slice(0,3):d.tags,photo:d.photo,
+  photos:compact||list?undefined:d.photos?.map((photo,index)=>index===0?d.photo:photo),
+  price:d.emiFirst&&d.emi?d.emi:d.price,emi:compact?undefined:d.emiFirst?`Full price ${d.price}`:d.emi,previousPrice:d.priceWas,
+  seller:d.seller,categoryLabel:d.elite?'Elite':d.categoryLabel==='PRIME'?'Mid-range':d.categoryLabel,
+  usp:d.usp==='As good as new'?'Good as new':d.usp,ribbon:d.recommended?'Recommended':undefined,
+  assurance:assurance||undefined,location:oneFooter&&assurance?undefined:d.location||d.city,wishlisted:d.wishlisted};
+}

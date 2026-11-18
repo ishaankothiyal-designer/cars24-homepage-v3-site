@@ -30,3 +30,13 @@
 .similar-cars .vc-carousel-grid .vc-body>.vc-seller{max-width:100%;overflow:hidden;text-overflow:ellipsis;font-size:9px;line-height:16px;white-space:nowrap}
 @container (min-width:375px){.similar-cars{--similar-card-width:calc((100cqw - 32px) / 2.5);--similar-media-height:calc(var(--similar-card-width) * 74 / 132);--similar-card-height:calc(var(--similar-media-height) + 74px)}}
 @media(prefers-reduced-motion:reduce){.similar-cars *{animation:none!important;scroll-behavior:auto!important}}
+
+/* Larger review families remain usable in the existing horizontal option rail. */
+.similar-cars-rail>.vc-card:not(.vc-carousel-grid){max-width:none}
+.similar-cars .vc-india-mobile{width:336px}
+.similar-cars .vc-india-mobile .vc-body{grid-template-columns:minmax(0,1fr) 108px;grid-template-rows:20px 20px 18px 17px;min-height:96px;padding-bottom:8px}
+.similar-cars .vc-india-mobile .vc-tags{grid-column:1 / -1;grid-row:4;margin-top:0;overflow:hidden}
+.similar-cars .vc-india-mobile .vc-finance-row{margin-top:0}
+
+/* Keep the source pointer outside the clipped body while the teaser unfolds. */
+.similar-cars-body{min-width:0}

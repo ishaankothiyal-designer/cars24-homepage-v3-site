@@ -128,10 +128,64 @@
       "height": 98.0,
       "sha256": "d0fdd32431d811fa869b65a3b07c0cd1c44d14e4756a970aa665f325ca385528",
       "bytes": 6273
+    },
+    {
+      "file": "activity-rest.svg",
+      "node": "9425:84277",
+      "width": 24,
+      "height": 24,
+      "sha256": "f126c2401919b035f01358b2574149faf50d38ba12fbd30b2668cedd87c5183b",
+      "bytes": 3114
+    },
+    {
+      "file": "activity-active.svg",
+      "node": "9425:84279",
+      "width": 24,
+      "height": 24,
+      "sha256": "2062eda8722583948eb2212b3d70d6d0700885348b17624a912a8c77cc7e18bd",
+      "bytes": 3302
     }
   ],
   "latestRecheck": "Fresh9182:62624 and9164:62590 context after the user asked again to check the updated bottom bar: geometry, tab order and padding unchanged; pill adds0 7px17px rgba(0,0,0,.08) shadow; the AI control is now an exact98x98 exportedSVG containing its64px material and shadow at(-17,-10) relative to the unchanged64px hit target.",
   "latestMaterialRecheck": "Fresh source after the latest color, blur and inner-shadow correction: bar9164:62591 uses black8% fill and10px background blur, superseding white40%/6px. Shadow0/7/17black8% and all three-tab geometry are unchanged. AI component is now9187:62776; its first inset shadow0/4/4 changes from black25% to white25%. The fresh98x98 export replaces priorbytes; animated background removes only the staticpurpleGroup while retaining the Vector8400 gloss, frame texture and fullmaterial/shadowchain.",
   "latestNavigationRecheck": "After the user said My Orders is moving to a future Profile task, fresh9182:62624 and9164:62590 context removes Order: Home, Showroom, Garage. Horizontal outside padding is now16px; vertical8px and wrapper360x80 stay. Pill is256x64 atx16; AI64px slot atx280. Cells/indicator are88px wide with-8px overlap, starts4/84/164. White40%,6px blur and7px/17px/.08 shadow stay. The latest98x98 AI export changed bytes again and replaces the previous file at unchanged(-17,-10) offsets.",
-  "latestPillColorRecheck": "Fresh9164:62590 context and screenshot after the user updated the color behind tabs: onlybar9164:62591 fill changes fromblack8% torgba(237,237,237,0.29). Selectedindicator stayswhite, outerwrapper stays transparent;10pxblur, source shadow, three-tab geometry and AI animation/material stayunchanged."
+  "latestPillColorRecheck": "Fresh9164:62590 context and screenshot after the user updated the color behind tabs: onlybar9164:62591 fill changes fromblack8% torgba(237,237,237,0.29). Selectedindicator stayswhite, outerwrapper stays transparent;10pxblur, source shadow, three-tab geometry and AI animation/material stayunchanged.",
+  "latestActivityRecheck": {
+    "accessed": "2026-11-18",
+    "sourceNode": "9164:62600",
+    "text": "Activity",
+    "typography": {
+      "fontSize": 12,
+      "lineHeight": 16,
+      "fontWeight": 500
+    },
+    "requirement": "Fresh9182:62624 source changes the middle visible label from Showroom to Activity; user explicitly requires this tab to open Activity. Source showroom icon instance9171:62205 and existing native artwork remain. Geometry, glass material, Aurora Rive and other links remain unchanged.",
+    "destination": "activity",
+    "content": "Only genuine session saved IDs and recently viewed IDs from the existing inventory render through the canonical shared card; empty sessions have an honest Browse cars action. Existing Home showroom links and directory route remain available.",
+    "supersedes": "Earlier middle-tab Showroom destination only; historical source/material records are retained."
+  },
+  "latestActivityIconRecheck": {
+    "accessed": "2026-11-18",
+    "sourceBoard": "9182:62624",
+    "sourceInstance": "9428:84303",
+    "componentSet": "9425:84276",
+    "rest": "9425:84277",
+    "active": "9425:84279",
+    "requirement": "Fresh source replaces the middle Activity storefront artwork with exact24px clipboard rest/active vectors. Activity label, destination, selected geometry, glass material and Aurora remain unchanged. Supersedes only the earlier showroom-art alias."
+  },
+  "indicatorMotion": {
+    "requirement": "User requests the selected indicator to move smoothly between tabs.",
+    "sourceMotionContext": {
+      "node": "9164:62591",
+      "recursive": true,
+      "animations": []
+    },
+    "implementation": {
+      "durationMs": 240,
+      "easing": "cubic-bezier(.22,1,.36,1)",
+      "property": "transform",
+      "timingAuthority": "Implementation choice; source contains no authored animation.",
+      "lifecycle": "Capture current visual x before host replacement; continue from that position on mount. First mount and reduced motion settle immediately."
+    }
+  }
 }

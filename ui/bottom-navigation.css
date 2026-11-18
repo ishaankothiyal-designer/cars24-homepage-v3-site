@@ -23,7 +23,7 @@
 }
 .device .screen .bottom-nav-9177 .bottom-nav-tab:last-child{margin-right:0}
 .device .screen .bottom-nav-9177 .bottom-nav-selection{position:absolute;left:4px;top:4px;width:88px;height:56px;border-radius:999px;background:var(--bottom-nav-9177-white);box-shadow:var(--bottom-nav-9177-selection-shadow);pointer-events:none}
-.device .screen .bottom-nav-9177 .bottom-nav-pill[data-selected=showrooms] .bottom-nav-selection{left:84px}
+.device .screen .bottom-nav-9177 .bottom-nav-pill[data-selected=activity] .bottom-nav-selection{left:84px}
 .device .screen .bottom-nav-9177 .bottom-nav-pill[data-selected=garage] .bottom-nav-selection{left:164px}
 .device .screen .bottom-nav-9177 .bottom-nav-tab[aria-current=page]::after{content:none}
 .device .screen .bottom-nav-9177 .bottom-nav-tab>img{display:block;flex:none;width:auto;height:auto;max-width:none;transform:none}

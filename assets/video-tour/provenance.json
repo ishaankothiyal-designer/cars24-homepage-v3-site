@@ -1,0 +1,55 @@
+{
+  "scope": "Shared illustrative mock media explicitly authorised 18 November 2026; not car listing/condition evidence.",
+  "icons": {
+    "source": "https://autonaut-icons.vercel.app/",
+    "catalogue": "Cars24 regular",
+    "provenance": "knowledge/assets/video-tour-controls-2026-11-17/provenance.json"
+  },
+  "fallbackPoster": {
+    "file": "immersive-creta-preview.png",
+    "source": "Figma ttwWd3vH4lRPzfPLM8rOun node9361:47458 media fill export"
+  },
+  "emptyIllustration": {
+    "file": "unavailable.png",
+    "source": "knowledge/assets/video-tour-empty-state-2026-11-18/provenance.json"
+  },
+  "emptyMotion": {
+    "file": "unavailable-loop.mp4",
+    "provider": "Higgsfield",
+    "model": "Seedance2.5",
+    "jobId": "d9e2558a-d3d6-4464-8f62-9b7670aa4a7c",
+    "duration": 5,
+    "purpose": "Decorative missing-chapter state; reduced-motion still retained"
+  },
+  "mockTour": {
+    "manifest": "mock/chapters.json",
+    "generationBrief": "docs/design/video-tour-mock-2026-11-18/production.json",
+    "voice": "Prashant Nair - Warm Indian Narrator",
+    "voiceProvider": "ElevenLabs",
+    "language": "English",
+    "accent": "Indian"
+  },
+  "files": {
+    "volume-off.svg": "62a5ef6e3287859c73f23a16d42403073c07f61de8f89b956766571c47790fff",
+    "chevron-right.svg": "14306810791c404c3c57458b5ac6bb63c12ba822df359b964a78e221abef0f26",
+    "closed-captioning.svg": "99d44fbe61828eb194588959031103a7ff8e7d0300a56cc95ff5e591c474a234",
+    "cross-large.svg": "6b02a25c8cabf9a5cc47fe0001eade7c7286d790e5aa1053289a15500d11a566",
+    "immersive-creta-preview.png": "a68e3568887bc7eee5ad5d9e15f085a55e37f0fdc78f43ca55254eb8d5c578f2",
+    "play.svg": "4ce913423ae6cff44061d6b4b6b86c5d7ef956eccfecd8c7765bc85e8552c476",
+    "volume-full.svg": "cc1df60072d433d51c859763b9a7dabd30320db492a62cf0508620a78272d4ad",
+    "unavailable.png": "249030d2a3a10e1180e321203ef667af884dae51d7e599eb19b978f2ac44bb81",
+    "pause.svg": "0684318dde1531402af52d845103e22268391437a3a671354cd8e097ba2a381d",
+    "unavailable-loop.mp4": "978202b1f11f3885f7aa9a28ddd4e55df2e82702cc44845f3c6925e7d62ad37f",
+    "chevron-left.svg": "9e1430c3f02aa0f004d2fafb71c20fc056e9c4f9d8a29b05f6c363e5d1f98593"
+  },
+  "demoOriginalStill": {
+    "file": "demo-original.jpg",
+    "source": "Original unmodified frame from user-supplied Drive Tiago360 reference, car10077715177; private inputs retained under ignored .local/video-tour-source/",
+    "role": "Synthetic profile initial still, distinct from the generated video poster"
+  },
+  "alternateMockTour": {
+    "manifest": "mock-alt/chapters.json",
+    "productionBrief": "docs/design/video-tour-mock-2026-11-18/alternate/production.json",
+    "role": "Second distinct generated camera take, alternating with the first shared demo tour; eight new Higgsfield shots with the same accepted ElevenLabs narration"
+  }
+}

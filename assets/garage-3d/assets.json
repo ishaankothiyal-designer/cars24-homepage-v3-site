@@ -1,0 +1,91 @@
+{
+  "HeroBackgroundDark": {
+    "light": "hero-background-dark.png"
+  },
+  "RCDocument": {
+    "light": "rc-document.jpg"
+  },
+  "PartnerIIFL": {
+    "light": "partner-iifl.png"
+  },
+  "PromoSellCar": {
+    "light": "promo-sell-car.png"
+  },
+  "PromoFastag": {
+    "light": "promo-fastag.png"
+  },
+  "PromoVehicleHistory": {
+    "light": "promo-vehicle-history.png"
+  },
+  "PromoLoan": {
+    "light": "promo-loan.png"
+  },
+  "PUCCFuel": {
+    "light": "pucc-fuel.png",
+    "dark": "pucc-fuel-dark.png"
+  },
+  "PartnerAU": {
+    "light": "partner-au.svg"
+  },
+  "InsuranceOwnDamage": {
+    "light": "insurance-own-damage.png",
+    "dark": "insurance-own-damage-dark.png"
+  },
+  "PromoInsurance": {
+    "light": "promo-insurance.png"
+  },
+  "PromoChallan": {
+    "light": "promo-challan.png"
+  },
+  "PartnerTVS": {
+    "light": "partner-tvs.png"
+  },
+  "OwnershipArtwork1": {
+    "light": "ownership-1.png"
+  },
+  "PUCCFine": {
+    "light": "pucc-fine.png",
+    "dark": "pucc-fine-dark.png"
+  },
+  "HeroBackgroundLight": {
+    "light": "hero-background-light.png"
+  },
+  "PartnerEquitas": {
+    "light": "partner-equitas.png"
+  },
+  "KiaSeltos": {
+    "light": "KiaSeltos.png"
+  },
+  "PolicyCopyIcon": {
+    "light": "policy-copy.svg"
+  },
+  "PUCCEmission": {
+    "light": "pucc-emission.png",
+    "dark": "pucc-emission-dark.png"
+  },
+  "OwnershipArtwork2": {
+    "light": "ownership-2.png"
+  },
+  "InsuranceZeroDep": {
+    "light": "insurance-zero-dep.png",
+    "dark": "insurance-zero-dep-dark.png"
+  },
+  "ValuationStepsBanner": {
+    "light": "valuation-steps-light.png",
+    "dark": "valuation-steps-dark.png"
+  },
+  "CarChipWhite": {
+    "light": "car-chip-white.png"
+  },
+  "InsuranceComprehensive": {
+    "light": "insurance-comprehensive.png",
+    "dark": "insurance-comprehensive-dark.png"
+  },
+  "PartnerPiramal": {
+    "light": "partner-piramal.svg"
+  },
+  "InsuranceThirdParty": {
+    "light": "insurance-third-party.png",
+    "dark": "insurance-third-party-dark.png"
+  }
+}

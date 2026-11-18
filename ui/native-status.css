@@ -82,3 +82,6 @@
 
 /* Home and L1 share the compact lavender canvas from Header9156:62369. CLP retains its white endpoint. */
 .device .screen.is-flow-home.is-home-scrolled{--page-canvas-surface:#f6f6ff}
+
+/* Native safe-area spacing stays; the route canvas supplies its surface. */
+.device .screen[class]>.home-indicator{background:transparent}

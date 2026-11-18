@@ -1,8 +1,11 @@
 import {CARS,matchingCars,nearbyCars} from './catalogue.js';
 import {interpretQuery,openFilters,serviceMatches} from '../search-model.js';
 import {createSpeechAdapter} from './speech.js';
-import {ALL_DEMO_CARS} from '../model.js';
+import {ALL_DEMO_CARS,matches,normalizeRegistration,validRegistration} from '../model.js';
+import {JOURNEY_SERVICES,BUY_FIELDS,buyQuestion,preferenceSummary,serviceFromQuery} from './context.js';
 import {resolveComparison,buildCarComparison,cloneComparison} from '../ui/car-comparison.js';
+
+const ENTRY_CARS=[...new Map([...ALL_DEMO_CARS,...CARS].map(car=>[car.id,car])).values()];
 
 export const CARGPT_NOTICE='Prototype interpretation over a dated CARS24 listing snapshot. Test drives are saved only in this demo.';
 export const INTRODUCTION='Hey I’m CarGPT, your voice assistant. Tell the brand and budget of car you want to buy and I’ll help you short list it.';
@@ -58,12 +61,12 @@ export function spokenSummary(text){
 }
 
 export function createCarGPTSession({city='Gurugram',speech=createSpeechAdapter(),schedule=setTimeout,cancel=clearTimeout,now=()=>new Date(),delay=450}={}) {
- let state={phase:'idle',stage:'intro',outputMode:'voice',permission:'unknown',transcript:'',query:'',messages:[],results:[],filters:openFilters(city),selectedCar:null,booking:null,error:'',supported:speech.supported,ttsSupported:speech.ttsSupported,level:0,introComplete:false,notice:CARGPT_NOTICE,dates:bookingDates(now()),services:[],searchContext:null,comparison:null,pendingComparison:null,narration:{text:'',revealed:0,active:false,started:false,kind:'intro',cue:false}};
+ let state={phase:'idle',stage:'intro',outputMode:'voice',permission:'unknown',transcript:'',query:'',messages:[],results:[],filters:openFilters(city),selectedCar:null,booking:null,error:'',supported:speech.supported,ttsSupported:speech.ttsSupported,level:0,introComplete:false,notice:CARGPT_NOTICE,dates:bookingDates(now()),services:[],entryContext:null,journeyQuestion:null,searchContext:null,comparison:null,pendingComparison:null,narration:{text:'',revealed:0,active:false,started:false,kind:'intro',cue:false}};
  let revision=0,audioRevision=0,timer=null,closed=false,introStarted=false,messageId=0,lastSearchHandoff=0,continuousVoice=false;
  const listeners=new Set(),contextCars=new Map(),galleryStates=new Map();
  const comparisonCars=()=>[...contextCars.values(),...CARS,...ALL_DEMO_CARS].filter((car,index,all)=>all.findIndex(other=>(other.listingUrl||other.id)===(car.listingUrl||car.id))===index);
- const findCar=id=>CARS.find(car=>car.id===id)||contextCars.get(id)||ALL_DEMO_CARS.find(car=>car.id===id);
- const snapshot=()=>({...state,comparison:cloneComparison(state.comparison),pendingComparison:state.pendingComparison?{...state.pendingComparison,cars:state.pendingComparison.cars.map(car=>({...car}))}:null,filters:{...state.filters},messages:state.messages.map(copyTurn),results:[...state.results],booking:copyBooking(state.booking),dates:[...state.dates],services:[...state.services],narration:{...state.narration},galleryStates:Object.fromEntries([...galleryStates].map(([key,value])=>[key,{...value}]))});
+ const findCar=id=>contextCars.get(id)||CARS.find(car=>car.id===id)||ALL_DEMO_CARS.find(car=>car.id===id);
+ const snapshot=()=>({...state,entryContext:state.entryContext?structuredClone(state.entryContext):null,journeyQuestion:state.journeyQuestion?structuredClone(state.journeyQuestion):null,comparison:cloneComparison(state.comparison),pendingComparison:state.pendingComparison?{...state.pendingComparison,cars:state.pendingComparison.cars.map(car=>({...car}))}:null,filters:{...state.filters},messages:state.messages.map(copyTurn),results:[...state.results],booking:copyBooking(state.booking),dates:[...state.dates],services:[...state.services],narration:{...state.narration},galleryStates:Object.fromEntries([...galleryStates].map(([key,value])=>[key,{...value}]))});
  const emit=()=>{if(!closed)for(const fn of listeners)fn(snapshot());};
  const patch=next=>{state={...state,...next,...(Object.hasOwn(next,'error')&&!Object.hasOwn(next,'errorCode')?{errorCode:''}:{})};emit();};
  function clearTimers(){if(timer!==null){cancel(timer);timer=null;}}
@@ -168,11 +171,13 @@ export function createCarGPTSession({city='Gurugram',speech=createSpeechAdapter(
   const text=String(query||'').trim().slice(0,600);if(!text||closed)return;
   const comparison=resolveComparison(text,{cars:comparisonCars(),currentCar:state.selectedCar,results:state.results,previous:state.comparison&&(!state.selectedCar||state.comparison.cars.some(car=>car.id===state.selectedCar.id))?state.comparison:null,pending:state.pendingComparison,city:state.filters.city});
   if(comparison){if(comparison.status==='ready')recordComparison(comparison.comparison,text);else askComparison(comparison,text);return;}
+  if(handleJourneyQuery(text))return;
   if(command(text))return;
   interrupt();const token=revision;
   const parsed=interpretFollowUp(text,fresh?openFilters(state.filters.city):state.filters);
+  if(state.entryContext&&parsed.mode==='cars'&&state.entryContext.journey!=='buy')state={...state,entryContext:{...state.entryContext,journey:'buy',key:JSON.stringify(['buy',...JSON.parse(state.entryContext.key).slice(1)])}};
   message('user',text,{...(attachments.length?{attachments:attachments.map(file=>({...file}))}:{})});
-  patch({stage:state.stage==='intro'?'conversation':state.stage,query:text,transcript:text,phase:'thinking',error:'',services:[],selectedCar:null,comparison:null,pendingComparison:null,introComplete:true});
+  patch({stage:state.stage==='intro'?'conversation':state.stage,query:text,transcript:text,phase:'thinking',error:'',services:[],journeyQuestion:null,selectedCar:null,comparison:null,pendingComparison:null,introComplete:true});
   timer=schedule(()=>{
    timer=null;if(closed||token!==revision)return;
    if(parsed.mode==='services'){
@@ -183,11 +188,111 @@ export function createCarGPTSession({city='Gurugram',speech=createSpeechAdapter(
     const reply=parsed.unsupported.length?`This preview cannot verify ${parsed.unsupported.join(' or ')}. Try model, budget, body type, fuel or transmission.`:'Try telling me a model, budget, body type, fuel or transmission.';
     message('assistant',reply);patch({phase:'idle',stage:state.results.length?'results':'conversation'});say(reply);return;
    }
-   const cars=matchingCars(parsed.filters,!state.searchContext),alternatives=cars.length?[]:nearbyCars(parsed.filters);
+   const cars=state.entryContext?entryMatches(parsed.filters):matchingCars(parsed.filters,!state.searchContext),alternatives=cars.length?[]:nearbyCars(parsed.filters);
    const first=cars[0],fit=first?(parsed.filters.seats?` The ${first.year} ${first.model} has ${first.seats} seats for your ${parsed.filters.seats}-person search.`:parsed.filters.cheapest?` The ${first.year} ${first.model} has the lowest listed price in this shortlist.`:parsed.filters.transmission==='Automatic'?` The ${first.year} ${first.model} is the newest automatic in this shortlist.`:''):'';
    const reply=cars.length?`I found ${cars.length} ${cars.length===1?'car':'cars'} in ${parsed.filters.city} that ${cars.length===1?'matches':'match'} your preferences.${fit}`:`No cars in this snapshot match those preferences${parsed.filters.city!=='Gurugram'?'. This snapshot covers Gurugram only.':alternatives.length?'. Here are nearby alternatives; they differ from your request. Your filters are unchanged.':'. Try widening your budget or changing a preference.'}`;
    message('assistant',reply,{kind:cars.length?'results':alternatives.length?'alternatives':'conversation',carIds:(cars.length?cars:alternatives).map(car=>car.id),filters:parsed.filters});patch({phase:'idle',stage:cars.length?'results':'conversation',filters:parsed.filters,results:cars,selectedCar:cars[0]||null,introComplete:true});say(reply);
   },delay);
+ }
+ function entryMatches(filters){
+  const primary=matchingCars(filters,!state.searchContext);
+  const expanded=state.entryContext?.surface==='listing'||state.entryContext?.carIds?.some(id=>!CARS.some(car=>car.id===id));
+  if(primary.length&&!expanded)return primary;
+  return matchingCars(filters,false,ENTRY_CARS);
+ }
+ function entryOpening({narrate=false}={}){
+  const context=state.entryContext;if(!context)return;
+  const city=state.filters.city,vehicle=context.vehicle||{},registration=vehicle.registration;
+  let reply='',question=null,cars=state.results,kind='journey';
+  if(context.journey==='all'){
+   reply='Your AI co-driver for everything cars. Ask anything about selling, buying or owning a car.';kind='service-picker';cars=[];
+  }else if(context.journey==='buy'){
+   const summary=preferenceSummary(state.filters);
+   question=context.surface==='listing'||context.surface==='detail'?null:buyQuestion(context.answered);
+   if(question){cars=[];reply=context.answered.length?`I’ve kept your preferences: ${summary||'open to all cars'} in ${city}.`:`Let’s find your next car in ${city}.`;}
+   else if(context.surface==='listing')reply=cars.length?`Here are the same ${cars.length} ${cars.length===1?'car you were':'cars you were'} browsing in ${city}${summary?` — ${summary}`:''}. The car in view is first.`:`Your listing has no cars with the current filters${summary?` — ${summary}`:''}. Which preference would you like to change?`;
+   else if(context.answered.length)reply=cars.length?`Picking up from your preferences: ${summary||'open to all cars'} in ${city}. Here ${cars.length===1?'is 1 matching car':`are ${cars.length} matching cars`}.`:`I’ve kept your preferences: ${summary||'open to all cars'} in ${city}. No exact matches are available in this snapshot. You can change a preference; I won’t substitute other cars.`;
+   else reply=`Let’s find your next car in ${city}.`;
+   if(question)reply+=' '+question.text;
+   kind=cars.length?'results':'journey';
+  }else if(context.journey==='loans'){
+   reply=context.loanApproval?`You have a sample loan approval of up to ₹${context.loanApproval.cap} lakh. Shall we continue your car-loan application?`:'I can help with your loan. Is it a car loan or a personal loan?';
+   question={key:'loan',options:(context.loanApproval?['Continue car loan']:['Car loan','Personal loan']).map(label=>({label,value:label}))};cars=[];
+  }else{
+   const labels={sell:'sell your car',challan:'check and resolve your challans',checks:'arrange a car check',insurance:'explore car insurance',ownership:'manage your car'};
+   const task=labels[context.journey]||'help with your car';
+   if(!registration&&!vehicle.model){reply=`I can help you ${task}. What’s your vehicle registration number?`;question={key:'registration',options:context.journey==='sell'?[{label:'Enter car details instead',value:'manual'}]:[]};}
+   else if(context.journey==='sell'&&!vehicle.model){reply=`I’ve kept ${registration}. What make and model is your car? I’ll use the details you provide for this prototype.`;question={key:'vehicle',options:[]};}
+   else if(context.journey==='sell'&&!vehicle.year){reply=`I’ve kept ${vehicle.model}${registration?` (${registration})`:''}. What year was the car registered?`;question={key:'vehicle-year',options:[]};}
+   else if(context.journey==='sell'&&(vehicle.km==null||vehicle.km==='')){reply=`Your ${vehicle.year} ${vehicle.model} is noted. How many kilometres has it been driven?`;question={key:'vehicle-km',options:[]};}
+   else if(context.journey==='sell'&&!vehicle.variant){reply='Which variant is it? You can say “Not sure” if you don’t know.';question={key:'vehicle-variant',options:[{label:'Not sure',value:'Not sure'}]};}
+   else{const name=[vehicle.year,vehicle.make,vehicle.model].filter(Boolean).filter((part,index,parts)=>!index||!String(part).startsWith(parts[index-1]+' ')).join(' ');reply=`Let’s continue${context.journey==='sell'?' selling':''}${name?` your ${name}`:' with your vehicle'}${registration?` (${registration})`:''} in ${city}. ${context.journey==='sell'?'Your car details are already here. Continue to your price estimate and inspection options.':`I can help you ${task} without entering the registration again.`}`;question={key:'continue',options:[{label:context.journey==='sell'?'Continue selling my car':context.journey==='challan'?'Check my challans':'Continue',value:context.journey}]};}
+   cars=[];
+  }
+  message('assistant',reply,{kind,carIds:cars.map(car=>car.id),filters:state.filters,entry:true,...(cars.some(car=>car.demoDifferences?.length)?{contextNote:'These are the same labelled alternatives from your listing; some preferences differ.'}:{})});
+  patch({stage:kind==='service-picker'?'entry':cars.length?'results':'conversation',phase:'idle',results:cars,selectedCar:cars[0]||null,journeyQuestion:question,services:[],error:'',introComplete:true});
+  if(narrate)say(reply);
+ }
+ function applyEntryContext(context,{force=false,opening=true}={}){
+  if(closed||!context||(!force&&state.entryContext?.key===context.key))return;
+  interrupt();introStarted=true;
+  const {cars=[],...metadata}=context;for(const car of cars)contextCars.set(car.id,car);
+  state={...state,entryContext:structuredClone({...metadata,carIds:cars.map(car=>car.id)}),filters:structuredClone(context.filters),results:[...cars],searchContext:null,comparison:null,pendingComparison:null,journeyQuestion:null,selectedCar:null};
+  if(context.surface==='detail'||!opening){patch({stage:'conversation',phase:'idle',error:'',introComplete:true});return;}
+  entryOpening();
+ }
+ function chooseJourney(journey){
+  if(closed||!JOURNEY_SERVICES.some(service=>service.id===journey))return;
+  interrupt();const label=JOURNEY_SERVICES.find(service=>service.id===journey).label;message('user',label);
+  const previous=state.entryContext||{vehicle:{},answered:[],filters:openFilters(city)};
+  const buyFilters=state.entryContext?.journey==='buy'?structuredClone(state.filters):previous.buyFilters||openFilters(state.filters.city);
+  state={...state,entryContext:{...previous,buyFilters,journey,surface:'service',answered:journey==='buy'?previous.answered||[]:[],key:previous.key?JSON.stringify([journey,...JSON.parse(previous.key).slice(1)]):JSON.stringify([journey])},filters:journey==='buy'?buyFilters:openFilters(state.filters.city),results:[],selectedCar:null,searchContext:null};
+  if(journey==='buy'&&!buyQuestion(state.entryContext.answered))state={...state,results:entryMatches(state.filters)};
+  for(const car of state.results)contextCars.set(car.id,car);entryOpening({narrate:true});
+ }
+ function answerPreference(key,value,label=value){
+  if(closed||!state.entryContext||!BUY_FIELDS.includes(key))return;
+  interrupt();message('user',label);
+  const filters={...state.filters};if(key==='budget'){const [min,max]=value.split(':').map(Number);if(!Number.isFinite(min)||!Number.isFinite(max)||min>max)return;filters.min=min;filters.max=max;}else filters[key]=value;
+  const answered=[...new Set([...state.entryContext.answered,key])];
+  state={...state,filters,entryContext:{...state.entryContext,journey:'buy',surface:'service',answered},results:buyQuestion(answered)?[]:entryMatches(filters)};
+  for(const car of state.results)contextCars.set(car.id,car);entryOpening({narrate:true});
+ }
+ function answerVehicle(field,value){
+  if(closed||!state.entryContext||!['year','km','variant'].includes(field))return;
+  const clean=String(value).trim(),number=Number(clean.replace(/[^0-9.]/g,''));
+  const valid=field==='year'?/^\d{4}$/.test(clean)&&number>=1900&&number<=now().getFullYear():field==='km'?/\d/.test(clean)&&Number.isFinite(number)&&number>=0&&number<=500000:clean.length>0&&clean.length<=100;
+  interrupt();message('user',clean);
+  if(!valid){const reply=field==='year'?'Enter a valid four-digit registration year.':'Enter kilometres from 0 to 500,000.';message('assistant',reply);patch({phase:'idle',error:''});say(reply);return;}
+  state={...state,entryContext:{...state.entryContext,vehicle:{...state.entryContext.vehicle,[field]:field==='km'?String(number):clean}}};entryOpening({narrate:true});
+ }
+ function selectLoanType(value){
+  if(closed||state.entryContext?.journey!=='loans')return;value=/personal/i.test(value)?'Personal loan':'Car loan';interrupt();message('user',value);const reply=`Let’s continue your ${value==='Personal loan'?'personal-loan':'car-loan'} application in ${state.filters.city}. Your existing details will carry forward.`;message('assistant',reply);patch({entryContext:{...state.entryContext,loanType:value},journeyQuestion:{key:'continue',options:[{label:'Continue application',value:'loans'}]},stage:'conversation',phase:'idle'});say(reply);
+ }
+ function handleJourneyQuery(text){
+  if(!state.entryContext)return false;
+  const service=serviceFromQuery(text);if(service&&service!==state.entryContext.journey){chooseJourney(service);return true;}
+  const question=state.journeyQuestion;if(!question)return false;
+  if(question.key.startsWith('vehicle-')){answerVehicle(question.key.slice(8),text);return true;}
+  if(question.key==='loan'&&/^(?:continue (?:car loan)?|car loan|personal loan)$/i.test(text)){selectLoanType(/personal/i.test(text)?'Personal loan':'Car loan');return true;}
+  if(question.key==='registration'){
+   if(/\b(?:show|find|compare|buy)\b/i.test(text))return false;
+   const registration=normalizeRegistration(text.replace(/^(?:my (?:car |vehicle )?(?:number|registration)(?: is)?|registration(?: number)?(?: is)?)\s*/i,''));
+   interrupt();message('user',text);
+   if(!validRegistration(registration)){const reply='Please enter a valid vehicle registration, such as DL01AB1234.';message('assistant',reply);patch({phase:'idle',error:''});say(reply);return true;}
+   state={...state,entryContext:{...state.entryContext,vehicle:{...state.entryContext.vehicle,registration}}};entryOpening({narrate:true});return true;
+  }
+  if(question.key==='vehicle'){
+   if(/\b(?:show|find|search|buy)\b/i.test(text))return false;
+   interrupt();message('user',text);state={...state,entryContext:{...state.entryContext,vehicle:{...state.entryContext.vehicle,model:text}}};entryOpening({narrate:true});return true;
+  }
+  if(BUY_FIELDS.includes(question.key)){
+   const parsed=interpretFollowUp(text,state.filters),keys=parsed.explicit.filter(key=>['min','max','body','transmission','fuel','make','model'].includes(key));
+   if(keys.length){interrupt();message('user',text);const answered=[...new Set([...state.entryContext.answered,...keys.map(key=>['min','max'].includes(key)?'budget':key)])];state={...state,filters:parsed.filters,entryContext:{...state.entryContext,journey:'buy',surface:'service',answered},results:buyQuestion(answered)?[]:entryMatches(parsed.filters)};for(const car of state.results)contextCars.set(car.id,car);entryOpening({narrate:true});return true;}
+   if(/^(?:any|open to all|no preference|either|both)$/i.test(text)){answerPreference(question.key,question.key==='budget'?'0:50':'Any',text);return true;}
+   interrupt();message('user',text);entryOpening({narrate:true});return true;
+  }
+  return false;
  }
  function continueSearch({query,filters,unsupported=[]}){
   if(closed)return;interrupt();introStarted=true;
@@ -279,6 +384,8 @@ export function createCarGPTSession({city='Gurugram',speech=createSpeechAdapter(
   getGalleryState(key){const value=galleryStates.get(key);return value?{...value}:undefined;},setGalleryState(key,value){if(!closed)galleryStates.set(key,{...value});},
   setOutputMode,
   setContinuousVoice(enabled){continuousVoice=Boolean(enabled);},
+  applyEntryContext,chooseJourney,answerPreference,answerVehicle,selectLoanType,getCar:findCar,
+  enterVehicleManually(){if(!state.entryContext)return;interrupt();message('user','Enter car details instead');const reply='What make and model is your car?';message('assistant',reply);patch({journeyQuestion:{key:'vehicle',options:[]},stage:'conversation',phase:'idle'});say(reply);},
   snapshot,subscribe(fn){if(closed)return()=>{};listeners.add(fn);fn(snapshot());return()=>listeners.delete(fn);},
   setListingContext(filters){if(closed)return;interrupt();patch({filters:{...openFilters(city),...filters},results:[],selectedCar:null,stage:state.messages.length?'conversation':'intro',searchContext:null,error:'',phase:'idle'});},
   recordComparison,chooseComparisonCar,comparisonCars,

@@ -124,7 +124,9 @@
 .onboard-brand-dot{width:var(--spacing-6);height:var(--spacing-6);border-radius:var(--radius-full);background:var(--border-primary)}
 .onboard-brand-dot.is-current{background:var(--text-secondary)}
 
-.onboard-scroll .onboard-section:first-child{padding-top:max(0px,calc((var(--onboard-viewport-height) - var(--onboard-question-height)) / 2))}
+.onboard-scroll .onboard-section:first-child{padding-top:0}
+.onboard-scroll .onboard-section.onboard-repayment-section{padding-top:calc(var(--spacing-24) + var(--border-width-thin) + var(--spacing-24))}
+.onboard-scroll .onboard-section.onboard-repayment-section::before{display:block;top:var(--spacing-24)}
 
 /* City selection is a searchable destination, rather than a browser dropdown. */
 .onboard-city-trigger{display:flex;align-items:center;justify-content:space-between;gap:var(--spacing-12);width:100%;min-height:var(--size-48);padding:var(--spacing-12) var(--spacing-16);border:var(--border-width-thin) solid var(--border-secondary);border-radius:var(--radius-alt-md);background:var(--bg-primary);text-align:left;font:inherit;color:var(--text-primary)}
@@ -185,3 +187,24 @@
 .onboard-login-sheet>.onboarding-cta .onboard-submit{margin:0}
 .onboard-login-sheet>.onboarding-cta .onboard-demo-note{margin:0}
 .onboard-login-sheet>.onboarding-cta .onboard-login-terms{margin:0}
+
+/* Hallmark · component: repayment information · Cars24 Turbo theme
+ * Pre-emit critique: P5 H5 E4 S5 R5 V4. Informational; no interactive states. */
+.onboard-repayment{border:var(--border-width-thin) solid var(--border-primary);border-radius:var(--radius-alt-xl);background:var(--bg-primary);overflow:hidden;display:grid}
+.onboard-repayment-heading{display:flex;align-items:center;gap:var(--spacing-8);padding:var(--spacing-16) var(--spacing-16) 0}
+.onboard-repayment-symbol{display:grid;place-items:center;flex:none;width:var(--size-32);height:var(--size-32);border-radius:var(--radius-alt-sm);background:var(--bg-brand-subtler);color:var(--text-brand-base)}
+.onboard-repayment-symbol .ui-icon{font-size:var(--font-size-lg)}
+.onboard-repayment-title{font-size:var(--font-size-sm);line-height:var(--spacing-20);font-weight:var(--font-weight-medium);color:var(--text-secondary)}
+.onboard-repayment-amount{display:grid;gap:var(--spacing-4);padding:var(--spacing-12) var(--spacing-16)}
+.onboard-repayment-annual{font-size:var(--font-size-3xl);line-height:var(--spacing-32);font-weight:var(--font-weight-semibold);letter-spacing:var(--letter-spacing-heading-h2);color:var(--text-primary)}
+.onboard-repayment-annual span{font-size:var(--font-size-sm);font-weight:var(--font-weight-normal);letter-spacing:normal;color:var(--text-secondary)}
+.onboard-repayment-monthly{font-size:var(--font-size-sm);line-height:var(--spacing-20);color:var(--text-brand-base)}
+.onboard-repayment-assumptions{margin:0 var(--spacing-16);padding-bottom:var(--spacing-16);font-size:var(--font-size-xs);line-height:var(--spacing-16);color:var(--text-secondary)}
+.onboard-repayment-footnote{display:grid;gap:var(--spacing-8);padding:var(--spacing-12) var(--spacing-16);background:var(--bg-brand-subtler);border-top:var(--border-width-thin) solid var(--border-primary)}
+
+/* After budget selection, show repayment and the next question together. */
+.onboard-scroll .onboard-repayment-section + #onboard-section-body{padding-top:calc(var(--spacing-24) + var(--border-width-thin) + var(--spacing-24))}
+.onboard-scroll .onboard-repayment-section + #onboard-section-body::before{display:block;top:var(--spacing-24)}
+.onboard-repayment-availability{font-size:var(--font-size-xs);line-height:var(--spacing-16);color:var(--text-brand-base)}
+
+.onboard-scroll-frame.has-repayment-focus .onboard-top-fade{opacity:0}

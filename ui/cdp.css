@@ -1136,3 +1136,25 @@
 .cdp-view [data-node-id="3375:34573"] img,.cdp-view [data-node-id="3375:34577"] img{opacity:0}
 .cdp-view [data-section="2682-83490"] :is([data-node-id="2682:83498"],[data-node-id="2682:83503"],[data-node-id="2682:83509"],[data-node-id="2857:54734"],[data-node-id="2857:54726"],[data-node-id="2857:54718"],[data-node-id="2857:54738"]){background-size:cover;background-position:center}
 .cdp-view [data-section="2682-83490"] :is([data-node-id="2682:83498"],[data-node-id="2682:83503"],[data-node-id="2682:83509"],[data-node-id="2857:54734"],[data-node-id="2857:54726"],[data-node-id="2857:54718"],[data-node-id="2857:54738"])>img{opacity:0}
+/* Shared inventory recommendations replace the former static CDP card examples. */
+:is(.cdp-view,.cdp-panel) .cdp-related-cars{padding:16px 0;max-width:100%;overflow:hidden}
+:is(.cdp-view,.cdp-panel) .cdp-related-cars>h2{font-size:17px;line-height:20px;font-weight:600;margin:0 16px 8px;color:var(--ink)}
+:is(.cdp-view,.cdp-panel) .cdp-related-cars>.cdp-panel-button{width:calc(100% - 32px);margin:8px 16px 0;min-height:44px}
+
+/* Fixed demo navigation artwork requested from Figma9433:84386. */
+.cdp-view .cdp-quicknav-item{flex:0 0 76px;width:76px;height:77px;display:flex;flex-direction:column;position:relative;padding:0;border:0;border-radius:16px;background:#e3e1ff;color:#62748e;overflow:clip;box-shadow:0 4px 12px #0000000a;text-align:center}
+.cdp-view .cdp-quicknav-item::after{content:'';position:absolute;inset:0;border:.5px solid #e2e8f0;border-radius:inherit;pointer-events:none}
+.cdp-view .cdp-quicknav-art{position:relative;display:block;flex:0 0 52px;width:76px;height:52px;overflow:hidden}
+.cdp-view .cdp-quicknav-photo{position:absolute;left:0;top:0;width:76px;height:52px;max-width:none;object-fit:cover;pointer-events:none}
+.cdp-view [data-crop=cutout] .cdp-quicknav-photo{width:64px;height:46px;left:6px;top:3px}
+.cdp-view [data-crop=wide] .cdp-quicknav-photo{width:121.82%;left:-10.91%}
+.cdp-view [data-crop=tyre] .cdp-quicknav-photo{width:120.67%;left:-20.45%}
+.cdp-view .cdp-quicknav-label{display:block;width:100%;padding:4px;background:#fff;font-family:var(--prototype-font-family);font-size:11px;font-weight:500;line-height:17px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cdp-view .cdp-quicknav-orbit{position:absolute;bottom:0;left:2px;width:72px;height:15px;background:#edebff}
+.cdp-view .cdp-quicknav-orbit>img{position:absolute;left:4px;top:-8px;max-width:none}
+.cdp-view .cdp-quicknav-orbit>img+img{top:-9px}
+.cdp-view .cdp-quicknav-orbit>span{position:absolute;top:3px;left:22px;width:28px;height:11px;border-radius:12px;background:#4736fe;color:white;font-size:9px;font-weight:400;line-height:14px;overflow:hidden;z-index:1}
+.cdp-view .cdp-quicknav-symbol{position:absolute;top:12px;left:24px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;padding:6px;border:1px solid #e3e1ff;border-radius:360px;background:white;color:#4736fe}
+.cdp-view .cdp-quicknav-shade{position:absolute;inset:0;background:linear-gradient(rgba(10,10,10,.02),rgba(10,10,10,.57))}
+
+.cdp-view .cdp-quicknav-item[data-value="360"] .cdp-quicknav-art{background:#edebff}

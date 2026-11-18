@@ -82,3 +82,25 @@
 
 /* Keep the optional tile gallery controls below the photograph's main tap point. */
 .vc-tile .vc-pagination{bottom:var(--spacing-12)}
+
+/* India Mobile Card: inspected 404 x 300 source 30136:277697.
+   Accessible CTA targets add 12px to the source's 32px action row. */
+.vc-india-mobile{width:404px}
+.vc-india-mobile .vc-body{display:grid;grid-template-columns:minmax(0,1fr) 116px;grid-template-rows:20px 20px 21px;column-gap:var(--spacing-12);row-gap:var(--spacing-2);padding:var(--spacing-4) var(--spacing-12);min-height:76px}
+.vc-india-mobile .vc-name-row{grid-column:1;grid-row:1}
+.vc-india-mobile .vc-variant{grid-column:1;grid-row:2;margin-top:0!important}
+.vc-india-mobile .vc-tags{grid-column:1;grid-row:3;margin-top:var(--spacing-4);overflow:visible}
+.vc-india-mobile .vc-pricing{grid-column:2;grid-row:1 / 4;text-align:right;align-items:flex-end;margin:0;gap:0}
+.vc-india-mobile .vc-price-row{justify-content:flex-end}
+.vc-india-mobile del{font-size:14px;line-height:20px;font-weight:400}
+.vc-india-mobile .vc-finance-row{margin-top:var(--spacing-12)}
+.vc-india-mobile .vc-emi>span{font-size:12px;line-height:18px;font-weight:500}
+.vc-india-mobile .vc-assurance{margin:var(--spacing-2) 0 0;padding-inline:var(--spacing-12);height:28px}
+.vc-india-mobile .vc-assurance-copy .vc-type-caption-semibold{font-size:11px;line-height:17px;font-weight:600}
+.vc-india-mobile .vc-assurance-copy .vc-type-caption-regular,.vc-india-mobile .vc-secondary{font-size:11px;line-height:17px;font-weight:400}
+
+.vc-india-mobile .vc-price-row{flex-direction:column;align-items:flex-end;gap:0}
+
+/* Runtime ListView fits the visible cutout, retaining a four-pixel safety inset. */
+.vc-list .vc-photo:has(.vc-list-balanced-photo){overflow:hidden}
+.vc-list .vc-photo>.vc-list-balanced-photo{position:absolute;max-width:none;object-fit:contain}

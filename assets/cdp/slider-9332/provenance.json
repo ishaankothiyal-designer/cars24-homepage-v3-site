@@ -33,7 +33,8 @@
     "Inventory-backed listing seller badges open the preview. C3 slider artwork and its separate bridge remain unchanged. Existing photo and View Details actions retain their normal fullscreen CDP entry.",
     "Utility CodeConnect paths asset/icon/svg are absent locally. Supplied vector exports use their intrinsic sizes inside 20px icon slots.",
     "The captured background uses inert static markup, with IDs, actions and Rive attributes removed. Static shadow-card snapshots preserve the original scroll and native canvas color below one 40% scrim.",
-    "User correction after415981b supersedes the source reserved header row within seller previews only: canonical hero starts at frame top in both states; Down/save/share float above it with expanded native-safe offsets. The duplicate make/model-title save control is hidden only inside this overlay. Ordinary CDP and image composition remain unchanged. Bounded endpoint sizing now reserves no header height."
+    "User correction after415981b supersedes the source reserved header row within seller previews only: canonical hero starts at frame top in both states; Down/save/share float above it with expanded native-safe offsets. The duplicate make/model-title save control is hidden only inside this overlay. Ordinary CDP and image composition remain unchanged. Bounded endpoint sizing now reserves no header height.",
+    "Subsequent user screenshot correction changes expanded previews only: white fixed header behind the existing transparent native status bar and controls, actual nativeTop+56px high, with a .5px #e2e8f0 separator. Expanded content viewport reserves that top area and the measured native bottom inset, aligning the unchanged canonical action footer with ordinary CDP above the home-handle strip. Collapsed previews remain image-first with floating controls; adjacent preview panes share the expanded safe areas."
   ],
   "assets": [
     {

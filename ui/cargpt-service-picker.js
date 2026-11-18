@@ -1,0 +1,5 @@
+const escape=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+// Figma 9407:143960. Preserve the caller's chat header and voice/text controls.
+export function renderCarGPTServicePicker(services,{orb='./cargpt/assets/entry/service-orb.svg'}={}){
+ return `<section class="cargpt-service-picker" aria-label="Choose a service"><div class="cargpt-service-intro"><img src="${escape(orb)}" width="82" height="82" alt=""><h1>Your AI co-driver for<br><span>everything cars</span></h1><p>Ask anything about selling, buying or owning a car.</p></div><div class="cargpt-service-list">${services.map(service=>`<button type="button" data-c3-action="choose-journey" data-journey="${escape(service.id)}"><i class="cargpt-service-glyph" data-service="${escape(service.id)}" aria-hidden="true"></i><span><strong>${escape(service.label)}</strong><small>${escape(service.description)}</small></span><i class="ui-icon ui-icon-next" aria-hidden="true"></i></button>`).join('')}</div></section>`;
+}
