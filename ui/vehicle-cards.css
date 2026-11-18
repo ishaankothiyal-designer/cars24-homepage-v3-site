@@ -63,3 +63,16 @@
 .vc-desktop-grid .vc-secondary .ui-icon{font-size:var(--spacing-12)}
 .vc-carousel-grid .vc-wishlist .ui-icon{font-size:var(--spacing-20)}
 .vc-list .vc-wishlist .ui-icon{font-size:var(--spacing-20)}
+
+/* Source-native artwork preserves the outlined type, fills, tail and icons. */
+.vc-card .vc-ribbon-source{height:auto;background:none;max-width:calc(100% - 44px)}
+.vc-card .vc-ribbon-source>img{display:block;max-width:100%;object-fit:contain;object-position:top left}
+.vc-category-source{display:block;width:auto;height:18px;max-width:100%}
+.vc-desktop-grid .vc-seller img{width:133px;height:21px}
+.vc-card .vc-assurance-plus{--vc-pale:#fef7ff}.vc-card .vc-assurance-max{--vc-pale:#f5eeff}
+.vc-tile .vc-assurance-plus .vc-assurance-copy{color:#740086}.vc-tile .vc-assurance-max .vc-assurance-copy{color:#3c018c}.vc-tile .vc-assurance-base .vc-assurance-copy{color:#214c8a}
+.vc-list .vc-assurance-plus .vc-promise-art{width:90.3px}.vc-list .vc-assurance-max .vc-promise-art{width:103.6px}
+
+.vc-card .vc-return-art{width:43.182px;height:14px}
+
+.vc-desktop-grid .vc-assurance-layout-library{background:none}.vc-desktop-grid .vc-assurance-layout-library>button{background:linear-gradient(90deg,var(--vc-pale),var(--vc-white))}.vc-desktop-grid .vc-assurance-layout-library .vc-secondary{font-size:9px;line-height:14px;white-space:pre-line}.vc-desktop-grid .vc-assurance-layout-library .vc-assurance-copy>.vc-type-body3-regular{color:#314158}
