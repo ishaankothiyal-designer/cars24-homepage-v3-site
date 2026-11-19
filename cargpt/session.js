@@ -79,7 +79,7 @@ export function createCarGPTSession({city='Gurugram',speech=createSpeechAdapter(
   const finish=error=>{
    if(closed||token!==revision||completed)return;completed=true;
    patch({phase:'idle',narration:{...state.narration,active:false,cue:false,revealed:text.length},introComplete:introduction?true:state.introComplete,...(error?{error:'Spoken playback is unavailable. You can read the response and choose an example.'}:{})});
-   if(continuousVoice&&state.outputMode==='voice'&&!error&&!introduction&&state.permission==='granted'&&token===revision)timer=schedule(()=>{timer=null;if(continuousVoice&&token===revision&&!closed)startVoice();},200);
+   if(continuousVoice&&state.outputMode==='voice'&&!error&&!introduction&&state.permission!=='denied'&&token===revision)timer=schedule(()=>{timer=null;if(continuousVoice&&token===revision&&!closed)startVoice({requestPermission:state.permission!=='granted'});},200);
   };
   const speak=()=>{
    if(closed||token!==revision||completed)return;

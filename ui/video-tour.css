@@ -61,6 +61,57 @@
 .device .screen.is-video-tour{--page-canvas-surface:var(--bg-primary-inverse);--native-status-ink:var(--text-primary-inverse);--native-status-art-filter:brightness(0) invert(1)}
 .cdp-tour-play{z-index:2;pointer-events:none}
 
+/* Fixed portrait/rim geometry; only diffuse light drifts around the entry. */
+.cdp-view .cdp-s666{
+ --cdp-presenter-ring-width:var(--cdp-source-40);
+ --cdp-presenter-ring-pink:var(--color-drive-pink-500);
+ --cdp-presenter-ring-purple:var(--color-electric-violet-500);
+ --cdp-presenter-drift-duration:12s;
+ --cdp-presenter-breathe-duration:7s;
+ --cdp-presenter-halo-pink:var(--color-drive-pink-300);
+ --cdp-presenter-halo-purple:var(--color-electric-violet-300);
+ --cdp-presenter-halo-blur:3px;
+ --cdp-presenter-halo-blur-low:1.5px;
+ --cdp-presenter-halo-reach:3px;
+ overflow:visible;
+ isolation:isolate;
+ box-shadow:0 0 var(--spacing-4) color-mix(in srgb,var(--cdp-presenter-halo-pink) 24%,transparent);
+}
+.cdp-view .cdp-s666::before{
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:50%;
+ padding:var(--cdp-presenter-ring-width);
+ background:linear-gradient(135deg,var(--cdp-presenter-ring-pink),var(--cdp-presenter-ring-purple),var(--cdp-presenter-ring-pink));
+ -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ -webkit-mask-composite:xor;
+ mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+ mask-composite:exclude;
+ pointer-events:none;
+}
+.cdp-view .cdp-s666::after{
+ content:"";
+ position:absolute;
+ inset:calc(-1 * var(--cdp-presenter-halo-reach));
+ z-index:-1;
+ border-radius:50%;
+ /* Pale washes follow an uneven, feathered band close to the fixed rim. */
+ background:conic-gradient(from 20deg,
+  var(--cdp-presenter-halo-pink),
+  color-mix(in srgb,var(--cdp-presenter-halo-purple) 25%,transparent) 28%,
+  var(--cdp-presenter-halo-purple) 53%,
+  color-mix(in srgb,var(--cdp-presenter-halo-pink) 18%,transparent) 78%,
+  var(--cdp-presenter-halo-pink));
+ mask:radial-gradient(closest-side at 47% 47%,transparent 60%,#000 76%,#000 87%,transparent 100%);
+ filter:blur(var(--cdp-presenter-halo-blur));
+ pointer-events:none;
+ animation:cdp-presenter-light-drift var(--cdp-presenter-drift-duration) linear infinite,cdp-presenter-light-breathe var(--cdp-presenter-breathe-duration) ease-in-out infinite;
+}
+@keyframes cdp-presenter-light-drift{to{transform:rotate(1turn)}}
+@keyframes cdp-presenter-light-breathe{0%,100%{opacity:.72;filter:blur(var(--cdp-presenter-halo-blur-low))}50%{opacity:1;filter:blur(var(--cdp-presenter-halo-blur))}}
+@media(prefers-reduced-motion:reduce){.cdp-view .cdp-s666::after{animation:none;opacity:.8}}
+
 .cdp-view .cdp-tour-dots{height:44px;width:112px;align-items:center;justify-content:center;gap:var(--spacing-4);bottom:0}
 .cdp-tour-dot{height:var(--spacing-4);width:var(--spacing-4);border-radius:50%;background:var(--color-neutral-300)}
 .cdp-tour-dot[data-current=true]{width:var(--spacing-12);border-radius:var(--radius-sm);background:var(--text-primary)}

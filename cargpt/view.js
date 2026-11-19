@@ -33,7 +33,21 @@ export function mountCarGPT(root,{session,bridge}) {
  const clearComparisons=()=>{comparisonDisposers.forEach(dispose=>dispose());comparisonDisposers=[];};
  const composer=view.querySelector('.cargpt-composer'),input=composer.querySelector('input'),send=composer.querySelector('.cargpt-send');
  const welcome=()=>`<div class="cargpt-welcome">${identity()}<p>${introduction}</p>${prompts()}</div>`;
- const exit=(instant=false)=>{session.suspend();leaveCarGPT(view,bridge.close,{instant});};
+ let serviceSelection=null;
+ const choosingService=s=>s.stage==='entry'&&s.entryContext?.journey==='all';
+ function cancelServiceSelection(){const pending=serviceSelection;serviceSelection=null;pending?.animations.forEach(animation=>animation.cancel());visuals.cancelTravel();delete view.dataset.serviceHandoff;feed.inert=false;composer.inert=false;return pending?.journey;}
+ const exit=(instant=false)=>{cancelServiceSelection();session.suspend();leaveCarGPT(view,bridge.close,{instant});};
+ async function selectService(journey,{instant=false}={}){
+  if(serviceSelection)return;
+  if(!choosingService(snapshot)||!voiceMode){session.chooseJourney(journey);return;}
+  const pending={journey,animations:[]};serviceSelection=pending;feed.inert=true;composer.inert=true;view.querySelector('[data-c3-action="exit"]').focus({preventScroll:true});view.dataset.serviceHandoff='moving';
+  await visuals.dock({instant});if(destroyed||serviceSelection!==pending)return;
+  view.dataset.serviceHandoff='controls';view.querySelector('.cargpt-controls').hidden=false;status.hidden=false;visuals.update({suppressMaterial:false});
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,easing=getComputedStyle(view).getPropertyValue('--c3-ease').trim();
+  pending.animations=[...view.querySelectorAll('.cargpt-control'),status].map((node,index)=>node.animate(reduced?[{opacity:0},{opacity:1}]:[{opacity:0,transform:'translateY(8px) scale(.96)'},{opacity:1,transform:'none'}],{duration:instant?0:160,delay:instant?0:Math.min(index,1)*40,easing,fill:'both'}));
+  await Promise.all(pending.animations.map(animation=>animation.finished.catch(()=>{})));if(destroyed||serviceSelection!==pending)return;
+  cancelServiceSelection();session.setContinuousVoice(true);session.chooseJourney(journey);
+ }
  const prompts=()=>`<div class="cargpt-prompts">${(snapshot.searchContext?['Show me cars under ₹12 lakh','Any make','Search in Gurugram']:examples).map(q=>button(e(q),'example',`data-query="${e(q)}" aria-label="Try example: ${e(q)}"`)).join('')}</div>`;
  const lookup=id=>session.getCar(id);
  const selected=s=>s.selectedCar||CARS.find(c=>c.id===s.booking?.carId)||null;
@@ -111,7 +125,7 @@ export function mountCarGPT(root,{session,bridge}) {
   return history+((s.messages||[]).some(m=>m.role==='user')&&ready?(latest?.kind==='results'?`<div class="cargpt-prompts">${button('Automatic only','example','data-query="Automatic only"')}${button('Show cheaper cars','example','data-query="Show cheaper cars"')}</div>`:prompts()):'');
  }
  function paint(s){
-  if(destroyed)return;const previous=snapshot;snapshot=s;view.dataset.stage=s.stage==='intro'?'composer':s.stage;view.dataset.mode=voiceMode?'voice':'text';view.dataset.phase=s.phase;
+  if(destroyed)return;const previous=snapshot;snapshot=s;view.dataset.stage=s.stage==='intro'?'composer':s.stage;view.dataset.mode=voiceMode?'voice':'text';view.dataset.phase=s.phase;view.dataset.servicePicker=String(choosingService(s));
   const next=markup(s);if(next!==lastMarkup){
    const opening=firstPaint;firstPaint=false;
    const scroll=feed.scrollTop,focused=feed.contains(document.activeElement)?document.activeElement:null;
@@ -142,7 +156,9 @@ export function mountCarGPT(root,{session,bridge}) {
   });
   transcript.textContent=s.phase==='listening'?s.transcript||'':'';status.textContent=s.phase==='idle'&&s.error&&['network','unsupported','audio-capture','recognition-error'].includes(s.errorCode)?'Voice unavailable':labels[s.phase]||'Ready';
   const listening=s.phase==='listening',speaking=s.phase==='speaking';const control=view.querySelector('[data-c3-action="microphone"]');control.setAttribute('aria-label',listening?'Pause microphone':speaking?'Interrupt and speak':'Start microphone');control.setAttribute('aria-pressed',String(listening));control.disabled=s.phase==='permission-required';view.querySelector('.cargpt-controls [data-c3-action=close]').disabled=false;control.querySelector('img').src=asset(['voice-paused','mic-off','permission-denied'].includes(s.phase)?'mic-off':'mic-on');
-  if(!closingVoice)visuals.update({phase:s.phase,level:s.level||0,permissionDenied:s.phase==='permission-denied',active:voiceMode,intro:false});
+  const picker=choosingService(s),waiting=picker&&view.dataset.serviceHandoff!=='controls';
+  view.querySelector('.cargpt-controls').hidden=waiting;view.querySelector('.cargpt-controls').inert=waiting;status.hidden=waiting;transcript.hidden=waiting;
+  if(!closingVoice)visuals.update({phase:picker?'idle':s.phase,level:picker?0:s.level||0,permissionDenied:s.phase==='permission-denied',active:picker||voiceMode,intro:false,anchor:picker&&!serviceSelection?feed.querySelector('.cargpt-service-orb'):null,suppressMaterial:waiting});
   // A contextual chip is a real user turn. Let the native permission/start
   // handshake settle first so submitting it cannot cancel an in-flight grant.
   if(queuedQuery&&(!voiceMode||!s.supported||s.permission==='denied'||s.phase==='listening'||s.error)){
@@ -150,15 +166,15 @@ export function mountCarGPT(root,{session,bridge}) {
   }
  }
  let closingVoice=false;
- async function closeVoice(instant=false){if(closingVoice)return;closingVoice=true;attachments.close();session.setOutputMode('text');view.dataset.voiceClosing='true';await visuals.dismissTo(view.querySelector('[data-c3-action="close"]'),{instant});if(destroyed)return;voiceMode=false;delete view.dataset.voiceClosing;closingVoice=false;paint(session.snapshot());input.focus({preventScroll:true});}
+ async function closeVoice(instant=false){if(closingVoice)return;const picker=choosingService(snapshot),journey=cancelServiceSelection();if(picker){voiceMode=false;session.setOutputMode('text');if(journey)session.chooseJourney(journey);paint(session.snapshot());input.focus({preventScroll:true});return;}closingVoice=true;attachments.close();session.setOutputMode('text');view.dataset.voiceClosing='true';await visuals.dismissTo(view.querySelector('[data-c3-action="close"]'),{instant});if(destroyed)return;voiceMode=false;delete view.dataset.voiceClosing;closingVoice=false;paint(session.snapshot());input.focus({preventScroll:true});}
  const headerMenu=mountCarGPTMenu(view.querySelector('.cargpt-menu-controls'),{container:view,onNewConversation:bridge.restart,onAbout:bridge.about});
  const attachments=mountAttachments(composer.querySelector('.cargpt-attachment-controls'),{tray:composer.querySelector('.cargpt-draft-attachments'),container:view,onChange:()=>onInput()});
  function galleryContext(node){const gallery=node.closest('.cargpt-gallery');if(!gallery)return null;const key=gallery.dataset.galleryKey,id=gallery.dataset.galleryCar,car=lookup(id)||snapshot.messages.find(m=>m.car?.id===id)?.car||selected(snapshot);return{gallery,key,car,...gallerySelection(car,galleryStates.get(key))};}
  function syncGallery(context,index){const {gallery,key}=context;galleryStates.set(key,{...galleryStates.get(key),category:context.category,index});gallery.querySelectorAll('.cargpt-gallery-dots>span').forEach((n,i)=>n.dataset.active=String(i===index));gallery.querySelectorAll('.cargpt-gallery-thumbnails>button').forEach((n,i)=>n.setAttribute('aria-pressed',String(i===index)));gallery.querySelectorAll('.cargpt-gallery-photo').forEach((n,i)=>n.tabIndex=i===index?0:-1);}
- const onGalleryScroll=event=>{if(!event.target.matches?.('.cargpt-photo-gallery'))return;const context=galleryContext(event.target);if(context){const index=Math.max(0,Math.min(context.photos.length-1,Math.round(event.target.scrollLeft/event.target.clientWidth)));if(index!==context.index)syncGallery(context,index);}};
+ const onGalleryScroll=event=>{if(event.target===feed&&choosingService(snapshot))visuals.layout();if(!event.target.matches?.('.cargpt-photo-gallery'))return;const context=galleryContext(event.target);if(context){const index=Math.max(0,Math.min(context.photos.length-1,Math.round(event.target.scrollLeft/event.target.clientWidth)));if(index!==context.index)syncGallery(context,index);}};
  // Portalling a modal can briefly move focus outside the phone before its
  // initial focus settles. Capture Escape there too, including while loading.
- const onPhotoKey=event=>{if(event.key==='Escape'&&(viewerOpening||view.querySelector('.cargpt-photo-viewer'))){event.preventDefault();event.stopPropagation();viewerRevision++;viewerOpening=false;photoViewer?.destroy();photoViewer=null;}};
+ const onPhotoKey=event=>{if(event.key!=='Escape')return;if(viewerOpening||view.querySelector('.cargpt-photo-viewer')){event.preventDefault();event.stopPropagation();viewerRevision++;viewerOpening=false;photoViewer?.destroy();photoViewer=null;}else if(choosingService(snapshot)&&voiceMode&&!view.querySelector('.cargpt-menu-popup')){event.preventDefault();event.stopPropagation();closeVoice(true);}};
  view.addEventListener('scroll',onGalleryScroll,true);
  document.addEventListener('keydown',onPhotoKey,true);
  session.setOutputMode(voiceMode?'voice':'text');
@@ -168,7 +184,7 @@ export function mountCarGPT(root,{session,bridge}) {
   else if(a==='exit')exit(event.detail===0);
   else if(a==='microphone'){if(snapshot.phase==='listening')session.pauseVoice();else{session.setContinuousVoice?.(true);session.startVoice({requestPermission:true});}}
   else if(a==='start-voice'){voiceMode=true;session.setContinuousVoice?.(true);session.startVoice({requestPermission:true});}
-  else if(a==='choose-journey')session.chooseJourney(hit.dataset.journey);
+  else if(a==='choose-journey')selectService(hit.dataset.journey,{instant:event.detail===0});
   else if(a==='preference')session.answerPreference(hit.dataset.field,hit.dataset.value,hit.textContent);
   else if(a==='manual-vehicle')session.enterVehicleManually();
   else if(a==='vehicle-answer')session.answerVehicle(hit.dataset.field.slice(8),hit.dataset.value);
@@ -202,11 +218,11 @@ export function mountCarGPT(root,{session,bridge}) {
  const onCardAssurance=event=>{const card=event.target.closest('car-card[data-c3-car]');if(card)bridge.notice([card.data.assuranceLead,card.data.assurance,...card.data.assurances||[]].filter(Boolean).join(' · '));};
  view.addEventListener('test-drive',onCardTestDrive);view.addEventListener('assurance-details',onCardAssurance);
  view.addEventListener('wishlist-toggle',onCardSave);view.addEventListener('view-details',onCardDetails);
- const onVisibility=()=>{if(document.hidden)session.suspend();};view.addEventListener('click',onClick);document.addEventListener('visibilitychange',onVisibility);
+ const onVisibility=()=>{if(document.hidden){cancelServiceSelection();session.suspend();paint(session.snapshot());}};view.addEventListener('click',onClick);document.addEventListener('visibilitychange',onVisibility);
  const onInput=()=>{const typing=!!input.value.trim()||attachments.snapshot().length>0;send.setAttribute('aria-label',typing?'Send message':'Start voice chat');send.dataset.typing=String(typing);send.innerHTML=icon(typing?'arrow-up-outline':'voice-1-wave-outline');};
  const onSubmit=event=>{event.preventDefault();const query=input.value.trim();if(query||attachments.snapshot().length){input.value='';const files=attachments.take();onInput();session.submit(query||'Attached files',{attachments:files});}else{attachments.close();voiceMode=true;session.setContinuousVoice?.(true);session.startVoice({requestPermission:true});}};
  const onKey=event=>{if(event.key==='Escape'&&(viewerOpening||view.querySelector('.cargpt-photo-viewer'))){event.preventDefault();event.stopPropagation();viewerRevision++;viewerOpening=false;photoViewer?.destroy();photoViewer=null;return;}const rail=event.target.closest('.cargpt-recommendations');if(rail&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();rail.scrollTo({left:event.key==='Home'?0:event.key==='End'?rail.scrollWidth:rail.scrollLeft+(event.key==='ArrowRight'?1:-1)*261,behavior:'instant'});return;}const tabs=event.target.closest('.cargpt-gallery-tabs');if(tabs&&['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const buttons=[...tabs.querySelectorAll('button:not(:disabled)')],index=buttons.indexOf(event.target),next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(index+(event.key==='ArrowRight'?1:-1)+buttons.length)%buttons.length;buttons[next].click();return;}if(event.key!=='Escape'||event.defaultPrevented||view.querySelector('.cargpt-menu-popup,.cargpt-photo-viewer'))return;event.preventDefault();if(voiceMode)closeVoice(true);else exit(true);};
  input.addEventListener('input',onInput);composer.addEventListener('submit',onSubmit);view.addEventListener('keydown',onKey);
- if(voiceMode&&snapshot.permission!=='denied'&&snapshot.supported){session.setContinuousVoice(true);session.startVoice({requestPermission:true});}
- return ()=>{view.removeEventListener('keydown',markComparisonInput,true);view.removeEventListener('click',markComparisonInput,true);comparisonPage?.destroy();clearComparisons();view.removeEventListener('keydown',onKey);document.removeEventListener('keydown',onPhotoKey,true);view.removeEventListener('scroll',onGalleryScroll,true);input.removeEventListener('input',onInput);composer.removeEventListener('submit',onSubmit);destroyed=true;viewerRevision++;photoViewer?.destroy();unsubscribe();headerMenu.destroy();attachments.destroy();session.suspend();visuals.destroy();view.removeEventListener('click',onClick);view.removeEventListener('test-drive',onCardTestDrive);view.removeEventListener('assurance-details',onCardAssurance);view.removeEventListener('wishlist-toggle',onCardSave);view.removeEventListener('view-details',onCardDetails);document.removeEventListener('visibilitychange',onVisibility);};
+ if(voiceMode&&!choosingService(snapshot)&&snapshot.permission!=='denied'&&snapshot.supported){session.setContinuousVoice(true);session.startVoice({requestPermission:true});}
+ return ()=>{cancelServiceSelection();view.removeEventListener('keydown',markComparisonInput,true);view.removeEventListener('click',markComparisonInput,true);comparisonPage?.destroy();clearComparisons();view.removeEventListener('keydown',onKey);document.removeEventListener('keydown',onPhotoKey,true);view.removeEventListener('scroll',onGalleryScroll,true);input.removeEventListener('input',onInput);composer.removeEventListener('submit',onSubmit);destroyed=true;viewerRevision++;photoViewer?.destroy();unsubscribe();headerMenu.destroy();attachments.destroy();session.suspend();visuals.destroy();view.removeEventListener('click',onClick);view.removeEventListener('test-drive',onCardTestDrive);view.removeEventListener('assurance-details',onCardAssurance);view.removeEventListener('wishlist-toggle',onCardSave);view.removeEventListener('view-details',onCardDetails);document.removeEventListener('visibilitychange',onVisibility);};
 }

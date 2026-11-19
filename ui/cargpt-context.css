@@ -1,6 +1,6 @@
 .cargpt-service-picker{display:flex;flex-direction:column;gap:28px;padding:19px 4px 0;flex:none}
 .cargpt-service-intro{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
-.cargpt-service-intro>img{display:block;width:82px;height:82px;flex:none}
+.cargpt-service-orb{display:block;width:82px;height:82px;flex:none}
 .cargpt-service-intro h1{font:600 19px/23px var(--c3-font);color:var(--c3-ink)}
 .cargpt-service-intro h1 span{color:var(--c3-brand)}
 .cargpt-service-intro p{margin-top:4px;font-size:13px;line-height:18px;color:var(--c3-secondary)}
@@ -20,3 +20,18 @@
 .cargpt-journey-options .cargpt-chip{min-height:44px;padding:8px 12px}
 .cargpt-context-note{font-size:12px;line-height:18px;color:var(--c3-secondary)}
 @media(hover:hover) and (pointer:fine){.cargpt-service-list>button:hover{background:var(--c3-brand-fill)}}
+
+/* An infrequent service-to-voice handoff. The live canvas stays mounted. */
+.cargpt-view{--c3-ease-travel:cubic-bezier(.77,0,.175,1)}
+.cargpt-view[data-service-picker="true"][data-mode] .cargpt-feed{padding-bottom:24px;scroll-padding-bottom:24px}
+.cargpt-view[data-service-picker="true"][data-mode] .cargpt-dock{display:block;background:transparent}
+.cargpt-view[data-service-picker="true"]:not([data-service-handoff="controls"]) .cargpt-dock::before{opacity:0}
+.cargpt-controls[hidden],.cargpt-status[hidden],.cargpt-transcript[hidden]{display:none}
+.cargpt-service-intro h1,.cargpt-service-intro p,.cargpt-service-list{transition:opacity 160ms var(--c3-ease),transform 160ms var(--c3-ease)}
+.cargpt-view[data-service-handoff] .cargpt-service-intro h1,.cargpt-view[data-service-handoff] .cargpt-service-intro p,.cargpt-view[data-service-handoff] .cargpt-service-list{opacity:0;transform:translateY(-8px)}
+.cargpt-service-list>button{transition:transform 100ms var(--c3-ease)}
+.cargpt-service-list>button:active{transform:scale(.96)}
+@media(prefers-reduced-motion:reduce){
+ .cargpt-service-intro h1,.cargpt-service-intro p,.cargpt-service-list{transition-property:opacity}
+ .cargpt-view[data-service-handoff] .cargpt-service-intro h1,.cargpt-view[data-service-handoff] .cargpt-service-intro p,.cargpt-view[data-service-handoff] .cargpt-service-list,.cargpt-service-list>button:active{transform:none}
+}

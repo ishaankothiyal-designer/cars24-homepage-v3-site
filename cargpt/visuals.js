@@ -9,18 +9,27 @@ export function mountC3Visuals(container) {
  const screen=container.closest('.screen'),material=document.createElement('div');material.className='c3-source-material';material.setAttribute('aria-hidden','true');
  screen.append(material);
  let renderer=null;const media=matchMedia('(prefers-reduced-motion: reduce)');
- let state={phase:'idle',level:0,active:false},loading=false,dead=false,closing=null;
- function resize(){const scale=screen.clientWidth/360;material.style.height=`${130*scale}px`;}
+ let state={phase:'idle',level:0,active:false,anchor:null,suppressMaterial:false},loading=false,dead=false,closing=null,flight=null;
+ function resize(){const scale=screen.clientWidth/360;material.style.height=`${130*scale}px`;paint();}
  const observer=new ResizeObserver(resize);observer.observe(screen);resize();
  function paint(){
-  if(dead)return;const active=state.active&&!document.hidden;host.hidden=!state.active;material.hidden=!state.active;screen.classList.toggle('is-cargpt-voice',state.active);
+  if(dead)return;const active=state.active&&!document.hidden,floor=state.active&&!state.suppressMaterial;host.hidden=!state.active;material.hidden=!floor;screen.classList.toggle('is-cargpt-voice',floor);
   const sizes={listening:64.4,speaking:77,'permission-denied':83.125};
-  const size=state.intro?180:media.matches?70:(sizes[state.phase]||70);orb.dataset.diameter=String(size);if(!closing)orb.style.transform=`translate(-50%,-50%) scale(${size/180})`;host.dataset.phase=state.phase;
+  const anchor=state.anchor?.isConnected?state.anchor:null,size=anchor?82:state.intro?180:media.matches?70:(sizes[state.phase]||70);orb.dataset.diameter=String(size);
+  let dx=0,dy=0;if(anchor){const a=anchor.getBoundingClientRect(),b=host.getBoundingClientRect(),zoom=b.width/host.clientWidth||1;dx=(a.left+a.width/2-b.left)/zoom-host.clientWidth/2;dy=(a.top+a.height/2-b.top)/zoom-103;}
+  if(!closing)orb.style.transform=`translate(-50%,-50%) translate(${dx}px,${dy}px) scale(${size/180})`;host.dataset.phase=state.phase;host.dataset.placement=anchor?'picker':'dock';
   if(state.active&&!renderer&&!loading){loading=true;import('../ui/cargpt-rive.js').then(({mountRiveOrb})=>{if(dead)return;renderer=mountRiveOrb(orb);paint();}).catch(()=>{if(!dead)orb.dataset.renderer='unavailable';});}renderer?.update({phase:state.phase,level:state.level,size,appear:1,travel:0,reducedMotion:media.matches,active});
  }
  media.addEventListener('change',paint);document.addEventListener('visibilitychange',paint);paint();
  return{
   update(next={}){state={...state,...next};paint();},
+  layout:paint,
+  async dock({instant=false}={}){
+   flight?.cancel();const from=orb.style.transform;state={...state,anchor:null};paint();
+   const reduced=media.matches,animation=orb.animate(reduced?[{opacity:0},{opacity:1}]:[{transform:from},{transform:orb.style.transform}],{duration:instant?0:reduced?160:280,easing:getComputedStyle(container.closest('.cargpt-view')).getPropertyValue('--c3-ease-travel').trim(),fill:'both'});flight=animation;
+   await animation.finished.catch(()=>{});if(flight===animation){flight=null;animation.cancel();paint();}
+  },
+  cancelTravel(){flight?.cancel();flight=null;paint();},
   async dismissTo(target,{instant=false}={}){
    if(closing)return closing;const a=orb.getBoundingClientRect(),b=target.getBoundingClientRect(),zoom=host.getBoundingClientRect().width/host.clientWidth;
    const dx=(b.left+b.width/2-a.left-a.width/2)/zoom,dy=(b.top+b.height/2-a.top-a.height/2)/zoom;
@@ -36,6 +45,6 @@ export function mountC3Visuals(container) {
    // must never make the retained canvas invisible on the next voice session.
    closing=Promise.resolve(controls).then(()=>{controls.stop();host.append(orb);flight.remove();closing=null;paint();});return closing;
   },
-  destroy(){dead=true;observer.disconnect();renderer?.destroy();media.removeEventListener('change',paint);document.removeEventListener('visibilitychange',paint);material.remove();host.remove();screen.classList.remove('is-cargpt-voice');}
+  destroy(){dead=true;flight?.cancel();observer.disconnect();renderer?.destroy();media.removeEventListener('change',paint);document.removeEventListener('visibilitychange',paint);material.remove();host.remove();screen.classList.remove('is-cargpt-voice');}
  };
 }

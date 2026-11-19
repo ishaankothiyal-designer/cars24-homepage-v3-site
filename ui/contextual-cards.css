@@ -3,7 +3,7 @@
 .journey-context-rail{display:flex;gap:var(--spacing-12);overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
 .journey-context-rail::-webkit-scrollbar{display:none}
 .journey-context-card{appearance:none;flex:0 0 100%;display:flex;align-items:center;gap:var(--spacing-12);min-width:0;box-sizing:border-box;padding:var(--spacing-16) var(--spacing-12);border:var(--prototype-measure-1px) solid var(--line);border-radius:var(--radius-alt-lg);background:var(--surface);color:var(--black);text-align:left;font:inherit;cursor:pointer;scroll-snap-align:start}
-.journey-context-rail.has-multiple .journey-context-card{flex-basis:92%}
+.journey-context-rail.has-multiple .journey-context-card{flex-basis:calc((100% - var(--spacing-12)) / 1.25)}
 .journey-context-card:focus-visible{outline:var(--spacing-2) solid var(--brand);outline-offset:calc(-1 * var(--spacing-4))}
 .journey-context-card:hover .journey-context-cta{text-decoration:underline}
 .journey-context-card .journey-context-art{flex:none;width:var(--spacing-48);height:var(--spacing-48);margin:0;background-size:300% 200%}
@@ -12,3 +12,13 @@
 .journey-context-detail{font-size:var(--font-size-xs);line-height:var(--line-height-body-3);color:var(--secondary);overflow-wrap:anywhere}
 .journey-context-cta{display:inline-flex;align-items:center;justify-content:center;gap:var(--spacing-8);min-height:var(--spacing-32);padding:var(--spacing-4) var(--spacing-12);border-radius:var(--radius-sm);background:var(--brand);color:var(--surface);font-size:var(--font-size-xs);font-weight:var(--font-weight-semibold)}
 .journey-context-cta .ui-icon{font-size:var(--font-size-sm)}
+
+/* 1.25 activities, including the inter-card gap; trailing space lets the final dot align its card. */
+.journey-context-rail{position:relative;overscroll-behavior-x:contain}
+.journey-context-rail.has-multiple::after{content:"";flex:0 0 calc(20% - var(--spacing-12) / 5)}
+.journey-context-title{margin:0 0 var(--spacing-12);font-size:var(--font-size-base);line-height:var(--line-height-body-2);font-weight:var(--font-weight-semibold)}
+.journey-context-pagination{display:flex;justify-content:center;align-items:center}
+.journey-context-dot{appearance:none;display:grid;place-items:center;width:calc(var(--spacing-40) + var(--spacing-4));height:calc(var(--spacing-40) + var(--spacing-4));padding:0;border:0;background:transparent;cursor:pointer}
+.journey-context-dot span{width:var(--spacing-6);height:var(--spacing-6);border-radius:var(--radius-full);background:var(--secondary)}
+.journey-context-dot[aria-current=true] span{background:var(--brand);width:var(--spacing-16)}
+.journey-context-dot:focus-visible{outline:var(--spacing-2) solid var(--brand);outline-offset:calc(-1 * var(--spacing-4));border-radius:var(--radius-sm)}

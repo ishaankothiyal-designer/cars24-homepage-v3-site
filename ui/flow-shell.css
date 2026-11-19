@@ -87,3 +87,10 @@
 /* L1 scenery continues through the native handle slot; floating controls keep their anchor. */
 .device .screen:not(.is-flow-home)>#app.has-bottom-nav:has(>.bottom-nav-content>:is(.l1-view,.l1-home)){overflow:visible}
 .device .screen:not(.is-flow-home)>#app.has-bottom-nav>.bottom-nav-content:has(>:is(.l1-view,.l1-home)){height:calc(100% + var(--home-native-bottom-inset))}
+
+/* L1 content extends beneath the native handle; its nav fade must share that extent.
+   Otherwise the fade ends in an opaque horizontal seam above the final scenery. */
+.device .screen:not(.is-flow-home)>#app.has-bottom-nav:has(.l1-scroll)::after{
+ bottom:calc(-1 * var(--home-native-bottom-inset));
+ height:calc(var(--bottom-nav-height) + var(--spacing-48) + var(--home-native-bottom-inset));
+}

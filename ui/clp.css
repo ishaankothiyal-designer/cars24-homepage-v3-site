@@ -473,3 +473,16 @@ body:has(.screen.is-clp) .clp-source-note{display:block;}
 /* Listing scenery fills the handle slot without moving its floating assistant or sticky chrome. */
 .device .screen.is-clp>#app:has(>.clp-source){overflow:visible}
 .device .screen.is-clp>#app>.clp-source>.clp-scroll{height:calc(100% + var(--home-native-bottom-inset))}
+
+/* Applied inline preferences share the toolbar selection tokens. */
+.clp-inline-choice[aria-pressed="true"]{outline:var(--border-width-thin) solid var(--brand);outline-offset:calc(-1 * var(--border-width-thin));background:var(--color-cobalt-blue-100);color:var(--brand)}
+.clp-inline-selection{margin:0;font-size:var(--font-size-xs);line-height:1.5;color:var(--brand);overflow-wrap:anywhere}
+
+/* Buy L1 shares CLP cards/filters in its existing single scroll root. */
+.clp-embedded,.clp-embedded>.clp-scroll{display:contents}
+.clp-embedded .clp-toolbar{position:sticky;top:var(--buy-listing-sticky-top,0px);z-index:5;background:var(--bg-primary);border-bottom:var(--border-width-thin) solid var(--border-secondary)}
+.clp-embedded .clp-results{background:var(--bg-primary);padding-top:var(--spacing-16)}
+.clp-embedded .clp-inline-buy{min-width:0;grid-column:1/-1;margin-inline:calc(-1 * var(--spacing-12));padding-block:var(--spacing-24);background:var(--bg-primary)}
+.clp-inline-buy>.l1-source{width:100%;max-width:100%;overflow:clip}
+.clp-inline-buy .l1-source>*{max-width:100%}
+.has-service-chrome{--buy-listing-sticky-top:calc(var(--spacing-56) + var(--spacing-32) + var(--spacing-2))}

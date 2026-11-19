@@ -22,7 +22,7 @@ export function revealCarGPT({trigger,enter}) {
  let entered=false;
  const timer=setTimeout(()=>{entered=true;enter();layer.style.pointerEvents='none';document.querySelector('.cargpt-view')?.classList.add('cargpt-arriving');},300);
  const cleanup=()=>{clearTimeout(timer);document.removeEventListener('keydown',onKey,true);animations.forEach(a=>a.cancel());layer.remove();active=null;};
- const onKey=event=>{if(event.key==='Escape'){event.preventDefault();event.stopImmediatePropagation();cleanup();if(entered)document.querySelector('[data-c3-action="back"]')?.click();}};
+ const onKey=event=>{if(event.key==='Escape'){if(entered){cleanup();return;}event.preventDefault();event.stopImmediatePropagation();cleanup();}};
  active=cleanup;document.addEventListener('keydown',onKey,true);
  Promise.all(animations.map(a=>a.finished)).then(cleanup,cleanup);
 }

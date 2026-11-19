@@ -85,3 +85,7 @@
 
 /* Native safe-area spacing stays; the route canvas supplies its surface. */
 .device .screen[class]>.home-indicator{background:transparent}
+
+/* Bottom navigation ends on an opaque native safe area, independent of the
+   scrolling route canvas. Keep the floating controls and their fade unchanged. */
+.device .screen[class]:has(>#app.has-bottom-nav)>.home-indicator{background:var(--bg-primary);z-index:20}
