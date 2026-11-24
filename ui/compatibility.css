@@ -276,3 +276,6 @@
 
 /* Figma 9193 search composer exact source exceptions; nearest slate/alpha tokens differ. */
 :root{--search-composer-placeholder:#90a1b9;--search-composer-stop-fill:rgba(10,10,10,.04)}
+
+/* Profile source footer8260:48463 has a450px artwork canvas; no450px spacing primitive. */
+:root{--profile-source-footer-height:450px}

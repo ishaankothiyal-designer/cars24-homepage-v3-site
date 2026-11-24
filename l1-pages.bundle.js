@@ -97,7 +97,7 @@ var F=String.raw`<div data-node-id="2788:69550" data-name=".element" class="home
 </div>
 <div data-node-id="2788:73626" data-name="shape" class="home-layer-266">
 </div>
-</div>`,E={brands:String.raw`<div data-node-id="2916:102662" data-name="asset" class="home-layer-34">
+</div>`,$={brands:String.raw`<div data-node-id="2916:102662" data-name="asset" class="home-layer-34">
 <div data-node-id="2916:102664" class="home-layer-35">
 <div data-node-id="2916:102665" class="home-layer-36">
 <div class="home-layer-37">

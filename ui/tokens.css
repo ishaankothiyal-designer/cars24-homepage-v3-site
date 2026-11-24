@@ -29,3 +29,6 @@
 
 /* Exact source card height in Figma onboarding 8672:85804; no 132px size primitive. */
 :root{--prototype-measure-132px:132px}
+
+/* Activity Figma typography roles: 8279:33523, same source values in Home. */
+:root{--activity-body-size:var(--prototype-measure-13px);--activity-meta-size:var(--prototype-measure-11px);--activity-body-leading:var(--line-height-heading-h5);--activity-meta-leading:var(--prototype-measure-17px)}

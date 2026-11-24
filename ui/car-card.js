@@ -148,8 +148,8 @@ Error generating stack: `+l.message+`
 
 :host(:is([data-card-surface="clp"],[data-card-surface="inventory"])) .vc-india-mobile .vc-tags{margin-top:0}
 
-:host([data-card-surface="clp"]) .vc-carousel-grid{width:100%;height:auto}
-:host([data-card-surface="clp"]) .vc-carousel-grid .vc-media{height:160px}
+:host(:is([data-card-surface="clp"],[data-full-width])) .vc-carousel-grid{width:100%;height:auto}
+:host(:is([data-card-surface="clp"],[data-full-width])) .vc-carousel-grid .vc-media{height:160px}
 `;var xo=`/* Autonaut Cars24 artwork; colour and dimensions inherit existing DLS tokens. */
 .ui-icon{display:inline-block;flex-shrink:0;width:1em;height:1em;font-style:normal;vertical-align:middle;background-color:currentColor;mask:var(--autonaut-icon) center/contain no-repeat;-webkit-mask:var(--autonaut-icon) center/contain no-repeat}
 .ui-icon::before{content:none!important}
