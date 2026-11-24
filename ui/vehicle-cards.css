@@ -104,3 +104,6 @@
 /* Runtime ListView fits the visible cutout, retaining a four-pixel safety inset. */
 .vc-list .vc-photo:has(.vc-list-balanced-photo){overflow:hidden}
 .vc-list .vc-photo>.vc-list-balanced-photo{position:absolute;max-width:none;object-fit:contain}
+/* Native seller marks have different widths; preserve each source aspect ratio. */
+.vc-desktop-grid .vc-seller img[data-figma-node],.vc-india-mobile .vc-seller img[data-figma-node]{width:auto;height:21px}
+.vc-card .vc-seller img[data-figma-node]{width:auto}

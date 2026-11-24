@@ -486,3 +486,9 @@ body:has(.screen.is-clp) .clp-source-note{display:block;}
 .clp-inline-buy>.l1-source{width:100%;max-width:100%;overflow:clip}
 .clp-inline-buy .l1-source>*{max-width:100%}
 .has-service-chrome{--buy-listing-sticky-top:calc(var(--spacing-56) + var(--spacing-32) + var(--spacing-2))}
+
+/* Reuse the L1 footer after the last real listing; embedded Buy already has one. */
+.clp-brand-footer{margin-top:var(--spacing-24);width:100%;overflow:hidden}
+.clp-brand-footer .l1-source{width:100%}
+.clp-source>.clp-scroll:has(>.clp-brand-footer){padding-bottom:0;scroll-padding-bottom:0}
+.clp-source>.clp-scroll:has(>.clp-brand-footer)::after{display:none}

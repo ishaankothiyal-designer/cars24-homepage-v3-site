@@ -10,7 +10,8 @@ export function cardData(car, saved=false, recommended=false) {
   price:`₹${car.price.toFixed(2)} lakh`, photos,photo:car.isDemoSnapshot&&car.cutoutImageUrl?car.cutoutImageUrl:photos[0],photoCount:photos.length,photoIndex:0,
   seller:car.seller,city:car.city,freeTestDrive:!!car.freeTestDrive,location:car.location || car.city,sourceNote:`${car.seller} · Checked ${car.fetchedAt}`,
   listingUrl:car.listingUrl,wishlisted:saved,owned:car.seller==='Cars24 Owned Stock',
-  elite:car.category==='ELITE',categoryLabel:car.category==='PRIME'?'PRIME':'',recommended,
+  elite:car.category==='ELITE',categoryLabel:car.category==='PRIME'?'PRIME':car.category==='BUDGET'?'Budget':'',recommended,
+  ribbon:car.ribbon||(car.originalPriceRupees>car.priceRupees?'Price Drop':undefined),
   recommendedLabel:'Recommended',assuranceLead:car.assuranceLead||'',assurance:car.assurance||'',
   assurances:car.assurances||[],emi:car.emiMonthlyRupees?`EMI ₹${car.emiMonthlyRupees.toLocaleString('en-IN')}/mo`:'',priceWas:car.originalPriceRupees>car.priceRupees?`₹${lakh(car.originalPriceRupees)}`:'',usp:car.uspLabel||'',
   ctaPrimary:car.freeTestDrive?'Free Test Drive':'View on CARS24',ctaSecondary:'View Details'
@@ -27,6 +28,6 @@ export function toVehicleCardData(d,{family=d.family,oneFooter=true}={}){
   photos:compact||list?undefined:d.photos?.map((photo,index)=>index===0?d.photo:photo),
   price:d.emiFirst&&d.emi?d.emi:d.price,emi:compact?undefined:d.emiFirst?`Full price ${d.price}`:d.emi,previousPrice:d.priceWas,
   seller:d.seller,categoryLabel:d.elite?'Elite':d.categoryLabel==='PRIME'?'Mid-range':d.categoryLabel,
-  usp:d.usp==='As good as new'?'Good as new':d.usp,ribbon:d.recommended?'Recommended':undefined,
+  usp:d.usp==='As good as new'?'Good as new':d.usp,ribbon:d.recommended?'Recommended':d.ribbon,
   assurance:assurance||undefined,location:oneFooter&&assurance?undefined:d.location||d.city,wishlisted:d.wishlisted};
 }
